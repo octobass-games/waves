@@ -9,7 +9,7 @@ namespace Octobass.Waves.CharacterController2D
     {
         public Rigidbody2D Body;
         public Animator Animator;
-        public CharacterDriver Driver;
+        public CharacterController2DDriver Driver;
         public CharacterController2DConfig CharacterControllerConfig;
 
         private Dictionary<CharacterStateId, ICharacterState> StateRegistry;
@@ -18,7 +18,7 @@ namespace Octobass.Waves.CharacterController2D
 
         void Awake()
         {
-            StateContext = new StateContext(Body, Animator, new DriverSnapshot(), new MovementIntent(), CharacterControllerConfig);
+            StateContext = new StateContext(Body, Animator, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig);
 
             StateRegistry = new()
             {

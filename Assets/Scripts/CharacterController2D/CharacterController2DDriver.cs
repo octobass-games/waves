@@ -1,0 +1,9 @@
+using UnityEngine;
+
+namespace Octobass.Waves.CharacterController2D
+{
+    public abstract class CharacterController2DDriver : MonoBehaviour
+    {
+        public abstract CharacterController2DDriverSnapshot TakeSnapshot();
+    }
+}
