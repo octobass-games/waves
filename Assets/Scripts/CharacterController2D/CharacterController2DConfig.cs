@@ -32,16 +32,16 @@ namespace Octobass.Waves.CharacterController2D
         [Tooltip("The gravity modifier to apply when the jump action is cancelled")]
         public float VariableJumpHeightGravityModifier;
 
-        [Tooltip("The contact filter to apply when detecting collisions")]
-        public ContactFilter2D CollisionContactFilter;
-
         [Tooltip("The movement speed modifier to apply when moving horizontally through the air")]
         public float AirMovementSpeedModifier;
 
         [Tooltip("The amount of time to ignore horizontal input for after starting a wall jump")]
         public float WallJumpInputFreezeTime;
 
-        [Tooltip("The contact filter to apply when detecting rideables")]
+        [Tooltip("The contact filter to apply when detecting ground collisions")]
+        public ContactFilter2D GroundContactFilter;
+
+        [Tooltip("The contact filter to apply when detecting rideable collisions")]
         public ContactFilter2D RideableContactFilter;
     }
 }

@@ -73,7 +73,7 @@ namespace Octobass.Waves.CharacterController2D
         {
             RaycastHit2D[] hits = new RaycastHit2D[1];
 
-            int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.CollisionContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
+            int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
 
             Direction = rightCount > 0 ? Vector2.one * Vector2.left : Vector2.one;
         }

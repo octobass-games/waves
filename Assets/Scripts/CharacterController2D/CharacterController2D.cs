@@ -49,7 +49,7 @@ namespace Octobass.Waves.CharacterController2D
             Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
 
             ContactFilter2D contactFilter = new ContactFilter2D();
-            contactFilter.layerMask = CharacterControllerConfig.CollisionContactFilter.layerMask | CharacterControllerConfig.RideableContactFilter.layerMask;
+            contactFilter.layerMask = CharacterControllerConfig.GroundContactFilter.layerMask | CharacterControllerConfig.RideableContactFilter.layerMask;
 
             Body.SafeMovePosition(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, contactFilter);
             Body.SafeMovePosition(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, contactFilter);
