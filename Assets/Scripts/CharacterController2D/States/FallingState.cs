@@ -44,7 +44,7 @@ namespace Octobass.Waves.CharacterController2D
             {
                 return CharacterStateId.Riding;
             }
-            else if (CoyoteTimer > 0 && StateContext.DriverSnapshot.Movement.y > 0 && !StateContext.JumpConsumed)
+            else if (CoyoteTimer > 0 && StateContext.DriverSnapshot.JumpPressed && !StateContext.JumpConsumed)
             {
                 return CharacterStateId.Jumping;
             }

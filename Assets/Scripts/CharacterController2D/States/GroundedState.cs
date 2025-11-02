@@ -26,7 +26,7 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            if (StateContext.DriverSnapshot.Movement.y > 0)
+            if (StateContext.DriverSnapshot.JumpPressed)
             {
                 return CharacterStateId.Jumping;
             }

@@ -33,8 +33,9 @@ namespace Octobass.Waves.CharacterController2D
 
             Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
 
-            if (StateContext.DriverSnapshot.Movement.y == 0)
+            if (!StateContext.DriverSnapshot.JumpPressed)
             {
+                Debug.Log("[JumpingState]: Applying variable jump height gravity");
                 Velocity -= StateContext.CharacterControllerConfig.VariableJumpHeightGravityModifier * Time.fixedDeltaTime;
             }
         }
