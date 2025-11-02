@@ -49,7 +49,7 @@ namespace Octobass.Waves.CharacterController2D
 
             Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
 
-            if (StateContext.DriverSnapshot.Movement.y == 0)
+            if (!StateContext.DriverSnapshot.JumpPressed)
             {
                 Velocity -= StateContext.CharacterControllerConfig.VariableJumpHeightGravityModifier * Time.fixedDeltaTime;
             }
@@ -60,6 +60,10 @@ namespace Octobass.Waves.CharacterController2D
             if (Velocity <= 0)
             {
                 return CharacterStateId.Falling;
+            }
+            else if (IsTouchingWall(Direction))
+            {
+                return CharacterStateId.WallSlide;
             }
 
             return null;
@@ -76,6 +80,15 @@ namespace Octobass.Waves.CharacterController2D
             int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
 
             Direction = rightCount > 0 ? Vector2.one * Vector2.left : Vector2.one;
+        }
+
+        private bool IsTouchingWall(Vector2 direction)
+        {
+            RaycastHit2D[] hits = new RaycastHit2D[1];
+
+            int count = StateContext.Body.Cast(direction, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
+
+            return count > 0;
         }
     }
 }

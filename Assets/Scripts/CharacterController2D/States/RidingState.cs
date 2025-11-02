@@ -34,10 +34,9 @@ namespace Octobass.Waves.CharacterController2D
 
             if (platform == null)
             {
-                // falling, jumping, etc.
                 return CharacterStateId.Falling;
             }
-            else if (StateContext.DriverSnapshot.Movement.y > 0)
+            else if (StateContext.DriverSnapshot.JumpPressed)
             {
                 return CharacterStateId.Jumping;
             }

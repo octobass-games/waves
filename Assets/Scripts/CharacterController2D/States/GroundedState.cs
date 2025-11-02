@@ -30,6 +30,10 @@ namespace Octobass.Waves.CharacterController2D
             {
                 return CharacterStateId.Jumping;
             }
+            else if (IsOnPlatform())
+            {
+                return CharacterStateId.Riding;
+            }
             else if (!IsGrounded())
             {
                 return CharacterStateId.Falling;
@@ -77,6 +81,15 @@ namespace Octobass.Waves.CharacterController2D
             }
 
             return false;
+        }
+
+        private bool IsOnPlatform()
+        {
+            RaycastHit2D[] hits = new RaycastHit2D[1];
+
+            int count = StateContext.Body.Cast(Vector2.down, StateContext.CharacterControllerConfig.RideableContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
+
+            return count > 0;
         }
     }
 }
