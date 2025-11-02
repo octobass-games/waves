@@ -22,17 +22,16 @@ namespace Octobass.Waves.CharacterController2D
 
         public void FixedUpdate()
         {
-            StateContext.MovementIntent.Displacement = Vector2.down * Time.fixedDeltaTime;
+            StateContext.MovementIntent.Displacement = Vector2.down * StateContext.CharacterControllerConfig.WallSlideSpeed * Time.fixedDeltaTime;
         }
 
         public CharacterStateId? GetTransition()
         {
-            // isgrounded
-            if (false)
+            if (IsTouchingWall(Vector2.down))
             {
-
+                return CharacterStateId.Grounded;
             }
-            else if (IsTouchingWall(Vector2.right) && StateContext.DriverSnapshot.Movement.x <= 0 || IsTouchingWall(Vector2.left) && StateContext.DriverSnapshot.Movement.x >= 0)
+            else if (IsTouchingWall(Vector2.right) && StateContext.DriverSnapshot.Movement.x <= 0 || IsTouchingWall(Vector2.left) && StateContext.DriverSnapshot.Movement.x >= 0 || !IsTouchingWall(Vector2.right) && !IsTouchingWall(Vector2.left))
             {
                 return CharacterStateId.Falling;
             }

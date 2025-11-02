@@ -38,6 +38,12 @@ namespace Octobass.Waves.CharacterController2D
         [Tooltip("The amount of time to ignore horizontal input for after starting a wall jump")]
         public float WallJumpInputFreezeTime;
 
+        [Tooltip("The speed at which the character will slide down walls")]
+        public float WallSlideSpeed;
+
+        [Tooltip("The speed at which the character will climb walls")]
+        public float WallClimbSpeed;
+
         [Tooltip("The contact filter to apply when detecting ground collisions")]
         public ContactFilter2D GroundContactFilter;
 
