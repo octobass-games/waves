@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class MapRenderer : MonoBehaviour
+namespace Octobass.Waves.Map
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class MapRenderer : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public Cartographer Cartographer;
     }
 }
