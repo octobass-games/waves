@@ -33,10 +33,9 @@ namespace Octobass.Waves.CharacterController2D
 
             Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
 
-            if (!StateContext.DriverSnapshot.JumpPressed)
+            if (StateContext.DriverSnapshot.JumpReleased)
             {
-                Debug.Log("[JumpingState]: Applying variable jump height gravity");
-                Velocity -= StateContext.CharacterControllerConfig.VariableJumpHeightGravityModifier * Time.fixedDeltaTime;
+                Velocity = 0;
             }
         }
 
@@ -50,6 +49,10 @@ namespace Octobass.Waves.CharacterController2D
             {
                 return CharacterStateId.WallClimb;
             }
+            else if (IsTouchingWall(StateContext.CharacterControllerConfig.WallJumpSkinWidth) && StateContext.DriverSnapshot.JumpPressed)
+            {
+                return CharacterStateId.WallJump;
+            }
             else
             {
                 return null;
@@ -61,18 +64,18 @@ namespace Octobass.Waves.CharacterController2D
             StateContext.JumpConsumed = true;
         }
 
-        private bool IsTouchingWall()
+        private bool IsTouchingWall(float distance = 0f)
         {
             RaycastHit2D[] hits = new RaycastHit2D[1];
 
-            int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
+            int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.GroundContactFilter, hits, distance + StateContext.CharacterControllerConfig.SkinWidth);
 
             if (rightCount > 0)
             {
                 return true;
             }
 
-            int leftCount = StateContext.Body.Cast(Vector2.left, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
+            int leftCount = StateContext.Body.Cast(Vector2.left, StateContext.CharacterControllerConfig.GroundContactFilter, hits, distance + StateContext.CharacterControllerConfig.SkinWidth);
 
             if (leftCount > 0)
             {

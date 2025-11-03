@@ -69,6 +69,8 @@ namespace Octobass.Waves.CharacterController2D
                 Debug.Log($"[CharacterController]: Entering - {State}");
                 State.Enter();
             }
+
+            Driver.Consume();
         }
     }
 }

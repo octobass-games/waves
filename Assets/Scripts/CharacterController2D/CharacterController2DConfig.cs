@@ -20,6 +20,9 @@ namespace Octobass.Waves.CharacterController2D
         [Tooltip("The skin width of the character i.e. the movement buffer")]
         public float SkinWidth;
 
+        [Tooltip("The skin width to apply when detecting wall jumps")]
+        public float WallJumpSkinWidth;
+
         [Tooltip("The jump height of the character")]
         public float JumpHeight;
 
