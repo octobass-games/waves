@@ -506,6 +506,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -4, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 48
+      m_TileSpriteIndex: 48
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -3, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 49
+      m_TileSpriteIndex: 49
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -2, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -814,6 +834,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 89987c9b4039d274cae9f10e93ffbe87, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4af872b8954abda4e88d7d7d38b70345, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: b22a7b5cc4370034eb5167415e7ee096, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 3750495dd1d8cd84690cee49be84c1ac, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -4557768721073952965, guid: cf24a6bbe855775498799d7d9258d970, type: 3}
@@ -911,8 +935,12 @@ Tilemap:
     m_Data: {fileID: 1721323620524559613, guid: cf24a6bbe855775498799d7d9258d970, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2697435325912814073, guid: cf24a6bbe855775498799d7d9258d970, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 7827564817015769346, guid: cf24a6bbe855775498799d7d9258d970, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 2666024478922391182, guid: cf24a6bbe855775498799d7d9258d970, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data:
       e00: 1
       e01: 0
@@ -931,7 +959,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 50
+  - m_RefCount: 52
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1117,7 +1145,7 @@ Transform:
   m_GameObject: {fileID: 885710542}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -2.31, z: 0}
+  m_LocalPosition: {x: -4.096, y: -2.426, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
