@@ -13,5 +13,10 @@ namespace Octobass.Waves.Extensions
         {
             return new Vector2(0, source.y);
         }
+
+        public static Vector2 Quantize(this Vector2 source, float step)
+        {
+            return new Vector2(Mathf.Round(source.x / step) * step, Mathf.Round(source.y / step) * step);
+        }
     }
 }

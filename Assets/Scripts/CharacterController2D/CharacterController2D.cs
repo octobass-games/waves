@@ -1,4 +1,5 @@
 using Octobass.Waves.Extensions;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,13 +47,16 @@ namespace Octobass.Waves.CharacterController2D
             State.FixedUpdate();
 
             Vector2 displacement = StateContext.MovementIntent.Displacement;
-            Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
+            Vector2 gridDisplacement = displacement.Quantize(CharacterControllerConfig.PixelStep);
+            Vector2 normalizedDisplacement = gridDisplacement == Vector2.zero ? Vector2.zero : gridDisplacement.normalized;
+
+            Debug.Log($"[CharacterController]: Grid displacement - {gridDisplacement.x}, {gridDisplacement.y}");
 
             ContactFilter2D contactFilter = new ContactFilter2D();
             contactFilter.layerMask = CharacterControllerConfig.GroundContactFilter.layerMask | CharacterControllerConfig.RideableContactFilter.layerMask;
 
-            Body.SafeMovePosition(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, contactFilter);
-            Body.SafeMovePosition(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, contactFilter);
+            Body.SafeMovePosition(normalizedDisplacement.ProjectX(), gridDisplacement.x, CharacterControllerConfig.SkinWidth, contactFilter);
+            Body.SafeMovePosition(normalizedDisplacement.ProjectY(), gridDisplacement.y, CharacterControllerConfig.SkinWidth, contactFilter);
 
             CharacterStateId? nextState = State.GetTransition();
 

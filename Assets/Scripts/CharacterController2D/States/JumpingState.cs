@@ -7,19 +7,16 @@ namespace Octobass.Waves.CharacterController2D
     {
         private StateContext StateContext;
 
-        private float InitialVelocity;
         private float Velocity;
 
         public JumpingState(StateContext stateContext)
         {
             StateContext = stateContext;
-
-            InitialVelocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
         }
 
         public void Enter()
         {
-            Velocity = InitialVelocity;
+            Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight); ;
         }
 
         public void Exit()

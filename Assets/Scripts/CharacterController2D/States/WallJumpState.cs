@@ -9,21 +9,18 @@ namespace Octobass.Waves.CharacterController2D
 
         private Vector2 Direction;
         private float WallJumpInputFreezeTimer = 0;
-        private float InitialVelocity;
         private float Velocity;
 
         public WallJumpState(StateContext stateContext)
         {
             StateContext = stateContext;
-
-            InitialVelocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
         }
 
         public void Enter()
         {
             CalculateDirection();
             WallJumpInputFreezeTimer = StateContext.CharacterControllerConfig.WallJumpInputFreezeTime;
-            Velocity = InitialVelocity;
+            Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight); ;
             StateContext.MovementIntent.Displacement = Vector2.zero;
         }
 
