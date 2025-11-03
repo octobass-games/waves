@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5755217b973bccb478bf992beb42e888, type: 3}
   m_Name: PlayerCharacterController2DConfig
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.CharacterController2D.CharacterController2DConfig
-  Speed: 6
-  MaxSpeed: 6
-  MaxFallSpeed: 20
-  Gravity: 20
+  Speed: 9
+  MaxSpeed: 12
+  MaxFallSpeed: 50
+  Gravity: 50
   SkinWidth: 0.03125
   WallJumpSkinWidth: 0.25
   JumpHeight: 7
   CoyoteTime: 500
-  FallingGravityModifier: 6
-  AirMovementSpeedModifier: 0.8
+  FallingGravityModifier: 3
+  AirMovementSpeedModifier: 0.9
   WallJumpInputFreezeTime: 200
   WallSlideSpeed: 3
   WallClimbSpeed: 2

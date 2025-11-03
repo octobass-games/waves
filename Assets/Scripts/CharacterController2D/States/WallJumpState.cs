@@ -10,6 +10,7 @@ namespace Octobass.Waves.CharacterController2D
         private Vector2 Direction;
         private float WallJumpInputFreezeTimer = 0;
         private float Velocity;
+        private bool WallTouched;
 
         public WallJumpState(StateContext stateContext)
         {
@@ -20,8 +21,9 @@ namespace Octobass.Waves.CharacterController2D
         {
             CalculateDirection();
             WallJumpInputFreezeTimer = StateContext.CharacterControllerConfig.WallJumpInputFreezeTime;
-            Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight); ;
+            Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
             StateContext.MovementIntent.Displacement = Vector2.zero;
+            WallTouched = false;
         }
 
         public void Exit()
@@ -31,18 +33,30 @@ namespace Octobass.Waves.CharacterController2D
 
         public void FixedUpdate()
         {
+            if (IsTouchingWall(Direction.ProjectX()))
+            {
+                WallTouched = true;
+            }
+
             if (WallJumpInputFreezeTimer > 0)
             {
                 WallJumpInputFreezeTimer -= Time.fixedDeltaTime;
 
-                StateContext.MovementIntent.Displacement = Direction.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
+                if (!WallTouched)
+                {
+                    StateContext.MovementIntent.Displacement = Direction.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
+                }
+                else
+                {
+                    StateContext.MovementIntent.Displacement.x = 0;
+                }
             }
             else
             {
                 StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
             }
 
-            StateContext.MovementIntent.Displacement += Vector2.up * Velocity * Time.fixedDeltaTime;
+            StateContext.MovementIntent.Displacement.y = (Vector2.up * Velocity * Time.fixedDeltaTime).y;
 
             Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
 
@@ -54,11 +68,11 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            if (Velocity <= 0)
+            if (Velocity <= 0 || IsTouchingRoof())
             {
                 return CharacterStateId.Falling;
             }
-            else if (IsTouchingWall(Direction))
+            else if (IsTouchingWall(Direction) && StateContext.DriverSnapshot.Movement.x == Direction.x)
             {
                 return CharacterStateId.WallSlide;
             }
@@ -84,6 +98,15 @@ namespace Octobass.Waves.CharacterController2D
             RaycastHit2D[] hits = new RaycastHit2D[1];
 
             int count = StateContext.Body.Cast(direction, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
+
+            return count > 0;
+        }
+
+        private bool IsTouchingRoof()
+        {
+            RaycastHit2D[] hits = new RaycastHit2D[1];
+
+            int count = StateContext.Body.Cast(Vector2.up, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
 
             return count > 0;
         }
