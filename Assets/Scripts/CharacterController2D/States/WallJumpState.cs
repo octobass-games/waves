@@ -68,7 +68,7 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            if (Velocity <= 0)
+            if (Velocity <= 0 || IsTouchingRoof())
             {
                 return CharacterStateId.Falling;
             }
@@ -98,6 +98,15 @@ namespace Octobass.Waves.CharacterController2D
             RaycastHit2D[] hits = new RaycastHit2D[1];
 
             int count = StateContext.Body.Cast(direction, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
+
+            return count > 0;
+        }
+
+        private bool IsTouchingRoof()
+        {
+            RaycastHit2D[] hits = new RaycastHit2D[1];
+
+            int count = StateContext.Body.Cast(Vector2.up, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
 
             return count > 0;
         }
