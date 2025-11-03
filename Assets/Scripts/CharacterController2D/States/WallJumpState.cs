@@ -40,7 +40,7 @@ namespace Octobass.Waves.CharacterController2D
 
             if (WallJumpInputFreezeTimer > 0)
             {
-                WallJumpInputFreezeTimer -= Time.fixedDeltaTime;
+                WallJumpInputFreezeTimer -= Time.fixedDeltaTime * 1000;
 
                 if (!WallTouched)
                 {

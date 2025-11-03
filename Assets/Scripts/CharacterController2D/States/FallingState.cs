@@ -44,6 +44,10 @@ namespace Octobass.Waves.CharacterController2D
             {
                 return CharacterStateId.Riding;
             }
+            else if (IsTouchingWall(StateContext.CharacterControllerConfig.WallJumpSkinWidth) && StateContext.DriverSnapshot.JumpPressed)
+            {
+                return CharacterStateId.WallJump;
+            }
             else if (CoyoteTimer > 0 && StateContext.DriverSnapshot.JumpPressed && !StateContext.JumpConsumed)
             {
                 return CharacterStateId.Jumping;
@@ -51,10 +55,6 @@ namespace Octobass.Waves.CharacterController2D
             else if (IsTouchingWall() && StateContext.DriverSnapshot.GrabPressed)
             {
                 return CharacterStateId.WallClimb;
-            }
-            else if (IsTouchingWall(StateContext.CharacterControllerConfig.WallJumpSkinWidth) && StateContext.DriverSnapshot.JumpPressed)
-            {
-                return CharacterStateId.WallJump;
             }
             else if (IsTouchingWall(Vector2.right) && StateContext.DriverSnapshot.Movement.x > 0 || IsTouchingWall(Vector2.left) && StateContext.DriverSnapshot.Movement.x < 0)
             {

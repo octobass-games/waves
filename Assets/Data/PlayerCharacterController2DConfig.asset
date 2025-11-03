@@ -17,14 +17,14 @@ MonoBehaviour:
   MaxFallSpeed: 50
   Gravity: 50
   SkinWidth: 0.03125
-  WallJumpSkinWidth: 0.25
+  WallJumpSkinWidth: 0.4
   JumpHeight: 7
-  CoyoteTime: 500
+  CoyoteTime: 200
   FallingGravityModifier: 3
   AirMovementSpeedModifier: 0.9
-  WallJumpInputFreezeTime: 200
-  WallSlideSpeed: 3
-  WallClimbSpeed: 2
+  WallJumpInputFreezeTime: 150
+  WallSlideSpeed: 10
+  WallClimbSpeed: 6
   GroundContactFilter:
     useTriggers: 0
     useLayerMask: 1
