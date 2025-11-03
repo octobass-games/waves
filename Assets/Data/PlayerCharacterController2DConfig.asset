@@ -14,18 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.CharacterController2D.CharacterController2DConfig
   Speed: 6
   MaxSpeed: 6
-  MaxFallSpeed: 8
-  Gravity: 10
+  MaxFallSpeed: 20
+  Gravity: 20
   SkinWidth: 0.03125
-  WallJumpSkinWidth: 3
+  WallJumpSkinWidth: 0.25
   JumpHeight: 7
   CoyoteTime: 500
-  FallingGravityModifier: 10
-  VariableJumpHeightGravityModifier: 1
+  FallingGravityModifier: 6
   AirMovementSpeedModifier: 0.8
   WallJumpInputFreezeTime: 200
-  WallSlideSpeed: 60
-  WallClimbSpeed: 50
+  WallSlideSpeed: 3
+  WallClimbSpeed: 2
   GroundContactFilter:
     useTriggers: 0
     useLayerMask: 1
@@ -54,4 +53,3 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  PixelStep: 0.03125
