@@ -4,7 +4,7 @@ namespace Octobass.Waves.Extensions
 {
     public static class RigidBody2DExtensions
     {
-        public static void SafeMovePosition(this Rigidbody2D source, Vector2 direction, float distance, float skinWidth, ContactFilter2D contactFilter)
+        public static Vector2 GetSafeDisplacement(this Rigidbody2D source, Vector2 direction, float distance, float skinWidth, ContactFilter2D contactFilter)
         {
             float distanceToMove = Mathf.Abs(distance);
 
@@ -18,7 +18,7 @@ namespace Octobass.Waves.Extensions
                 distanceToMove = Mathf.Min(distanceToMove, hit.distance - skinWidth);
             }
 
-            source.position += distanceToMove * direction.normalized;
+            return distanceToMove * direction.normalized;
         }
     }
 }

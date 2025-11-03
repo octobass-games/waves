@@ -52,8 +52,5 @@ namespace Octobass.Waves.CharacterController2D
 
         [Tooltip("The contact filter to apply when detecting rideable collisions")]
         public ContactFilter2D RideableContactFilter;
-
-        [Tooltip("The size of one pixel in world units")]
-        public float PixelStep;
     }
 }
