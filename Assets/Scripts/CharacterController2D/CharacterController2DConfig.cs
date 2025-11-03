@@ -32,9 +32,6 @@ namespace Octobass.Waves.CharacterController2D
         [Tooltip("The modifier to apply to gravity when falling")]
         public float FallingGravityModifier;
 
-        [Tooltip("The gravity modifier to apply when the jump action is cancelled")]
-        public float VariableJumpHeightGravityModifier;
-
         [Tooltip("The movement speed modifier to apply when moving horizontally through the air")]
         public float AirMovementSpeedModifier;
 
