@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Camera
 {
-    public class RoomEntranceWatcherDirectorCue : MonoBehaviour, IRoomEntranceWatcher
+    public class DirectorCueRoomEntranceWatcher : MonoBehaviour, IRoomEntranceWatcher
     {
         public CameraDirector Director;
         public CameraSetup Setup;
@@ -12,12 +12,12 @@ namespace Octobass.Waves.Camera
         {
             if (Setup == null)
             {
-                Debug.LogWarning($"[DirectorCue]: Camera setup missing from {name}");
+                Debug.LogWarning($"[DirectorCue]: Camera setup not set");
             }
 
             if (Director == null)
             {
-                Debug.LogWarning($"[DirectorCue]: Camera director missing from {name}");
+                Debug.LogWarning($"[DirectorCue]: Camera director not set");
             }
         }
 

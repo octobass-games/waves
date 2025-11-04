@@ -11,7 +11,7 @@ namespace Octobass.Waves.Camera
         {
             if (Camera == null)
             {
-                Debug.LogWarning($"[CameraDirector]: A directable camera is not available for {name}");
+                Debug.LogWarning($"[CameraDirector]: Camera not set");
             }
         }
 
