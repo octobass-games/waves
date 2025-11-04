@@ -6,6 +6,8 @@ namespace Octobass.Waves.CharacterController2D
     {
         private StateContext StateContext;
 
+        private Vector2 Movement;
+
         public GroundedState(StateContext stateContext)
         {
             StateContext = stateContext;
@@ -22,6 +24,8 @@ namespace Octobass.Waves.CharacterController2D
         public void FixedUpdate()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
+            
+            Movement = StateContext.DriverSnapshot.Movement * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
         }
 
         public CharacterStateId? GetTransition()
@@ -51,6 +55,9 @@ namespace Octobass.Waves.CharacterController2D
         public void Update()
         {
             StateContext.JumpConsumed = false;
+
+            StateContext.Animator.SetBool("HasXVelocity", Movement.x != 0);
+            StateContext.SpriteRenderer.flipX = Movement.x < 0;
         }
 
         private bool IsGrounded()

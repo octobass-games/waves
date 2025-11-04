@@ -20,7 +20,7 @@ namespace Octobass.Waves.CharacterController2D
 
         void Awake()
         {
-            StateContext = new StateContext(Body, Animator, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig);
+            StateContext = new StateContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig);
 
             StateRegistry = new()
             {
@@ -49,9 +49,6 @@ namespace Octobass.Waves.CharacterController2D
 
             Vector2 displacement = StateContext.MovementIntent.Displacement;
             Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
-
-            Animator.SetBool("HasXVelocity", normalizedDisplacement.x != 0);
-            SpriteRenderer.flipX = normalizedDisplacement.x < 0;
 
             ContactFilter2D contactFilter = new()
             {
