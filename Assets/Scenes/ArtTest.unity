@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6462682}
   - component: {fileID: 6462683}
+  - component: {fileID: 6462684}
   m_Layer: 0
   m_Name: e4
   m_TagString: Untagged
@@ -209,6 +210,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6462684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 31
 --- !u!1 &9907487
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9907488}
   - component: {fileID: 9907489}
+  - component: {fileID: 9907490}
   m_Layer: 0
   m_Name: d5
   m_TagString: Untagged
@@ -299,6 +314,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &9907490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9907487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 22
 --- !u!1 &32127342
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32127343}
   - component: {fileID: 32127344}
+  - component: {fileID: 32127345}
   m_Layer: 0
   m_Name: f3
   m_TagString: Untagged
@@ -389,6 +418,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &32127345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32127342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 40
 --- !u!1 &35661421
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35661422}
   - component: {fileID: 35661423}
+  - component: {fileID: 35661424}
   m_Layer: 0
   m_Name: c10
   m_TagString: Untagged
@@ -479,6 +522,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &35661424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35661421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 16
 --- !u!1 &73570820
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 73570821}
   - component: {fileID: 73570822}
+  - component: {fileID: 73570823}
   m_Layer: 0
   m_Name: d8
   m_TagString: Untagged
@@ -569,6 +626,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &73570823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73570820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 25
 --- !u!1 &88161485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91746805}
   - component: {fileID: 91746806}
+  - component: {fileID: 91746807}
   m_Layer: 0
   m_Name: e1
   m_TagString: Untagged
@@ -1525,6 +1596,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &91746807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91746804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 28
 --- !u!1 &128973099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128973100}
   - component: {fileID: 128973101}
+  - component: {fileID: 128973102}
   m_Layer: 0
   m_Name: a9
   m_TagString: Untagged
@@ -1615,6 +1700,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &128973102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128973099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 5
 --- !u!1 &168533206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168533207}
   - component: {fileID: 168533208}
+  - component: {fileID: 168533209}
   m_Layer: 0
   m_Name: c8
   m_TagString: Untagged
@@ -1705,6 +1804,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &168533209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168533206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 14
 --- !u!1 &170775641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170775642}
   - component: {fileID: 170775643}
+  - component: {fileID: 170775644}
   m_Layer: 0
   m_Name: c12
   m_TagString: Untagged
@@ -1795,6 +1908,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &170775644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170775641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 18
 --- !u!1 &271922611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +1931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271922612}
   - component: {fileID: 271922613}
+  - component: {fileID: 271922614}
   m_Layer: 0
   m_Name: d4
   m_TagString: Untagged
@@ -1885,6 +2012,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &271922614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271922611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 21
 --- !u!1 &300360151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,6 +2035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300360152}
   - component: {fileID: 300360153}
+  - component: {fileID: 300360154}
   m_Layer: 0
   m_Name: d12
   m_TagString: Untagged
@@ -1975,6 +2116,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &300360154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300360151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 27
 --- !u!1 &383866023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +2139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383866024}
   - component: {fileID: 383866025}
+  - component: {fileID: 383866026}
   m_Layer: 0
   m_Name: d6
   m_TagString: Untagged
@@ -2065,6 +2220,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &383866026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383866023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 23
 --- !u!1 &409568033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 409568034}
   - component: {fileID: 409568035}
+  - component: {fileID: 409568036}
   m_Layer: 0
   m_Name: e5
   m_TagString: Untagged
@@ -2155,6 +2324,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &409568036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409568033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 32
 --- !u!1 &470187071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,6 +2392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544833025}
   - component: {fileID: 544833026}
+  - component: {fileID: 544833027}
   m_Layer: 0
   m_Name: b9
   m_TagString: Untagged
@@ -2290,6 +2473,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &544833027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544833024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 9
 --- !u!1 &547844376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,6 +2496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 547844377}
   - component: {fileID: 547844378}
+  - component: {fileID: 547844379}
   m_Layer: 0
   m_Name: a4
   m_TagString: Untagged
@@ -2380,6 +2577,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &547844379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547844376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 0
 --- !u!1 &597416891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,6 +2714,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &682498893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 682498894}
+  - component: {fileID: 682498895}
+  m_Layer: 0
+  m_Name: BigMask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &682498894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682498893}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.94, y: 0.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7878350320144541069}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!331 &682498895
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682498893}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -7014269608861205233, guid: 794b4d44674fd0a4da17750c93ed0d92, type: 3}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
+  m_MaskSource: 0
 --- !u!1 &779291121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,6 +2814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779291122}
   - component: {fileID: 779291123}
+  - component: {fileID: 779291124}
   m_Layer: 0
   m_Name: b6
   m_TagString: Untagged
@@ -2594,6 +2895,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &779291124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779291121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 7
 --- !u!1 &791922115
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,6 +2918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791922116}
   - component: {fileID: 791922117}
+  - component: {fileID: 791922118}
   m_Layer: 0
   m_Name: d3
   m_TagString: Untagged
@@ -2684,6 +2999,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &791922118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791922115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 20
 --- !u!1 &824762723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,6 +3022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824762724}
   - component: {fileID: 824762725}
+  - component: {fileID: 824762726}
   m_Layer: 0
   m_Name: e9
   m_TagString: Untagged
@@ -2774,6 +3103,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &824762726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824762723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 36
 --- !u!1 &840320527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +3126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 840320528}
   - component: {fileID: 840320529}
+  - component: {fileID: 840320530}
   m_Layer: 0
   m_Name: g5
   m_TagString: Untagged
@@ -2864,6 +3207,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &840320530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840320527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 45
 --- !u!1 &842883033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,6 +3265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864874499}
   - component: {fileID: 864874500}
+  - component: {fileID: 864874501}
   m_Layer: 0
   m_Name: c11
   m_TagString: Untagged
@@ -2989,6 +3346,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &864874501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864874498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 17
 --- !u!1 &870265985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,6 +3369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 870265986}
   - component: {fileID: 870265987}
+  - component: {fileID: 870265988}
   m_Layer: 0
   m_Name: c4
   m_TagString: Untagged
@@ -3079,6 +3450,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &870265988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870265985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 11
 --- !u!1 &871098606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,6 +3473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871098607}
   - component: {fileID: 871098608}
+  - component: {fileID: 871098609}
   m_Layer: 0
   m_Name: d2
   m_TagString: Untagged
@@ -3169,6 +3554,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &871098609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871098606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 19
 --- !u!1 &885710542
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,6 +3609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921219206}
   - component: {fileID: 921219207}
+  - component: {fileID: 921219208}
   m_Layer: 0
   m_Name: h7
   m_TagString: Untagged
@@ -3291,6 +3690,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &921219208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921219205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 47
 --- !u!1 &936158182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +3907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980205592}
   - component: {fileID: 980205593}
+  - component: {fileID: 980205594}
   m_Layer: 0
   m_Name: g4
   m_TagString: Untagged
@@ -3575,6 +3988,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &980205594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980205591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 44
 --- !u!1 &1003391766
 GameObject:
   m_ObjectHideFlags: 0
@@ -3585,6 +4011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003391767}
   - component: {fileID: 1003391768}
+  - component: {fileID: 1003391769}
   m_Layer: 0
   m_Name: a5
   m_TagString: Untagged
@@ -3665,6 +4092,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1003391769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003391766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 1
 --- !u!1 &1042297645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,6 +4115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1042297646}
   - component: {fileID: 1042297647}
+  - component: {fileID: 1042297648}
   m_Layer: 0
   m_Name: d7
   m_TagString: Untagged
@@ -3755,6 +4196,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1042297648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042297645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 24
 --- !u!1 &1129338102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +4219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1129338103}
   - component: {fileID: 1129338104}
+  - component: {fileID: 1129338105}
   m_Layer: 0
   m_Name: a6
   m_TagString: Untagged
@@ -3845,6 +4300,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1129338105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129338102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 2
 --- !u!1 &1139000210
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,6 +4323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1139000211}
   - component: {fileID: 1139000212}
+  - component: {fileID: 1139000213}
   m_Layer: 0
   m_Name: e7
   m_TagString: Untagged
@@ -3935,6 +4404,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1139000213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139000210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 34
 --- !u!1 &1200094377
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,6 +4427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200094378}
   - component: {fileID: 1200094379}
+  - component: {fileID: 1200094380}
   m_Layer: 0
   m_Name: a7
   m_TagString: Untagged
@@ -4025,6 +4508,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1200094380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200094377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 3
 --- !u!1 &1240671047
 GameObject:
   m_ObjectHideFlags: 0
@@ -4035,6 +4531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240671048}
   - component: {fileID: 1240671049}
+  - component: {fileID: 1240671050}
   m_Layer: 0
   m_Name: g3
   m_TagString: Untagged
@@ -4115,6 +4612,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1240671050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240671047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 43
 --- !u!1 &1279548674
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,6 +4675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1308324720}
   - component: {fileID: 1308324721}
+  - component: {fileID: 1308324722}
   m_Layer: 0
   m_Name: d9
   m_TagString: Untagged
@@ -4245,6 +4756,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1308324722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308324719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 26
 --- !u!1 &1364394100
 GameObject:
   m_ObjectHideFlags: 0
@@ -4255,6 +4779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364394101}
   - component: {fileID: 1364394102}
+  - component: {fileID: 1364394103}
   m_Layer: 0
   m_Name: e2
   m_TagString: Untagged
@@ -4335,6 +4860,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1364394103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364394100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 29
 --- !u!1 &1372834575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4345,6 +4883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372834576}
   - component: {fileID: 1372834577}
+  - component: {fileID: 1372834578}
   m_Layer: 0
   m_Name: e12
   m_TagString: Untagged
@@ -4425,6 +4964,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1372834578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372834575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 39
 --- !u!1 &1474829391
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,6 +5172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564487701}
   - component: {fileID: 1564487702}
+  - component: {fileID: 1564487703}
   m_Layer: 0
   m_Name: e3
   m_TagString: Untagged
@@ -4700,6 +5253,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1564487703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564487700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 30
 --- !u!1 &1566193322
 GameObject:
   m_ObjectHideFlags: 0
@@ -4710,6 +5276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566193323}
   - component: {fileID: 1566193324}
+  - component: {fileID: 1566193325}
   m_Layer: 0
   m_Name: f5
   m_TagString: Untagged
@@ -4790,6 +5357,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1566193325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566193322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 41
 --- !u!1 &1573074828
 GameObject:
   m_ObjectHideFlags: 0
@@ -4800,6 +5380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1573074829}
   - component: {fileID: 1573074830}
+  - component: {fileID: 1573074831}
   m_Layer: 0
   m_Name: c5
   m_TagString: Untagged
@@ -4880,6 +5461,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1573074831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573074828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 12
 --- !u!1 &1576805668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,6 +5484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1576805669}
   - component: {fileID: 1576805670}
+  - component: {fileID: 1576805671}
   m_Layer: 0
   m_Name: f7
   m_TagString: Untagged
@@ -4970,6 +5565,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1576805671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576805668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 42
 --- !u!1 &1590915445
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,6 +5588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590915446}
   - component: {fileID: 1590915447}
+  - component: {fileID: 1590915448}
   m_Layer: 0
   m_Name: c6
   m_TagString: Untagged
@@ -5060,6 +5669,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1590915448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590915445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 13
 --- !u!1 &1593400393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,6 +5692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1593400394}
   - component: {fileID: 1593400395}
+  - component: {fileID: 1593400396}
   m_Layer: 0
   m_Name: g7
   m_TagString: Untagged
@@ -5150,6 +5773,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1593400396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593400393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 46
 --- !u!1 &1614463817
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,6 +5828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633256816}
   - component: {fileID: 1633256817}
+  - component: {fileID: 1633256818}
   m_Layer: 0
   m_Name: e10
   m_TagString: Untagged
@@ -5272,6 +5909,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1633256818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633256815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 37
 --- !u!1 &1690456788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5282,6 +5932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690456789}
   - component: {fileID: 1690456790}
+  - component: {fileID: 1690456791}
   m_Layer: 0
   m_Name: b8
   m_TagString: Untagged
@@ -5362,6 +6013,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1690456791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690456788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 8
 --- !u!1 &1701114624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5372,6 +6036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701114625}
   - component: {fileID: 1701114626}
+  - component: {fileID: 1701114627}
   m_Layer: 0
   m_Name: c3
   m_TagString: Untagged
@@ -5452,6 +6117,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1701114627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701114624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 10
 --- !u!1 &1752663382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5625,6 +6303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1825375181}
   - component: {fileID: 1825375182}
+  - component: {fileID: 1825375183}
   m_Layer: 0
   m_Name: b4
   m_TagString: Untagged
@@ -5705,6 +6384,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1825375183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825375180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 6
 --- !u!1 &1840906516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5715,6 +6407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1840906517}
   - component: {fileID: 1840906518}
+  - component: {fileID: 1840906519}
   m_Layer: 0
   m_Name: e11
   m_TagString: Untagged
@@ -5795,6 +6488,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1840906519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840906516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 38
 --- !u!1 &1849447548
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,6 +6511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849447549}
   - component: {fileID: 1849447550}
+  - component: {fileID: 1849447551}
   m_Layer: 0
   m_Name: e6
   m_TagString: Untagged
@@ -5885,6 +6592,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1849447551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849447548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 33
 --- !u!1 &1851789919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5895,6 +6615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851789920}
   - component: {fileID: 1851789921}
+  - component: {fileID: 1851789922}
   m_Layer: 0
   m_Name: c9
   m_TagString: Untagged
@@ -5975,6 +6696,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1851789922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851789919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 15
 --- !u!1 &1881697885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,6 +6759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896697849}
   - component: {fileID: 1896697850}
+  - component: {fileID: 1896697851}
   m_Layer: 0
   m_Name: a8
   m_TagString: Untagged
@@ -6105,6 +6840,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1896697851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896697848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 4
 --- !u!1 &2025326343
 GameObject:
   m_ObjectHideFlags: 0
@@ -6130,7 +6878,7 @@ Transform:
   m_GameObject: {fileID: 2025326343}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.019, y: 0.18, z: 0}
+  m_LocalPosition: {x: -0.019, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6154,6 +6902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129453051}
   - component: {fileID: 2129453052}
+  - component: {fileID: 2129453053}
   m_Layer: 0
   m_Name: e8
   m_TagString: Untagged
@@ -6234,6 +6983,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2129453053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129453050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+  Id: 35
 --- !u!1 &2133496157
 GameObject:
   m_ObjectHideFlags: 0
@@ -6432,6 +7194,7 @@ Transform:
   m_Children:
   - {fileID: 4222227290596771037}
   - {fileID: 2025326344}
+  - {fileID: 682498894}
   m_Father: {fileID: 967600492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8506083379362660911
