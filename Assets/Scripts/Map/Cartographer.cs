@@ -1,12 +1,19 @@
 using Octobass.Waves.Room;
+using Octobass.Waves.Save;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Octobass.Waves.Map
 {
-    public class Cartographer : MonoBehaviour
+    public class Cartographer : MonoBehaviour, ISavable
     {
-        private List<RoomInstance> Rooms = new();
+        private const string SaveKey = "cartographer";
+
+        private List<RoomInstance> Rooms = new()
+        {
+            new RoomInstance() { Id = RoomId.A4, State = RoomState.Discovered },
+        };
 
         public List<RoomInstance> GetDiscoveredRooms()
         {
@@ -49,6 +56,19 @@ namespace Octobass.Waves.Map
         private List<RoomInstance> FindRoomsByState(RoomState state)
         {
             return Rooms.FindAll(room => state == room.State);
+        }
+
+        public void Save(SaveData saveData)
+        {
+            saveData.Add(SaveKey, Rooms);
+        }
+
+        public void Load(SaveData saveData)
+        {
+            foreach (RoomInstance room in saveData.Load<List<RoomInstance>>(SaveKey))
+            {
+                Debug.Log($"Room: {room.Id}, {room.State}");
+            }
         }
     }
 }

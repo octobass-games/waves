@@ -45,16 +45,6 @@ namespace Octobass.Waves.Save
 
         private void OnDisable()
         {
-            Unregister();
-        }
-
-        void OnDestroy()
-        {
-            Unregister();
-        }
-
-        private void Unregister()
-        {
             SaveManager?.Unregister(this);
         }
     }

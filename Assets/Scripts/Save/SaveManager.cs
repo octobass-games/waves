@@ -8,7 +8,7 @@ namespace Octobass.Waves.Save
     public class SaveManager : MonoBehaviour
     {
         [Tooltip("The name of the JSON file to save to (excluding the .json file extension) when not playing in a browser")]
-        public string SaveFileName;
+        public string SaveFileName = "save-data";
 
         [Tooltip("The name of the property under which to save to when playing in a browser")]
         public string SaveDataKey = "save-data";
@@ -29,6 +29,11 @@ namespace Octobass.Waves.Save
             {
                 Debug.LogWarning("[SaveManager]: Attempting to register self with ServiceLocator but instance not available");
             }
+        }
+
+        void Start()
+        {
+            Load();
         }
 
         public void Register(Saver saver)
@@ -73,11 +78,9 @@ namespace Octobass.Waves.Save
             {
                 var data = ReadData();
 
-                List<ISavable> savables = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None).OfType<ISavable>().ToList();
-
-                foreach (ISavable savable in savables)
+                foreach (Saver saver in Savers)
                 {
-                    savable.Load(data);
+                    saver.Load(data);
                 }
             }
         }
