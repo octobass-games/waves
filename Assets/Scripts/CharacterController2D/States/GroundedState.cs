@@ -56,6 +56,7 @@ namespace Octobass.Waves.CharacterController2D
         {
             StateContext.JumpConsumed = false;
 
+            StateContext.Animator.SetBool("IsGrounded", true);
             StateContext.Animator.SetBool("HasXVelocity", Movement.x != 0);
             StateContext.SpriteRenderer.flipX = Movement.x < 0;
         }

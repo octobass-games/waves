@@ -59,6 +59,7 @@ namespace Octobass.Waves.CharacterController2D
         public void Update()
         {
             StateContext.JumpConsumed = true;
+            StateContext.Animator.SetBool("IsGrounded", false);
         }
 
         private bool IsTouchingWall(float distance = 0f)
