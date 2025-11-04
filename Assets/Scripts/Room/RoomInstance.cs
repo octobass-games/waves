@@ -1,6 +1,6 @@
 namespace Octobass.Waves.Room
 {
-    public class Room
+    public class RoomInstance
     {
         public RoomId Id;
         public RoomState State;
