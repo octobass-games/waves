@@ -33,7 +33,7 @@ namespace Octobass.Waves.Save
 
         void Start()
         {
-            Load();
+            Save();
         }
 
         public void Register(Saver saver)

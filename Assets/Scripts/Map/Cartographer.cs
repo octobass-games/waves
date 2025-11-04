@@ -8,7 +8,7 @@ namespace Octobass.Waves.Map
 {
     public class Cartographer : MonoBehaviour, ISavable
     {
-        private const string SaveKey = "cartographer";
+        private const string SaveKey = "cartographer-rooms";
 
         private List<RoomInstance> Rooms = new()
         {
