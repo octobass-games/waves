@@ -10,6 +10,7 @@ namespace Octobass.Waves.CharacterController2D
     {
         public Rigidbody2D Body;
         public Animator Animator;
+        public SpriteRenderer SpriteRenderer;
         public CharacterController2DDriver Driver;
         public CharacterController2DConfig CharacterControllerConfig;
 
@@ -48,6 +49,9 @@ namespace Octobass.Waves.CharacterController2D
 
             Vector2 displacement = StateContext.MovementIntent.Displacement;
             Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
+
+            Animator.SetBool("HasXVelocity", normalizedDisplacement.x != 0);
+            SpriteRenderer.flipX = normalizedDisplacement.x < 0;
 
             ContactFilter2D contactFilter = new()
             {
