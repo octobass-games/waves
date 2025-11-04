@@ -1,6 +1,5 @@
 using Octobass.Waves.Room;
 using Octobass.Waves.Save;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,12 +7,13 @@ namespace Octobass.Waves.Map
 {
     public class Cartographer : MonoBehaviour, ISavable
     {
-        private const string SaveKey = "cartographer-rooms";
+        [SerializeField]
+        private List<RoomInstance> Rooms;
 
-        private List<RoomInstance> Rooms = new()
-        {
-            new RoomInstance() { Id = RoomId.A4, State = RoomState.Discovered },
-        };
+        private const string RoomsSaveKey = "cartographer-rooms";
+        private const string ActiveRoomSaveKey = "cartographer-active-room";
+
+        private RoomId ActiveRoomId = RoomId.E1;
 
         public List<RoomInstance> GetDiscoveredRooms()
         {
@@ -27,7 +27,7 @@ namespace Octobass.Waves.Map
 
         public void MarkRoomVisited(RoomId roomId)
         {
-            RoomInstance room = Rooms.Find(room => room.Id == roomId);
+            RoomInstance room = FindRoomById(roomId);
 
             if (room != null)
             {
@@ -41,7 +41,7 @@ namespace Octobass.Waves.Map
 
         public void MarkRoomDiscovered(RoomId roomId)
         {
-            RoomInstance room = Rooms.Find(room => room.Id == roomId);
+            RoomInstance room = FindRoomById(roomId);
 
             if (room != null && room.State != RoomState.Visited)
             {
@@ -53,22 +53,31 @@ namespace Octobass.Waves.Map
             }
         }
 
+        public void SetActiveRoom(RoomId roomId)
+        {
+            ActiveRoomId = roomId;
+        }
+
+        public void Save(SaveData saveData)
+        {
+            saveData.Add(RoomsSaveKey, Rooms);
+            saveData.Add(ActiveRoomSaveKey, ActiveRoomId);
+        }
+
+        public void Load(SaveData saveData)
+        {
+            Rooms = saveData.Load<List<RoomInstance>>(RoomsSaveKey);
+            ActiveRoomId = saveData.Load<RoomId>(ActiveRoomSaveKey);
+        }
+
         private List<RoomInstance> FindRoomsByState(RoomState state)
         {
             return Rooms.FindAll(room => state == room.State);
         }
 
-        public void Save(SaveData saveData)
+        private RoomInstance FindRoomById(RoomId roomId)
         {
-            saveData.Add(SaveKey, Rooms);
-        }
-
-        public void Load(SaveData saveData)
-        {
-            foreach (RoomInstance room in saveData.Load<List<RoomInstance>>(SaveKey))
-            {
-                Debug.Log($"Room: {room.Id}, {room.State}");
-            }
+            return Rooms.Find(room => roomId == room.Id);
         }
     }
 }
