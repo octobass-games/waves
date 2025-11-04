@@ -6,21 +6,21 @@ namespace Octobass.Waves.Map
 {
     public class Cartographer : MonoBehaviour
     {
-        private List<Room.Room> Rooms = new();
+        private List<Room.RoomInstance> Rooms = new();
 
-        public List<Room.Room> GetDiscoveredRooms()
+        public List<Room.RoomInstance> GetDiscoveredRooms()
         {
             return FindRoomsByState(RoomState.Discovered);
         }
 
-        public List<Room.Room> GetVisitedRooms()
+        public List<Room.RoomInstance> GetVisitedRooms()
         {
             return FindRoomsByState(RoomState.Visited);
         }
 
         public void MarkRoomVisited(RoomId roomId)
         {
-            Room.Room room = Rooms.Find(room => room.Id == roomId);
+            Room.RoomInstance room = Rooms.Find(room => room.Id == roomId);
 
             if (room != null)
             {
@@ -34,7 +34,7 @@ namespace Octobass.Waves.Map
 
         public void MarkRoomDiscovered(RoomId roomId)
         {
-            Room.Room room = Rooms.Find(room => room.Id == roomId);
+            Room.RoomInstance room = Rooms.Find(room => room.Id == roomId);
 
             if (room != null && room.State != RoomState.Visited)
             {
@@ -46,7 +46,7 @@ namespace Octobass.Waves.Map
             }
         }
 
-        private List<Room.Room> FindRoomsByState(RoomState state)
+        private List<Room.RoomInstance> FindRoomsByState(RoomState state)
         {
             return Rooms.FindAll(room => state == room.State);
         }
