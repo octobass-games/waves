@@ -3874,6 +3874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 967600492}
+  - component: {fileID: 967600493}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -3897,6 +3898,68 @@ Transform:
   - {fileID: 7878350320144541069}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967600493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967600491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d29ceea822bc743be0c88967eaf3a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRenderer
+  Cartographer: {fileID: 0}
+  RoomRenderers:
+  - {fileID: 547844379}
+  - {fileID: 1003391769}
+  - {fileID: 1129338105}
+  - {fileID: 1200094380}
+  - {fileID: 1896697851}
+  - {fileID: 128973102}
+  - {fileID: 1825375183}
+  - {fileID: 779291124}
+  - {fileID: 1690456791}
+  - {fileID: 544833027}
+  - {fileID: 1701114627}
+  - {fileID: 870265988}
+  - {fileID: 1573074831}
+  - {fileID: 1590915448}
+  - {fileID: 168533209}
+  - {fileID: 1851789922}
+  - {fileID: 35661424}
+  - {fileID: 864874501}
+  - {fileID: 170775644}
+  - {fileID: 871098609}
+  - {fileID: 791922118}
+  - {fileID: 271922614}
+  - {fileID: 9907490}
+  - {fileID: 383866026}
+  - {fileID: 1042297648}
+  - {fileID: 73570823}
+  - {fileID: 1308324722}
+  - {fileID: 300360154}
+  - {fileID: 91746807}
+  - {fileID: 1364394103}
+  - {fileID: 1564487703}
+  - {fileID: 6462684}
+  - {fileID: 409568036}
+  - {fileID: 1849447551}
+  - {fileID: 1139000213}
+  - {fileID: 2129453053}
+  - {fileID: 824762726}
+  - {fileID: 1633256818}
+  - {fileID: 1840906519}
+  - {fileID: 1372834578}
+  - {fileID: 32127345}
+  - {fileID: 1566193325}
+  - {fileID: 1576805671}
+  - {fileID: 1240671050}
+  - {fileID: 980205594}
+  - {fileID: 840320530}
+  - {fileID: 1593400396}
+  - {fileID: 921219208}
 --- !u!1 &980205591
 GameObject:
   m_ObjectHideFlags: 0
