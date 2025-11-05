@@ -1,4 +1,5 @@
 using Octobass.Waves.Room;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Octobass.Waves.Camera
@@ -6,13 +7,13 @@ namespace Octobass.Waves.Camera
     public class DirectorCueRoomEntranceWatcher : MonoBehaviour, IRoomEntranceWatcher
     {
         public CameraDirector Director;
-        public CameraSetup Setup;
+        public CinemachineCamera Camera;
 
         void Awake()
         {
-            if (Setup == null)
+            if (Camera == null)
             {
-                Debug.LogWarning($"[DirectorCue]: Camera setup not set");
+                Debug.LogWarning($"[DirectorCue]: Camera not set");
             }
 
             if (Director == null)
@@ -23,7 +24,7 @@ namespace Octobass.Waves.Camera
 
         public void OnEntrance()
         {
-            Director.SetupCamera(Setup);
+            Director.SwitchCamera(Camera);
         }
     }
 }

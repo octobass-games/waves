@@ -15,13 +15,11 @@ namespace Octobass.Waves.Camera
             }
         }
 
-        public void SetupCamera(CameraSetup setup)
+        public void SwitchCamera(CinemachineCamera camera)
         {
-            Debug.Log($"[CameraDirector]: Focusing camera to look at {setup.Anchor.name}");
-
-            Camera.GetComponent<CinemachineConfiner2D>().BoundingShape2D = setup.Bounds;
-            Camera.Follow = setup.Anchor;
-            Camera.LookAt = setup.Anchor;
+            Camera.gameObject.SetActive(false);
+            Camera = camera;
+            Camera.gameObject.SetActive(true);
         }
     }
 }

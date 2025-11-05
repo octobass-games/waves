@@ -26,7 +26,7 @@ namespace Octobass.Waves.Map
         {
             PlayerInput = new PlayerInput();
             PlayerInput.Enable();
-
+            
             MiniMapCentre = MiniMapRows.transform.position;
         }
 
