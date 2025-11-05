@@ -19,7 +19,7 @@ namespace Octobass.Waves.Map
         private Vector3 MiniMapCentre;
         private PlayerInput PlayerInput;
 
-        private List<RoomInstance> Rooms;
+        private List<RoomInstance> Rooms = new();
         private RoomId ActiveRoom;
 
         void Awake()
