@@ -1,5 +1,8 @@
+using System;
+
 namespace Octobass.Waves.Room
 {
+    [Serializable]
     public enum RoomId
     {
                     A4, A5, A6, A7, A8, A9,

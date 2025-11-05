@@ -3619,7 +3619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d29ceea822bc743be0c88967eaf3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRenderer
-  Cartographer: {fileID: 0}
   RoomRenderers:
   - {fileID: 818693600930152474}
   - {fileID: 6779986797203477347}
@@ -3670,6 +3669,7 @@ MonoBehaviour:
   - {fileID: 5059578370163709142}
   - {fileID: 6302263218085294782}
   miniMode: 1
+  MiniMapRows: {fileID: 7797686477883764163}
   MiniMap: {fileID: 2513154379063299626}
   BigMap: {fileID: 478428931246542604}
 --- !u!1 &5804280087519057116

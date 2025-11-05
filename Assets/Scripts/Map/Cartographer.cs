@@ -7,6 +7,8 @@ namespace Octobass.Waves.Map
 {
     public class Cartographer : MonoBehaviour, ISavable
     {
+        public MapRenderer MapRenderer;
+
         [SerializeField]
         private List<RoomInstance> Rooms;
 
@@ -15,14 +17,12 @@ namespace Octobass.Waves.Map
 
         private RoomId ActiveRoomId = RoomId.E1;
 
-        public List<RoomInstance> GetDiscoveredRooms()
+        void Awake()
         {
-            return FindRoomsByState(RoomState.Discovered);
-        }
-
-        public List<RoomInstance> GetVisitedRooms()
-        {
-            return FindRoomsByState(RoomState.Visited);
+            if (MapRenderer == null)
+            {
+                Debug.Log("[Cartographer]: MapRenderer not set");
+            }
         }
 
         public void MarkRoomVisited(RoomId roomId)
