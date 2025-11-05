@@ -4,7 +4,7 @@ namespace Octobass.Waves.CharacterController2D
 {
     public class PlayerInputCharacterController2DDriver : CharacterController2DDriver
     {
-        public PlayerInput PlayerInput;
+        private PlayerInput PlayerInput;
 
         private bool JumpPressed;
         private bool JumpReleased;
