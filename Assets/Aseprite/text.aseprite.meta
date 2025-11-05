@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fc88703a3f4f7904db8ea61827cb16f5
+guid: 9ab75d611e6254840a9076c4b3453acf
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -87,7 +87,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   asepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638978691827441588
+  platformSettingsDirtyTick: 638979395323079401
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -127,19 +127,41 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: main-menu
+  - name: text
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 1.5075758, y: -23.9375}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
+      x: 4
+      y: 4
+      width: 132
+      height: 16
+    spriteID: 528b7ff37f986404dbcf938fc304b4b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData:
+  - name: new-game
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
       x: 0
-      y: 0
-      width: 252
-      height: 222
-    spriteID: d4438a72330825c47a0e63842f5fe09e
+      y: 101
+      width: 94
+      height: 9
+    spriteID: cced96a60f8a5c041a328e676afa9520
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,30 +170,176 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  spriteSheetImportData: []
+  - name: load
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 85
+      width: 39
+      height: 9
+    spriteID: ef08ef38f3ea65f4197285781fae4e6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: credits
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 72
+      width: 66
+      height: 9
+    spriteID: 5b0249c4390b4ba48b9a767019669209
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: controls
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 58
+      width: 82
+      height: 9
+    spriteID: 09c8c716031a44247899b8d3f0485dce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: save
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 43
+      width: 41
+      height: 9
+    spriteID: 523a034fc2962884688af82fe920a615
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: close
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 29
+      width: 46
+      height: 9
+    spriteID: a799c5819cddf994886a85fa0235e41f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: quit
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1
+      y: 14
+      width: 40
+      height: 9
+    spriteID: 3d0b44d843c16a64d824f79fcdbdf9d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: pause
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2
+      y: 0
+      width: 53
+      height: 9
+    spriteID: 8bc77cf1dc7fa944890485ff5e567285
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 483539305
+      value0: 3423761293
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: main-menu
+    name: text
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: main-menu
+    - name: text
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 252
-        height: 222
-      spriteId: d4438a72330825c47a0e63842f5fe09e
+        x: 1
+        y: 267
+        width: 93
+        height: 110
+      spriteId: 528b7ff37f986404dbcf938fc304b4b8
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -205,5 +373,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 252, y: 222}
-  previousTextureSize: {x: 256, y: 256}
+  canvasSize: {x: 400, y: 400}
+  previousTextureSize: {x: 128, y: 128}
