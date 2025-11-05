@@ -203,10 +203,60 @@ MonoBehaviour:
   - {fileID: 7594330359890170951}
   - {fileID: 5074240517299149320}
   - {fileID: 9020458013270159322}
+  BigMapRenderers:
+  - {fileID: 3381354018739390763}
+  - {fileID: 7651533332011981806}
+  - {fileID: 4560779808780652581}
+  - {fileID: 1803416753901640115}
+  - {fileID: 5053535600422185867}
+  - {fileID: 2134737737460508136}
+  - {fileID: 202188144911052740}
+  - {fileID: 2084495734838869844}
+  - {fileID: 3248162088466203402}
+  - {fileID: 8363558134730721982}
+  - {fileID: 4694948171487955124}
+  - {fileID: 1645112281109365384}
+  - {fileID: 3638036157812802922}
+  - {fileID: 3329862249168758654}
+  - {fileID: 8417270885387690603}
+  - {fileID: 4712211201335545007}
+  - {fileID: 5197076341401282613}
+  - {fileID: 5199244230689357044}
+  - {fileID: 8525345262897054424}
+  - {fileID: 7214711466112078004}
+  - {fileID: 7111713688692636800}
+  - {fileID: 4766779667031958632}
+  - {fileID: 2372884657605487361}
+  - {fileID: 5072358118669849487}
+  - {fileID: 8994445515653592229}
+  - {fileID: 5564381916461181890}
+  - {fileID: 6661158929786727450}
+  - {fileID: 3569444942190376650}
+  - {fileID: 2558668693760731174}
+  - {fileID: 7712909600597888321}
+  - {fileID: 2397350568940831333}
+  - {fileID: 4517040933161228757}
+  - {fileID: 7261941150900830269}
+  - {fileID: 5411440524861755574}
+  - {fileID: 8891087835548157033}
+  - {fileID: 6088053054505936051}
+  - {fileID: 8300808954892244091}
+  - {fileID: 1429267860523102711}
+  - {fileID: 5341935757917264465}
+  - {fileID: 8796734183687213246}
+  - {fileID: 8901767247070377184}
+  - {fileID: 3132137251075958157}
+  - {fileID: 4757363276836186253}
+  - {fileID: 4363382672070916818}
+  - {fileID: 7310690679460538546}
+  - {fileID: 754937450555402860}
+  - {fileID: 2699127842595873827}
+  - {fileID: 2175645852167737841}
   miniMode: 1
   MiniMapRows: {fileID: 3663584914955161552}
   MiniMap: {fileID: 6365271757446011794}
-  BigMap: {fileID: 0}
+  MiniMask: {fileID: 5114550657773534907}
+  BigMap: {fileID: 7761655543936081119}
 --- !u!1 &4949011625248796602
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,11 +614,539 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+--- !u!114 &202188144911052740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 118272298716023199, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &754937450555402860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 653147908827597879, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &1429267860523102711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1206866325785778092, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &1645112281109365384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1566968909614228691, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &1803416753901640115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1904289229781909480, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &2084495734838869844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2272062572383967503, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &2134737737460508136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2218723918175224755, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &2175645852167737841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2115305807159080874, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &2372884657605487361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2559257395323178330, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &2397350568940831333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2463320186347299902, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &2558668693760731174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2371240390369889917, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &2699127842595873827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2747014853133599352, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &3132137251075958157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2890738324235715542, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &3248162088466203402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3348896060224333137, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &3329862249168758654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3268607406323843365, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &3381354018739390763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3280479373899476848, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &3569444942190376650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3666869422738985105, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &3638036157812802922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3537163613229720369, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &4363382672070916818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4604851868872121481, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &4517040933161228757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4451141684481392526, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &4560779808780652581 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4332819216268670590, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &4694948171487955124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4777667676168515311, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &4712211201335545007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4760095982919871220, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &4757363276836186253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4715248732290158294, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &4766779667031958632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4705524759628448307, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &5053535600422185867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4993263652254469584, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &5072358118669849487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4976129975475877332, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &5197076341401282613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5437490071328804462, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &5199244230689357044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5426006424246803119, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &5341935757917264465 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5280540143090318346, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &5411440524861755574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5220566356323399405, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &5564381916461181890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5643791895303654809, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
 --- !u!4 &6020115351547091383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5828183521677295596, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
   m_PrefabInstance: {fileID: 246115836036327003}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6088053054505936051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6275619793131651816, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &6661158929786727450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6853161201548970561, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &7111713688692636800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7051371371645213403, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &7214711466112078004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7455054797231060719, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &7261941150900830269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7470900090852828774, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &7310690679460538546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7358507394269843177, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &7651533332011981806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7585702287413722549, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &7712909600597888321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7522035462276213530, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8300808954892244091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8095225618715701792, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8363558134730721982 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8609530926730259685, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8417270885387690603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8627285322126738480, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8525345262897054424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8447201852596085891, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8796734183687213246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8754476707059955429, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8891087835548157033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8649475667994223154, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8901767247070377184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8710822774347469499, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
+--- !u!114 &8994445515653592229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9203336213005079294, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+  m_PrefabInstance: {fileID: 246115836036327003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887c24007fa7e3b449e52b5afe397995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRoomRenderer
 --- !u!1001 &6950190749937997936
 PrefabInstance:
   m_ObjectHideFlags: 0

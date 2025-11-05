@@ -1,5 +1,6 @@
 using Octobass.Waves.Room;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Octobass.Waves.Map
 {
@@ -7,29 +8,29 @@ namespace Octobass.Waves.Map
     {
         public RoomId Id;
 
-        private SpriteRenderer spriteRenderer;
+        private Image Image;
 
         void Awake()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            Image = GetComponent<Image>();
         }
 
         public void Draw(RoomInstance room)
         {
-            Color color = spriteRenderer.color;
+            Color color = Image.color;
             
             switch (room.State)
             {
                 case RoomState.Unknown:
-                    spriteRenderer.enabled = false;
+                    Image.enabled = false;
                     break;
                 case RoomState.Discovered:
-                    spriteRenderer.enabled = true;
-                    spriteRenderer.color = new Color(color.r, color.g, color.b, 0.5f);
+                    Image.enabled = true;
+                    Image.color = new Color(color.r, color.g, color.b, 0.5f);
                     break;
                 case RoomState.Visited:
-                    spriteRenderer.enabled = true;
-                    spriteRenderer.color = new Color(color.r, color.g, color.b, 1f);
+                    Image.enabled = true;
+                    Image.color = new Color(color.r, color.g, color.b, 1f);
                     break;
             }
         }
