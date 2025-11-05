@@ -20,7 +20,7 @@ namespace Octobass.Waves.CharacterController2D
 
         void Awake()
         {
-            StateContext = new StateContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig);
+            StateContext = new StateContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig, new CharacterController2DCollisionDetector(Body, CharacterControllerConfig));
 
             StateRegistry = new()
             {

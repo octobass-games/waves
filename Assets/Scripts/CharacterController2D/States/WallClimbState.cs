@@ -27,7 +27,7 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            if (!StateContext.DriverSnapshot.GrabPressed || !IsTouchingWall())
+            if (!StateContext.DriverSnapshot.GrabPressed || !StateContext.CharacterController2DCollisionDetector.IsTouchingWall())
             {
                 return CharacterStateId.Falling;
             }
@@ -41,27 +41,6 @@ namespace Octobass.Waves.CharacterController2D
 
         public void Update()
         {
-        }
-
-        private bool IsTouchingWall()
-        {
-            RaycastHit2D[] hits = new RaycastHit2D[1];
-
-            int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
-
-            if (rightCount > 0)
-            {
-                return true;
-            }
-
-            int leftCount = StateContext.Body.Cast(Vector2.left, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
-
-            if (leftCount > 0)
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }

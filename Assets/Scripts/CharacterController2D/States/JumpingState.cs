@@ -40,15 +40,15 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            if (Velocity <= 0 || IsTouchingRoof())
+            if (Velocity <= 0 || StateContext.CharacterController2DCollisionDetector.IsTouchingCeiling())
             {
                 return CharacterStateId.Falling;
             }
-            else if (IsTouchingWall() && StateContext.DriverSnapshot.GrabPressed)
+            else if (StateContext.CharacterController2DCollisionDetector.IsTouchingWall() && StateContext.DriverSnapshot.GrabPressed)
             {
                 return CharacterStateId.WallClimb;
             }
-            else if (IsTouchingWall(StateContext.CharacterControllerConfig.WallJumpSkinWidth) && StateContext.DriverSnapshot.JumpPressed)
+            else if (StateContext.CharacterController2DCollisionDetector.IsCloseToWall() && StateContext.DriverSnapshot.JumpPressed)
             {
                 return CharacterStateId.WallJump;
             }
@@ -63,36 +63,6 @@ namespace Octobass.Waves.CharacterController2D
             StateContext.JumpConsumed = true;
             StateContext.Animator.SetBool("IsGrounded", false);
             StateContext.SpriteRenderer.flipX = Movement.x < 0;
-        }
-
-        private bool IsTouchingWall(float distance = 0f)
-        {
-            RaycastHit2D[] hits = new RaycastHit2D[1];
-
-            int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.GroundContactFilter, hits, distance + StateContext.CharacterControllerConfig.SkinWidth);
-
-            if (rightCount > 0)
-            {
-                return true;
-            }
-
-            int leftCount = StateContext.Body.Cast(Vector2.left, StateContext.CharacterControllerConfig.GroundContactFilter, hits, distance + StateContext.CharacterControllerConfig.SkinWidth);
-
-            if (leftCount > 0)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        private bool IsTouchingRoof()
-        {
-            RaycastHit2D[] hits = new RaycastHit2D[1];
-
-            int count = StateContext.Body.Cast(Vector2.up, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
-
-            return count > 0;
         }
     }
 }

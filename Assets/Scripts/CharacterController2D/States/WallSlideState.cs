@@ -27,11 +27,11 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            if (IsTouchingWall(Vector2.down))
+            if (StateContext.CharacterController2DCollisionDetector.IsGrounded())
             {
                 return CharacterStateId.Grounded;
             }
-            else if (IsTouchingWall(Vector2.right) && StateContext.DriverSnapshot.Movement.x <= 0 || IsTouchingWall(Vector2.left) && StateContext.DriverSnapshot.Movement.x >= 0 || !IsTouchingWall(Vector2.right) && !IsTouchingWall(Vector2.left))
+            else if (StateContext.CharacterController2DCollisionDetector.IsTouchingRightWall() && StateContext.DriverSnapshot.Movement.x <= 0 || StateContext.CharacterController2DCollisionDetector.IsTouchingLeftWall() && StateContext.DriverSnapshot.Movement.x >= 0 || !StateContext.CharacterController2DCollisionDetector.IsTouchingWall())
             {
                 return CharacterStateId.Falling;
             }
@@ -49,15 +49,6 @@ namespace Octobass.Waves.CharacterController2D
 
         public void Update()
         {
-        }
-
-        private bool IsTouchingWall(Vector2 direction)
-        {
-            RaycastHit2D[] hits = new RaycastHit2D[1];
-
-            int count = StateContext.Body.Cast(direction, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
-
-            return count > 0;
         }
     }
 }

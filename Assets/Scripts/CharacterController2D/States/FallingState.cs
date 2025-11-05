@@ -36,15 +36,15 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            if (IsGrounded())
+            if (StateContext.CharacterController2DCollisionDetector.IsGrounded())
             {
                 return CharacterStateId.Grounded;
             }
-            else if (IsLandingOnMovingPlatform())
+            else if (StateContext.CharacterController2DCollisionDetector.IsOnPlatform())
             {
                 return CharacterStateId.Riding;
             }
-            else if (IsTouchingWall(StateContext.CharacterControllerConfig.WallJumpSkinWidth) && StateContext.DriverSnapshot.JumpPressed)
+            else if (StateContext.CharacterController2DCollisionDetector.IsCloseToWall() && StateContext.DriverSnapshot.JumpPressed)
             {
                 return CharacterStateId.WallJump;
             }
@@ -52,11 +52,11 @@ namespace Octobass.Waves.CharacterController2D
             {
                 return CharacterStateId.Jumping;
             }
-            else if (IsTouchingWall() && StateContext.DriverSnapshot.GrabPressed)
+            else if (StateContext.CharacterController2DCollisionDetector.IsCloseToWall() && StateContext.DriverSnapshot.GrabPressed)
             {
                 return CharacterStateId.WallClimb;
             }
-            else if (IsTouchingWall(Vector2.right) && StateContext.DriverSnapshot.Movement.x > 0 || IsTouchingWall(Vector2.left) && StateContext.DriverSnapshot.Movement.x < 0)
+            else if (StateContext.CharacterController2DCollisionDetector.IsTouchingRightWall() && StateContext.DriverSnapshot.Movement.x > 0 || StateContext.CharacterController2DCollisionDetector.IsTouchingLeftWall() && StateContext.DriverSnapshot.Movement.x < 0)
             {
                 return CharacterStateId.WallSlide;
             }
@@ -66,37 +66,6 @@ namespace Octobass.Waves.CharacterController2D
 
         public void Update()
         {
-        }
-
-        private bool IsGrounded()
-        {
-            RaycastHit2D[] hits = new RaycastHit2D[1];
-
-            int count = StateContext.Body.Cast(Vector2.down, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
-
-            return count > 0;
-        }
-        private bool IsLandingOnMovingPlatform()
-        {
-            RaycastHit2D[] hits = new RaycastHit2D[1];
-
-            int count = StateContext.Body.Cast(Vector2.down, StateContext.CharacterControllerConfig.RideableContactFilter, hits, StateContext.CharacterControllerConfig.SkinWidth);
-
-            return count > 0;
-        }
-
-        private bool IsTouchingWall(float distance = 0f)
-        {
-            return IsTouchingWall(Vector2.right, distance) || IsTouchingWall(Vector2.left, distance);
-        }
-
-        private bool IsTouchingWall(Vector2 direction, float distance = 0f)
-        {
-            RaycastHit2D[] hits = new RaycastHit2D[1];
-
-            int count = StateContext.Body.Cast(direction, StateContext.CharacterControllerConfig.GroundContactFilter, hits, distance + StateContext.CharacterControllerConfig.SkinWidth);
-
-            return count > 0;
         }
     }
 }
