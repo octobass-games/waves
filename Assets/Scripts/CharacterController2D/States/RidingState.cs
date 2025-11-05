@@ -1,4 +1,3 @@
-using Octobass.Waves.CharacterController2D;
 using UnityEngine;
 
 namespace Octobass.Waves.CharacterController2D
