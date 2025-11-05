@@ -8,6 +8,7 @@ namespace Octobass.Waves.CharacterController2D
         private StateContext StateContext;
 
         private float Velocity;
+        private Vector2 Movement;
 
         public JumpingState(StateContext stateContext)
         {
@@ -27,6 +28,7 @@ namespace Octobass.Waves.CharacterController2D
         public void FixedUpdate()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime + Vector2.up * Velocity * Time.fixedDeltaTime;
+            Movement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime + Vector2.up * Velocity * Time.fixedDeltaTime; ;
 
             Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
 
@@ -60,6 +62,7 @@ namespace Octobass.Waves.CharacterController2D
         {
             StateContext.JumpConsumed = true;
             StateContext.Animator.SetBool("IsGrounded", false);
+            StateContext.SpriteRenderer.flipX = Movement.x < 0;
         }
 
         private bool IsTouchingWall(float distance = 0f)
