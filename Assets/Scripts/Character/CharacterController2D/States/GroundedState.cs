@@ -55,10 +55,6 @@ namespace Octobass.Waves.Character
         public void Update()
         {
             StateContext.JumpConsumed = false;
-
-            StateContext.Animator.SetBool("IsGrounded", true);
-            StateContext.Animator.SetBool("HasXVelocity", Movement.x != 0);
-            StateContext.SpriteRenderer.flipX = Movement.x < 0;
         }
     }
 }

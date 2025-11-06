@@ -13,13 +13,21 @@ namespace Octobass.Waves.Character
         public CharacterController2DDriver Driver;
         public CharacterController2DConfig CharacterControllerConfig;
 
+        private CharacterController2DCollisionDetector CollisionDetector;
+
         private Dictionary<CharacterStateId, ICharacterState> StateRegistry;
         private ICharacterState State;
         private StateContext StateContext;
+        private ContactFilter2D AllGroundContactFilter;
+
+        private bool AnimatorUpdated;
+        private Vector2 Displacement;
 
         void Awake()
         {
-            StateContext = new StateContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig, new CharacterController2DCollisionDetector(Body, CharacterControllerConfig));
+            CollisionDetector = new CharacterController2DCollisionDetector(Body, CharacterControllerConfig);
+
+            StateContext = new StateContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig, CollisionDetector);
 
             StateRegistry = new()
             {
@@ -33,11 +41,52 @@ namespace Octobass.Waves.Character
             };
 
             State = StateRegistry[CharacterStateId.Grounded];
+
+            AllGroundContactFilter = new()
+            {
+                useLayerMask = true,
+                layerMask = CharacterControllerConfig.GroundContactFilter.layerMask | CharacterControllerConfig.RideableContactFilter.layerMask
+            };
         }
 
         void Update()
         {
             StateContext.DriverSnapshot = Driver.TakeSnapshot();
+
+            if (!AnimatorUpdated)
+            {
+                if (State is GroundedState)
+                {
+                    Animator.SetTrigger("IsGrounded");
+                }
+                else if (State is JumpingState)
+                {
+                    Animator.SetTrigger("Jump");
+                }
+                else if (State is FallingState)
+                {
+                    Animator.SetTrigger("Fall");
+                }
+                else if (State is WallClimbState)
+                {
+                    Animator.SetTrigger("WallClimb");
+                }
+                else if (State is WallSlideState)
+                {
+                }
+                else if (State is RidingState)
+                {
+                }
+                else if (State is WallJumpState)
+                {
+                }
+
+                AnimatorUpdated = true;
+            }
+
+            Animator.SetBool("HasXVelocity", Displacement.x != 0);
+            Animator.SetBool("HasYVelocity", Displacement.y != 0);
+            SpriteRenderer.flipX = (State is WallClimbState || State is WallSlideState) ? CollisionDetector.IsTouchingLeftWall() : Displacement.x < 0;
 
             State.Update();
         }
@@ -46,17 +95,11 @@ namespace Octobass.Waves.Character
         {
             State.FixedUpdate();
 
-            Vector2 displacement = StateContext.MovementIntent.Displacement;
-            Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
+            Displacement = StateContext.MovementIntent.Displacement;
+            Vector2 normalizedDisplacement = Displacement == Vector2.zero ? Vector2.zero : Displacement.normalized;
 
-            ContactFilter2D contactFilter = new()
-            {
-                useLayerMask = true,
-                layerMask = CharacterControllerConfig.GroundContactFilter.layerMask | CharacterControllerConfig.RideableContactFilter.layerMask
-            };
-
-            Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, contactFilter);
-            Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, contactFilter);
+            Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), Displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
+            Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), Displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
 
             CharacterStateId? nextState = State.GetTransition();
@@ -64,6 +107,7 @@ namespace Octobass.Waves.Character
             if (nextState.HasValue)
             {
                 State.Exit();
+                AnimatorUpdated = false;
 
                 if (!StateRegistry.TryGetValue(nextState.Value, out State))
                 {
