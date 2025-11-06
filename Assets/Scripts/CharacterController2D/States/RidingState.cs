@@ -14,7 +14,7 @@ namespace Octobass.Waves.CharacterController2D
 
         public void Enter()
         {
-            Rideable = GetPlatform(Vector2.down * StateContext.CharacterControllerConfig.SkinWidth);
+            Rideable = StateContext.CharacterController2DCollisionDetector.GetPlatform();
         }
 
         public void Exit()
@@ -29,7 +29,7 @@ namespace Octobass.Waves.CharacterController2D
 
         public CharacterStateId? GetTransition()
         {
-            IRideable platform = GetPlatform(Vector2.down * StateContext.CharacterControllerConfig.SkinWidth);
+            IRideable platform = StateContext.CharacterController2DCollisionDetector.GetPlatform();
 
             if (platform == null)
             {
@@ -45,31 +45,6 @@ namespace Octobass.Waves.CharacterController2D
 
         public void Update()
         {
-        }
-
-        private IRideable GetPlatform(Vector2 displacement)
-        {
-            RaycastHit2D[] hits = Physics2D.BoxCastAll(StateContext.Body.position + displacement, StateContext.Body.GetComponent<Collider2D>().bounds.size, 0f, Vector2.down, StateContext.CharacterControllerConfig.SkinWidth, StateContext.CharacterControllerConfig.RideableContactFilter.layerMask.value);
-
-            for (int i = 0; i < hits.Length; i++)
-            {
-                RaycastHit2D hit = hits[i];
-
-                GameObject gameObject = hit.collider.gameObject;
-                MonoBehaviour[] monoBehaviours = gameObject.GetComponents<MonoBehaviour>();
-
-                foreach (MonoBehaviour monoBehaviour in monoBehaviours)
-                {
-                    IRideable rideable = monoBehaviour as IRideable;
-
-                    if (rideable != null)
-                    {
-                        return rideable;
-                    }
-                }
-            }
-
-            return null;
         }
     }
 }

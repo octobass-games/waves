@@ -64,5 +64,31 @@ namespace Octobass.Waves.CharacterController2D
         {
             return IsCloseToLeftWall() || IsCloseToRightWall();
         }
+
+        public IRideable GetPlatform()
+        {
+            RaycastHit2D[] hits = Physics2D.BoxCastAll(Body.position + Vector2.down * SkinWidth, Body.GetComponent<Collider2D>().bounds.size, 0f, Vector2.down, SkinWidth, RideableContactFilter.layerMask.value);
+
+            for (int i = 0; i < hits.Length; i++)
+            {
+                RaycastHit2D hit = hits[i];
+
+                GameObject gameObject = hit.collider.gameObject;
+                MonoBehaviour[] monoBehaviours = gameObject.GetComponents<MonoBehaviour>();
+
+                foreach (MonoBehaviour monoBehaviour in monoBehaviours)
+                {
+                    IRideable rideable = monoBehaviour as IRideable;
+
+                    if (rideable != null)
+                    {
+                        return rideable;
+                    }
+                }
+            }
+
+            return null;
+
+        }
     }
 }
