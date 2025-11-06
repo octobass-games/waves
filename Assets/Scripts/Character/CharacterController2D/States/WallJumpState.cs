@@ -31,7 +31,7 @@ namespace Octobass.Waves.Character
             Velocity = 0;
         }
 
-        public void FixedUpdate()
+        public void Tick()
         {
             if (IsTouchingWall(Direction.ProjectX()))
             {
@@ -78,10 +78,6 @@ namespace Octobass.Waves.Character
             }
 
             return null;
-        }
-
-        public void Update()
-        {
         }
 
         private void CalculateDirection()

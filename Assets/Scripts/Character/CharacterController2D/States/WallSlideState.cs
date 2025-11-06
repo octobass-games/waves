@@ -19,7 +19,7 @@ namespace Octobass.Waves.Character
         {
         }
 
-        public void FixedUpdate()
+        public void Tick()
         {
             StateContext.MovementIntent.Displacement = Vector2.down * StateContext.CharacterControllerConfig.WallSlideSpeed * Time.fixedDeltaTime;
         }
@@ -44,10 +44,6 @@ namespace Octobass.Waves.Character
             }
 
             return null;
-        }
-
-        public void Update()
-        {
         }
     }
 }

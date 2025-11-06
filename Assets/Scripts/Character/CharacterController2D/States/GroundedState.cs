@@ -6,8 +6,6 @@ namespace Octobass.Waves.Character
     {
         private StateContext StateContext;
 
-        private Vector2 Movement;
-
         public GroundedState(StateContext stateContext)
         {
             StateContext = stateContext;
@@ -21,11 +19,9 @@ namespace Octobass.Waves.Character
         {
         }
 
-        public void FixedUpdate()
+        public void Tick()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
-            
-            Movement = StateContext.DriverSnapshot.Movement * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
         }
 
         public CharacterStateId? GetTransition()
@@ -40,6 +36,8 @@ namespace Octobass.Waves.Character
             }
             else if (!StateContext.CharacterController2DCollisionDetector.IsGrounded())
             {
+                StateContext.CoyoteAllowed = true;
+
                 return CharacterStateId.Falling;
             }
             else if (StateContext.CharacterController2DCollisionDetector.IsTouchingWall() && StateContext.DriverSnapshot.GrabPressed)
@@ -50,11 +48,6 @@ namespace Octobass.Waves.Character
             {
                 return null;
             }
-        }
-
-        public void Update()
-        {
-            StateContext.JumpConsumed = false;
         }
     }
 }

@@ -87,13 +87,11 @@ namespace Octobass.Waves.Character
             Animator.SetBool("HasXVelocity", Displacement.x != 0);
             Animator.SetBool("HasYVelocity", Displacement.y != 0);
             SpriteRenderer.flipX = (State is WallClimbState || State is WallSlideState) ? CollisionDetector.IsTouchingLeftWall() : Displacement.x < 0;
-
-            State.Update();
         }
 
         void FixedUpdate()
         {
-            State.FixedUpdate();
+            State.Tick();
 
             Displacement = StateContext.MovementIntent.Displacement;
             Vector2 normalizedDisplacement = Displacement == Vector2.zero ? Vector2.zero : Displacement.normalized;

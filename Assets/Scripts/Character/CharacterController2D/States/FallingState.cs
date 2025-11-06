@@ -9,8 +9,6 @@ namespace Octobass.Waves.Character
         private float Velocity;
         private float CoyoteTimer;
 
-        private bool AnimatorUpdated;
-
         public FallingState(StateContext stateContext)
         {
             StateContext = stateContext;
@@ -18,7 +16,6 @@ namespace Octobass.Waves.Character
 
         public void Enter()
         {
-            AnimatorUpdated = false;
             Velocity = 0;
             CoyoteTimer = StateContext.CharacterControllerConfig.CoyoteTime;
         }
@@ -27,9 +24,10 @@ namespace Octobass.Waves.Character
         {
             Velocity = 0;
             CoyoteTimer = StateContext.CharacterControllerConfig.CoyoteTime;
+            StateContext.CoyoteAllowed = false;
         }
 
-        public void FixedUpdate()
+        public void Tick()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime + Vector2.up * Velocity * Time.fixedDeltaTime;
 
@@ -51,7 +49,7 @@ namespace Octobass.Waves.Character
             {
                 return CharacterStateId.WallJump;
             }
-            else if (CoyoteTimer > 0 && StateContext.DriverSnapshot.JumpPressed && !StateContext.JumpConsumed)
+            else if (CoyoteTimer > 0 && StateContext.DriverSnapshot.JumpPressed && StateContext.CoyoteAllowed)
             {
                 return CharacterStateId.Jumping;
             }
@@ -65,16 +63,6 @@ namespace Octobass.Waves.Character
             }
 
             return null;
-        }
-
-        public void Update()
-        {
-            if (!AnimatorUpdated)
-            {
-                StateContext.Animator.SetTrigger("Fall");
-                
-                AnimatorUpdated = true;
-            }
         }
     }
 }

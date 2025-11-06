@@ -4,9 +4,7 @@ namespace Octobass.Waves.Character
     {
         void Enter();
 
-        void Update();
-
-        void FixedUpdate();
+        void Tick();
 
         void Exit();
 

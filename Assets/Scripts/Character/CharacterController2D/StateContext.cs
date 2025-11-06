@@ -11,7 +11,7 @@ namespace Octobass.Waves.Character
         public MovementIntent MovementIntent;
         public CharacterController2DConfig CharacterControllerConfig;
         public CharacterController2DCollisionDetector CharacterController2DCollisionDetector;
-        public bool JumpConsumed;
+        public bool CoyoteAllowed;
 
         public StateContext(Rigidbody2D body, Animator animator, SpriteRenderer spriteRenderer, CharacterController2DDriverSnapshot driverSnapshot, MovementIntent movementIntent, CharacterController2DConfig characterControllerConfig, CharacterController2DCollisionDetector characterController2DCollisionDetector)
         {

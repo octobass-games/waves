@@ -22,7 +22,7 @@ namespace Octobass.Waves.Character
             Rideable = null;
         }
 
-        public void FixedUpdate()
+        public void Tick()
         {
             StateContext.MovementIntent.Displacement = Rideable.GetDisplacement() + new Vector2(StateContext.DriverSnapshot.Movement.x, 0) * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
         }
@@ -41,10 +41,6 @@ namespace Octobass.Waves.Character
             }
 
             return null;
-        }
-
-        public void Update()
-        {
         }
     }
 }

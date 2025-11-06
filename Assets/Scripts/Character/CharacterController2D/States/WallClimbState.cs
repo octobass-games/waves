@@ -20,7 +20,7 @@ namespace Octobass.Waves.Character
         {
         }
 
-        public void FixedUpdate()
+        public void Tick()
         {
             StateContext.MovementIntent.Displacement.y = StateContext.DriverSnapshot.Climbing.y * StateContext.CharacterControllerConfig.WallClimbSpeed * Time.fixedDeltaTime;
         }
@@ -37,10 +37,6 @@ namespace Octobass.Waves.Character
             }
 
             return null;
-        }
-
-        public void Update()
-        {
         }
     }
 }

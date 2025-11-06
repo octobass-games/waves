@@ -8,8 +8,6 @@ namespace Octobass.Waves.Character
         private StateContext StateContext;
 
         private float Velocity;
-        private Vector2 Movement;
-        private bool AnimatorUpdated;
 
         public JumpingState(StateContext stateContext)
         {
@@ -19,8 +17,6 @@ namespace Octobass.Waves.Character
         public void Enter()
         {
             Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
-
-            AnimatorUpdated = false;
         }
 
         public void Exit()
@@ -28,10 +24,9 @@ namespace Octobass.Waves.Character
             Velocity = 0;
         }
 
-        public void FixedUpdate()
+        public void Tick()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime + Vector2.up * Velocity * Time.fixedDeltaTime;
-            Movement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime + Vector2.up * Velocity * Time.fixedDeltaTime; ;
 
             Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
 
@@ -59,20 +54,6 @@ namespace Octobass.Waves.Character
             {
                 return null;
             }
-        }
-
-        public void Update()
-        {
-            StateContext.JumpConsumed = true;
-
-            if (!AnimatorUpdated)
-            {
-                StateContext.Animator.SetTrigger("Jump");
-
-                AnimatorUpdated = true;
-            }
-
-            StateContext.SpriteRenderer.flipX = Movement.x < 0;
         }
     }
 }
