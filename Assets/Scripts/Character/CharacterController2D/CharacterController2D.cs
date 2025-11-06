@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    // TODO: Fix jump consumption
     public class CharacterController2D : MonoBehaviour
     {
         public Rigidbody2D Body;
