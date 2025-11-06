@@ -9,6 +9,7 @@ namespace Octobass.Waves.Character
 
         private float Velocity;
         private Vector2 Movement;
+        private bool AnimatorUpdated;
 
         public JumpingState(StateContext stateContext)
         {
@@ -17,7 +18,9 @@ namespace Octobass.Waves.Character
 
         public void Enter()
         {
-            Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight); ;
+            Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
+
+            AnimatorUpdated = false;
         }
 
         public void Exit()
@@ -61,7 +64,14 @@ namespace Octobass.Waves.Character
         public void Update()
         {
             StateContext.JumpConsumed = true;
-            StateContext.Animator.SetBool("IsGrounded", false);
+
+            if (!AnimatorUpdated)
+            {
+                StateContext.Animator.SetTrigger("Jump");
+
+                AnimatorUpdated = true;
+            }
+
             StateContext.SpriteRenderer.flipX = Movement.x < 0;
         }
     }

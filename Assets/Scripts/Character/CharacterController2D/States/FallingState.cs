@@ -9,6 +9,8 @@ namespace Octobass.Waves.Character
         private float Velocity;
         private float CoyoteTimer;
 
+        private bool AnimatorUpdated;
+
         public FallingState(StateContext stateContext)
         {
             StateContext = stateContext;
@@ -16,6 +18,7 @@ namespace Octobass.Waves.Character
 
         public void Enter()
         {
+            AnimatorUpdated = false;
             Velocity = 0;
             CoyoteTimer = StateContext.CharacterControllerConfig.CoyoteTime;
         }
@@ -66,6 +69,12 @@ namespace Octobass.Waves.Character
 
         public void Update()
         {
+            if (!AnimatorUpdated)
+            {
+                StateContext.Animator.SetTrigger("Fall");
+                
+                AnimatorUpdated = true;
+            }
         }
     }
 }

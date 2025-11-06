@@ -6,6 +6,9 @@ namespace Octobass.Waves.Character
     {
         private StateContext StateContext;
 
+        private bool AnimatorUpdated;
+        private float Movement;
+
         public WallClimbState(StateContext stateContext)
         {
             StateContext = stateContext;
@@ -13,6 +16,7 @@ namespace Octobass.Waves.Character
 
         public void Enter()
         {
+            AnimatorUpdated = false;
             StateContext.MovementIntent.Displacement.x = 0;
         }
 
@@ -23,6 +27,7 @@ namespace Octobass.Waves.Character
         public void FixedUpdate()
         {
             StateContext.MovementIntent.Displacement.y = StateContext.DriverSnapshot.Climbing.y * StateContext.CharacterControllerConfig.WallClimbSpeed * Time.fixedDeltaTime;
+            Movement = StateContext.DriverSnapshot.Climbing.y* StateContext.CharacterControllerConfig.WallClimbSpeed* Time.fixedDeltaTime;
         }
 
         public CharacterStateId? GetTransition()
@@ -41,6 +46,14 @@ namespace Octobass.Waves.Character
 
         public void Update()
         {
+            if (!AnimatorUpdated)
+            {
+                StateContext.Animator.SetTrigger("WallClimb");
+
+                AnimatorUpdated = true;
+            }
+
+            StateContext.Animator.SetBool("HasYVelocity", Movement != 0);
         }
     }
 }
