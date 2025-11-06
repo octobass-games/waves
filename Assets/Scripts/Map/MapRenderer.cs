@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace Octobass.Waves.Map
@@ -18,14 +19,11 @@ namespace Octobass.Waves.Map
         private Vector3 MiniMapCentre;
         private PlayerInput PlayerInput;
 
-        private List<Room> Rooms = new();
-        private RoomId ActiveRoom;
-
         void Awake()
         {
             PlayerInput = new PlayerInput();
             PlayerInput.Enable();
-            
+
             MiniMapCentre = MiniMapRows.transform.position;
         }
 
@@ -37,18 +35,11 @@ namespace Octobass.Waves.Map
             }
         }
 
-        public void Draw(List<Room> rooms, RoomId activeRoom)
-        {
-            Rooms = rooms;
-            ActiveRoom = activeRoom;
-            DrawMap();
-        }
-
-        private void DrawMap()
+        public void OnRoomStateChanged(List<Room> rooms, RoomId activeRoom)
         {
             if (miniMode)
             {
-                foreach (Room room in Rooms)
+                foreach (Room room in rooms)
                 {
                     MapRoomRenderer renderer = RoomRenderers.Find(renderer => renderer.Id == room.Id);
 
@@ -56,7 +47,7 @@ namespace Octobass.Waves.Map
                     {
                         renderer.Draw(room);
 
-                        if (room.Id == ActiveRoom)
+                        if (room.Id == activeRoom)
                         {
                             Vector3 translation = MiniMapCentre - renderer.transform.position;
 
@@ -71,7 +62,7 @@ namespace Octobass.Waves.Map
             }
             else
             {
-                foreach (Room room in Rooms)
+                foreach (Room room in rooms)
                 {
                     MapRoomRenderer renderer = BigMapRenderers.Find(renderer => renderer.Id == room.Id);
 
@@ -96,14 +87,12 @@ namespace Octobass.Waves.Map
                 MiniMap.SetActive(true);
                 MiniMask.SetActive(true);
                 BigMap.SetActive(false);
-                DrawMap();
             }
             else
             {
                 MiniMap.SetActive(false);
                 MiniMask.SetActive(false);
                 BigMap.SetActive(true);
-                DrawMap();
             }
         }
     }

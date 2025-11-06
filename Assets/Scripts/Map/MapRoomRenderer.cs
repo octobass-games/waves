@@ -8,6 +8,7 @@ namespace Octobass.Waves.Map
         public RoomId Id;
 
         private Image Image;
+        private float Opacity;
 
         void Awake()
         {
@@ -17,20 +18,15 @@ namespace Octobass.Waves.Map
         public void Draw(Room room)
         {
             Color color = Image.color;
-            
-            switch (room.State)
+
+            if (room.State == RoomState.Unknown)
             {
-                case RoomState.Unknown:
-                    Image.enabled = false;
-                    break;
-                case RoomState.Discovered:
-                    Image.enabled = true;
-                    Image.color = new Color(color.r, color.g, color.b, 0.5f);
-                    break;
-                case RoomState.Visited:
-                    Image.enabled = true;
-                    Image.color = new Color(color.r, color.g, color.b, 1f);
-                    break;
+                Image.enabled = false;
+            }
+            else
+            {
+                Image.enabled = true;
+                Image.color = new Color(color.r, color.g, color.b, room.State == RoomState.Discovered ? 0.5f : 1f); 
             }
         }
     }

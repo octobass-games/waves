@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Map
 {
-    public class RoomHallway : MonoBehaviour
+    public class RoomPerimeter : MonoBehaviour
     {
         public RoomId Room;
 
@@ -14,7 +14,7 @@ namespace Octobass.Waves.Map
 
                 if (cartographer != null)
                 {
-                    cartographer.EnterHallway(Room);
+                    cartographer.EnterPerimeter(Room);
                 }
             }
         }

@@ -8,7 +8,7 @@ namespace Octobass.Waves.Map
     public class Cartographer : MonoBehaviour, ISavable
     {
         public UnityEvent<RoomId> OnRoomEntered;
-        public UnityEvent<RoomId> OnRoomDiscovered;
+        public UnityEvent<List<Room>, RoomId> OnRoomStateChanged;
 
         [SerializeField]
         private List<Room> Rooms;
@@ -17,6 +17,13 @@ namespace Octobass.Waves.Map
 
         private const string RoomsSaveKey = "cartographer-rooms";
         private const string ActiveRoomSaveKey = "cartographer-active-room";
+
+        void Start()
+        {
+            ServiceLocator.Instance.Register(this);
+
+            OnRoomStateChanged.Invoke(Rooms, RoomId.A4);
+        }
 
         public void EnterRoom(RoomId roomId)
         {
@@ -28,7 +35,8 @@ namespace Octobass.Waves.Map
 
                 room.State = RoomState.Visited;
 
-                OnRoomEntered.Invoke(roomId);
+                OnRoomEntered.Invoke(ActiveRoomId);
+                OnRoomStateChanged.Invoke(Rooms, room.Id);
             }
             else
             {
@@ -36,7 +44,7 @@ namespace Octobass.Waves.Map
             }
         }
 
-        public void EnterHallway(RoomId roomId)
+        public void EnterPerimeter(RoomId roomId)
         {
             Room room = FindRoomById(roomId);
 
@@ -44,7 +52,7 @@ namespace Octobass.Waves.Map
             {
                 room.State = RoomState.Discovered;
 
-                OnRoomEntered.Invoke(roomId);
+                OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
             }
             else
             {
@@ -62,6 +70,7 @@ namespace Octobass.Waves.Map
         {
             Rooms = saveData.Load<List<Room>>(RoomsSaveKey);
             ActiveRoomId = saveData.Load<RoomId>(ActiveRoomSaveKey);
+            OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
         }
 
         private List<Room> FindRoomsByState(RoomState state)
