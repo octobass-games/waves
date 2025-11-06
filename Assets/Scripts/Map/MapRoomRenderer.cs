@@ -14,7 +14,7 @@ namespace Octobass.Waves.Map
             Image = GetComponent<Image>();
         }
 
-        public void Draw(RoomInstance room)
+        public void Draw(Room room)
         {
             Color color = Image.color;
             

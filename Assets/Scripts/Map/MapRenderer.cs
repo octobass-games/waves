@@ -18,7 +18,7 @@ namespace Octobass.Waves.Map
         private Vector3 MiniMapCentre;
         private PlayerInput PlayerInput;
 
-        private List<RoomInstance> Rooms = new();
+        private List<Room> Rooms = new();
         private RoomId ActiveRoom;
 
         void Awake()
@@ -37,7 +37,7 @@ namespace Octobass.Waves.Map
             }
         }
 
-        public void Draw(List<RoomInstance> rooms, RoomId activeRoom)
+        public void Draw(List<Room> rooms, RoomId activeRoom)
         {
             Rooms = rooms;
             ActiveRoom = activeRoom;
@@ -48,7 +48,7 @@ namespace Octobass.Waves.Map
         {
             if (miniMode)
             {
-                foreach (RoomInstance room in Rooms)
+                foreach (Room room in Rooms)
                 {
                     MapRoomRenderer renderer = RoomRenderers.Find(renderer => renderer.Id == room.Id);
 
@@ -71,7 +71,7 @@ namespace Octobass.Waves.Map
             }
             else
             {
-                foreach (RoomInstance room in Rooms)
+                foreach (Room room in Rooms)
                 {
                     MapRoomRenderer renderer = BigMapRenderers.Find(renderer => renderer.Id == room.Id);
 

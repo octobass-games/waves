@@ -3,7 +3,7 @@ using System;
 namespace Octobass.Waves.Map
 {
     [Serializable]
-    public class RoomInstance
+    public class Room
     {
         public RoomId Id;
         public RoomState State;
