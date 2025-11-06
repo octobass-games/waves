@@ -1,5 +1,7 @@
 using Octobass.Waves.Save;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,9 +22,23 @@ namespace Octobass.Waves.Map
 
         void Start()
         {
+            GenerateRoomsFromEnums();
             ServiceLocator.Instance.Register(this);
 
             OnRoomStateChanged.Invoke(Rooms, RoomId.A4);
+        }
+
+        private void GenerateRoomsFromEnums()
+        {
+            Rooms = new List<Room>();
+            var alllIds = Enum.GetValues(typeof(RoomId)).Cast<RoomId>();
+            foreach (var item in alllIds)
+            {
+                var room = new Room();
+                room.State = item == RoomId.E1 ? RoomState.Discovered : RoomState.Unknown;
+                room.Id = item;
+                Rooms.Add(room);
+            }
         }
 
         public void EnterRoom(RoomId roomId)
