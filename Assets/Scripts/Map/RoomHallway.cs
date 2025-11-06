@@ -1,18 +1,21 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Octobass.Waves.Map
 {
     public class RoomHallway : MonoBehaviour
     {
-        public RoomId RoomHallwayId;
-        public UnityEvent<RoomId> OnHallwayEntered;
+        public RoomId Room;
 
         void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag(Tags.Player))
             {
-                OnHallwayEntered.Invoke(RoomHallwayId);
+                Cartographer cartographer = ServiceLocator.Instance.Get<Cartographer>();
+
+                if (cartographer != null)
+                {
+                    cartographer.EnterHallway(Room);
+                }
             }
         }
     }

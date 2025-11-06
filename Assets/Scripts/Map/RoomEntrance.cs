@@ -1,18 +1,21 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Octobass.Waves.Map
 {
     public class RoomEntrance : MonoBehaviour
     {
-        public RoomId RoomId;
-        public UnityEvent<RoomId> OnRoomEntered;
+        public RoomId Room;
 
         void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag(Tags.Player))
             {
-                OnRoomEntered.Invoke(RoomId);
+                Cartographer cartographer = ServiceLocator.Instance.Get<Cartographer>();
+
+                if (cartographer != null)
+                {
+                    cartographer.EnterRoom(Room);
+                }
             }
         }
     }

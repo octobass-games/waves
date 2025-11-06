@@ -1,12 +1,16 @@
 using Octobass.Waves.Save;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Octobass.Waves.Map
 {
     public class Cartographer : MonoBehaviour, ISavable
     {
         public MapRenderer MapRenderer;
+
+        public UnityEvent<RoomId> OnRoomEntered;
+        public UnityEvent<RoomId> OnRoomDiscovered;
 
         [SerializeField]
         private List<RoomInstance> Rooms;
@@ -24,13 +28,15 @@ namespace Octobass.Waves.Map
             }
         }
 
-        public void MarkRoomVisited(RoomId roomId)
+        public void EnterRoom(RoomId roomId)
         {
             RoomInstance room = FindRoomById(roomId);
 
             if (room != null)
             {
                 room.State = RoomState.Visited;
+
+                OnRoomEntered.Invoke(roomId);
             }
             else
             {
@@ -38,13 +44,14 @@ namespace Octobass.Waves.Map
             }
         }
 
-        public void MarkRoomDiscovered(RoomId roomId)
+        public void EnterHallway(RoomId roomId)
         {
             RoomInstance room = FindRoomById(roomId);
 
             if (room != null && room.State != RoomState.Visited)
             {
                 room.State = RoomState.Discovered;
+                OnRoomEntered.Invoke(roomId);
             }
             else
             {
