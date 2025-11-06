@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5364705c09b3f214f8c9fb3e738f0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Camera.CameraDirector
-  Camera: {fileID: 904325938}
 --- !u!114 &129779921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e17284a62b6f2d46a3ded4b12ffcb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Camera.DirectorCueRoomEntranceWatcher
-  Director: {fileID: 129779920}
-  Camera: {fileID: 904325938}
 --- !u!61 &129779922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -224,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17166a7e5b32024a80198bdde2a8672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Room.RoomEntrance
+  Room: 0
 --- !u!4 &129779924
 Transform:
   m_ObjectHideFlags: 0
@@ -298,7 +296,7 @@ BoxCollider2D:
   m_Offset: {x: -0.12383199, y: 1.159841}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.59322035, y: -0.07462686}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1.84375, y: 2.09375}
     newSize: {x: 1.84375, y: 2.09375}
     adaptiveTilingThreshold: 0.5
@@ -4744,6 +4742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17166a7e5b32024a80198bdde2a8672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Room.RoomEntrance
+  Room: 0
 --- !u!4 &1592359426
 Transform:
   m_ObjectHideFlags: 0
@@ -4771,7 +4770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5364705c09b3f214f8c9fb3e738f0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Camera.CameraDirector
-  Camera: {fileID: 904325938}
 --- !u!114 &1592359428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4784,8 +4782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e17284a62b6f2d46a3ded4b12ffcb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Camera.DirectorCueRoomEntranceWatcher
-  Director: {fileID: 1592359427}
-  Camera: {fileID: 1669412454}
 --- !u!1 &1669412450
 GameObject:
   m_ObjectHideFlags: 0
@@ -4972,9 +4968,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.055555556
-    width: 0.33333334
-    height: 0.3333333
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
