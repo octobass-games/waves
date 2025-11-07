@@ -1,4 +1,3 @@
-using Octobass.Waves.Character;
 using Octobass.Waves.Extensions;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,12 +33,8 @@ namespace Octobass.Waves.Character
             StateRegistry = new()
             {
                 { CharacterStateId.Grounded, new GroundedState(StateContext) },
-                { CharacterStateId.Jumping, new JumpingState(StateContext) },
                 { CharacterStateId.Falling, new FallingState(StateContext) },
-                { CharacterStateId.WallClimb, new WallClimbState(StateContext) },
-                { CharacterStateId.WallJump, new WallJumpState(StateContext) },
                 { CharacterStateId.Riding, new RidingState(StateContext) },
-                { CharacterStateId.WallSlide, new WallSlideState(StateContext) }
             };
 
             State = StateRegistry[CharacterStateId.Grounded];
@@ -126,6 +121,33 @@ namespace Octobass.Waves.Character
             }
 
             Driver.Consume();
+        }
+
+        public void AddState(CharacterStateId state)
+        {
+            if (!StateRegistry.ContainsKey(state))
+            {
+                switch(state)
+                {
+                    case CharacterStateId.Jumping:
+                        StateRegistry[CharacterStateId.Jumping] = new JumpingState(StateContext);
+                        break;
+                    case CharacterStateId.WallClimb:
+                        StateRegistry[CharacterStateId.WallClimb] = new WallClimbState(StateContext);
+                        StateRegistry[CharacterStateId.WallSlide] = new WallSlideState(StateContext);
+                        break;
+                    case CharacterStateId.WallJump:
+                        StateRegistry[CharacterStateId.WallJump] = new WallJumpState(StateContext);
+                        break;
+                    default:
+                        Debug.Log($"[CharacterController2D]: Trying to add a state that is not supported - {state}");
+                        break;
+                }
+            }
+            else
+            {
+                Debug.Log($"[CharacterController2D]: State already exists in character controller - {state}");
+            }
         }
 
         public CharacterStateId? GetNext()
