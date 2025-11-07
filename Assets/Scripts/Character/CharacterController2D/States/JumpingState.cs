@@ -17,6 +17,7 @@ namespace Octobass.Waves.Character
         public void Enter()
         {
             StateContext.Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
+            StateContext.CoyoteAllowed = false;
         }
 
         public void Exit()
