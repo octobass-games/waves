@@ -8,6 +8,7 @@ namespace Octobass.Waves.Debugging
     public class DebugMenu : MonoBehaviour
     {
         public CharacterController2D Player;
+        public bool UnlockAllAbilitiesOnAwake = true;
         public GameObject DebugMenuUi;
 
         private PlayerInput PlayerInput;
@@ -25,6 +26,16 @@ namespace Octobass.Waves.Debugging
             if (Player == null)
             {
                 Debug.LogWarning("[DebugMenu]: Player not set");
+            }
+        }
+
+        void Start()
+        {
+            if (UnlockAllAbilitiesOnAwake)
+            {
+                AddState("Jumping");
+                AddState("WallClimb");
+                AddState("WallJump");
             }
         }
 
