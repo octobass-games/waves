@@ -19,21 +19,22 @@ namespace Octobass.Waves.Character
 
         public void Enter()
         {
-            CalculateDirection();
+            StateContext.WallJumpDirection = CalculateDirection();
             WallJumpInputFreezeTimer = StateContext.CharacterControllerConfig.WallJumpInputFreezeTime;
-            Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
+            StateContext.Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
             StateContext.MovementIntent.Displacement = Vector2.zero;
             WallTouched = false;
         }
 
         public void Exit()
         {
-            Velocity = 0;
+            StateContext.Velocity = 0;
+            StateContext.WallJumpDirection = Vector2.zero;
         }
 
         public void Tick()
         {
-            if (IsTouchingWall(Direction.ProjectX()))
+            if (IsTouchingWall(StateContext.WallJumpDirection.ProjectX()))
             {
                 WallTouched = true;
             }
@@ -44,7 +45,7 @@ namespace Octobass.Waves.Character
 
                 if (!WallTouched)
                 {
-                    StateContext.MovementIntent.Displacement = Direction.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
+                    StateContext.MovementIntent.Displacement = StateContext.WallJumpDirection.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
                 }
                 else
                 {
@@ -56,37 +57,24 @@ namespace Octobass.Waves.Character
                 StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
             }
 
-            StateContext.MovementIntent.Displacement.y = (Vector2.up * Velocity * Time.fixedDeltaTime).y;
+            StateContext.MovementIntent.Displacement.y = (Vector2.up * StateContext.Velocity * Time.fixedDeltaTime).y;
 
-            Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
+            StateContext.Velocity -= StateContext.CharacterControllerConfig.Gravity * Time.fixedDeltaTime;
+            StateContext.IsTouchingWallForWallJump = IsTouchingWall(StateContext.WallJumpDirection);
 
             if (StateContext.DriverSnapshot.JumpReleased)
             {
-                Velocity = 0;
+                StateContext.Velocity = 0;
             }
         }
 
-        public CharacterStateId? GetTransition()
-        {
-            if (Velocity <= 0 || StateContext.CharacterController2DCollisionDetector.IsTouchingCeiling())
-            {
-                return CharacterStateId.Falling;
-            }
-            else if (IsTouchingWall(Direction) && StateContext.DriverSnapshot.Movement.x == Direction.x)
-            {
-                return CharacterStateId.WallSlide;
-            }
-
-            return null;
-        }
-
-        private void CalculateDirection()
+        private Vector2 CalculateDirection()
         {
             RaycastHit2D[] hits = new RaycastHit2D[1];
 
             int rightCount = StateContext.Body.Cast(Vector2.right, StateContext.CharacterControllerConfig.GroundContactFilter, hits, StateContext.CharacterControllerConfig.WallJumpSkinWidth + StateContext.CharacterControllerConfig.SkinWidth);
 
-            Direction = rightCount > 0 ? Vector2.one * Vector2.left : Vector2.one;
+            return rightCount > 0 ? Vector2.one * Vector2.left : Vector2.one;
         }
 
         private bool IsTouchingWall(Vector2 direction)

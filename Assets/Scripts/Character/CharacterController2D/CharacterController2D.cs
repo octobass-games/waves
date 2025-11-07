@@ -1,3 +1,4 @@
+using Octobass.Waves.Character;
 using Octobass.Waves.Extensions;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,9 @@ namespace Octobass.Waves.Character
 
         private Dictionary<CharacterStateId, ICharacterState> StateRegistry;
         private ICharacterState State;
+        private CharacterStateId StateId;
         private StateContext StateContext;
+
         private ContactFilter2D AllGroundContactFilter;
 
         private bool AnimatorUpdated;
@@ -40,6 +43,7 @@ namespace Octobass.Waves.Character
             };
 
             State = StateRegistry[CharacterStateId.Grounded];
+            StateId = CharacterStateId.Grounded;
 
             AllGroundContactFilter = new()
             {
@@ -99,7 +103,7 @@ namespace Octobass.Waves.Character
             Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), Displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
 
-            CharacterStateId? nextState = State.GetTransition();
+            CharacterStateId? nextState = GetNext();
 
             if (nextState.HasValue)
             {
@@ -108,15 +112,40 @@ namespace Octobass.Waves.Character
 
                 if (!StateRegistry.TryGetValue(nextState.Value, out State))
                 {
-                    Debug.Log($"[CharacterController]: Could not find state to transition to - {nextState.Value}");
+                    Debug.Log($"[CharacterController2D]: Could not find state to transition to - {nextState.Value}");
                     State = StateRegistry[CharacterStateId.Grounded];
+                    StateId = CharacterStateId.Grounded;
+                }
+                else
+                {
+                    StateId = nextState.Value;
                 }
 
-                Debug.Log($"[CharacterController]: Entering - {State}");
+                Debug.Log($"[CharacterController2D]: Entering - {State}");
                 State.Enter();
             }
 
             Driver.Consume();
+        }
+
+        public CharacterStateId? GetNext()
+        {
+            if (TransitionRegistry.Transitions.TryGetValue(StateId, out List<Transition> transitions))
+            {
+                foreach (var transition in transitions)
+                {
+                    if (StateRegistry.ContainsKey(transition.Target) && transition.IsSatisfied(StateContext))
+                    {
+                        return transition.Target;
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log($"[CharacterController2D]: Could not find transitions for {StateId}");
+            }
+
+            return null;
         }
     }
 }

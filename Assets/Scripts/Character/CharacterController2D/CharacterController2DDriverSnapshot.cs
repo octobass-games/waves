@@ -10,5 +10,6 @@ namespace Octobass.Waves.Character
         public bool JumpReleased;
         public bool GrabPressed;
         public bool GrabReleased;
+        public bool GrabHeld;
     }
 }

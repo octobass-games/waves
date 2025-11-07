@@ -46,7 +46,8 @@ namespace Octobass.Waves.Character
                 JumpPressed = JumpPressed,
                 JumpReleased = JumpReleased,
                 GrabPressed = GrabPressed,
-                GrabReleased = GrabReleased
+                GrabReleased = GrabReleased,
+                GrabHeld = GrabPressed && !GrabReleased
             };
         }
 
@@ -54,8 +55,12 @@ namespace Octobass.Waves.Character
         {
             JumpPressed = false;
             JumpReleased = false;
-            GrabPressed = false;
-            GrabReleased = false;
+
+            if (GrabReleased)
+            {
+                GrabPressed = false;
+                GrabReleased = false;
+            }
         }
     }
 }

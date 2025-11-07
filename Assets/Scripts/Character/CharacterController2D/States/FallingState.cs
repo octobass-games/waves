@@ -33,36 +33,11 @@ namespace Octobass.Waves.Character
 
             Velocity = Mathf.Max(Velocity - StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.FallingGravityModifier * Time.fixedDeltaTime, -StateContext.CharacterControllerConfig.MaxFallSpeed);
             CoyoteTimer = Mathf.Max(CoyoteTimer - (Time.fixedDeltaTime * 1000), -1);
-        }
-
-        public CharacterStateId? GetTransition()
-        {
-            if (StateContext.CharacterController2DCollisionDetector.IsGrounded())
+            
+            if (CoyoteTimer == -1)
             {
-                return CharacterStateId.Grounded;
+                StateContext.CoyoteAllowed = false;
             }
-            else if (StateContext.CharacterController2DCollisionDetector.IsOnPlatform())
-            {
-                return CharacterStateId.Riding;
-            }
-            else if (StateContext.CharacterController2DCollisionDetector.IsCloseToWall() && StateContext.DriverSnapshot.JumpPressed)
-            {
-                return CharacterStateId.WallJump;
-            }
-            else if (CoyoteTimer > 0 && StateContext.DriverSnapshot.JumpPressed && StateContext.CoyoteAllowed)
-            {
-                return CharacterStateId.Jumping;
-            }
-            else if (StateContext.CharacterController2DCollisionDetector.IsCloseToWall() && StateContext.DriverSnapshot.GrabPressed)
-            {
-                return CharacterStateId.WallClimb;
-            }
-            else if (StateContext.CharacterController2DCollisionDetector.IsTouchingRightWall() && StateContext.DriverSnapshot.Movement.x > 0 || StateContext.CharacterController2DCollisionDetector.IsTouchingLeftWall() && StateContext.DriverSnapshot.Movement.x < 0)
-            {
-                return CharacterStateId.WallSlide;
-            }
-
-            return null;
         }
     }
 }

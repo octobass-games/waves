@@ -12,6 +12,9 @@ namespace Octobass.Waves.Character
         public CharacterController2DConfig CharacterControllerConfig;
         public CharacterController2DCollisionDetector CharacterController2DCollisionDetector;
         public bool CoyoteAllowed;
+        public float Velocity;
+        public Vector2 WallJumpDirection;
+        public bool IsTouchingWallForWallJump;
 
         public StateContext(Rigidbody2D body, Animator animator, SpriteRenderer spriteRenderer, CharacterController2DDriverSnapshot driverSnapshot, MovementIntent movementIntent, CharacterController2DConfig characterControllerConfig, CharacterController2DCollisionDetector characterController2DCollisionDetector)
         {

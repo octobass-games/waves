@@ -7,7 +7,5 @@ namespace Octobass.Waves.Character
         void Tick();
 
         void Exit();
-
-        CharacterStateId? GetTransition();
     }
 }

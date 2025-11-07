@@ -24,19 +24,5 @@ namespace Octobass.Waves.Character
         {
             StateContext.MovementIntent.Displacement.y = StateContext.DriverSnapshot.Climbing.y * StateContext.CharacterControllerConfig.WallClimbSpeed * Time.fixedDeltaTime;
         }
-
-        public CharacterStateId? GetTransition()
-        {
-            if (StateContext.DriverSnapshot.GrabReleased || !StateContext.CharacterController2DCollisionDetector.IsTouchingWall())
-            {
-                return CharacterStateId.Falling;
-            }
-            else if (StateContext.DriverSnapshot.JumpPressed)
-            {
-                return CharacterStateId.WallJump;
-            }
-
-            return null;
-        }
     }
 }
