@@ -27,6 +27,16 @@ namespace Octobass.Waves.Character
         private bool AttackAnimationUpdated;
         private Vector2 Displacement;
 
+        void OnActiveFrame()
+        {
+            Debug.Log("Active frame!");
+        }
+
+        void OnRecoveryFrame()
+        {
+            Debug.Log("Recovery frame!");
+        }
+
         void Awake()
         {
             CollisionDetector = new CharacterController2DCollisionDetector(Body, CharacterControllerConfig);
@@ -82,6 +92,7 @@ namespace Octobass.Waves.Character
                 switch (attackState)
                 {
                     case AttackStateId.Attacking:
+                        Debug.Log($"Setting melee trigger - {attackState}");
                         Animator.SetTrigger("MeleeAttack");
                         break;
                     default:
