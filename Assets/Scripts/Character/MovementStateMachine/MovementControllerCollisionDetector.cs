@@ -11,7 +11,7 @@ namespace Octobass.Waves.Character
         private ContactFilter2D GroundContactFilter;
         private ContactFilter2D RideableContactFilter;
 
-        public MovementControllerCollisionDetector(Rigidbody2D body, MovementControllerConfig characterController2DConfig)
+        public MovementControllerCollisionDetector(Rigidbody2D body, MovementConfig characterController2DConfig)
         {
             Body = body;
             SkinWidth = characterController2DConfig.SkinWidth;

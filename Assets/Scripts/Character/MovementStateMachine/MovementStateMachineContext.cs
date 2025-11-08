@@ -8,14 +8,14 @@ namespace Octobass.Waves.Character
         public readonly Animator Animator;
         public CharacterController2DDriverSnapshot DriverSnapshot;
         public MovementIntent MovementIntent;
-        public MovementControllerConfig CharacterControllerConfig;
+        public MovementConfig CharacterControllerConfig;
         public MovementControllerCollisionDetector CharacterController2DCollisionDetector;
         public bool CoyoteAllowed;
         public float Velocity;
         public Vector2 WallJumpDirection;
         public bool IsTouchingWallForWallJump;
 
-        public MovementStateMachineContext(Rigidbody2D body, CharacterController2DDriverSnapshot driverSnapshot, MovementIntent movementIntent, MovementControllerConfig characterControllerConfig, MovementControllerCollisionDetector characterController2DCollisionDetector)
+        public MovementStateMachineContext(Rigidbody2D body, CharacterController2DDriverSnapshot driverSnapshot, MovementIntent movementIntent, MovementConfig characterControllerConfig, MovementControllerCollisionDetector characterController2DCollisionDetector)
         {
             Body = body;
             DriverSnapshot = driverSnapshot;

@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Octobass.Waves.Character
 {
     [CreateAssetMenu]
-    public class MovementControllerConfig : ScriptableObject
+    public class MovementConfig : ScriptableObject
     {
         [Tooltip("The default horizontal movement speed of the character")]
         public float Speed;

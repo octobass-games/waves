@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class MovementController : MonoBehaviour
+    public class MovementStateMachine : MonoBehaviour
     {
         public CharacterStateId CurrentStateId { get; private set; }
 
@@ -13,7 +13,7 @@ namespace Octobass.Waves.Character
         private MovementStateMachineContext StateContext;
 
         public Rigidbody2D Body;
-        public MovementControllerConfig CharacterControllerConfig;
+        public MovementConfig CharacterControllerConfig;
         private MovementControllerCollisionDetector CollisionDetector;
 
         private ContactFilter2D AllGroundContactFilter;
