@@ -5,9 +5,10 @@ namespace Octobass.Waves.Character
 {
     public class AttackStateMachine
     {
+        public AttackStateId CurrentStateId { get; private set; }
+
         private AttackStateMachineContext Context;
         private IAttackState CurrentState;
-        private AttackStateId CurrentStateId;
 
         private Dictionary<AttackStateId, IAttackState> StateRegistry;
 

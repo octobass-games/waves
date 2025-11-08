@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-
     public class CharacterController2D : MonoBehaviour
     {
         public Rigidbody2D Body;
@@ -25,6 +24,7 @@ namespace Octobass.Waves.Character
         private ContactFilter2D AllGroundContactFilter;
 
         private bool AnimatorUpdated;
+        private bool AttackAnimationUpdated;
         private Vector2 Displacement;
 
         void Awake()
@@ -52,6 +52,7 @@ namespace Octobass.Waves.Character
             AttackStateMachineContext.DriverSnapshot = snapshot; 
             
             CharacterStateId currentState = MovementStateMachine.CurrentStateId;
+            AttackStateId attackState = AttackStateMachine.CurrentStateId;
 
             if (!AnimatorUpdated)
             {
@@ -75,6 +76,20 @@ namespace Octobass.Waves.Character
 
                 AnimatorUpdated = true;
             }
+            
+            if (!AttackAnimationUpdated)
+            {
+                switch (attackState)
+                {
+                    case AttackStateId.Attacking:
+                        Animator.SetTrigger("MeleeAttack");
+                        break;
+                    default:
+                        break;
+                }
+
+                AttackAnimationUpdated = true;
+            }
 
             Animator.SetBool("HasXVelocity", Displacement.x != 0);
             Animator.SetBool("HasYVelocity", Displacement.y != 0);
@@ -94,7 +109,7 @@ namespace Octobass.Waves.Character
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
 
             AnimatorUpdated = !MovementStateMachine.EvaluateTransitions();
-            AttackStateMachine.EvaluateTransitions();
+            AttackAnimationUpdated = !AttackStateMachine.EvaluateTransitions();
 
             Driver.Consume();
         }
