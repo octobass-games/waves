@@ -1,4 +1,5 @@
 using Octobass.Waves.Character;
+using Octobass.Waves.Item;
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -52,7 +53,7 @@ namespace Octobass.Waves.Debugging
         {
             if (Enum.TryParse<CharacterStateId>(state, out CharacterStateId stateId))
             {
-                Player.AddState(stateId);
+                Player.OnAbilityItemPickedUp(new AbilityItemInstance("test", stateId));
             }
             else
             {

@@ -136,6 +136,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inspect"",
+                    ""type"": ""Button"",
+                    ""id"": ""b952c262-8031-4459-9827-35e396fac730"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -367,6 +376,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""InspectMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""102e694e-d433-4e9a-8413-b2b7b5ec5fa6"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inspect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bbdf4a3b-b8b2-4e09-9154-1992cd099bcb"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inspect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b34fa20-37a6-473c-aaf1-19b0607d4417"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inspect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -898,6 +940,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Movement_Grab = m_Movement.FindAction("Grab", throwIfNotFound: true);
         m_Movement_Climbing = m_Movement.FindAction("Climbing", throwIfNotFound: true);
         m_Movement_InspectMap = m_Movement.FindAction("InspectMap", throwIfNotFound: true);
+        m_Movement_Inspect = m_Movement.FindAction("Inspect", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -996,6 +1039,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Grab;
     private readonly InputAction m_Movement_Climbing;
     private readonly InputAction m_Movement_InspectMap;
+    private readonly InputAction m_Movement_Inspect;
     /// <summary>
     /// Provides access to input actions defined in input action map "Movement".
     /// </summary>
@@ -1027,6 +1071,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Movement/InspectMap".
         /// </summary>
         public InputAction @InspectMap => m_Wrapper.m_Movement_InspectMap;
+        /// <summary>
+        /// Provides access to the underlying input action "Movement/Inspect".
+        /// </summary>
+        public InputAction @Inspect => m_Wrapper.m_Movement_Inspect;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1068,6 +1116,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @InspectMap.started += instance.OnInspectMap;
             @InspectMap.performed += instance.OnInspectMap;
             @InspectMap.canceled += instance.OnInspectMap;
+            @Inspect.started += instance.OnInspect;
+            @Inspect.performed += instance.OnInspect;
+            @Inspect.canceled += instance.OnInspect;
         }
 
         /// <summary>
@@ -1094,6 +1145,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @InspectMap.started -= instance.OnInspectMap;
             @InspectMap.performed -= instance.OnInspectMap;
             @InspectMap.canceled -= instance.OnInspectMap;
+            @Inspect.started -= instance.OnInspect;
+            @Inspect.performed -= instance.OnInspect;
+            @Inspect.canceled -= instance.OnInspect;
         }
 
         /// <summary>
@@ -1364,6 +1418,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInspectMap(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Inspect" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInspect(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

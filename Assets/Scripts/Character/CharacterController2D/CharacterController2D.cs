@@ -1,4 +1,5 @@
 using Octobass.Waves.Extensions;
+using Octobass.Waves.Item;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -123,8 +124,10 @@ namespace Octobass.Waves.Character
             Driver.Consume();
         }
 
-        public void AddState(CharacterStateId state)
+        public void OnAbilityItemPickedUp(AbilityItemInstance ability)
         {
+            CharacterStateId state = ability.NewState;
+
             if (!StateRegistry.ContainsKey(state))
             {
                 switch(state)
