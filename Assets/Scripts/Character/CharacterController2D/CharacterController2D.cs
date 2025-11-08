@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
+
     public class CharacterController2D : MonoBehaviour
     {
         public Rigidbody2D Body;
@@ -15,9 +16,7 @@ namespace Octobass.Waves.Character
 
         private CharacterController2DCollisionDetector CollisionDetector;
 
-        private Dictionary<CharacterStateId, ICharacterState> StateRegistry;
-        private ICharacterState State;
-        private CharacterStateId StateId;
+        private StateMachine StateMachine;
         private StateContext StateContext;
 
         private ContactFilter2D AllGroundContactFilter;
@@ -30,16 +29,7 @@ namespace Octobass.Waves.Character
             CollisionDetector = new CharacterController2DCollisionDetector(Body, CharacterControllerConfig);
 
             StateContext = new StateContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig, CollisionDetector);
-
-            StateRegistry = new()
-            {
-                { CharacterStateId.Grounded, new GroundedState(StateContext) },
-                { CharacterStateId.Falling, new FallingState(StateContext) },
-                { CharacterStateId.Riding, new RidingState(StateContext) },
-            };
-
-            State = StateRegistry[CharacterStateId.Grounded];
-            StateId = CharacterStateId.Grounded;
+            StateMachine = new StateMachine(StateContext);
 
             AllGroundContactFilter = new()
             {
@@ -51,33 +41,27 @@ namespace Octobass.Waves.Character
         void Update()
         {
             StateContext.DriverSnapshot = Driver.TakeSnapshot();
+            
+            CharacterStateId currentState = StateMachine.CurrentStateId;
 
             if (!AnimatorUpdated)
             {
-                if (State is GroundedState)
+                switch (currentState)
                 {
-                    Animator.SetTrigger("IsGrounded");
-                }
-                else if (State is JumpingState)
-                {
-                    Animator.SetTrigger("Jump");
-                }
-                else if (State is FallingState)
-                {
-                    Animator.SetTrigger("Fall");
-                }
-                else if (State is WallClimbState)
-                {
-                    Animator.SetTrigger("WallClimb");
-                }
-                else if (State is WallSlideState)
-                {
-                }
-                else if (State is RidingState)
-                {
-                }
-                else if (State is WallJumpState)
-                {
+                    case CharacterStateId.Grounded:
+                        Animator.SetTrigger("IsGrounded");
+                        break;
+                    case CharacterStateId.Jumping:
+                        Animator.SetTrigger("Jump");
+                        break;
+                    case CharacterStateId.Falling:
+                        Animator.SetTrigger("Fall");
+                        break;
+                    case CharacterStateId.WallClimb:
+                        Animator.SetTrigger("WallClimb");
+                        break;
+                    default:
+                        break;
                 }
 
                 AnimatorUpdated = true;
@@ -85,12 +69,12 @@ namespace Octobass.Waves.Character
 
             Animator.SetBool("HasXVelocity", Displacement.x != 0);
             Animator.SetBool("HasYVelocity", Displacement.y != 0);
-            SpriteRenderer.flipX = (State is WallClimbState || State is WallSlideState) ? CollisionDetector.IsTouchingLeftWall() : Displacement.x < 0;
+            SpriteRenderer.flipX = (currentState == CharacterStateId.WallClimb || currentState == CharacterStateId.WallSlide) ? CollisionDetector.IsTouchingLeftWall() : Displacement.x < 0;
         }
 
         void FixedUpdate()
         {
-            State.Tick();
+            StateMachine.Tick();
 
             Displacement = StateContext.MovementIntent.Displacement;
             Vector2 normalizedDisplacement = Displacement == Vector2.zero ? Vector2.zero : Displacement.normalized;
@@ -99,78 +83,14 @@ namespace Octobass.Waves.Character
             Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), Displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
 
-            CharacterStateId? nextState = GetNext();
-
-            if (nextState.HasValue)
-            {
-                State.Exit();
-                AnimatorUpdated = false;
-
-                if (!StateRegistry.TryGetValue(nextState.Value, out State))
-                {
-                    Debug.Log($"[CharacterController2D]: Could not find state to transition to - {nextState.Value}");
-                    State = StateRegistry[CharacterStateId.Grounded];
-                    StateId = CharacterStateId.Grounded;
-                }
-                else
-                {
-                    StateId = nextState.Value;
-                }
-
-                Debug.Log($"[CharacterController2D]: Entering - {State}");
-                State.Enter();
-            }
+            AnimatorUpdated = !StateMachine.EvaluateTransitions();
 
             Driver.Consume();
         }
 
         public void OnAbilityItemPickedUp(AbilityItemInstance ability)
         {
-            CharacterStateId state = ability.NewState;
-
-            if (!StateRegistry.ContainsKey(state))
-            {
-                switch(state)
-                {
-                    case CharacterStateId.Jumping:
-                        StateRegistry[CharacterStateId.Jumping] = new JumpingState(StateContext);
-                        break;
-                    case CharacterStateId.WallClimb:
-                        StateRegistry[CharacterStateId.WallClimb] = new WallClimbState(StateContext);
-                        StateRegistry[CharacterStateId.WallSlide] = new WallSlideState(StateContext);
-                        break;
-                    case CharacterStateId.WallJump:
-                        StateRegistry[CharacterStateId.WallJump] = new WallJumpState(StateContext);
-                        break;
-                    default:
-                        Debug.Log($"[CharacterController2D]: Trying to add a state that is not supported - {state}");
-                        break;
-                }
-            }
-            else
-            {
-                Debug.Log($"[CharacterController2D]: State already exists in character controller - {state}");
-            }
-        }
-
-        public CharacterStateId? GetNext()
-        {
-            if (TransitionRegistry.Transitions.TryGetValue(StateId, out List<Transition> transitions))
-            {
-                foreach (var transition in transitions)
-                {
-                    if (StateRegistry.ContainsKey(transition.Target) && transition.IsSatisfied(StateContext))
-                    {
-                        return transition.Target;
-                    }
-                }
-            }
-            else
-            {
-                Debug.Log($"[CharacterController2D]: Could not find transitions for {StateId}");
-            }
-
-            return null;
+            StateMachine.AddState(ability.NewState);
         }
     }
 }
