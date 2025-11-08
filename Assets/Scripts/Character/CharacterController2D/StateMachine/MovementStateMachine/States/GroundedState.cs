@@ -4,9 +4,9 @@ namespace Octobass.Waves.Character
 {
     public class GroundedState : ICharacterState
     {
-        private StateContext StateContext;
+        private MovementStateMachineContext StateContext;
 
-        public GroundedState(StateContext stateContext)
+        public GroundedState(MovementStateMachineContext stateContext)
         {
             StateContext = stateContext;
         }

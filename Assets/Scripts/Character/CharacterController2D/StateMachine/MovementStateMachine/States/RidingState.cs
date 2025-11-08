@@ -4,10 +4,10 @@ namespace Octobass.Waves.Character
 {
     public class RidingState : ICharacterState
     {
-        private StateContext StateContext;
+        private MovementStateMachineContext StateContext;
         private IRideable Rideable;
 
-        public RidingState(StateContext stateContext)
+        public RidingState(MovementStateMachineContext stateContext)
         {
             StateContext = stateContext;
         }

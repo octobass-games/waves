@@ -5,11 +5,11 @@ namespace Octobass.Waves.Character
 {
     public class FallingState : ICharacterState
     {
-        private StateContext StateContext;
+        private MovementStateMachineContext StateContext;
         private float Velocity;
         private float CoyoteTimer;
 
-        public FallingState(StateContext stateContext)
+        public FallingState(MovementStateMachineContext stateContext)
         {
             StateContext = stateContext;
         }

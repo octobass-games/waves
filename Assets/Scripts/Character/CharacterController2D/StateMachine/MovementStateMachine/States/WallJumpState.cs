@@ -5,14 +5,14 @@ namespace Octobass.Waves.Character
 {
     public class WallJumpState : ICharacterState
     {
-        private StateContext StateContext;
+        private MovementStateMachineContext StateContext;
 
         private Vector2 Direction;
         private float WallJumpInputFreezeTimer = 0;
         private float Velocity;
         private bool WallTouched;
 
-        public WallJumpState(StateContext stateContext)
+        public WallJumpState(MovementStateMachineContext stateContext)
         {
             StateContext = stateContext;
         }

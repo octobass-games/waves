@@ -10,6 +10,8 @@ namespace Octobass.Waves.Character
         private bool JumpReleased;
         private bool GrabPressed;
         private bool GrabReleased;
+        private bool AttackPressed;
+        private bool AttackReleased;
 
         void Awake()
         {
@@ -39,6 +41,16 @@ namespace Octobass.Waves.Character
                 GrabReleased = true;
             }
 
+            if (PlayerInput.Movement.Attack.WasPerformedThisFrame())
+            {
+                AttackPressed = true;
+            }
+
+            if (PlayerInput.Movement.Attack.WasReleasedThisFrame())
+            {
+                AttackReleased = true;
+            }
+
             return new CharacterController2DDriverSnapshot
             {
                 Movement = new Vector2(PlayerInput.Movement.Horizontal.ReadValue<float>(), 0),
@@ -47,7 +59,9 @@ namespace Octobass.Waves.Character
                 JumpReleased = JumpReleased,
                 GrabPressed = GrabPressed,
                 GrabReleased = GrabReleased,
-                GrabHeld = GrabPressed && !GrabReleased
+                GrabHeld = GrabPressed && !GrabReleased,
+                AttackPressed = AttackPressed,
+                AttackReleased = AttackReleased
             };
         }
 
@@ -55,6 +69,9 @@ namespace Octobass.Waves.Character
         {
             JumpPressed = false;
             JumpReleased = false;
+
+            AttackPressed = false;
+            AttackReleased = false;
 
             if (GrabReleased)
             {

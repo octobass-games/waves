@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class StateContext
+    public class MovementStateMachineContext
     {
         public readonly Rigidbody2D Body;
         public readonly Animator Animator;
@@ -16,7 +16,7 @@ namespace Octobass.Waves.Character
         public Vector2 WallJumpDirection;
         public bool IsTouchingWallForWallJump;
 
-        public StateContext(Rigidbody2D body, Animator animator, SpriteRenderer spriteRenderer, CharacterController2DDriverSnapshot driverSnapshot, MovementIntent movementIntent, CharacterController2DConfig characterControllerConfig, CharacterController2DCollisionDetector characterController2DCollisionDetector)
+        public MovementStateMachineContext(Rigidbody2D body, Animator animator, SpriteRenderer spriteRenderer, CharacterController2DDriverSnapshot driverSnapshot, MovementIntent movementIntent, CharacterController2DConfig characterControllerConfig, CharacterController2DCollisionDetector characterController2DCollisionDetector)
         {
             Body = body;
             Animator = animator;

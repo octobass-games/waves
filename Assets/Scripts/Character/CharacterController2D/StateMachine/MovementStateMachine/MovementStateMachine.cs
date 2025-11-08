@@ -3,15 +3,15 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class StateMachine
+    public class MovementStateMachine
     {
         public CharacterStateId CurrentStateId {  get; private set; }
 
         private Dictionary<CharacterStateId, ICharacterState> StateRegistry;
         private ICharacterState CurrentState;
-        private StateContext StateContext;
+        private MovementStateMachineContext StateContext;
 
-        public StateMachine(StateContext stateContext)
+        public MovementStateMachine(MovementStateMachineContext stateContext)
         {
             StateContext = stateContext;
 
@@ -41,7 +41,7 @@ namespace Octobass.Waves.Character
 
                 if (!StateRegistry.TryGetValue(nextState.Value, out CurrentState))
                 {
-                    Debug.Log($"[StateMachine]: Could not find state to transition to - {nextState.Value}");
+                    Debug.Log($"[MovementStateMachine]: Could not find state to transition to - {nextState.Value}");
                     CurrentState = StateRegistry[CharacterStateId.Grounded];
                     CurrentStateId = CharacterStateId.Grounded;
                 }
@@ -50,7 +50,7 @@ namespace Octobass.Waves.Character
                     CurrentStateId = nextState.Value;
                 }
 
-                Debug.Log($"[StateMachine]: Entering - {CurrentState}");
+                Debug.Log($"[MovementStateMachine]: Entering - {CurrentState}");
                 CurrentState.Enter();
 
                 return true;
@@ -76,19 +76,19 @@ namespace Octobass.Waves.Character
                         StateRegistry[CharacterStateId.WallJump] = new WallJumpState(StateContext);
                         break;
                     default:
-                        Debug.LogWarning($"[StateMachine]: Trying to add a state that is not supported - {stateId}");
+                        Debug.LogWarning($"[MovementStateMachine]: Trying to add a state that is not supported - {stateId}");
                         break;
                 }
             }
             else
             {
-                Debug.LogWarning($"[StateMachine]: State already exists in state machine - {stateId}");
+                Debug.LogWarning($"[MovementStateMachine]: State already exists in state machine - {stateId}");
             }
         }
 
         private CharacterStateId? GetNextTransition()
         {
-            if (TransitionRegistry.Transitions.TryGetValue(CurrentStateId, out List<Transition> transitions))
+            if (MovementStateTransitionRegistry.Transitions.TryGetValue(CurrentStateId, out List<MovementStateTransition> transitions))
             {
                 foreach (var transition in transitions)
                 {
@@ -100,7 +100,7 @@ namespace Octobass.Waves.Character
             }
             else
             {
-                Debug.LogWarning($"[StateMachine]: Could not find transitions for {CurrentStateId}");
+                Debug.LogWarning($"[MovementStateMachine]: Could not find transitions for {CurrentStateId}");
             }
 
             return null;

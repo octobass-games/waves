@@ -1,3 +1,4 @@
+using Octobass.Waves.Attack;
 using Octobass.Waves.Extensions;
 using Octobass.Waves.Item;
 using UnityEngine;
@@ -12,11 +13,14 @@ namespace Octobass.Waves.Character
         public SpriteRenderer SpriteRenderer;
         public CharacterController2DDriver Driver;
         public CharacterController2DConfig CharacterControllerConfig;
+        public AttackMove Attack;
 
         private CharacterController2DCollisionDetector CollisionDetector;
 
-        private StateMachine StateMachine;
-        private StateContext StateContext;
+        private MovementStateMachine MovementStateMachine;
+        private MovementStateMachineContext MovementStateMachineContext;
+        private AttackStateMachine AttackStateMachine;
+        private AttackStateMachineContext AttackStateMachineContext;
 
         private ContactFilter2D AllGroundContactFilter;
 
@@ -27,8 +31,11 @@ namespace Octobass.Waves.Character
         {
             CollisionDetector = new CharacterController2DCollisionDetector(Body, CharacterControllerConfig);
 
-            StateContext = new StateContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig, CollisionDetector);
-            StateMachine = new StateMachine(StateContext);
+            MovementStateMachineContext = new MovementStateMachineContext(Body, Animator, SpriteRenderer, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig, CollisionDetector);
+            MovementStateMachine = new MovementStateMachine(MovementStateMachineContext);
+
+            AttackStateMachineContext = new AttackStateMachineContext(MovementStateMachine.CurrentStateId, Attack, new CharacterController2DDriverSnapshot());
+            AttackStateMachine = new AttackStateMachine(AttackStateMachineContext);
 
             AllGroundContactFilter = new()
             {
@@ -39,9 +46,12 @@ namespace Octobass.Waves.Character
 
         void Update()
         {
-            StateContext.DriverSnapshot = Driver.TakeSnapshot();
+            CharacterController2DDriverSnapshot snapshot = Driver.TakeSnapshot();
             
-            CharacterStateId currentState = StateMachine.CurrentStateId;
+            MovementStateMachineContext.DriverSnapshot = snapshot;
+            AttackStateMachineContext.DriverSnapshot = snapshot; 
+            
+            CharacterStateId currentState = MovementStateMachine.CurrentStateId;
 
             if (!AnimatorUpdated)
             {
@@ -73,23 +83,25 @@ namespace Octobass.Waves.Character
 
         void FixedUpdate()
         {
-            StateMachine.Tick();
+            AttackStateMachine.Tick();
+            MovementStateMachine.Tick();
 
-            Displacement = StateContext.MovementIntent.Displacement;
+            Displacement = MovementStateMachineContext.MovementIntent.Displacement;
             Vector2 normalizedDisplacement = Displacement == Vector2.zero ? Vector2.zero : Displacement.normalized;
 
             Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), Displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), Displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
 
-            AnimatorUpdated = !StateMachine.EvaluateTransitions();
+            AnimatorUpdated = !MovementStateMachine.EvaluateTransitions();
+            AttackStateMachine.EvaluateTransitions();
 
             Driver.Consume();
         }
 
         public void OnAbilityItemPickedUp(AbilityItemInstance ability)
         {
-            StateMachine.AddState(ability.NewState);
+            MovementStateMachine.AddState(ability.NewState);
         }
     }
 }

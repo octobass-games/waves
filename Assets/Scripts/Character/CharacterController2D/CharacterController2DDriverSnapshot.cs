@@ -11,5 +11,7 @@ namespace Octobass.Waves.Character
         public bool GrabPressed;
         public bool GrabReleased;
         public bool GrabHeld;
+        public bool AttackPressed;
+        public bool AttackReleased;
     }
 }

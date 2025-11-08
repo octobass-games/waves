@@ -4,9 +4,9 @@ namespace Octobass.Waves.Character
 {
     public class WallClimbState : ICharacterState
     {
-        private StateContext StateContext;
+        private MovementStateMachineContext StateContext;
 
-        public WallClimbState(StateContext stateContext)
+        public WallClimbState(MovementStateMachineContext stateContext)
         {
             StateContext = stateContext;
         }

@@ -5,11 +5,11 @@ namespace Octobass.Waves.Character
 {
     public class JumpingState : ICharacterState
     {
-        private StateContext StateContext;
+        private MovementStateMachineContext StateContext;
 
         private float Velocity;
 
-        public JumpingState(StateContext stateContext)
+        public JumpingState(MovementStateMachineContext stateContext)
         {
             StateContext = stateContext;
         }
