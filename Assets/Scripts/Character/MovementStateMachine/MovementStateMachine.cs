@@ -6,10 +6,9 @@ namespace Octobass.Waves.Character
 {
     public class MovementStateMachine : MonoBehaviour
     {
-        public CharacterStateId CurrentStateId { get; private set; }
-
         private Dictionary<CharacterStateId, ICharacterState> StateRegistry = new();
         private ICharacterState CurrentState;
+        private CharacterStateId CurrentStateId;
         private MovementStateMachineContext StateContext;
 
         public Rigidbody2D Body;
@@ -39,26 +38,19 @@ namespace Octobass.Waves.Character
             };
         }
 
-        public Vector2 Tick(CharacterController2DDriverSnapshot snapshot)
+        public MovementSnapshot Tick(CharacterController2DDriverSnapshot snapshot)
         {
             StateContext.DriverSnapshot = snapshot;
 
             CurrentState.Tick();
 
-            Vector2 Displacement = StateContext.MovementIntent.Displacement;
-            Vector2 normalizedDisplacement = Displacement == Vector2.zero ? Vector2.zero : Displacement.normalized;
+            Vector2 displacement = StateContext.MovementIntent.Displacement;
+            Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
 
-            Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), Displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
-            Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), Displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
+            Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
+            Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
 
-            EvaluateTransitions();
-
-            return Displacement;
-        }
-
-        public bool EvaluateTransitions()
-        {
             CharacterStateId? nextState = GetNextTransition();
 
             if (nextState.HasValue)
@@ -78,11 +70,9 @@ namespace Octobass.Waves.Character
 
                 Debug.Log($"[MovementStateMachine]: Entering - {CurrentState}");
                 CurrentState.Enter();
-
-                return true;
             }
 
-            return false;
+            return new MovementSnapshot(CurrentStateId, displacement);
         }
 
         public void AddState(CharacterStateId stateId)
@@ -139,11 +129,6 @@ namespace Octobass.Waves.Character
             }
 
             return null;
-        }
-
-        public CharacterStateId GetCurrentState()
-        {
-            return CurrentStateId;
         }
     }
 }

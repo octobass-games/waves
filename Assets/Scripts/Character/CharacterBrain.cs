@@ -25,8 +25,8 @@ namespace Octobass.Waves.Character
         private AttackStateId PreviousAttackState;
         private AttackStateId CurrentAttackState;
 
-        private CharacterStateId PreviousMovementState;
-        private CharacterStateId CurrentMovementState;
+        private MovementSnapshot CurrentMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero);
+        private MovementSnapshot PreviousMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero);
 
         void Awake()
         {
@@ -37,12 +37,11 @@ namespace Octobass.Waves.Character
         {
             Snapshot = Driver.TakeSnapshot();
 
-            CurrentMovementState = MovementController.GetCurrentState();
             CurrentAttackState = AttackController.GetCurrentState();
 
-            if (PreviousMovementState != CurrentMovementState)
+            if (PreviousMovementSnapshot.State != CurrentMovementSnapshot.State)
             {
-                switch (CurrentMovementState)
+                switch (CurrentMovementSnapshot.State)
                 {
                     case CharacterStateId.Grounded:
                         Animator.SetTrigger("IsGrounded");
@@ -59,9 +58,9 @@ namespace Octobass.Waves.Character
                     default:
                         break;
                 }
-
-                PreviousMovementState = CurrentMovementState;
             }
+
+            PreviousMovementSnapshot = CurrentMovementSnapshot;
 
             if (PreviousAttackState != CurrentAttackState)
             {
@@ -78,16 +77,16 @@ namespace Octobass.Waves.Character
                 PreviousAttackState = CurrentAttackState;
             }
 
-            Animator.SetBool("HasXVelocity", Displacement.x != 0);
-            Animator.SetBool("HasYVelocity", Displacement.y != 0);
-            SpriteRenderer.flipX = (CurrentMovementState == CharacterStateId.WallClimb || CurrentMovementState == CharacterStateId.WallSlide) ? CollisionDetector.IsTouchingLeftWall() : Displacement.x < 0;
+            Animator.SetBool("HasXVelocity", CurrentMovementSnapshot.Displacement.x != 0);
+            Animator.SetBool("HasYVelocity", CurrentMovementSnapshot.Displacement.y != 0);
+            SpriteRenderer.flipX = (CurrentMovementSnapshot.State == CharacterStateId.WallClimb || CurrentMovementSnapshot.State == CharacterStateId.WallSlide) ? CollisionDetector.IsTouchingLeftWall() : CurrentMovementSnapshot.Displacement.x < 0;
         }
 
         void FixedUpdate()
         {
             AttackController.Tick(Snapshot);
 
-            Displacement = MovementController.Tick(Snapshot);
+            CurrentMovementSnapshot = MovementController.Tick(Snapshot);
 
             Driver.Consume();
         }
