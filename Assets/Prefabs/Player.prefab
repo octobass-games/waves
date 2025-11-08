@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3912023152736792653}
-  - component: {fileID: 3960150527223363248}
+  - component: {fileID: 1324872311313738621}
+  - component: {fileID: 5917689616387817606}
+  - component: {fileID: 5257431564495623803}
   - component: {fileID: 6662430300472696404}
   - component: {fileID: 3796453743840512579}
   - component: {fileID: 3962255609282539790}
@@ -38,7 +40,7 @@ Transform:
   - {fileID: 2641394280749416727}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3960150527223363248
+--- !u!114 &1324872311313738621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,14 +49,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1806367208770461159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9732065f4eda94e43957a92f21bd911c, type: 3}
+  m_Script: {fileID: 11500000, guid: 260050a4795f64c4780f00a5b14562f6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.CharacterController2D.CharacterController2D
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.CharacterBrain
+  MovementController: {fileID: 5917689616387817606}
+  AttackController: {fileID: 5257431564495623803}
   Body: {fileID: 6662430300472696404}
+  CharacterControllerConfig: {fileID: 11400000, guid: 431261bee2e99c64cbe8a1d586f17f74, type: 2}
   Animator: {fileID: 881346472432367290}
   SpriteRenderer: {fileID: 2145831334822855955}
   Driver: {fileID: 3796453743840512579}
-  CharacterControllerConfig: {fileID: 11400000, guid: 1c9812ccf9542b949af79b641b0d2f23, type: 2}
+--- !u!114 &5917689616387817606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3501ecb75799742a86c398033e3914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.MovementController
+  Body: {fileID: 6662430300472696404}
+  CharacterControllerConfig: {fileID: 11400000, guid: 431261bee2e99c64cbe8a1d586f17f74, type: 2}
+--- !u!114 &5257431564495623803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08c7cda09d284a4f88ab00d137d54ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.AttackController
   Attack: {fileID: 8984330001030628447}
 --- !u!50 &6662430300472696404
 Rigidbody2D:

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class CharacterController2DCollisionDetector
+    public class MovementControllerCollisionDetector
     {
         private Rigidbody2D Body;
         private float SkinWidth;
@@ -11,7 +11,7 @@ namespace Octobass.Waves.Character
         private ContactFilter2D GroundContactFilter;
         private ContactFilter2D RideableContactFilter;
 
-        public CharacterController2DCollisionDetector(Rigidbody2D body, CharacterController2DConfig characterController2DConfig)
+        public MovementControllerCollisionDetector(Rigidbody2D body, MovementControllerConfig characterController2DConfig)
         {
             Body = body;
             SkinWidth = characterController2DConfig.SkinWidth;

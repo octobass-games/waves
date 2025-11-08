@@ -1,14 +1,13 @@
 using Octobass.Waves.Character;
 using Octobass.Waves.Item;
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Octobass.Waves.Debugging
 {
     public class DebugMenu : MonoBehaviour
     {
-        public CharacterController2D Player;
+        public CharacterBrain Player;
         public bool UnlockAllAbilitiesOnAwake = true;
         public GameObject DebugMenuUi;
 
