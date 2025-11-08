@@ -1,6 +1,5 @@
 using Octobass.Waves.Extensions;
 using Octobass.Waves.Item;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Octobass.Waves.Character

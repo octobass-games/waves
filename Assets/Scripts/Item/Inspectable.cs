@@ -49,5 +49,10 @@ namespace Octobass.Waves.Item
                 IsInspectable = false;
             }
         }
+
+        void OnDisable()
+        {
+            PlayerInput.Disable();
+        }
     }
 }

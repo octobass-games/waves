@@ -22,8 +22,8 @@ namespace Octobass.Waves.Character
                 { CharacterStateId.Riding, new RidingState(StateContext) },
             };
 
-            CurrentState = StateRegistry[CharacterStateId.Falling];
-            CurrentStateId = CharacterStateId.Falling;
+            CurrentState = StateRegistry[CharacterStateId.Grounded];
+            CurrentStateId = CharacterStateId.Grounded;
         }
 
         public void Tick()
