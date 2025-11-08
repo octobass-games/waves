@@ -47,7 +47,7 @@ namespace Octobass.Waves.Character
                 CharacterStateId.WallClimb,
                 new()
                 {
-                    new(CharacterStateId.Falling, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.GrabReleased || !stateContext.CharacterController2DCollisionDetector.IsTouchingWall()),
+                    new(CharacterStateId.Falling, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.GrabReleased || !stateContext.CharacterController2DCollisionDetector.IsCloseToWall()),
                     new(CharacterStateId.WallJump, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.JumpPressed)
                 }
             },
