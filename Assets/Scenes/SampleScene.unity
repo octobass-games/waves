@@ -128,7 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 53941427}
-  - component: {fileID: 53941426}
   - component: {fileID: 53941429}
   - component: {fileID: 53941428}
   - component: {fileID: 53941431}
@@ -141,22 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &53941426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53941425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9732065f4eda94e43957a92f21bd911c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.CharacterController2D.CharacterController2D
-  Body: {fileID: 53941429}
-  Animator: {fileID: 53941428}
-  Driver: {fileID: 53941432}
-  CharacterControllerConfig: {fileID: 11400000, guid: 1c9812ccf9542b949af79b641b0d2f23, type: 2}
 --- !u!4 &53941427
 Transform:
   m_ObjectHideFlags: 0
@@ -4854,7 +4837,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 16.875
+  orthographic size: 8.171875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5211,6 +5194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17166a7e5b32024a80198bdde2a8672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Room.RoomEntrance
+  Room: 0
 --- !u!1 &1053008775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,6 +5301,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f855ea4911aaa5242b5e927a05b067d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.Cartographer
+  OnRoomEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRoomStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  Rooms: []
 --- !u!4 &1299838400
 Transform:
   m_ObjectHideFlags: 0
