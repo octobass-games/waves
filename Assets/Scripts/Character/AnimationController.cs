@@ -51,8 +51,6 @@ namespace Octobass.Waves.Character
                     default:
                         break;
                 }
-
-                PreviousAttackState = CurrentAttackState;
             }
 
             Animator.SetBool("HasXVelocity", CurrentMovementSnapshot.Displacement.x != 0);
