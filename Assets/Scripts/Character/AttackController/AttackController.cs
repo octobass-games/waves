@@ -7,36 +7,27 @@ namespace Octobass.Waves.Character
     {
         public AttackMove Attack;
 
-        private AttackStateMachine AttackStateMachine;
-        private AttackStateMachineContext AttackStateMachineContext;
-
-        void Awake()
-        {
-            AttackStateMachineContext = new AttackStateMachineContext(Attack, new CharacterController2DDriverSnapshot());
-            AttackStateMachine = new AttackStateMachine(AttackStateMachineContext);
-        }
+        private bool IsAttacking;
 
         void OnActiveFrame()
         {
-            Debug.Log("Active frame");
+            Attack.Activate();
         }
 
         void OnRecoveryFrame()
         {
-            Debug.Log("Recovery frame");
+            IsAttacking = false;
+            Attack.Deactivate();
         }
 
-        public void Tick(CharacterController2DDriverSnapshot snapshot)
+        public AttackSnapshot Tick(CharacterController2DDriverSnapshot driverSnapshot, MovementSnapshot movementSnapshot)
         {
-            AttackStateMachineContext.DriverSnapshot = snapshot;
+            if (driverSnapshot.AttackPressed && !IsAttacking)
+            {
+                IsAttacking = true;
+            }
 
-            AttackStateMachine.Tick();
-            AttackStateMachine.EvaluateTransitions();
-        }
-
-        public AttackStateId GetCurrentState()
-        {
-            return AttackStateMachine.CurrentStateId;
+            return new AttackSnapshot(IsAttacking);
         }
     }
 }

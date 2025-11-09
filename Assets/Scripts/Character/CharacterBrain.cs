@@ -10,23 +10,21 @@ namespace Octobass.Waves.Character
         public AnimationController AnimationController;
 
         public CharacterController2DDriver Driver;
-        private CharacterController2DDriverSnapshot Snapshot = new();
 
+        private CharacterController2DDriverSnapshot DriverSnapshot = new();
         private MovementSnapshot MovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
+        private AttackSnapshot AttackSnapshot = new(false);
 
         void Update()
         {
-            Snapshot = Driver.TakeSnapshot();
-
-            AnimationController.Tick(MovementSnapshot, AttackController.GetCurrentState());
+            DriverSnapshot = Driver.TakeSnapshot();
+            AnimationController.Tick(MovementSnapshot, AttackSnapshot);
         }
 
         void FixedUpdate()
         {
-            AttackController.Tick(Snapshot);
-
-            MovementSnapshot = MovementStateMachine.Tick(Snapshot);
-
+            MovementSnapshot = MovementStateMachine.Tick(DriverSnapshot);
+            AttackSnapshot = AttackController.Tick(DriverSnapshot, MovementSnapshot);
             Driver.Consume();
         }
 

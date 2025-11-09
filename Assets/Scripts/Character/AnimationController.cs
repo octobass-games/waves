@@ -7,18 +7,18 @@ namespace Octobass.Waves.Character
         public Animator Animator;
         public SpriteRenderer SpriteRenderer;
 
-        private AttackStateId PreviousAttackState;
-        private AttackStateId CurrentAttackState;
+        private AttackSnapshot PreviousAttackState = new(false);
+        private AttackSnapshot CurrentAttackState = new(false);
         private MovementSnapshot CurrentMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
         private MovementSnapshot PreviousMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
 
-        public void Tick(MovementSnapshot movementSnapshot, AttackStateId attackState)
+        public void Tick(MovementSnapshot movementSnapshot, AttackSnapshot attackSnapshot)
         {
             PreviousMovementSnapshot = CurrentMovementSnapshot;
             CurrentMovementSnapshot = movementSnapshot;
 
             PreviousAttackState = CurrentAttackState;
-            CurrentAttackState = attackState;
+            CurrentAttackState = attackSnapshot;
 
             if (PreviousMovementSnapshot.State != CurrentMovementSnapshot.State)
             {
@@ -41,16 +41,9 @@ namespace Octobass.Waves.Character
                 }
             }
 
-            if (PreviousAttackState != CurrentAttackState)
+            if (PreviousAttackState.IsAttacking != CurrentAttackState.IsAttacking && CurrentAttackState.IsAttacking)
             {
-                switch (CurrentAttackState)
-                {
-                    case AttackStateId.Attacking:
-                        Animator.SetTrigger("MeleeAttack");
-                        break;
-                    default:
-                        break;
-                }
+                Animator.SetTrigger("MeleeAttack");
             }
 
             Animator.SetBool("HasXVelocity", CurrentMovementSnapshot.Displacement.x != 0);
