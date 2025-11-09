@@ -22,7 +22,7 @@ namespace Octobass.Waves.Character
 
             float verticalDistanceFromBobHeight = characterY - bobPositionY;
 
-            Debug.Log($"[SwimmingState]: characterY - {characterY}, colliderY - {colliderY}, bobPositionY - {bobPositionY}, verticalDistanceFromBobHeight - {verticalDistanceFromBobHeight}");
+            Debug.Log(Context.DriverSnapshot.Swimming);
 
             if (verticalDistanceFromBobHeight > 0)
             {

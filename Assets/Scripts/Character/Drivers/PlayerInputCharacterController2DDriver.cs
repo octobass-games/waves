@@ -55,6 +55,7 @@ namespace Octobass.Waves.Character
             {
                 Movement = new Vector2(PlayerInput.Movement.Horizontal.ReadValue<float>(), 0),
                 Climbing = new Vector2(0, PlayerInput.Movement.Climbing.ReadValue<float>()),
+                Swimming = PlayerInput.Movement.Swimming.ReadValue<Vector2>(),
                 JumpPressed = JumpPressed,
                 JumpReleased = JumpReleased,
                 GrabPressed = GrabPressed,

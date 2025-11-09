@@ -50,6 +50,9 @@ namespace Octobass.Waves.Character
         [Tooltip("The height above the water that the character will sit when swimming above the surface of liquids")]
         public float SwimmingBobHeight;
 
+        [Tooltip("The movement speed modifier to apply when moving underwater")]
+        public float DivingSpeedModifier;
+
         [Tooltip("The contact filter to apply when detecting ground collisions")]
         public ContactFilter2D GroundContactFilter;
 

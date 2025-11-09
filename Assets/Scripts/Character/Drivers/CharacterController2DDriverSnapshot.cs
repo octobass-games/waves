@@ -5,6 +5,7 @@ namespace Octobass.Waves.Character
     public class CharacterController2DDriverSnapshot
     {
         public Vector2 Movement;
+        public Vector2 Swimming;
         public Vector2 Climbing;
         public bool JumpPressed;
         public bool JumpReleased;

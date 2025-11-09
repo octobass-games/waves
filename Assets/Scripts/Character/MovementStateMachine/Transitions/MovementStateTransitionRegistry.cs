@@ -74,7 +74,14 @@ namespace Octobass.Waves.Character
                 CharacterStateId.Swimming,
                 new()
                 {
-                    new(CharacterStateId.Jumping, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.JumpPressed)
+                    new(CharacterStateId.Jumping, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.JumpPressed),
+                    new(CharacterStateId.Diving, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.Swimming.y < 0)
+                }
+            },
+            {
+                CharacterStateId.Diving,
+                new()
+                {
                 }
             }
         };

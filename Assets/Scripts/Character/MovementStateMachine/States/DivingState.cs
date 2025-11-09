@@ -4,28 +4,16 @@ namespace Octobass.Waves.Character
 {
     public class DivingState : CharacterState
     {
-        public void Enter()
+        public MovementStateMachineContext Context;
+
+        public DivingState(MovementStateMachineContext context)
         {
+            Context = context;
         }
 
-        public void Exit()
+        public override void Tick()
         {
-        }
-
-        public void Tick()
-        {
-        }
-
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            Context.MovementIntent.Displacement = Context.DriverSnapshot.Swimming * Context.CharacterControllerConfig.DivingSpeedModifier * Context.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
         }
     }
 }

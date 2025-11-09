@@ -103,6 +103,9 @@ namespace Octobass.Waves.Character
                     case CharacterStateId.Swimming:
                         StateRegistry[CharacterStateId.Swimming] = new SwimmingState(StateContext);
                         break;
+                    case CharacterStateId.Diving:
+                        StateRegistry[CharacterStateId.Diving] = new DivingState(StateContext);
+                        break;
                     default:
                         Debug.LogWarning($"[MovementStateMachine]: Trying to add a state that is not supported - {stateId}");
                         break;

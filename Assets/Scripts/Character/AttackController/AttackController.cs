@@ -8,7 +8,7 @@ namespace Octobass.Waves.Character
     {
         public AttackMove Attack;
 
-        private readonly List<CharacterStateId> AttackingStates = new() { CharacterStateId.Grounded, CharacterStateId.Jumping, CharacterStateId.Falling };
+        private readonly List<CharacterStateId> AttackingStates = new() { CharacterStateId.Grounded };
         private bool IsAttacking;
 
         void OnActiveFrame()
