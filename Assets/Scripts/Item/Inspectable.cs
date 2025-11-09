@@ -10,6 +10,7 @@ namespace Octobass.Waves.Item
         private PlayerInput PlayerInput;
         private bool IsInspectable;
         private bool InspectPressed;
+        public GameObject DisplayInspect;
 
         void Awake()
         {
@@ -30,6 +31,9 @@ namespace Octobass.Waves.Item
             if (collision.CompareTag(Tags.Player))
             {
                 IsInspectable = true;
+                if (DisplayInspect != null) {
+                DisplayInspect.SetActive(true);
+                }
             }
         }
 
@@ -47,6 +51,10 @@ namespace Octobass.Waves.Item
             if (collision.CompareTag(Tags.Player))
             {
                 IsInspectable = false;
+                if (DisplayInspect != null)
+                {
+                    DisplayInspect.SetActive(false);
+                }
             }
         }
 
