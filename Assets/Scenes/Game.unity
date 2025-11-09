@@ -428,6 +428,8 @@ MonoBehaviour:
     Camera: {fileID: 4872047995143768167}
   - Room: 4
     Camera: {fileID: 8625358745252777650}
+  - Room: 5
+    Camera: {fileID: 3002459229753527263}
 --- !u!4 &446417061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5475917945376907728, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
@@ -3184,6 +3186,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6952735444726692689, guid: 0dfed17565759ad42b2fe2de87990773, type: 3}
   m_PrefabInstance: {fileID: 779380401717556511}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3002459229753527263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 529437772062066552, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
+  m_PrefabInstance: {fileID: 597992575706367303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!4 &3164808543201598290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7937823612751208482, guid: 45b47b3e9c2ff1c4aa35881a7c2ba695, type: 3}
