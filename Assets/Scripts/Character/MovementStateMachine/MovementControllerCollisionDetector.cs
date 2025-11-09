@@ -10,6 +10,7 @@ namespace Octobass.Waves.Character
         private float WallJumpSkinWidth;
         private ContactFilter2D GroundContactFilter;
         private ContactFilter2D RideableContactFilter;
+        private ContactFilter2D WaterContactFilter;
 
         public MovementControllerCollisionDetector(Rigidbody2D body, MovementConfig characterController2DConfig)
         {
@@ -18,6 +19,7 @@ namespace Octobass.Waves.Character
             WallJumpSkinWidth = characterController2DConfig.WallJumpSkinWidth;
             GroundContactFilter = characterController2DConfig.GroundContactFilter;
             RideableContactFilter = characterController2DConfig.RideableContactFilter;
+            WaterContactFilter = characterController2DConfig.WaterContactFilter;
         }
 
         public bool IsGrounded()
@@ -88,7 +90,27 @@ namespace Octobass.Waves.Character
             }
 
             return null;
+        }
 
+        public bool IsTouchingWater()
+        {
+            return DetectWater() != null;
+        }
+
+        public Collider2D DetectWater()
+        {
+            Collider2D[] colliders = new Collider2D[10];
+
+            int count = Body.Overlap(WaterContactFilter, colliders);
+
+            if (count > 0)
+            {
+                Debug.Log("In water");
+                return colliders[0];
+            }
+
+            Debug.Log("Not in water");
+            return null;
         }
     }
 }

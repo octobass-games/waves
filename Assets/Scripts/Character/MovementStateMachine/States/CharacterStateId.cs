@@ -10,6 +10,7 @@ namespace Octobass.Waves.Character
         WallClimb,
         WallJump,
         Riding,
-        WallSlide
+        WallSlide,
+        Swimming
     }
 }

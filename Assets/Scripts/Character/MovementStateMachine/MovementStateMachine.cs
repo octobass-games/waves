@@ -100,6 +100,9 @@ namespace Octobass.Waves.Character
                     case CharacterStateId.WallJump:
                         StateRegistry[CharacterStateId.WallJump] = new WallJumpState(StateContext);
                         break;
+                    case CharacterStateId.Swimming:
+                        StateRegistry[CharacterStateId.Swimming] = new SwimmingState(StateContext);
+                        break;
                     default:
                         Debug.LogWarning($"[MovementStateMachine]: Trying to add a state that is not supported - {stateId}");
                         break;

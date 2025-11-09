@@ -25,6 +25,8 @@ MonoBehaviour:
   WallJumpInputFreezeTime: 250
   WallSlideSpeed: 10
   WallClimbSpeed: 6
+  SwimmingSpeed: 3
+  SwimmingBobHeight: 0.5
   GroundContactFilter:
     useTriggers: 0
     useLayerMask: 1
@@ -49,6 +51,20 @@ MonoBehaviour:
     layerMask:
       serializedVersion: 2
       m_Bits: 128
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  WaterContactFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 16
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0

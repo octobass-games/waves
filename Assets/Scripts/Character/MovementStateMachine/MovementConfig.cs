@@ -44,10 +44,19 @@ namespace Octobass.Waves.Character
         [Tooltip("The speed at which the character will climb walls")]
         public float WallClimbSpeed;
 
+        [Tooltip("The speed at which the character will swim above the surface of liquids")]
+        public float SwimmingSpeed;
+
+        [Tooltip("The height above the water that the character will sit when swimming above the surface of liquids")]
+        public float SwimmingBobHeight;
+
         [Tooltip("The contact filter to apply when detecting ground collisions")]
         public ContactFilter2D GroundContactFilter;
 
         [Tooltip("The contact filter to apply when detecting rideable collisions")]
         public ContactFilter2D RideableContactFilter;
+
+        [Tooltip("The contact filter to apply when detecting water collisions")]
+        public ContactFilter2D WaterContactFilter;
     }
 }

@@ -19,6 +19,7 @@ namespace Octobass.Waves.Character
                 CharacterStateId.Falling,
                 new() {
                     new(CharacterStateId.Grounded, (MovementStateMachineContext stateContext) => stateContext.CharacterController2DCollisionDetector.IsGrounded()),
+                    new(CharacterStateId.Swimming, (MovementStateMachineContext stateContext) => stateContext.CharacterController2DCollisionDetector.IsTouchingWater()),
                     new(CharacterStateId.Riding, (MovementStateMachineContext stateContext) => stateContext.CharacterController2DCollisionDetector.IsOnPlatform()),
                     new(CharacterStateId.WallJump, (MovementStateMachineContext stateContext) => stateContext.CharacterController2DCollisionDetector.IsCloseToWall() && stateContext.DriverSnapshot.JumpPressed),
                     new(CharacterStateId.Jumping, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.JumpPressed && stateContext.CoyoteAllowed),
@@ -67,6 +68,13 @@ namespace Octobass.Waves.Character
                     new(CharacterStateId.WallClimb, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.GrabHeld),
                     new(CharacterStateId.WallJump, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.JumpPressed),
                     new(CharacterStateId.Falling, (MovementStateMachineContext stateContext) => stateContext.CharacterController2DCollisionDetector.IsTouchingRightWall() && stateContext.DriverSnapshot.Movement.x <= 0 || stateContext.CharacterController2DCollisionDetector.IsTouchingLeftWall() && stateContext.DriverSnapshot.Movement.x >= 0 || !stateContext.CharacterController2DCollisionDetector.IsTouchingWall())
+                }
+            },
+            {
+                CharacterStateId.Swimming,
+                new()
+                {
+                    new(CharacterStateId.Jumping, (MovementStateMachineContext stateContext) => stateContext.DriverSnapshot.JumpPressed)
                 }
             }
         };
