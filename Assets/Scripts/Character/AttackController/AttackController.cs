@@ -1,4 +1,5 @@
 using Octobass.Waves.Attack;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Octobass.Waves.Character
@@ -7,6 +8,7 @@ namespace Octobass.Waves.Character
     {
         public AttackMove Attack;
 
+        private readonly List<CharacterStateId> AttackingStates = new() { CharacterStateId.Grounded, CharacterStateId.Jumping, CharacterStateId.Falling };
         private bool IsAttacking;
 
         void OnActiveFrame()
@@ -16,18 +18,29 @@ namespace Octobass.Waves.Character
 
         void OnRecoveryFrame()
         {
-            IsAttacking = false;
-            Attack.Deactivate();
+            EndAttack();
         }
 
         public AttackSnapshot Tick(CharacterController2DDriverSnapshot driverSnapshot, MovementSnapshot movementSnapshot)
         {
-            if (driverSnapshot.AttackPressed && !IsAttacking)
+            bool isInAttackingState = AttackingStates.Contains(movementSnapshot.State);
+
+            if (isInAttackingState && driverSnapshot.AttackPressed && !IsAttacking)
             {
                 IsAttacking = true;
             }
+            else if (!isInAttackingState && IsAttacking)
+            {
+                EndAttack();
+            }
 
             return new AttackSnapshot(IsAttacking);
+        }
+
+        private void EndAttack()
+        {
+            IsAttacking = false;
+            Attack.Deactivate();
         }
     }
 }
