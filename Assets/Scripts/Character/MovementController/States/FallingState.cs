@@ -18,8 +18,8 @@ namespace Octobass.Waves.Character
         {
             Speed = config.Speed;
             Gravity = config.Gravity;
-            MaxFallSpeed = config.MaxFallSpeed;
             FallingGravityModifier = config.FallingGravityModifier;
+            MaxFallSpeed = config.MaxFallSpeed;
             AirMovementSpeedModifier = config.AirMovementSpeedModifier;
             CoyoteTime = config.CoyoteTime;
         }
