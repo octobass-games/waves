@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class RidingState : ICharacterState
+    public class RidingState : CharacterState
     {
         private MovementStateMachineContext StateContext;
         private IRideable Rideable;
@@ -12,17 +12,17 @@ namespace Octobass.Waves.Character
             StateContext = stateContext;
         }
 
-        public void Enter()
+        public override void Enter()
         {
             Rideable = StateContext.CharacterController2DCollisionDetector.GetPlatform();
         }
 
-        public void Exit()
+        public override void Exit()
         {
             Rideable = null;
         }
 
-        public void Tick()
+        public override void Tick()
         {
             StateContext.MovementIntent.Displacement = Rideable.GetDisplacement() + new Vector2(StateContext.DriverSnapshot.Movement.x, 0) * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
         }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class SwimmingState : ICharacterState
+    public class SwimmingState : CharacterState
     {
         private MovementStateMachineContext Context;
 
@@ -12,15 +12,7 @@ namespace Octobass.Waves.Character
             Context = context;
         }
 
-        public void Enter()
-        {
-        }
-
-        public void Exit()
-        {
-        }
-
-        public void Tick()
+        public override void Tick()
         {
             Collider2D waterCollider = Context.CharacterController2DCollisionDetector.DetectWater();
 

@@ -6,8 +6,8 @@ namespace Octobass.Waves.Character
 {
     public class MovementStateMachine : MonoBehaviour
     {
-        private Dictionary<CharacterStateId, ICharacterState> StateRegistry = new();
-        private ICharacterState CurrentState;
+        private Dictionary<CharacterStateId, CharacterState> StateRegistry = new();
+        private CharacterState CurrentState;
         private CharacterStateId CurrentStateId;
         private MovementStateMachineContext StateContext;
 

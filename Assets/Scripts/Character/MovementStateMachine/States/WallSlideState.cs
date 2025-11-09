@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class WallSlideState : ICharacterState
+    public class WallSlideState : CharacterState
     {
         private MovementStateMachineContext StateContext;
 
@@ -11,15 +11,7 @@ namespace Octobass.Waves.Character
             StateContext = stateContext;
         }
 
-        public void Enter()
-        {
-        }
-
-        public void Exit()
-        {
-        }
-
-        public void Tick()
+        public override void Tick()
         {
             StateContext.MovementIntent.Displacement = Vector2.down * StateContext.CharacterControllerConfig.WallSlideSpeed * Time.fixedDeltaTime;
         }

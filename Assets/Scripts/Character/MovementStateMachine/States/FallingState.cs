@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class FallingState : ICharacterState
+    public class FallingState : CharacterState
     {
         private MovementStateMachineContext StateContext;
         private float Velocity;
@@ -14,20 +14,20 @@ namespace Octobass.Waves.Character
             StateContext = stateContext;
         }
 
-        public void Enter()
+        public override void Enter()
         {
             Velocity = 0;
             CoyoteTimer = StateContext.CharacterControllerConfig.CoyoteTime;
         }
 
-        public void Exit()
+        public override void Exit()
         {
             Velocity = 0;
             CoyoteTimer = StateContext.CharacterControllerConfig.CoyoteTime;
             StateContext.CoyoteAllowed = false;
         }
 
-        public void Tick()
+        public override void Tick()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime + Vector2.up * Velocity * Time.fixedDeltaTime;
 

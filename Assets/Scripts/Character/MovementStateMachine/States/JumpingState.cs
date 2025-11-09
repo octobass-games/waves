@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class JumpingState : ICharacterState
+    public class JumpingState : CharacterState
     {
         private MovementStateMachineContext StateContext;
 
@@ -14,18 +14,18 @@ namespace Octobass.Waves.Character
             StateContext = stateContext;
         }
 
-        public void Enter()
+        public override void Enter()
         {
             StateContext.Velocity = Mathf.Sqrt(2 * StateContext.CharacterControllerConfig.Gravity * StateContext.CharacterControllerConfig.JumpHeight);
             StateContext.CoyoteAllowed = false;
         }
 
-        public void Exit()
+        public override void Exit()
         {
             StateContext.Velocity = 0;
         }
 
-        public void Tick()
+        public override void Tick()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement.ProjectX() * StateContext.CharacterControllerConfig.AirMovementSpeedModifier * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime + Vector2.up * StateContext.Velocity * Time.fixedDeltaTime;
 

@@ -11,6 +11,7 @@ namespace Octobass.Waves.Character
         WallJump,
         Riding,
         WallSlide,
-        Swimming
+        Swimming,
+        Diving
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class WallClimbState : ICharacterState
+    public class WallClimbState : CharacterState
     {
         private MovementStateMachineContext StateContext;
 
@@ -11,16 +11,12 @@ namespace Octobass.Waves.Character
             StateContext = stateContext;
         }
 
-        public void Enter()
+        public override void Enter()
         {
             StateContext.MovementIntent.Displacement.x = 0;
         }
 
-        public void Exit()
-        {
-        }
-
-        public void Tick()
+        public override void Tick()
         {
             StateContext.MovementIntent.Displacement.y = StateContext.DriverSnapshot.Climbing.y * StateContext.CharacterControllerConfig.WallClimbSpeed * Time.fixedDeltaTime;
         }

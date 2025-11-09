@@ -105,11 +105,9 @@ namespace Octobass.Waves.Character
 
             if (count > 0)
             {
-                Debug.Log("In water");
                 return colliders[0];
             }
 
-            Debug.Log("Not in water");
             return null;
         }
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class GroundedState : ICharacterState
+    public class GroundedState : CharacterState
     {
         private MovementStateMachineContext StateContext;
 
@@ -11,15 +11,7 @@ namespace Octobass.Waves.Character
             StateContext = stateContext;
         }
 
-        public void Enter()
-        {
-        }
-
-        public void Exit()
-        {
-        }
-
-        public void Tick()
+        public override void Tick()
         {
             StateContext.MovementIntent.Displacement = StateContext.DriverSnapshot.Movement * StateContext.CharacterControllerConfig.Speed * Time.fixedDeltaTime;
             StateContext.CoyoteAllowed = true;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class WallJumpState : ICharacterState
+    public class WallJumpState : CharacterState
     {
         private MovementStateMachineContext StateContext;
 
@@ -17,7 +17,7 @@ namespace Octobass.Waves.Character
             StateContext = stateContext;
         }
 
-        public void Enter()
+        public override void Enter()
         {
             StateContext.WallJumpDirection = CalculateDirection();
             WallJumpInputFreezeTimer = StateContext.CharacterControllerConfig.WallJumpInputFreezeTime;
@@ -26,13 +26,13 @@ namespace Octobass.Waves.Character
             WallTouched = false;
         }
 
-        public void Exit()
+        public override void Exit()
         {
             StateContext.Velocity = 0;
             StateContext.WallJumpDirection = Vector2.zero;
         }
 
-        public void Tick()
+        public override void Tick()
         {
             if (IsTouchingWall(StateContext.WallJumpDirection.ProjectX()))
             {
