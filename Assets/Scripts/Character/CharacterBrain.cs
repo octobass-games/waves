@@ -25,8 +25,8 @@ namespace Octobass.Waves.Character
         private AttackStateId PreviousAttackState;
         private AttackStateId CurrentAttackState;
 
-        private MovementSnapshot CurrentMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero);
-        private MovementSnapshot PreviousMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero);
+        private MovementSnapshot CurrentMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
+        private MovementSnapshot PreviousMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
 
         void Awake()
         {
@@ -79,7 +79,7 @@ namespace Octobass.Waves.Character
 
             Animator.SetBool("HasXVelocity", CurrentMovementSnapshot.Displacement.x != 0);
             Animator.SetBool("HasYVelocity", CurrentMovementSnapshot.Displacement.y != 0);
-            SpriteRenderer.flipX = (CurrentMovementSnapshot.State == CharacterStateId.WallClimb || CurrentMovementSnapshot.State == CharacterStateId.WallSlide) ? CollisionDetector.IsTouchingLeftWall() : CurrentMovementSnapshot.Displacement.x < 0;
+            SpriteRenderer.flipX = CurrentMovementSnapshot.FacingDirection == Vector2.left;
         }
 
         void FixedUpdate()

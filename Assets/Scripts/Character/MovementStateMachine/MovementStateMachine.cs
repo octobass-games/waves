@@ -50,7 +50,7 @@ namespace Octobass.Waves.Character
             Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
-
+            
             CharacterStateId? nextState = GetNextTransition();
 
             if (nextState.HasValue)
@@ -72,7 +72,7 @@ namespace Octobass.Waves.Character
                 CurrentState.Enter();
             }
 
-            return new MovementSnapshot(CurrentStateId, displacement);
+            return new MovementSnapshot(CurrentStateId, displacement, GetFacingDirection(displacement));
         }
 
         public void AddState(CharacterStateId stateId)
@@ -129,6 +129,16 @@ namespace Octobass.Waves.Character
             }
 
             return null;
+        }
+
+        private Vector2 GetFacingDirection(Vector2 displacement)
+        {
+            if (CurrentStateId == CharacterStateId.WallClimb || CurrentStateId == CharacterStateId.WallSlide)
+            {
+                return CollisionDetector.IsCloseToLeftWall() ? Vector2.left : Vector2.right;
+            }
+
+            return displacement.x < 0 ? Vector2.left : Vector2.right;
         }
     }
 }
