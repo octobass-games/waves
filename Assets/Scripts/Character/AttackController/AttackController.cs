@@ -8,6 +8,7 @@ namespace Octobass.Waves.Character
     {
         public AttackMove Attack;
 
+        // TODO: if we want multiple attacking states then we need to handle the scenario where the attack is never ended
         private readonly List<CharacterStateId> AttackingStates = new() { CharacterStateId.Grounded };
         private bool IsAttacking;
 

@@ -4,12 +4,10 @@ using UnityEngine;
 
 namespace Octobass.Waves.Character
 {
-    public class MovementStateMachine : MonoBehaviour
+    public class MovementController : MonoBehaviour
     {
         private Dictionary<CharacterStateId, CharacterState> StateRegistry = new();
         private CharacterState CurrentState;
-        private CharacterStateId CurrentStateId;
-        private MovementStateMachineContext StateContext;
 
         public Rigidbody2D Body;
         public MovementConfig CharacterControllerConfig;
@@ -17,12 +15,13 @@ namespace Octobass.Waves.Character
 
         private ContactFilter2D AllGroundContactFilter;
 
+        private CharacterStateId PreviousStateId;
+        private CharacterStateId CurrentStateId;
+        private StateSnapshot StateSnapshot = new();
+
         void Awake()
         {
-
             CollisionDetector = new MovementControllerCollisionDetector(Body, CharacterControllerConfig);
-
-            StateContext = new MovementStateMachineContext(Body, new CharacterController2DDriverSnapshot(), new MovementIntent(), CharacterControllerConfig, CollisionDetector);
 
             AddState(CharacterStateId.Grounded);
             AddState(CharacterStateId.Falling);
@@ -38,24 +37,23 @@ namespace Octobass.Waves.Character
             };
         }
 
-        public MovementSnapshot Tick(CharacterController2DDriverSnapshot snapshot)
+        public MovementSnapshot Tick(CharacterController2DDriverSnapshot driverSnapshot)
         {
-            StateContext.DriverSnapshot = snapshot;
+            StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot);
 
-            CurrentState.Tick();
-
-            Vector2 displacement = StateContext.MovementIntent.Displacement;
+            Vector2 displacement = StateSnapshot.Velocity * Time.fixedDeltaTime;
             Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
 
             Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
             
-            CharacterStateId? nextState = GetNextTransition();
+            CharacterStateId? nextState = GetNextTransition(driverSnapshot);
 
             if (nextState.HasValue)
             {
                 CurrentState.Exit();
+                PreviousStateId = CurrentStateId;
 
                 if (!StateRegistry.TryGetValue(nextState.Value, out CurrentState))
                 {
@@ -69,7 +67,7 @@ namespace Octobass.Waves.Character
                 }
 
                 Debug.Log($"[MovementStateMachine]: Entering - {CurrentState}");
-                CurrentState.Enter();
+                CurrentState.Enter(PreviousStateId);
             }
 
             return new MovementSnapshot(CurrentStateId, displacement, GetFacingDirection(displacement));
@@ -82,29 +80,29 @@ namespace Octobass.Waves.Character
                 switch (stateId)
                 {
                     case CharacterStateId.Grounded:
-                        StateRegistry[CharacterStateId.Grounded] = new GroundedState(StateContext);
+                        StateRegistry[CharacterStateId.Grounded] = new GroundedState(CharacterControllerConfig);
                         break;
                     case CharacterStateId.Falling:
-                        StateRegistry[CharacterStateId.Falling] = new FallingState(StateContext);
+                        StateRegistry[CharacterStateId.Falling] = new FallingState(CharacterControllerConfig);
                         break;
                     case CharacterStateId.Riding:
-                        StateRegistry[CharacterStateId.Riding] = new RidingState(StateContext);
+                        StateRegistry[CharacterStateId.Riding] = new RidingState(CharacterControllerConfig, CollisionDetector);
                         break;
                     case CharacterStateId.Jumping:
-                        StateRegistry[CharacterStateId.Jumping] = new JumpingState(StateContext);
+                        StateRegistry[CharacterStateId.Jumping] = new JumpingState(CharacterControllerConfig);
                         break;
                     case CharacterStateId.WallClimb:
-                        StateRegistry[CharacterStateId.WallClimb] = new WallClimbState(StateContext);
-                        StateRegistry[CharacterStateId.WallSlide] = new WallSlideState(StateContext);
+                        StateRegistry[CharacterStateId.WallClimb] = new WallClimbState(CharacterControllerConfig);
+                        StateRegistry[CharacterStateId.WallSlide] = new WallSlideState(CharacterControllerConfig);
                         break;
                     case CharacterStateId.WallJump:
-                        StateRegistry[CharacterStateId.WallJump] = new WallJumpState(StateContext);
+                        StateRegistry[CharacterStateId.WallJump] = new WallJumpState(CharacterControllerConfig, CollisionDetector);
                         break;
                     case CharacterStateId.Swimming:
-                        StateRegistry[CharacterStateId.Swimming] = new SwimmingState(StateContext);
+                        StateRegistry[CharacterStateId.Swimming] = new SwimmingState(CharacterControllerConfig, CollisionDetector);
                         break;
                     case CharacterStateId.Diving:
-                        StateRegistry[CharacterStateId.Diving] = new DivingState(StateContext);
+                        StateRegistry[CharacterStateId.Diving] = new DivingState(CharacterControllerConfig);
                         break;
                     default:
                         Debug.LogWarning($"[MovementStateMachine]: Trying to add a state that is not supported - {stateId}");
@@ -117,13 +115,13 @@ namespace Octobass.Waves.Character
             }
         }
 
-        private CharacterStateId? GetNextTransition()
+        private CharacterStateId? GetNextTransition(CharacterController2DDriverSnapshot driverSnapshot)
         {
             if (MovementStateTransitionRegistry.Transitions.TryGetValue(CurrentStateId, out List<MovementStateTransition> transitions))
             {
                 foreach (var transition in transitions)
                 {
-                    if (StateRegistry.ContainsKey(transition.Target) && transition.IsSatisfied(StateContext))
+                    if (StateRegistry.ContainsKey(transition.Target) && transition.IsSatisfied(StateSnapshot, driverSnapshot, CollisionDetector))
                     {
                         return transition.Target;
                     }

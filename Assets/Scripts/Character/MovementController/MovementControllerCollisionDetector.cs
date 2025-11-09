@@ -5,7 +5,8 @@ namespace Octobass.Waves.Character
 {
     public class MovementControllerCollisionDetector
     {
-        private Rigidbody2D Body;
+        public Rigidbody2D Body;
+
         private float SkinWidth;
         private float WallJumpSkinWidth;
         private ContactFilter2D GroundContactFilter;
@@ -35,6 +36,11 @@ namespace Octobass.Waves.Character
         public bool IsTouchingLeftWall()
         {
             return Body.IsCollidingLeft(GroundContactFilter, SkinWidth);
+        }
+
+        public bool IsTouchingWall(Vector2 direction)
+        {
+            return Body.IsColliding(direction, GroundContactFilter, SkinWidth);
         }
 
         public bool IsTouchingWall()

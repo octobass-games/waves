@@ -5,7 +5,7 @@ namespace Octobass.Waves.Character
 {
     public class CharacterBrain : MonoBehaviour
     {
-        public MovementStateMachine MovementStateMachine;
+        public MovementController MovementStateMachine;
         public AttackController AttackController;
         public AnimationController AnimationController;
 
