@@ -50,5 +50,10 @@ namespace Octobass.Waves.Character
             Animator.SetBool("HasYVelocity", CurrentMovementSnapshot.Displacement.y != 0);
             SpriteRenderer.flipX = CurrentMovementSnapshot.FacingDirection == Vector2.left;
         }
+
+        public void PlayUpgradeAnimation()
+        {
+            Animator.SetTrigger("StaffUpgrade");
+        }
     }
 }

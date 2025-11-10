@@ -1,4 +1,3 @@
-using Octobass.Waves.Item;
 using UnityEngine;
 
 namespace Octobass.Waves.Character
@@ -26,11 +25,6 @@ namespace Octobass.Waves.Character
             MovementSnapshot = MovementStateMachine.Tick(DriverSnapshot);
             AttackSnapshot = AttackController.Tick(DriverSnapshot, MovementSnapshot);
             Driver.Consume();
-        }
-
-        public void OnAbilityItemPickedUp(AbilityItemInstance ability)
-        {
-            MovementStateMachine.AddState(ability.NewState);
         }
     }
 }

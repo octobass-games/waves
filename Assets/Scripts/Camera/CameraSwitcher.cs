@@ -8,7 +8,10 @@ namespace Octobass.Waves.Camera
     public class CameraSwitcher : MonoBehaviour
     {
         [SerializeField]
-        private CinemachineCamera ActiveCamera;
+        private CinemachineCamera RoomCamera;
+
+        [SerializeField]
+        private CinemachineCamera UpgradeCamera;
 
         [SerializeField]
         private List<RoomCameraBinding> RoomCameraBindings;
@@ -17,9 +20,14 @@ namespace Octobass.Waves.Camera
 
         void Awake()
         {
-            if (ActiveCamera == null)
+            if (RoomCamera == null)
             {
-                Debug.LogWarning($"[CameraSwitcher]: Initial camera not set");
+                Debug.LogWarning($"[CameraSwitcher]: Initial RoomCamera not set");
+            }
+
+            if (UpgradeCamera == null)
+            {
+                Debug.LogWarning($"[CameraSwitcher]: UpgradeCamera not set");
             }
 
             RoomCameraBindingRegistry = new();
@@ -39,14 +47,26 @@ namespace Octobass.Waves.Camera
         {
             if (RoomCameraBindingRegistry.TryGetValue(room, out CinemachineCamera camera))
             {
-                ActiveCamera.gameObject.SetActive(false);
-                ActiveCamera = camera;
-                ActiveCamera.gameObject.SetActive(true);
+                RoomCamera.gameObject.SetActive(false);
+                RoomCamera = camera;
+                RoomCamera.gameObject.SetActive(true);
             }
             else
             {
                 Debug.LogWarning($"[CameraSwitcher]: Could not find camera for room - {room}");
             }
+        }
+
+        public void OnUpgradeStart()
+        {
+            RoomCamera.gameObject.SetActive(false);
+            UpgradeCamera.gameObject.SetActive(true);
+        }
+
+        public void OnUpgradeEnd()
+        {
+            UpgradeCamera.gameObject.SetActive(true);
+            RoomCamera.gameObject.SetActive(false);
         }
     }
 }

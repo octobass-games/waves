@@ -7,7 +7,7 @@ namespace Octobass.Waves.Debugging
 {
     public class DebugMenu : MonoBehaviour
     {
-        public CharacterBrain Player;
+        public MovementController PlayerMovementController;
         public bool UnlockAllAbilitiesOnAwake = true;
         public GameObject DebugMenuUi;
 
@@ -23,7 +23,7 @@ namespace Octobass.Waves.Debugging
                 Debug.LogWarning("[DebugMenu]: DebugMenuUi not set");
             }
 
-            if (Player == null)
+            if (PlayerMovementController == null)
             {
                 Debug.LogWarning("[DebugMenu]: Player not set");
             }
@@ -52,9 +52,9 @@ namespace Octobass.Waves.Debugging
 
         public void AddState(string state)
         {
-            if (Enum.TryParse<CharacterStateId>(state, out CharacterStateId stateId))
+            if (Enum.TryParse(state, out CharacterStateId stateId))
             {
-                Player.OnAbilityItemPickedUp(new AbilityItemInstance("test", stateId));
+                PlayerMovementController.AddState(stateId);
             }
             else
             {

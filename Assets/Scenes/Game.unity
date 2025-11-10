@@ -198,6 +198,101 @@ Transform:
   - {fileID: 6931301958784812060}
   m_Father: {fileID: 908922137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &341121346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341121349}
+  - component: {fileID: 341121348}
+  - component: {fileID: 341121347}
+  m_Layer: 0
+  m_Name: UpgradeCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &341121347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341121346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 1, z: -10}
+--- !u!114 &341121348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341121346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 1047319393}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &341121349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341121346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -75.880005, y: 0.40999985, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &357466901
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75810d9b81938c488787b9f26649f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Camera.CameraSwitcher
-  ActiveCamera: {fileID: 2062222795}
+  RoomCamera: {fileID: 9155442939798803095}
+  UpgradeCamera: {fileID: 341121348}
   RoomCameraBindings:
   - Room: 10
     Camera: {fileID: 4017761716070136193}
@@ -1758,6 +1854,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260050a4795f64c4780f00a5b14562f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.CharacterBrain
+--- !u!114 &1448142519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7789577042043984978, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+  m_PrefabInstance: {fileID: 1047319392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448142502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ec66e408a313e42931fde730439ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.MovementStateMachine
 --- !u!1 &1667465366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,6 +2055,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1448142510}
+    - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
+      propertyPath: PlayerMovementController
+      value: 
+      objectReference: {fileID: 1448142519}
     - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
       propertyPath: UnlockAllAbilitiesOnAwake
       value: 1
@@ -2392,17 +2503,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7016373576886688874, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
   m_PrefabInstance: {fileID: 2062222793}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2062222795 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3443018490517164082, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
-  m_PrefabInstance: {fileID: 2062222793}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1001 &2093304771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6306,6 +6406,7 @@ SceneRoots:
   - {fileID: 666075285}
   - {fileID: 951568741}
   - {fileID: 393106806}
+  - {fileID: 341121349}
   - {fileID: 908922137}
   - {fileID: 1330039401}
   - {fileID: 800713602}

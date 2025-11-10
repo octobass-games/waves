@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7789577042043984978}
   - component: {fileID: 5257431564495623803}
   - component: {fileID: 4136274269782190093}
+  - component: {fileID: 3985318897784524841}
   - component: {fileID: 6662430300472696404}
   - component: {fileID: 3796453743840512579}
   - component: {fileID: 3962255609282539790}
@@ -98,6 +99,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.AnimationController
   Animator: {fileID: 881346472432367290}
   SpriteRenderer: {fileID: 2145831334822855955}
+--- !u!114 &3985318897784524841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ded0c67cc94ba249a551662c2d885c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.AbilityController
+  MovementController: {fileID: 7789577042043984978}
+  AnimationController: {fileID: 4136274269782190093}
+  ExplainerRoot: {fileID: 0}
+  ExplainerText: {fileID: 0}
+  OnUpgradeStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUpgradeEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &6662430300472696404
 Rigidbody2D:
   serializedVersion: 5
