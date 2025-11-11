@@ -6,11 +6,11 @@ namespace Octobass.Waves.Item
     [CreateAssetMenu]
     public class AbilityItemDefinition : ItemDefinition
     {
-        public CharacterStateId NewState;
+        public AbilityDefinition Ability;
 
         public override ItemInstance ToItemInstance()
         {
-            return new AbilityItemInstance(Name, NewState);
+            return new AbilityItemInstance(Name, Ability);
         }
     }
 }

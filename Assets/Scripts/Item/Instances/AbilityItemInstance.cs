@@ -6,11 +6,11 @@ namespace Octobass.Waves.Item
     [Serializable]
     public class AbilityItemInstance : ItemInstance
     {
-        public CharacterStateId NewState;
+        public AbilityInstance Ability;
 
-        public AbilityItemInstance(string name, CharacterStateId newState) : base(name)
+        public AbilityItemInstance(string name, AbilityDefinition abilityDefinition) : base(name)
         {
-            NewState = newState;
+            Ability = new AbilityInstance(abilityDefinition.name, abilityDefinition.NewState, abilityDefinition.Explainer);
         }
     }
 }

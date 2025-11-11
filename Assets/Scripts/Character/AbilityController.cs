@@ -7,14 +7,22 @@ namespace Octobass.Waves.Character
 {
     public class AbilityController : MonoBehaviour
     {
-        public MovementController MovementController;
-        public AnimationController AnimationController;
-
-        public GameObject ExplainerRoot;
-        public TextMeshProUGUI ExplainerText;
-
         public UnityEvent OnUpgradeStart;
         public UnityEvent OnUpgradeEnd;
+
+        [SerializeField]
+        private MovementController MovementController;
+
+        [SerializeField]
+        private AnimationController AnimationController;
+
+        [SerializeField]
+        private GameObject ExplainerRoot;
+        
+        [SerializeField]
+        private TextMeshProUGUI ExplainerText;
+        
+        private AbilityItemInstance PickedUpItem;
 
         void Awake()
         {
@@ -43,7 +51,9 @@ namespace Octobass.Waves.Character
         {
             if (item is AbilityItemInstance abilityItemInstance)
             {
-                MovementController.AddState(abilityItemInstance.NewState);
+                PickedUpItem = abilityItemInstance;
+
+                MovementController.AddState(PickedUpItem.Ability.NewState);
                 AnimationController.PlayUpgradeAnimation();
             }
         }
@@ -56,11 +66,12 @@ namespace Octobass.Waves.Character
         public void OnUpgradeAnimationEnd()
         {
             ExplainerRoot.SetActive(true);
-            ExplainerText.text = "Hello, World!";
+            ExplainerText.text = PickedUpItem.Ability.Explainer;
         }
 
         public void OnUpgradeExplainerDismissed()
         {
+            PickedUpItem = null;
             ExplainerRoot.SetActive(false);
             ExplainerText.text = "";
             OnUpgradeEnd.Invoke();
