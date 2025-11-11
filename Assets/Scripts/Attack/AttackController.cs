@@ -1,8 +1,8 @@
-using Octobass.Waves.Attack;
+using Octobass.Waves.Character;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Attack
 {
     public class AttackController : MonoBehaviour
     {

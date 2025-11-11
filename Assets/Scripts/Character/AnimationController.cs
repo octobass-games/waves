@@ -1,3 +1,4 @@
+using Octobass.Waves.Attack;
 using UnityEngine;
 
 namespace Octobass.Waves.Character

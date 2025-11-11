@@ -1,4 +1,4 @@
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Attack
 {
     public class AttackSnapshot
     {
