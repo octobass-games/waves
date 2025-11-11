@@ -11,7 +11,7 @@ namespace Octobass.Waves.Character
         public AnimationController AnimationController;
 
         public GameObject ExplainerRoot;
-        public TextMeshPro ExplainerText;
+        public TextMeshProUGUI ExplainerText;
 
         public UnityEvent OnUpgradeStart;
         public UnityEvent OnUpgradeEnd;

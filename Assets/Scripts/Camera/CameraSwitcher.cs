@@ -65,8 +65,8 @@ namespace Octobass.Waves.Camera
 
         public void OnUpgradeEnd()
         {
-            UpgradeCamera.gameObject.SetActive(true);
-            RoomCamera.gameObject.SetActive(false);
+            UpgradeCamera.gameObject.SetActive(false);
+            RoomCamera.gameObject.SetActive(true);
         }
     }
 }
