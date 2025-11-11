@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     [CreateAssetMenu]
     public class MovementConfig : ScriptableObject

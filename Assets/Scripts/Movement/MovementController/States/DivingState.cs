@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public class DivingState : CharacterState
     {

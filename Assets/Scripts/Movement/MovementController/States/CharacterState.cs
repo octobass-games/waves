@@ -1,4 +1,4 @@
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public abstract class CharacterState
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public static class MovementStateTransitionRegistry
     {

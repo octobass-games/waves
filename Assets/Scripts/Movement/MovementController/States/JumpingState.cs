@@ -1,7 +1,7 @@
 using Octobass.Waves.Extensions;
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public class JumpingState : CharacterState
     {

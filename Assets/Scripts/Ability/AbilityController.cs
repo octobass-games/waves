@@ -1,5 +1,5 @@
-using Octobass.Waves.Character;
 using Octobass.Waves.Item;
+using Octobass.Waves.Movement;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;

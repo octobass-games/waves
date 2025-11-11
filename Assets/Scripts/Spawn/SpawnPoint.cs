@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Spawn
 {
     public class SpawnPoint : MonoBehaviour
     {

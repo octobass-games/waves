@@ -1,6 +1,6 @@
 using System;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public class MovementStateTransition
     {

@@ -1,7 +1,8 @@
 using Octobass.Waves.Attack;
+using Octobass.Waves.Character;
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public class CharacterBrain : MonoBehaviour
     {

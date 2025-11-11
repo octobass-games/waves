@@ -2,7 +2,7 @@ using Octobass.Waves.Extensions;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public class MovementController : MonoBehaviour
     {

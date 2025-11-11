@@ -1,5 +1,5 @@
-using Octobass.Waves.Character;
-using Octobass.Waves.Item;
+using Octobass.Waves.Movement;
+using Octobass.Waves.Spawn;
 using System;
 using UnityEngine;
 

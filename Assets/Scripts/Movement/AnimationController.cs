@@ -1,7 +1,7 @@
 using Octobass.Waves.Attack;
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public class AnimationController : MonoBehaviour
     {

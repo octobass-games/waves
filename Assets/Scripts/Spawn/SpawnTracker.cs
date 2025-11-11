@@ -1,8 +1,9 @@
+using Octobass.Waves.Movement;
 using Octobass.Waves.Save;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Spawn
 {
     public class SpawnTracker : MonoBehaviour, ISavable
     {

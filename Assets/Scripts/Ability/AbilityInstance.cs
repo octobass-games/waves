@@ -1,4 +1,4 @@
-using Octobass.Waves.Character;
+using Octobass.Waves.Movement;
 using System;
 
 namespace Octobass.Waves
