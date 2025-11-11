@@ -10,7 +10,6 @@ namespace Octobass.Waves.Character
         {
             if (collision.CompareTag(Tags.Player))
             {
-                Debug.Log("Player found!");
                 if (collision.gameObject.TryGetComponent(out SpawnTracker spawnTracker))
                 {
                     spawnTracker.SetSpawnPoint(this);
