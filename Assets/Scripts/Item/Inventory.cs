@@ -7,7 +7,7 @@ namespace Octobass.Waves.Item
 {
     public class Inventory : MonoBehaviour, ISavable
     {
-        public UnityEvent<AbilityItemInstance> OnAbilityItemPickedUp;
+        public UnityEvent<ItemInstance> OnItemPickedUp;
 
         [SerializeReference]
         private List<ItemInstance> Items = new();
@@ -28,7 +28,7 @@ namespace Octobass.Waves.Item
                     if (definition.ToItemInstance() is AbilityItemInstance instance)
                     {
                         Items.Add(instance);
-                        OnAbilityItemPickedUp.Invoke(instance);
+                        OnItemPickedUp.Invoke(instance);
                     }
                     else
                     {

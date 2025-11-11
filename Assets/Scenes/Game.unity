@@ -1047,82 +1047,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
---- !u!1 &800713600
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 800713602}
-  - component: {fileID: 800713601}
-  - component: {fileID: 800713603}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &800713601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800713600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a497c4ccc9720f4e96f7b1d0521087b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.Inventory
-  OnAbilityItemPickedUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1448142516}
-        m_TargetAssemblyTypeName: Octobass.Waves.Character.AbilityController, Assembly-CSharp
-        m_MethodName: OnItemPickedUp
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Items: []
-  references:
-    version: 2
-    RefIds: []
---- !u!4 &800713602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800713600}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.97492, y: -2.37869, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &800713603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800713600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
 --- !u!1001 &808593324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1445,6 +1369,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1448142516}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnItemPickedUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Character.AbilityController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6992,6 +6940,5 @@ SceneRoots:
   - {fileID: 341121349}
   - {fileID: 908922137}
   - {fileID: 1330039401}
-  - {fileID: 800713602}
   - {fileID: 657639031}
   - {fileID: 14005583}
