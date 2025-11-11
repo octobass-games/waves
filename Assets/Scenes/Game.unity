@@ -2259,6 +2259,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ec66e408a313e42931fde730439ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.MovementStateMachine
+--- !u!114 &1448142528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+  m_PrefabInstance: {fileID: 1047319392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448142502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c404ce3e5478504d8634567f5be3d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.SpawnTracker
 --- !u!1 &1539800906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,6 +2596,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1448142510}
+    - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
+      propertyPath: SpawnTracker
+      value: 
+      objectReference: {fileID: 1448142528}
     - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
       propertyPath: PlayerMovementController
       value: 
@@ -6904,6 +6919,10 @@ PrefabInstance:
     - target: {fileID: 5475917945376907728, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139727662031723133, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8311678071600866508, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: m_Name

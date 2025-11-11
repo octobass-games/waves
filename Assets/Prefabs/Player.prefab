@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2145831334822855955}
   - component: {fileID: 881346472432367290}
   - component: {fileID: 6471979937186483503}
+  - component: {fileID: 5931426664578809513}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -306,6 +307,20 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!114 &5931426664578809513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c404ce3e5478504d8634567f5be3d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.SpawnTracker
+  MovementController: {fileID: 7789577042043984978}
+  Spawns: []
 --- !u!1 &2319988461481833929
 GameObject:
   m_ObjectHideFlags: 0

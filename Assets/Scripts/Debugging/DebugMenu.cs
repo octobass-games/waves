@@ -10,6 +10,7 @@ namespace Octobass.Waves.Debugging
         public MovementController PlayerMovementController;
         public bool UnlockAllAbilitiesOnAwake = true;
         public GameObject DebugMenuUi;
+        public SpawnTracker SpawnTracker;
 
         private PlayerInput PlayerInput;
 
@@ -26,6 +27,11 @@ namespace Octobass.Waves.Debugging
             if (PlayerMovementController == null)
             {
                 Debug.LogWarning("[DebugMenu]: Player not set");
+            }
+
+            if (SpawnTracker == null)
+            {
+                Debug.LogWarning("[DebugMenu]: SpawnTracker not set");
             }
         }
 
@@ -48,6 +54,11 @@ namespace Octobass.Waves.Debugging
                 DebugMenuUi.SetActive(!DebugMenuUi.activeSelf);
             }
 
+        }
+
+        public void Respawn()
+        {
+            SpawnTracker.Respawn();
         }
 
         public void AddState(string state)

@@ -37,6 +37,14 @@ namespace Octobass.Waves.Character
             };
         }
 
+        public void ResetAtPosition(Vector2 position)
+        {
+            Body.position = position;
+
+            CurrentStateId = CharacterStateId.Grounded;
+            CurrentState = StateRegistry[CharacterStateId.Grounded];
+        }
+
         public MovementSnapshot Tick(CharacterController2DDriverSnapshot driverSnapshot)
         {
             StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot);
