@@ -1,9 +1,10 @@
+using Octobass.Waves.Character;
 using Octobass.Waves.Item;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Ability
 {
     public class AbilityController : MonoBehaviour
     {
