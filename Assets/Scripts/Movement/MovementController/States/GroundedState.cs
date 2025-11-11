@@ -4,18 +4,18 @@ namespace Octobass.Waves.Movement
 {
     public class GroundedState : CharacterState
     {
-        private readonly float Speed;
+        private readonly MovementConfig Config;
 
         public GroundedState(MovementConfig config)
         {
-            Speed = config.Speed;
+            Config = config;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousStateSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
         {
             return new StateSnapshot()
             {
-                Velocity = driverSnapshot.Movement * Speed
+                Velocity = driverSnapshot.Movement * Config.Speed
             };
         }
     }

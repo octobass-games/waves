@@ -4,29 +4,19 @@ namespace Octobass.Waves.Movement
 {
     public class FallingState : CharacterState
     {
-        private readonly float Speed;
-        private readonly float Gravity;
-        private readonly float FallingGravityModifier;
-        private readonly float AirMovementSpeedModifier;
-        private readonly float CoyoteTime;
-        private readonly float MaxFallSpeed;
+        private readonly MovementConfig Config;
 
         private float CoyoteTimer;
         private bool IsCoyoteJumpAvailable;
 
         public FallingState(MovementConfig config)
         {
-            Speed = config.Speed;
-            Gravity = config.Gravity;
-            FallingGravityModifier = config.FallingGravityModifier;
-            MaxFallSpeed = config.MaxFallSpeed;
-            AirMovementSpeedModifier = config.AirMovementSpeedModifier;
-            CoyoteTime = config.CoyoteTime;
+            Config = config;
         }
 
         public override void Enter(CharacterStateId previousStateId)
         {
-            CoyoteTimer = CoyoteTime;
+            CoyoteTimer = Config.CoyoteTime;
             IsCoyoteJumpAvailable = previousStateId == CharacterStateId.Grounded;
         }
 
@@ -37,8 +27,8 @@ namespace Octobass.Waves.Movement
             return new StateSnapshot()
             {
                 Velocity = new Vector2(
-                    driverSnapshot.Movement.x * AirMovementSpeedModifier * Speed,
-                    Mathf.Max(previousSnapshot.Velocity.y - Gravity * FallingGravityModifier * Time.fixedDeltaTime, -MaxFallSpeed)
+                    driverSnapshot.Movement.x * Config.AirMovementSpeedModifier * Config.Speed,
+                    Mathf.Max(previousSnapshot.Velocity.y - Config.Gravity * Config.FallingGravityModifier * Time.fixedDeltaTime, -Config.MaxFallSpeed)
                 ),
                 IsCoyoteJumpAvailable = IsCoyoteJumpAvailable && CoyoteTimer != -1
             };

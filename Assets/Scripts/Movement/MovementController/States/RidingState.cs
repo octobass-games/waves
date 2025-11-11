@@ -4,14 +4,14 @@ namespace Octobass.Waves.Movement
 {
     public class RidingState : CharacterState
     {
-        private readonly float Speed;
+        private readonly MovementConfig Config;
         private readonly MovementControllerCollisionDetector CollisionDetector;
 
         private IRideable Rideable;
 
         public RidingState(MovementConfig config, MovementControllerCollisionDetector collisionDetector)
         {
-            Speed = config.Speed;
+            Config = config;
             CollisionDetector = collisionDetector;
         }
 
@@ -24,7 +24,7 @@ namespace Octobass.Waves.Movement
         {
             return new StateSnapshot()
             {
-                Velocity = Rideable.GetVelocity() + new Vector2(driverSnapshot.Movement.x * Speed, 0)
+                Velocity = Rideable.GetVelocity() + new Vector2(driverSnapshot.Movement.x * Config.Speed, 0)
             };
         }
     }

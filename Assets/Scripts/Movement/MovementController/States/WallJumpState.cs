@@ -5,11 +5,7 @@ namespace Octobass.Waves.Movement
 {
     public class WallJumpState : CharacterState
     {
-        private readonly float Speed;
-        private readonly float WallJumpInputFreezeTime;
-        private readonly float Gravity;
-        private readonly float JumpHeight;
-        private readonly float AirMovementSpeedModifier;
+        private readonly MovementConfig Config;
 
         private MovementControllerCollisionDetector CollisionDetector;
         private Vector2 Direction;
@@ -19,18 +15,14 @@ namespace Octobass.Waves.Movement
 
         public WallJumpState(MovementConfig config, MovementControllerCollisionDetector collisionDetector)
         {
-            Speed = config.Speed;
-            WallJumpInputFreezeTime = config.WallJumpInputFreezeTime;
-            Gravity = config.Gravity;
-            JumpHeight = config.JumpHeight;
-            AirMovementSpeedModifier = config.AirMovementSpeedModifier;
+            Config = config;
             CollisionDetector = collisionDetector;
         }
 
         public override void Enter(CharacterStateId previousStateId)
         {
             Direction = CollisionDetector.IsCloseToRightWall() ? Vector2.one * Vector2.left : Vector2.one;
-            WallJumpInputFreezeTimer = WallJumpInputFreezeTime;
+            WallJumpInputFreezeTimer = Config.WallJumpInputFreezeTime;
             WallTouched = false;
             ImpulseApplied = false;
         }
@@ -41,7 +33,7 @@ namespace Octobass.Waves.Movement
 
             if (!ImpulseApplied)
             {
-                velocity.y = Mathf.Sqrt(2 * Gravity * JumpHeight);
+                velocity.y = Mathf.Sqrt(2 * Config.Gravity * Config.JumpHeight);
                 ImpulseApplied = true;
             }
             else if (driverSnapshot.JumpReleased)
@@ -50,7 +42,7 @@ namespace Octobass.Waves.Movement
             }
             else
             {
-                velocity.y = previousSnapshot.Velocity.y - Gravity * Time.fixedDeltaTime;
+                velocity.y = previousSnapshot.Velocity.y - Config.Gravity * Time.fixedDeltaTime;
             }
 
             if (Direction.x == -1 && CollisionDetector.IsTouchingLeftWall() || Direction.x == 1 && CollisionDetector.IsTouchingRightWall())
@@ -64,7 +56,7 @@ namespace Octobass.Waves.Movement
 
                 if (!WallTouched)
                 {
-                    velocity.x = Direction.ProjectX().x * AirMovementSpeedModifier * Speed;
+                    velocity.x = Direction.ProjectX().x * Config.AirMovementSpeedModifier * Config.Speed;
                 }
                 else
                 {
@@ -73,7 +65,7 @@ namespace Octobass.Waves.Movement
             }
             else
             {
-                velocity.x = driverSnapshot.Movement.ProjectX().x * AirMovementSpeedModifier * Speed;
+                velocity.x = driverSnapshot.Movement.ProjectX().x * Config.AirMovementSpeedModifier * Config.Speed;
             }
 
             return new StateSnapshot()

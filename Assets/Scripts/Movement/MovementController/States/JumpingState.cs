@@ -5,19 +5,13 @@ namespace Octobass.Waves.Movement
 {
     public class JumpingState : CharacterState
     {
-        private readonly float Speed;
-        private readonly float JumpHeight;
-        private readonly float Gravity;
-        private readonly float AirMovementSpeedModifier;
+        private readonly MovementConfig Config;
 
         private bool ImpulseApplied;
 
         public JumpingState(MovementConfig config)
         {
-            Speed = config.Speed;
-            Gravity = config.Gravity;
-            AirMovementSpeedModifier = config.AirMovementSpeedModifier;
-            JumpHeight = config.JumpHeight;
+            Config = config;
         }
 
         public override void Enter(CharacterStateId previousStateId)
@@ -27,11 +21,11 @@ namespace Octobass.Waves.Movement
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
         {
-            Vector2 velocity = driverSnapshot.Movement.ProjectX() * AirMovementSpeedModifier * Speed;
+            Vector2 velocity = driverSnapshot.Movement.ProjectX() * Config.AirMovementSpeedModifier * Config.Speed;
 
             if (!ImpulseApplied)
             {
-                velocity.y = Mathf.Sqrt(2 * Gravity * JumpHeight);
+                velocity.y = Mathf.Sqrt(2 * Config.Gravity * Config.JumpHeight);
                 ImpulseApplied = true;
             }
             else if (driverSnapshot.JumpReleased)
@@ -40,7 +34,7 @@ namespace Octobass.Waves.Movement
             }
             else
             {
-                velocity.y = previousSnapshot.Velocity.y - Gravity * Time.fixedDeltaTime;
+                velocity.y = previousSnapshot.Velocity.y - Config.Gravity * Time.fixedDeltaTime;
             }
 
             return new StateSnapshot()

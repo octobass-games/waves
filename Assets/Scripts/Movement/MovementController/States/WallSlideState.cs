@@ -4,18 +4,18 @@ namespace Octobass.Waves.Movement
 {
     public class WallSlideState : CharacterState
     {
-        private readonly float WallSlideSpeed;
+        private readonly MovementConfig Config;
 
         public WallSlideState(MovementConfig config)
         {
-            WallSlideSpeed = config.WallSlideSpeed;
+            Config = config;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
         {
             return new StateSnapshot()
             {
-                Velocity = Vector2.down * WallSlideSpeed
+                Velocity = Vector2.down * Config.WallSlideSpeed
             };
         }
     }

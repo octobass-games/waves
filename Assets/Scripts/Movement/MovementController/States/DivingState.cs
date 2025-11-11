@@ -4,20 +4,18 @@ namespace Octobass.Waves.Movement
 {
     public class DivingState : CharacterState
     {
-        private readonly float Speed;
-        private readonly float DivingSpeedModifier;
+        private readonly MovementConfig Config;
 
         public DivingState(MovementConfig config)
         {
-            Speed = config.Speed;
-            DivingSpeedModifier = config.DivingSpeedModifier;
+            Config = config;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
         {
             return new StateSnapshot()
             {
-                Velocity = driverSnapshot.Swimming * DivingSpeedModifier * Speed
+                Velocity = driverSnapshot.Swimming * Config.DivingSpeedModifier * Config.Speed
             };
         }
     }
