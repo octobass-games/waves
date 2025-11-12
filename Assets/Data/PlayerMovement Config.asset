@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98185df9fc4d23148b132ffb9785a4cb, type: 3}
   m_Name: PlayerMovement Config
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.MovementConfig
-  Speed: 9
+  Speed: 7
   MaxSpeed: 12
   MaxFallSpeed: 50
-  Gravity: 50
+  Gravity: 30
   SkinWidth: 0.03125
   WallJumpSkinWidth: 0.3
-  JumpHeight: 7
+  JumpHeight: 3
   CoyoteTime: 200
   FallingGravityModifier: 3
-  AirMovementSpeedModifier: 0.9
+  AirMovementSpeedModifier: 0.95
   WallJumpInputFreezeTime: 250
-  WallSlideSpeed: 10
-  WallClimbSpeed: 6
+  WallSlideSpeed: 7
+  WallClimbSpeed: 4
   SwimmingSpeed: 3
   SwimmingBobHeight: 0.5
   DivingSpeedModifier: 0.3
