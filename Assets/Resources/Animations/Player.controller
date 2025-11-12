@@ -78,7 +78,7 @@ AnimatorStateMachine:
     m_Position: {x: -510.19482, y: -277.84167, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6434886734560207853}
-    m_Position: {x: 57.322876, y: -132.62463, z: 0}
+    m_Position: {x: 0, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4160753878068750394}
     m_Position: {x: -25.79663, y: -32.188538, z: 0}
@@ -92,6 +92,7 @@ AnimatorStateMachine:
   - {fileID: 5303891128175496421}
   - {fileID: 3577919120389732817}
   - {fileID: 7321717047746349411}
+  - {fileID: -3637441094852818582}
   m_EntryTransitions:
   - {fileID: 8589312784676762006}
   m_StateMachineTransitions: {}
@@ -392,6 +393,31 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-3637441094852818582
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Swimming
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 6434886734560207853}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-3112228958940445304
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -659,6 +685,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: MeleeAttack
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Swimming
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
