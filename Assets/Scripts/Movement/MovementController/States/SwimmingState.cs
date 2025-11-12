@@ -1,4 +1,6 @@
+using NUnit.Framework.Constraints;
 using Octobass.Waves.Extensions;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement
@@ -6,13 +8,19 @@ namespace Octobass.Waves.Movement
     public class SwimmingState : CharacterState
     {
         private readonly MovementConfig Config;
+        private readonly MovementControllerCollisionDetector CollisionDetector;
 
-        private MovementControllerCollisionDetector CollisionDetector;
+        private bool IsRising;
 
         public SwimmingState(MovementConfig config, MovementControllerCollisionDetector collisionDetector)
         {
             Config = config;
             CollisionDetector = collisionDetector;
+        }
+
+        public override void Enter(CharacterStateId previousStateId)
+        {
+            IsRising = false;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
@@ -24,11 +32,21 @@ namespace Octobass.Waves.Movement
             var bobPositionY = colliderY + Config.SwimmingBobHeight;
             float verticalDistanceFromBobHeight = characterY - bobPositionY;
 
+            Vector2 velocity = previousSnapshot.Velocity;
+
+            velocity.x = verticalDistanceFromBobHeight == 0 ? driverSnapshot.Movement.x * Config.SwimmingSpeed : 0;
+            velocity.y = velocity.y + Config.Gravity * Config.BuoyancyDescentModifier * Time.fixedDeltaTime;
+
+            if (velocity.y >= 0)
+            {
+                IsRising = true;
+            }
+
             return new StateSnapshot()
             {
                 Velocity = new Vector2(
-                    verticalDistanceFromBobHeight == 0 ? driverSnapshot.Movement.x * Config.SwimmingSpeed : 0,
-                    verticalDistanceFromBobHeight < 0 ? Mathf.Min(-1, verticalDistanceFromBobHeight / Time.fixedDeltaTime) : Mathf.Max(-1, -(verticalDistanceFromBobHeight / Time.fixedDeltaTime))
+                    velocity.x,
+                    IsRising ? (verticalDistanceFromBobHeight > 0 ? -(verticalDistanceFromBobHeight / Time.fixedDeltaTime) : (verticalDistanceFromBobHeight == 0) ? 0 : Config.BuoyancyAscentSpeed) : velocity.y
                 )
             };
         }

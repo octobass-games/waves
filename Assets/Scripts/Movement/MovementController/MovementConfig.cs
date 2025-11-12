@@ -53,6 +53,12 @@ namespace Octobass.Waves.Movement
         [Tooltip("The movement speed modifier to apply when moving underwater")]
         public float DivingSpeedModifier;
 
+        [Tooltip("The modifier to apply to gravity during descent upon water entry")]
+        public float BuoyancyDescentModifier;
+
+        [Tooltip("The speed at which the character will once descent has finishing after water entry")]
+        public float BuoyancyAscentSpeed;
+
         [Tooltip("The contact filter to apply when detecting ground collisions")]
         public ContactFilter2D GroundContactFilter;
 

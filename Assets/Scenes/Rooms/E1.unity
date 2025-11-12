@@ -383,6 +383,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1749568247}
     - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
+      propertyPath: SpawnTracker
+      value: 
+      objectReference: {fileID: 1749568255}
+    - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
+      propertyPath: PlayerMovementController
+      value: 
+      objectReference: {fileID: 1749568253}
+    - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
       propertyPath: UnlockAllAbilitiesOnAwake
       value: 1
       objectReference: {fileID: 0}
@@ -5085,22 +5093,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a497c4ccc9720f4e96f7b1d0521087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.Inventory
-  OnAbilityItemPickedUp:
+  OnItemPickedUp:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Octobass.Waves.Character.CharacterController2D,
-          Assembly-CSharp
-        m_MethodName: OnAbilityItemPickedUp
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Items: []
   references:
     version: 2
@@ -5403,6 +5398,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260050a4795f64c4780f00a5b14562f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.CharacterBrain
+--- !u!114 &1749568253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7789577042043984978, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+  m_PrefabInstance: {fileID: 8968294265933260623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ec66e408a313e42931fde730439ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.MovementStateMachine
+--- !u!114 &1749568255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+  m_PrefabInstance: {fileID: 8968294265933260623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c404ce3e5478504d8634567f5be3d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.SpawnTracker
 --- !u!1 &1775404523
 GameObject:
   m_ObjectHideFlags: 0
@@ -5755,6 +5772,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  DisplayInspect: {fileID: 0}
 --- !u!114 &1786268892
 MonoBehaviour:
   m_ObjectHideFlags: 0
