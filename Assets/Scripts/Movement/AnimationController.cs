@@ -38,6 +38,8 @@ namespace Octobass.Waves.Movement
                         Animator.SetTrigger("WallClimb");
                         break;
                     default:
+                    case CharacterStateId.WallJump:
+                        Animator.SetTrigger("Jump");
                         break;
                 }
             }
