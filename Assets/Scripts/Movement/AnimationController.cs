@@ -44,6 +44,9 @@ namespace Octobass.Waves.Movement
                     case CharacterStateId.Swimming:
                         Animator.SetTrigger("Swimming");
                         break;
+                    case CharacterStateId.Diving:
+                        Animator.SetTrigger("Diving");
+                        break;
                 }
             }
 
