@@ -102,12 +102,7 @@ namespace Octobass.Waves.Movement
             return null;
         }
 
-        public bool IsTouchingWaterwayEntrance()
-        {
-            return DetectWaterwayEntrance();
-        }
-
-        public bool DetectWaterwayEntrance()
+        public bool IsSwimmingAtWaterwayEntrance()
         {
             Collider2D[] colliders = new Collider2D[10];
 
@@ -119,8 +114,6 @@ namespace Octobass.Waves.Movement
                 var colliderY = colliders[0].bounds.max.y;
                 var bobPositionY = colliderY + SwimmingBobHeight;
                 float verticalDistanceFromBobHeight = characterY - bobPositionY;
-
-                Debug.Log(verticalDistanceFromBobHeight);
 
                 return verticalDistanceFromBobHeight >= 0;
             }
