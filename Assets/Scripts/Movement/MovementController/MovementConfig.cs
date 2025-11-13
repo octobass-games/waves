@@ -65,7 +65,10 @@ namespace Octobass.Waves.Movement
         [Tooltip("The contact filter to apply when detecting rideable collisions")]
         public ContactFilter2D RideableContactFilter;
 
-        [Tooltip("The contact filter to apply when detecting water collisions")]
-        public ContactFilter2D WaterContactFilter;
+        [Tooltip("The contact filter to apply when detecting waterway collisions")]
+        public ContactFilter2D WaterwayContactFilter;
+
+        [Tooltip("The contact filter to apply when detecting waterway entrance collisions")]
+        public ContactFilter2D WaterwayEntranceContactFilter;
     }
 }

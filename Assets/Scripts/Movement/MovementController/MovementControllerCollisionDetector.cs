@@ -9,9 +9,11 @@ namespace Octobass.Waves.Movement
 
         private float SkinWidth;
         private float WallJumpSkinWidth;
+        private float SwimmingBobHeight;
         private ContactFilter2D GroundContactFilter;
         private ContactFilter2D RideableContactFilter;
-        private ContactFilter2D WaterContactFilter;
+        private ContactFilter2D WaterwayContactFilter;
+        private ContactFilter2D WaterwayEntranceContactFilter;
 
         public MovementControllerCollisionDetector(Rigidbody2D body, MovementConfig characterController2DConfig)
         {
@@ -20,7 +22,9 @@ namespace Octobass.Waves.Movement
             WallJumpSkinWidth = characterController2DConfig.WallJumpSkinWidth;
             GroundContactFilter = characterController2DConfig.GroundContactFilter;
             RideableContactFilter = characterController2DConfig.RideableContactFilter;
-            WaterContactFilter = characterController2DConfig.WaterContactFilter;
+            WaterwayContactFilter = characterController2DConfig.WaterwayContactFilter;
+            WaterwayEntranceContactFilter = characterController2DConfig.WaterwayEntranceContactFilter;
+            SwimmingBobHeight = characterController2DConfig.SwimmingBobHeight;
         }
 
         public bool IsGrounded()
@@ -98,16 +102,42 @@ namespace Octobass.Waves.Movement
             return null;
         }
 
-        public bool IsTouchingWater()
+        public bool IsTouchingWaterwayEntrance()
         {
-            return DetectWater() != null;
+            return DetectWaterwayEntrance();
         }
 
-        public Collider2D DetectWater()
+        public bool DetectWaterwayEntrance()
         {
             Collider2D[] colliders = new Collider2D[10];
 
-            int count = Body.Overlap(WaterContactFilter, colliders);
+            int count = Body.Overlap(WaterwayEntranceContactFilter, colliders);
+
+            if (count > 0)
+            {
+                var characterY = Body.GetComponent<BoxCollider2D>().bounds.max.y;
+                var colliderY = colliders[0].bounds.max.y;
+                var bobPositionY = colliderY + SwimmingBobHeight;
+                float verticalDistanceFromBobHeight = characterY - bobPositionY;
+
+                Debug.Log(verticalDistanceFromBobHeight);
+
+                return verticalDistanceFromBobHeight >= 0;
+            }
+
+            return false;
+        }
+
+        public bool IsTouchingWaterway()
+        {
+            return DetectWaterway() != null;
+        }
+
+        public Collider2D DetectWaterway()
+        {
+            Collider2D[] colliders = new Collider2D[10];
+
+            int count = Body.Overlap(WaterwayContactFilter, colliders);
 
             if (count > 0)
             {

@@ -20,12 +20,12 @@ namespace Octobass.Waves.Movement
 
         public override void Enter(CharacterStateId previousStateId)
         {
-            IsRising = false;
+            IsRising = previousStateId == CharacterStateId.Diving;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
         {
-            Collider2D waterCollider = CollisionDetector.DetectWater();
+            Collider2D waterCollider = CollisionDetector.DetectWaterway();
 
             var characterY = CollisionDetector.Body.GetComponent<BoxCollider2D>().bounds.max.y;
             var colliderY = waterCollider.bounds.max.y;
