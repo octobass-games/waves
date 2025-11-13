@@ -18,6 +18,7 @@ namespace Octobass.Waves.Movement
         private CharacterStateId PreviousStateId;
         private CharacterStateId CurrentStateId;
         private StateSnapshot StateSnapshot = new();
+        private Vector2 CurrentFacingDirection = Vector2.right;
 
         void Awake()
         {
@@ -56,6 +57,8 @@ namespace Octobass.Waves.Movement
             Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
             Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
             
+            CurrentFacingDirection = GetFacingDirection(displacement, driverSnapshot, CurrentFacingDirection);
+
             CharacterStateId? nextState = GetNextTransition(driverSnapshot);
 
             if (nextState.HasValue)
@@ -78,7 +81,7 @@ namespace Octobass.Waves.Movement
                 CurrentState.Enter(PreviousStateId);
             }
 
-            return new MovementSnapshot(CurrentStateId, displacement, GetFacingDirection(displacement));
+            return new MovementSnapshot(CurrentStateId, displacement, CurrentFacingDirection);
         }
 
         public void AddState(CharacterStateId stateId)
@@ -143,14 +146,25 @@ namespace Octobass.Waves.Movement
             return null;
         }
 
-        private Vector2 GetFacingDirection(Vector2 displacement)
+        private Vector2 GetFacingDirection(Vector2 displacement, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             if (CurrentStateId == CharacterStateId.WallClimb || CurrentStateId == CharacterStateId.WallSlide)
             {
                 return CollisionDetector.IsCloseToLeftWall() ? Vector2.left : Vector2.right;
             }
 
-            return displacement.x < 0 ? Vector2.left : Vector2.right;
+            if (displacement.x > 0)
+            {
+                return Vector2.right;
+            }
+            else if (displacement.x < 0)
+            {
+                return Vector2.left;
+            }
+            else
+            {
+                return facingDirection;
+            }
         }
     }
 }
