@@ -10,6 +10,7 @@ namespace Octobass.Waves.Map
         public List<MapRoomRenderer> BigMapRenderers;
 
         public bool miniMode = true;
+        public bool HideOnAwake = true;
 
         public GameObject MiniMapRows;
         public GameObject MiniMap;
@@ -28,6 +29,11 @@ namespace Octobass.Waves.Map
             PlayerInput.Enable();
 
             MiniMapCentre = MiniMapRows.transform.position;
+
+            if (HideOnAwake)
+            {
+                HideMap();
+            }
         }
 
         void Update()
