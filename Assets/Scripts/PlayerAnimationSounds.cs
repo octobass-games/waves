@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class PlayerAnimationSounds : MonoBehaviour
 {
-   void OnStep()
+    public string stepSFX;
+
+    void OnStep()
     {
-        /// play sound
+        FMODUnity.RuntimeManager.PlayOneShot(stepSFX);
     }
 }
