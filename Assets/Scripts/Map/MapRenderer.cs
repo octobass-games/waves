@@ -108,5 +108,31 @@ namespace Octobass.Waves.Map
 
             Draw();
         }
+
+        public void ShowMap()
+        {
+            if (miniMode)
+            {
+                MiniMap.SetActive(true);
+                MiniMask.SetActive(true);
+            }
+            else
+            {
+                BigMap.SetActive(true);
+            }
+        }
+
+        public void HideMap()
+        {
+            if (miniMode)
+            {
+                MiniMap.SetActive(false);
+                MiniMask.SetActive(false);
+            }
+            else
+            {
+                BigMap.SetActive(false);
+            }
+        }
     }
 }
