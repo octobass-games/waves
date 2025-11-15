@@ -24,7 +24,6 @@ namespace Octobass.Waves.Water
 
         private Material FillableMaterial;
         private float FillableLine;
-
         private PlayerInput PlayerInput;
 
         void Awake()
@@ -70,28 +69,24 @@ namespace Octobass.Waves.Water
             PlayerInput.Enable();
         }
 
-        void Update()
+        public void Fill()
         {
-            Vector2 direction = Vector2.zero;
+            Move(Vector2.up);
+        }
 
-            if (PlayerInput.Movement.Inspect.IsPressed())
-            {
-                direction = Vector2.up;
-            }
-            else if (PlayerInput.Movement.Attack.IsPressed())
-            {
-                direction = Vector2.down;
-            }
+        public void Drain()
+        {
+            Move(Vector2.down);
+        }
 
-            if (direction != Vector2.zero)
-            {
-                FillableLine = Mathf.Clamp(FillableLine + FillableSpeed * direction.y * Time.deltaTime, FillableBottom.transform.position.y, FillableTop.transform.position.y);
+        private void Move(Vector2 direction)
+        {
+            FillableLine = Mathf.Clamp(FillableLine + direction.y * Time.deltaTime, FillableBottom.transform.position.y, FillableTop.transform.position.y);
 
-                Collider.size = new Vector2(Collider.size.x, (FillableLine - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
-                Collider.offset = new Vector2(0, (SpriteRenderer.bounds.min.y + ((FillableLine - SpriteRenderer.bounds.min.y) / 2) - transform.position.y) / transform.lossyScale.y);
+            Collider.size = new Vector2(Collider.size.x, (FillableLine - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
+            Collider.offset = new Vector2(0, (SpriteRenderer.bounds.min.y + ((FillableLine - SpriteRenderer.bounds.min.y) / 2) - transform.position.y) / transform.lossyScale.y);
 
-                FillableMaterial.SetFloat("_FillableLine", FillableLine);
-            }
+            FillableMaterial.SetFloat("_FillableLine", FillableLine);
         }
     }
 }
