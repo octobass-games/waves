@@ -1394,14 +1394,18 @@ PrefabInstance:
       objectReference: {fileID: 1183648943}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
@@ -1409,7 +1413,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 393106807}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 27405527}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
@@ -1417,7 +1429,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 393106807}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 27405527}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
@@ -1425,7 +1445,15 @@ PrefabInstance:
       value: OnUpgradeEnd
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ShowMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
@@ -1433,19 +1461,39 @@ PrefabInstance:
       value: OnUpgradeStart
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HideMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Octobass.Waves.Camera.CameraSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Map.MapRenderer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Octobass.Waves.Camera.CameraSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Map.MapRenderer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnUpgradeStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
