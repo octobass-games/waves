@@ -19,6 +19,9 @@ namespace Octobass.Waves.Water
         [SerializeField]
         private float FillableLineWidth;
 
+        [SerializeField]
+        private BoxCollider2D Collider;
+
         private Material FillableMaterial;
         private float FillableLine;
 
@@ -30,7 +33,7 @@ namespace Octobass.Waves.Water
             {
                 Debug.LogWarning("[WaterFillable]: SpriteRenderer not set");
             }
-            
+
             if (FillableSpeed == 0)
             {
                 Debug.LogWarning("[WaterFillable]: FillableSpeed is zero");
@@ -51,9 +54,17 @@ namespace Octobass.Waves.Water
                 Debug.LogWarning("[WaterFillable]: FillableLineWidth is zero");
             }
 
+            if (Collider == null)
+            {
+                Debug.LogWarning("[WaterFillable]: Collider not set");
+            }
+
             FillableMaterial = SpriteRenderer.material;
             FillableLine = FillableBottom.position.y;
             FillableMaterial.SetFloat("_FillableLine", FillableLine);
+
+            Collider.size = new Vector3(Collider.size.x, (FillableBottom.position.y - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
+            Collider.offset = new Vector2(0, FillableBottom.position.y / transform.lossyScale.y);
 
             PlayerInput = new PlayerInput();
             PlayerInput.Enable();
@@ -61,15 +72,23 @@ namespace Octobass.Waves.Water
 
         void Update()
         {
+            Vector2 direction = Vector2.zero;
+
             if (PlayerInput.Movement.Inspect.IsPressed())
             {
-                FillableLine = Mathf.Clamp(FillableLine + FillableSpeed * Time.deltaTime, FillableBottom.transform.position.y, FillableTop.transform.position.y);
-
-                FillableMaterial.SetFloat("_FillableLine", FillableLine);
+                direction = Vector2.up;
             }
             else if (PlayerInput.Movement.Attack.IsPressed())
             {
-                FillableLine = Mathf.Clamp(FillableLine - FillableSpeed * Time.deltaTime, FillableBottom.transform.position.y, FillableTop.transform.position.y);
+                direction = Vector2.down;
+            }
+
+            if (direction != Vector2.zero)
+            {
+                FillableLine = Mathf.Clamp(FillableLine + FillableSpeed * direction.y * Time.deltaTime, FillableBottom.transform.position.y, FillableTop.transform.position.y);
+
+                Collider.size = new Vector2(Collider.size.x, (FillableLine - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
+                Collider.offset = new Vector2(0, (SpriteRenderer.bounds.min.y + ((FillableLine - SpriteRenderer.bounds.min.y) / 2) - transform.position.y) / transform.lossyScale.y);
 
                 FillableMaterial.SetFloat("_FillableLine", FillableLine);
             }
