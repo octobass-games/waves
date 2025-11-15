@@ -19,6 +19,7 @@ namespace Octobass.Waves.Movement
         private CharacterStateId CurrentStateId;
         private StateSnapshot StateSnapshot = new();
         private Vector2 CurrentFacingDirection = Vector2.right;
+        private bool IsFrozen;
 
         void Awake()
         {
@@ -48,6 +49,11 @@ namespace Octobass.Waves.Movement
 
         public MovementSnapshot Tick(CharacterController2DDriverSnapshot driverSnapshot)
         {
+            if (IsFrozen)
+            {
+                return new MovementSnapshot(CurrentStateId, Vector2.zero, CurrentFacingDirection);
+            }
+
             StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot);
 
             Vector2 displacement = StateSnapshot.Velocity * Time.fixedDeltaTime;
@@ -124,6 +130,16 @@ namespace Octobass.Waves.Movement
             {
                 Debug.LogWarning($"[MovementStateMachine]: State already exists in state machine - {stateId}");
             }
+        }
+
+        public void Freeze()
+        {
+            IsFrozen = true;
+        }
+
+        public void Unfreeze()
+        {
+            IsFrozen = false;
         }
 
         private CharacterStateId? GetNextTransition(CharacterController2DDriverSnapshot driverSnapshot)

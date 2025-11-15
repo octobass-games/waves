@@ -56,6 +56,7 @@ namespace Octobass.Waves.Ability
                 PickedUpItem = abilityItemInstance;
 
                 MovementController.AddState(PickedUpItem.Ability.NewState);
+                MovementController.Freeze();
                 AnimationController.PlayUpgradeAnimation();
             }
         }
@@ -76,6 +77,7 @@ namespace Octobass.Waves.Ability
             PickedUpItem = null;
             ExplainerRoot.SetActive(false);
             ExplainerText.text = "";
+            MovementController.Unfreeze();
             OnUpgradeEnd.Invoke();
         }
     }
