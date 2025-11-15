@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{ad02f008-71f0-4b02-b052-ad1d74637c11}">
 		<property name="name">
-			<value>isMainMusic</value>
+			<value>MusicState</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8f379127-3185-4ca4-9235-13711e27aa30}</destination>
@@ -21,9 +21,6 @@
 		<property name="enumerationLabels">
 			<value>Value A</value>
 			<value>Value B</value>
-		</property>
-		<property name="isGlobal">
-			<value>true</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

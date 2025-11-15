@@ -103,9 +103,6 @@
 		<property name="isAsync">
 			<value>true</value>
 		</property>
-		<relationship name="triggerConditions">
-			<destination>{3c50cbea-4f11-4e45-bdaa-7bdbf6ee9d67}</destination>
-		</relationship>
 		<relationship name="sounds">
 			<destination>{c64cb0fc-9905-44d9-8e37-e5133e5e09e6}</destination>
 			<destination>{0ef7c0c5-d604-4754-8dfd-4c45eaef5e99}</destination>
@@ -146,17 +143,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{0a850051-5763-4ab4-8651-9923e61f7c6c}" />
 	<object class="MixerBusFader" id="{e31f5b45-dcfa-4af8-81b3-f17f475202eb}" />
-	<object class="ParameterCondition" id="{3c50cbea-4f11-4e45-bdaa-7bdbf6ee9d67}">
-		<property name="minimum">
-			<value>1</value>
-		</property>
-		<property name="maximum">
-			<value>1</value>
-		</property>
-		<relationship name="parameter">
-			<destination>{076ad290-1158-4850-9399-f70623daef81}</destination>
-		</relationship>
-	</object>
 	<object class="EventSound" id="{c64cb0fc-9905-44d9-8e37-e5133e5e09e6}">
 		<relationship name="event">
 			<destination>{df326897-8059-4520-b8d0-75407c1d6ebd}</destination>
