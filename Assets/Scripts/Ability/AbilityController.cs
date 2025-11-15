@@ -1,5 +1,4 @@
 using Octobass.Waves.Item;
-using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
 using TMPro;
 using UnityEngine;
