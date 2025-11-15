@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{ad02f008-71f0-4b02-b052-ad1d74637c11}">
+		<property name="name">
+			<value>MainThemeTrigger</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8f379127-3185-4ca4-9235-13711e27aa30}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{076ad290-1158-4850-9399-f70623daef81}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{076ad290-1158-4850-9399-f70623daef81}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Value A</value>
+			<value>Value B</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
