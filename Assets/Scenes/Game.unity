@@ -959,6 +959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657639031}
   - component: {fileID: 657639032}
+  - component: {fileID: 657639033}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -1008,6 +1009,39 @@ MonoBehaviour:
       Data4: 349585416
     Path: event:/Music/Ambient Chords/Main Ambient
   MusicState: MusicState
+--- !u!114 &657639033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657639030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1228882490
+      Data2: 1304821067
+      Data3: 153259944
+      Data4: -1591688239
+    Path: event:/SFX/Water
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: OutOrIn
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &666075283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1915,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1776599706522154879, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
   m_PrefabInstance: {fileID: 6809107531801228825}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1329037016}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
@@ -2305,6 +2339,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2938896930296231441, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
   m_PrefabInstance: {fileID: 6809107531801228825}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1329037016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 454544333398357002, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+  m_PrefabInstance: {fileID: 6809107531801228825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1329037021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329037016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 1
+  Value: 1
 --- !u!1 &1330039398
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,7 +6390,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 454544333398357002, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1329037021}
   m_SourcePrefab: {fileID: 100100000, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
 --- !u!4 &6823947987452947239 stripped
 Transform:

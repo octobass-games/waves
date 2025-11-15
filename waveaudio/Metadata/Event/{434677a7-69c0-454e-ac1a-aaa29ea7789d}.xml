@@ -100,6 +100,9 @@
 		<property name="isAsync">
 			<value>true</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{0a65bf1d-14d8-47f9-a26e-626b1d316809}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{405197da-4a00-404c-9326-fa66f38d0275}</destination>
 			<destination>{9ef9dbf4-4fc1-47e6-8f59-f9293bbd6cd5}</destination>
@@ -130,6 +133,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{3a21ecee-fda9-4636-b200-8646d5ba4ae7}" />
 	<object class="MixerBusFader" id="{6b3145bb-4545-43cd-bdba-4e33b4ceb7fe}" />
+	<object class="ADSRModulator" id="{0a65bf1d-14d8-47f9-a26e-626b1d316809}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="EventSound" id="{405197da-4a00-404c-9326-fa66f38d0275}">
 		<relationship name="event">
 			<destination>{21c51833-ea35-4e5b-b627-104599a6cedc}</destination>
