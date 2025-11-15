@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 134631692}
   - component: {fileID: 134631691}
   - component: {fileID: 134631690}
+  - component: {fileID: 134631694}
   m_Layer: 0
   m_Name: Button (2)
   m_TagString: Untagged
@@ -263,6 +264,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &134631694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134631688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -433879761
+      Data2: 1265029846
+      Data3: 400849547
+      Data4: -1675257860
+    Path: event:/SFX/Bubbles
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &212752074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1109,7 @@ GameObject:
   - component: {fileID: 1417348147}
   - component: {fileID: 1417348146}
   - component: {fileID: 1417348145}
+  - component: {fileID: 1417348149}
   m_Layer: 0
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1208,6 +1241,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1417348149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417348143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -433879761
+      Data2: 1265029846
+      Data3: 400849547
+      Data4: -1675257860
+    Path: event:/SFX/Bubbles
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1528902724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1285,7 @@ GameObject:
   - component: {fileID: 1528902729}
   - component: {fileID: 1528902728}
   - component: {fileID: 1528902727}
+  - component: {fileID: 1528902730}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1364,6 +1429,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1528902730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528902724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -433879761
+      Data2: 1265029846
+      Data3: 400849547
+      Data4: -1675257860
+    Path: event:/SFX/Bubbles
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1631431484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,6 +1552,7 @@ GameObject:
   - component: {fileID: 1963438187}
   - component: {fileID: 1963438186}
   - component: {fileID: 1963438185}
+  - component: {fileID: 1963438189}
   m_Layer: 0
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1587,6 +1684,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1963438189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963438183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -433879761
+      Data2: 1265029846
+      Data3: 400849547
+      Data4: -1675257860
+    Path: event:/SFX/Bubbles
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!212 &3626916396818228815
 SpriteRenderer:
   m_ObjectHideFlags: 0
