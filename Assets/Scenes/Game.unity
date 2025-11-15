@@ -2358,7 +2358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
   CollisionTag: 
   Parameter: OutOrIn
-  TriggerEvent: 1
+  TriggerEvent: 11
   Value: 1
 --- !u!1 &1330039398
 GameObject:
@@ -2909,6 +2909,11 @@ Transform:
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 5594049911904241800, guid: 9a9d31279f28be14b91e7d437da8e5fb, type: 3}
   m_PrefabInstance: {fileID: 1686493098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1695592210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1340303693900578863, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+  m_PrefabInstance: {fileID: 9155442939798803094}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1698217320 stripped
 MonoBehaviour:
@@ -7376,19 +7381,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1340303693900578863, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9155442939798803100}
   m_SourcePrefab: {fileID: 100100000, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
 --- !u!114 &9155442939798803095 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 896404029467673434, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
   m_PrefabInstance: {fileID: 9155442939798803094}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1695592210}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+--- !u!114 &9155442939798803100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695592210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
