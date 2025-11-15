@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
+using Octobass.Waves.Map;
 
 public class Music : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class Music : MonoBehaviour
         PlayTheme();
     }
 
+    public void OnRoomEnter(RoomId roomId)
+    {
+        SetMusicState(1);
+    }
+
     public void SetMusicState(float value)
     {
         currentStateValue = value;
@@ -30,15 +36,9 @@ public class Music : MonoBehaviour
         if (ambientInstance.isValid())
             ambientInstance.setParameterByName(MusicState, currentStateValue);
 
-        if (currentStateValue >= 1f)
+        if (!mainPlaying)
         {
-            if (!mainPlaying)
-                PlayTheme();
-        }
-        else
-        {
-            if (!mainPlaying)
-                PlayAmbient();
+            PlayTheme();
         }
     }
 
@@ -85,16 +85,7 @@ public class Music : MonoBehaviour
             mainInstance.release();
             mainPlaying = false;
 
-            if (currentStateValue >= 1f)
-            {
-                // Still in "theme mode" → start another theme
-                PlayTheme();
-            }
-            else
-            {
-                // State is 0 → go back to ambient
-                PlayAmbient();
-            }
+            PlayAmbient();
         }
     }
 
