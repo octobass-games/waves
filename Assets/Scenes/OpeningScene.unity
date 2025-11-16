@@ -490,7 +490,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1139802159}
-  - component: {fileID: 1139802158}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -498,37 +497,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1139802158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139802157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1914660126
-      Data2: 1219662334
-      Data3: 1924979891
-      Data4: 1644249650
-    Path: event:/Music/Animation Music
-  Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!4 &1139802159
 Transform:
   m_ObjectHideFlags: 0
@@ -693,6 +661,7 @@ GameObject:
   - component: {fileID: 3626916396818228815}
   - component: {fileID: 7878350318254721447}
   - component: {fileID: 7878350318254721448}
+  - component: {fileID: 7878350318254721449}
   m_Layer: 0
   m_Name: open-game-animation
   m_TagString: Untagged
@@ -750,6 +719,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   FadeCanvas: {fileID: 882876625}
+--- !u!114 &7878350318254721449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969460405230838211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b80f05563386ab48ab2a2c6cb7f7fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StarterAnimationAudioPlayer
+  music: event:/Music/Animation Music
+  writingSFX: event:/SFX/Cutscene SFX/writing letter
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
