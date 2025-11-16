@@ -1,4 +1,3 @@
-using Octobass.Waves.Extensions;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement
@@ -33,8 +32,8 @@ namespace Octobass.Waves.Movement
 
             Vector2 velocity = previousSnapshot.Velocity - previousSnapshot.Velocity.normalized * Config.DashDrag * Time.fixedDeltaTime;
 
-            velocity.x = previousSnapshot.Velocity.normalized.x == -1 ? Mathf.Min(velocity.x, 0) : Mathf.Max(velocity.x, 0);
-            velocity.y = Mathf.Max(velocity.y, 0);
+            velocity.x = previousSnapshot.Velocity.normalized.x < 0 ? Mathf.Min(velocity.x, 0) : Mathf.Max(velocity.x, 0);
+            velocity.y = previousSnapshot.Velocity.normalized.y < 0 ? Mathf.Min(velocity.y, 0) : Mathf.Max(velocity.y, 0);
 
             return new StateSnapshot()
             {

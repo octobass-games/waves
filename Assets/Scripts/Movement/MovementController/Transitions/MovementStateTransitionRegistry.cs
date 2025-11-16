@@ -94,6 +94,7 @@ namespace Octobass.Waves.Movement
                 new()
                 {
                     new(CharacterStateId.Grounded, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.Velocity == Vector2.zero && collisionDetector.IsGrounded() || collisionDetector.IsTouchingWall(stateSnapshot.Velocity.normalized)),
+                    new(CharacterStateId.Falling, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.Velocity == Vector2.zero && !collisionDetector.IsGrounded()),
                 }
             }
         };
