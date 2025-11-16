@@ -202,6 +202,18 @@ MonoBehaviour:
           m_StringArgument: open
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6850245519609442418}
+        m_TargetAssemblyTypeName: Octobass.Waves.Item.Inspectable, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: open
+          m_BoolArgument: 0
+        m_CallState: 2
   DisplayInspect: {fileID: 1927318565770141116}
 --- !u!1001 &4830046979206419244
 PrefabInstance:
@@ -216,6 +228,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 816816511157946652, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -269053427
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027466978260692452, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027466978260692452, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027466978260692452, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
       propertyPath: m_SortingLayerID
       value: -269053427
       objectReference: {fileID: 0}
@@ -265,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465181307829915280, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
