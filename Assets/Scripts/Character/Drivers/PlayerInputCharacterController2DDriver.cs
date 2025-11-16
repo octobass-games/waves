@@ -67,7 +67,7 @@ namespace Octobass.Waves.Character
 
             return new CharacterController2DDriverSnapshot
             {
-                Movement = new Vector2(PlayerInput.Movement.Horizontal.ReadValue<float>(), 0),
+                Movement = PlayerInput.Movement.Horizontal.ReadValue<Vector2>(),
                 Climbing = new Vector2(0, PlayerInput.Movement.Climbing.ReadValue<float>()),
                 DashPressed = DashPressed,
                 DashReleased = DashReleased,
