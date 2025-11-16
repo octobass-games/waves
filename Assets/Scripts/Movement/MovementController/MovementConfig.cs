@@ -70,5 +70,11 @@ namespace Octobass.Waves.Movement
 
         [Tooltip("The contact filter to apply when detecting waterway entrance collisions")]
         public ContactFilter2D WaterwayEntranceContactFilter;
+
+        [Tooltip("The distance that the character dashes")]
+        public float DashDistance;
+
+        [Tooltip("The drag to apply to the character while dashing")]
+        public float DashDrag;
     }
 }

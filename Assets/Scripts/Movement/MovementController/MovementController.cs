@@ -121,6 +121,9 @@ namespace Octobass.Waves.Movement
                     case CharacterStateId.Diving:
                         StateRegistry[CharacterStateId.Diving] = new DivingState(CharacterControllerConfig);
                         break;
+                    case CharacterStateId.Dashing:
+                        StateRegistry[CharacterStateId.Dashing] = new DashState(CharacterControllerConfig);
+                        break;
                     default:
                         Debug.LogWarning($"[MovementStateMachine]: Trying to add a state that is not supported - {stateId}");
                         break;

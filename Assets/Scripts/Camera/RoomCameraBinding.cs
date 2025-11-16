@@ -9,5 +9,6 @@ namespace Octobass.Waves.Camera
     {
         public RoomId Room;
         public CinemachineCamera Camera;
+        public float OrthographicSize;
     }
 }

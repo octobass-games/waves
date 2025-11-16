@@ -163,6 +163,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e789351-5409-4529-be6c-0cdd7e556f81"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -561,6 +570,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Swimming"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50dd6525-f08e-4527-a261-8c43ebe8d683"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ec89fc8-a61b-402e-8600-ba6a976d979d"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1093,6 +1124,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Movement_Inspect = m_Movement.FindAction("Inspect", throwIfNotFound: true);
         m_Movement_Attack = m_Movement.FindAction("Attack", throwIfNotFound: true);
         m_Movement_Swimming = m_Movement.FindAction("Swimming", throwIfNotFound: true);
+        m_Movement_Dash = m_Movement.FindAction("Dash", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1194,6 +1226,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Inspect;
     private readonly InputAction m_Movement_Attack;
     private readonly InputAction m_Movement_Swimming;
+    private readonly InputAction m_Movement_Dash;
     /// <summary>
     /// Provides access to input actions defined in input action map "Movement".
     /// </summary>
@@ -1237,6 +1270,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Movement/Swimming".
         /// </summary>
         public InputAction @Swimming => m_Wrapper.m_Movement_Swimming;
+        /// <summary>
+        /// Provides access to the underlying input action "Movement/Dash".
+        /// </summary>
+        public InputAction @Dash => m_Wrapper.m_Movement_Dash;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1287,6 +1324,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Swimming.started += instance.OnSwimming;
             @Swimming.performed += instance.OnSwimming;
             @Swimming.canceled += instance.OnSwimming;
+            @Dash.started += instance.OnDash;
+            @Dash.performed += instance.OnDash;
+            @Dash.canceled += instance.OnDash;
         }
 
         /// <summary>
@@ -1322,6 +1362,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Swimming.started -= instance.OnSwimming;
             @Swimming.performed -= instance.OnSwimming;
             @Swimming.canceled -= instance.OnSwimming;
+            @Dash.started -= instance.OnDash;
+            @Dash.performed -= instance.OnDash;
+            @Dash.canceled -= instance.OnDash;
         }
 
         /// <summary>
@@ -1613,6 +1656,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwimming(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Dash" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDash(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

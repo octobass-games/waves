@@ -44,6 +44,7 @@ namespace Octobass.Waves.Debugging
                 AddState("WallJump");
                 AddState("Swimming");
                 AddState("Diving");
+                AddState("Dashing");
             }
         }
 

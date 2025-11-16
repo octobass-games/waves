@@ -12,6 +12,7 @@ namespace Octobass.Waves.Movement
         Riding,
         WallSlide,
         Swimming,
-        Diving
+        Diving,
+        Dashing
     }
 }

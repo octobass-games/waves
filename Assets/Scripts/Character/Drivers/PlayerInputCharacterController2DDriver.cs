@@ -9,6 +9,8 @@ namespace Octobass.Waves.Character
 
         private bool JumpPressed;
         private bool JumpReleased;
+        private bool DashPressed;
+        private bool DashReleased;
         private bool GrabPressed;
         private bool GrabReleased;
         private bool AttackPressed;
@@ -52,10 +54,23 @@ namespace Octobass.Waves.Character
                 AttackReleased = true;
             }
 
+            if (PlayerInput.Movement.Dash.WasPerformedThisFrame())
+            {
+                DashPressed = true;
+            }
+
+            if (PlayerInput.Movement.Dash.WasReleasedThisFrame())
+            {
+                DashReleased = true;
+            }
+
+
             return new CharacterController2DDriverSnapshot
             {
                 Movement = new Vector2(PlayerInput.Movement.Horizontal.ReadValue<float>(), 0),
                 Climbing = new Vector2(0, PlayerInput.Movement.Climbing.ReadValue<float>()),
+                DashPressed = DashPressed,
+                DashReleased = DashReleased,
                 Swimming = PlayerInput.Movement.Swimming.ReadValue<Vector2>(),
                 JumpPressed = JumpPressed,
                 JumpReleased = JumpReleased,
@@ -71,6 +86,9 @@ namespace Octobass.Waves.Character
         {
             JumpPressed = false;
             JumpReleased = false;
+
+            DashPressed = false;
+            DashReleased = false;
 
             AttackPressed = false;
             AttackReleased = false;

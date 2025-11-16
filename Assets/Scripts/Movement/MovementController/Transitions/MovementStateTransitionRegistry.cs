@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Octobass.Waves.Movement
 {
@@ -10,6 +11,7 @@ namespace Octobass.Waves.Movement
                 CharacterStateId.Grounded,
                 new() {
                     new(CharacterStateId.Jumping, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => driverSnapshot.JumpPressed),
+                    new(CharacterStateId.Dashing, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => driverSnapshot.DashPressed),
                     new(CharacterStateId.Riding, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsOnPlatform()),
                     new(CharacterStateId.Falling, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => !collisionDetector.IsGrounded()),
                     new(CharacterStateId.WallClimb, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsTouchingWall() && driverSnapshot.GrabHeld)
@@ -32,6 +34,7 @@ namespace Octobass.Waves.Movement
                 new()
                 {
                     new(CharacterStateId.Falling, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.Velocity.y <= 0 || collisionDetector.IsTouchingCeiling()),
+                    new(CharacterStateId.Dashing, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => driverSnapshot.DashPressed),
                     new(CharacterStateId.WallClimb, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsTouchingWall() && driverSnapshot.GrabHeld),
                     new(CharacterStateId.WallJump, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsCloseToWall() && driverSnapshot.JumpPressed)
                 }
@@ -84,6 +87,13 @@ namespace Octobass.Waves.Movement
                 new()
                 {
                     new(CharacterStateId.Swimming,  (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsSwimmingAtWaterwayEntrance())
+                }
+            },
+            {
+                CharacterStateId.Dashing,
+                new()
+                {
+                    new(CharacterStateId.Grounded, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.Velocity == Vector2.zero && collisionDetector.IsGrounded() || collisionDetector.IsTouchingWall(stateSnapshot.Velocity.normalized)),
                 }
             }
         };
