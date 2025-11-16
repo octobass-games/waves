@@ -10,12 +10,16 @@ namespace Octobass.Waves.Map
         private Image Image;
         private float Opacity;
 
+        private MapRoomDetailsRenderer detailsRenderer;
+
         void Awake()
         {
             Image = GetComponent<Image>();
+
+            detailsRenderer = GetComponentInChildren<MapRoomDetailsRenderer>();
         }
 
-        public void Draw(Room room)
+        public void Draw(Room room, bool isPlayerInRoom, bool miniMode)
         {
             Color color = Image.color;
 
@@ -27,6 +31,10 @@ namespace Octobass.Waves.Map
             {
                 Image.enabled = true;
                 Image.color = new Color(color.r, color.g, color.b, room.State == RoomState.Discovered ? 0.5f : 1f); 
+            }
+            if (!miniMode)
+            {
+                detailsRenderer.Player.SetActive(isPlayerInRoom);
             }
         }
     }

@@ -58,16 +58,18 @@ namespace Octobass.Waves.Map
                 foreach (Room room in Rooms)
                 {
                     MapRoomRenderer renderer = RoomRenderers.Find(renderer => renderer.Id == room.Id);
+                    bool playerInRoom = room.Id == ActiveRoom;
 
                     if (renderer != null)
                     {
-                        renderer.Draw(room);
+                        renderer.Draw(room, playerInRoom, miniMode = true);
 
-                        if (room.Id == ActiveRoom)
+                        if (playerInRoom)
                         {
                             Vector3 translation = MiniMapCentre - renderer.transform.position;
 
                             MiniMapRows.transform.position += translation;
+
                         }
                     }
                     else
@@ -81,10 +83,11 @@ namespace Octobass.Waves.Map
                 foreach (Room room in Rooms)
                 {
                     MapRoomRenderer renderer = BigMapRenderers.Find(renderer => renderer.Id == room.Id);
+                    bool playerInRoom = room.Id == ActiveRoom;
 
                     if (renderer != null)
                     {
-                        renderer.Draw(room);
+                        renderer.Draw(room, playerInRoom, miniMode = false);
                     }
                     else
                     {

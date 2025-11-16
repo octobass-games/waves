@@ -84,6 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985525826174346171}
+  - component: {fileID: 1166820242512433004}
   m_Layer: 0
   m_Name: MapRoomDetails
   m_TagString: Untagged
@@ -113,6 +114,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1166820242512433004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313309216941022365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8da6a5c355128245be5f081be978494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  Player: {fileID: 6578098473496013579}
+  Waterporter: {fileID: 5301145164907863137}
+  Shell: {fileID: 6891155686931566812}
 --- !u!1 &6578098473496013579
 GameObject:
   m_ObjectHideFlags: 0
