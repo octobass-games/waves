@@ -50,6 +50,9 @@ namespace Octobass.Waves.Movement
                     case CharacterStateId.WallSlide:
                         Animator.SetTrigger("WallSlide");
                         break;
+                    case CharacterStateId.Dashing:
+                        Animator.SetTrigger("Dash");
+                        break;
                 }
             }
 
