@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -8,15 +9,31 @@ public class PauseMenu : MonoBehaviour
     public GameObject MainMenuPanel;
     public GameObject ControlsPanel;
     public GameObject PostcardsPanel;
+    private PlayerInput PlayerInput;
+
+    private bool paused = false;
     void Start()
     {
-        
+        PlayerInput = new PlayerInput();
+        PlayerInput.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerInput.Movement.Pause.WasPerformedThisFrame())
+        {
+            paused = !paused;
+        }
+
+        if (paused)
+        {
+            OpenPause();
+        }
+        else
+        {
+            ClosePause();
+        }
     }
 
 
@@ -32,6 +49,17 @@ public class PauseMenu : MonoBehaviour
     public void OpenPause()
     {
         MainMenuPanel.SetActive(true);
+        CollectablesPanel.SetActive(false);
+        StaffPanel.SetActive(false);
+        ControlsPanel.SetActive(false);
+        PostcardsPanel.SetActive(false);
+
+
+    }
+
+    public void ClosePause()
+    {
+        MainMenuPanel.SetActive(false);
         CollectablesPanel.SetActive(false);
         StaffPanel.SetActive(false);
         ControlsPanel.SetActive(false);

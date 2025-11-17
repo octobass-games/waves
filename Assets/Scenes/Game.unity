@@ -505,7 +505,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -594,7 +594,7 @@ Transform:
   m_GameObject: {fileID: 393106800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.20537, y: -0.000000063304014, z: -1}
+  m_LocalPosition: {x: -75.91093, y: -0.000000063304014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5941,6 +5941,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 4.2954345
+      objectReference: {fileID: 0}
     - target: {fileID: 7984609605813208002, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 61
@@ -7208,6 +7212,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1061778173}
     m_Modifications:
+    - target: {fileID: 88908602692458268, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: m_TileSpriteArray.Array.size
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 88908602692458268, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 1411526821795162185, guid: cf24a6bbe855775498799d7d9258d970, type: 3}
+    - target: {fileID: 88908602692458268, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 88908602692458268, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: m_Tiles.Array.data[1].second.m_TileSpriteIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 896404029467673434, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -8807,6 +8827,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1340303693900578863, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9155442939798803100}
+    - targetCorrespondingSourceObject: {fileID: 4447766627213842465, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6022542894036974198, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
 --- !u!114 &9155442939798803095 stripped
 MonoBehaviour:
