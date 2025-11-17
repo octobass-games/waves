@@ -26,4 +26,14 @@ public class PlayerAnimationSounds : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(upgradeSFX);
     }
+
+    void IsDiving() //set diving music
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IsDiving", 0f);
+    }
+
+    void NotDiving() //set standard music
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IsDiving", 1f);
+    }
 }
