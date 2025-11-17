@@ -83,6 +83,7 @@ namespace Octobass.Waves.Movement
                     CurrentStateId = nextState.Value;
                 }
 
+                // TODO: Should maybe not do this until start of next frame, so animator gets current state and data
                 Debug.Log($"[MovementStateMachine]: Entering - {CurrentState}");
                 CurrentState.Enter(PreviousStateId);
             }
