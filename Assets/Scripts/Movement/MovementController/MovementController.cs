@@ -54,17 +54,6 @@ namespace Octobass.Waves.Movement
                 return new MovementSnapshot(CurrentStateId, Vector2.zero, CurrentFacingDirection);
             }
 
-            StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot);
-
-            Vector2 displacement = StateSnapshot.Velocity * Time.fixedDeltaTime;
-            Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
-
-            Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
-            Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
-            Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
-            
-            CurrentFacingDirection = GetFacingDirection(displacement, driverSnapshot, CurrentFacingDirection);
-
             CharacterStateId? nextState = GetNextTransition(driverSnapshot);
 
             if (nextState.HasValue)
@@ -87,6 +76,17 @@ namespace Octobass.Waves.Movement
                 Debug.Log($"[MovementStateMachine]: Entering - {CurrentState}");
                 CurrentState.Enter(PreviousStateId);
             }
+
+            StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot);
+
+            Vector2 displacement = StateSnapshot.Velocity * Time.fixedDeltaTime;
+            Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
+
+            Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
+            Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
+            Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
+            
+            CurrentFacingDirection = GetFacingDirection(displacement, driverSnapshot, CurrentFacingDirection);
 
             return new MovementSnapshot(CurrentStateId, displacement, CurrentFacingDirection);
         }
