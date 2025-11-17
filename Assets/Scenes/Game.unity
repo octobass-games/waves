@@ -562,9 +562,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.055555556
-    width: 0.33333334
-    height: 0.3333333
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1692,6 +1692,10 @@ PrefabInstance:
     - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: meleeSFX
       value: event:/SFX/staff swing
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: upgradeSFX
+      value: event:/SFX/upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
@@ -5943,7 +5947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.2954345
+      value: 5.9766145
       objectReference: {fileID: 0}
     - target: {fileID: 7984609605813208002, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_LocalPosition.x
