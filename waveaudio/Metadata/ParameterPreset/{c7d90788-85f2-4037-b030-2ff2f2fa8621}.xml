@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{c7d90788-85f2-4037-b030-2ff2f2fa8621}">
+		<property name="name">
+			<value>IsDiving</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8f379127-3185-4ca4-9235-13711e27aa30}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{27acbfac-249e-467e-9d1c-f10cffd618ba}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{27acbfac-249e-467e-9d1c-f10cffd618ba}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Yes</value>
+			<value>No</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
