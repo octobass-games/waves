@@ -30,5 +30,12 @@ namespace Octobass.Waves.Attack
                 OnDamageTaken.Invoke();
             }
         }
+
+        public void OnOneShot()
+        {
+            HealthPoints = 0;
+
+            OnHealthEmpty.Invoke();
+        }
     }
 }

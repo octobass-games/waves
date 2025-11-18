@@ -1775,16 +1775,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: Spawns.Array.size
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: 'Spawns.Array.data[0]'
       value: 
-      objectReference: {fileID: 6809107531801228827}
+      objectReference: {fileID: 9155442939798803097}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: 'Spawns.Array.data[1]'
       value: 
+      objectReference: {fileID: 9155442939798803096}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[2]'
+      value: 
       objectReference: {fileID: 6809107531801228826}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6809107531801228827}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[4]'
+      value: 
+      objectReference: {fileID: 4096788883821409408}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[5]'
+      value: 
+      objectReference: {fileID: 4096788883821409407}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[6]'
+      value: 
+      objectReference: {fileID: 7049680760765415748}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[7]'
+      value: 
+      objectReference: {fileID: 7049680760765415747}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[8]'
+      value: 
+      objectReference: {fileID: 5117037892847758986}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[9]'
+      value: 
+      objectReference: {fileID: 5117037892847758985}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[10]'
+      value: 
+      objectReference: {fileID: 7049680760765415748}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1812,7 +1848,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1806367208770461159, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448142529}
   m_SourcePrefab: {fileID: 100100000, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
 --- !u!4 &1047319393 stripped
 Transform:
@@ -2728,6 +2767,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c404ce3e5478504d8634567f5be3d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.SpawnTracker
+--- !u!114 &1448142529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448142502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5f29bc89bdd5d45a784db1c68c358f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Attack.Health
+  HealthPoints: 1
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthEmpty:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1448142528}
+        m_TargetAssemblyTypeName: Octobass.Waves.Spawn.SpawnTracker, Assembly-CSharp
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1539800906
 GameObject:
   m_ObjectHideFlags: 0
@@ -6035,7 +6105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 5.661078
+      value: 4.3753967
       objectReference: {fileID: 0}
     - target: {fileID: 7984609605813208002, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6085,6 +6155,28 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 570116630}
   m_SourcePrefab: {fileID: 100100000, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+--- !u!114 &4096788883821409407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3368793062061112884, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+  m_PrefabInstance: {fileID: 4096788883821409406}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &4096788883821409408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6192252644217154313, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+  m_PrefabInstance: {fileID: 4096788883821409406}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
 --- !u!4 &4198546411435873038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7049527547531701338, guid: a797251c194ba02409b11f5ea2132305, type: 3}
@@ -7210,6 +7302,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+--- !u!114 &5117037892847758985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8069321099996796873, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+  m_PrefabInstance: {fileID: 5117037892847758983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &5117037892847758986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4377616427298097660, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+  m_PrefabInstance: {fileID: 5117037892847758983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
 --- !u!4 &5188070695413835859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4771669468361460541, guid: 8f6f73275025e5542be4136d61ddc594, type: 3}
@@ -7562,7 +7676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
 --- !u!114 &6809107531801228827 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 565243217430306313, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9147616746775782154, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
   m_PrefabInstance: {fileID: 6809107531801228825}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -7655,6 +7769,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1061778173}
     m_Modifications:
+    - target: {fileID: 2692595276987996021, guid: 8f045df30d4e18743bad1ff3ee1175d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3722629038095873605, guid: 8f045df30d4e18743bad1ff3ee1175d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 105
@@ -7708,6 +7826,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f045df30d4e18743bad1ff3ee1175d1, type: 3}
+--- !u!114 &7049680760765415747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4206200983020407958, guid: 8f045df30d4e18743bad1ff3ee1175d1, type: 3}
+  m_PrefabInstance: {fileID: 7049680760765415746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &7049680760765415748 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6706513338088915428, guid: 8f045df30d4e18743bad1ff3ee1175d1, type: 3}
+  m_PrefabInstance: {fileID: 7049680760765415746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
 --- !u!114 &7234971544640157240 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2706353667704266880, guid: 402617311824c634da48d190faeb7ad6, type: 3}
@@ -9850,6 +9990,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+--- !u!114 &9155442939798803096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3145226390021547351, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+  m_PrefabInstance: {fileID: 9155442939798803094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &9155442939798803097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6396793279942415344, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+  m_PrefabInstance: {fileID: 9155442939798803094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
 --- !u!114 &9155442939798803100
 MonoBehaviour:
   m_ObjectHideFlags: 0

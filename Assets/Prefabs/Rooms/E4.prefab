@@ -570,6 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925794732350822000}
   - component: {fileID: 2692595276987996021}
+  - component: {fileID: 3434003824928212962}
   m_Layer: 0
   m_Name: box
   m_TagString: Untagged
@@ -626,7 +627,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 3.1298866, y: 0.75166583}
+  m_Offset: {x: 5.1298866, y: 0.75166583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -636,8 +637,20 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.576393, y: 1.2218032}
+  m_Size: {x: 13.576393, y: 1.2218032}
   m_EdgeRadius: 0
+--- !u!114 &3434003824928212962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038499729612211392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a08f54a2aefb2d4b9a9a8a2f5a92521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Attack.EnvironmentalAttack
 --- !u!1 &2617313031403212467
 GameObject:
   m_ObjectHideFlags: 0
