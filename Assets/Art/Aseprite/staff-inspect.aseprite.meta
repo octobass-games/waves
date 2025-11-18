@@ -127,27 +127,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: wall-climb
-    originalName: 
-    pivot: {x: 0.50000006, y: -10.625}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 30
-      y: 152
-      width: 8
-      height: 8
-    spriteID: 965e0253a49a95348af49be7aef30bae
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 30, y: 152}
   - name: range attack
     originalName: 
     pivot: {x: 0.50000006, y: -7.625}
@@ -157,7 +136,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 30
-      y: 160
+      y: 152
       width: 8
       height: 8
     spriteID: 77bd52faa11b8854996610d2dff27b06
@@ -168,7 +147,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 160}
+    uvTransform: {x: 30, y: 152}
   - name: dive
     originalName: 
     pivot: {x: 0.50000006, y: -3.875}
@@ -178,7 +157,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 30
-      y: 168
+      y: 160
       width: 8
       height: 8
     spriteID: 08e256dbb87cc704e9e41c7e98bc1d42
@@ -189,7 +168,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 168}
+    uvTransform: {x: 30, y: 160}
   - name: swim
     originalName: 
     pivot: {x: 0.50000006, y: -9.125}
@@ -199,7 +178,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 30
-      y: 182
+      y: 168
       width: 8
       height: 8
     spriteID: 4146170058e38994ba81c216685c1760
@@ -210,7 +189,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 182}
+    uvTransform: {x: 30, y: 168}
   - name: wall-jump
     originalName: 
     pivot: {x: 0.50000006, y: -6.1249995}
@@ -220,7 +199,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 30
-      y: 190
+      y: 182
       width: 8
       height: 8
     spriteID: d21e6f13d632e96458afefe43e17b068
@@ -231,7 +210,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 190}
+    uvTransform: {x: 30, y: 182}
   - name: staff_Frame_0
     originalName: 
     pivot: {x: 0.5, y: -0.019736843}
@@ -421,6 +400,27 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 30, y: 198}
+  - name: dash
+    originalName: 
+    pivot: {x: 0.50000006, y: -10.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 190
+      width: 8
+      height: 8
+    spriteID: ce1f23b843aeaa04b93d50fe57109cb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 190}
   spriteSheetImportData: []
   tileSetImportData: []
   asepriteLayers:
@@ -440,43 +440,6 @@ ScriptedImporter:
     tileCells: []
     tileSetIndex: 0
     parentIndex: -1
-  - layerIndex: 3
-    uuid:
-      value0: 785628921
-      value1: 0
-      value2: 0
-      value3: 0
-    guid: 0
-    name: wall-climb
-    layerFlags: 19
-    layerType: 0
-    blendMode: 0
-    cells:
-    - name: wall-climb
-      frameIndex: 0
-      additiveSortOrder: 0
-      cellRect:
-        x: 21
-        y: 85
-        width: 8
-        height: 8
-      spriteId: 965e0253a49a95348af49be7aef30bae
-    linkedCells:
-    - frameIndex: 1
-      linkedToFrame: 0
-    - frameIndex: 2
-      linkedToFrame: 0
-    - frameIndex: 3
-      linkedToFrame: 0
-    - frameIndex: 4
-      linkedToFrame: 0
-    - frameIndex: 5
-      linkedToFrame: 0
-    - frameIndex: 6
-      linkedToFrame: 0
-    tileCells: []
-    tileSetIndex: 0
-    parentIndex: 2
   - layerIndex: 4
     uuid:
       value0: 444491044
@@ -762,6 +725,43 @@ ScriptedImporter:
         width: 8
         height: 7
       spriteId: ba96e11188672fa4895b93a2a1d5905a
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    tileCells: []
+    tileSetIndex: 0
+    parentIndex: 2
+  - layerIndex: 3
+    uuid:
+      value0: 1166606877
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 0
+    name: dash
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: dash
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 21
+        y: 85
+        width: 8
+        height: 8
+      spriteId: ce1f23b843aeaa04b93d50fe57109cb6
     linkedCells:
     - frameIndex: 1
       linkedToFrame: 0
