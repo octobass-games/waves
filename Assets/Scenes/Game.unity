@@ -570,7 +570,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1754,8 +1754,12 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: dashSFX
+      value: event:/SFX/Dash
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: landSFX
-      value: event:/SFX/Landing/Landing
+      value: event:/SFX/Steps/All Steps
       objectReference: {fileID: 0}
     - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: stepSFX
@@ -6019,7 +6023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.1141624
+      value: 5.661078
       objectReference: {fileID: 0}
     - target: {fileID: 7984609605813208002, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_LocalPosition.x

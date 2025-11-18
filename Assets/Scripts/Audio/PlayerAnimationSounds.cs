@@ -7,6 +7,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public string splashSFX;
     public string upgradeSFX;
     public string landSFX;
+    public string dashSFX;
 
     void OnStep()
     {
@@ -37,9 +38,13 @@ public class PlayerAnimationSounds : MonoBehaviour
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IsDiving", 1f);
     }
-
     void OnLanding()
     {
         FMODUnity.RuntimeManager.PlayOneShot(landSFX);
+    }
+
+    void OnDash()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(dashSFX);
     }
 }
