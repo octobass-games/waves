@@ -20,7 +20,7 @@ namespace Octobass.Waves.Movement
             Rideable = CollisionDetector.GetPlatform();
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
+        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             return new StateSnapshot()
             {

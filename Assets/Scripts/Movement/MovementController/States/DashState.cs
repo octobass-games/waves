@@ -18,7 +18,7 @@ namespace Octobass.Waves.Movement
             ImpulseApplied = false;
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
+        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             if (!ImpulseApplied)
             {
@@ -26,7 +26,7 @@ namespace Octobass.Waves.Movement
 
                 return new StateSnapshot()
                 {
-                    Velocity = driverSnapshot.Movement * Mathf.Sqrt(2 * Config.DashDrag * Config.DashDistance)
+                    Velocity = (driverSnapshot.Movement == Vector2.zero ? facingDirection : driverSnapshot.Movement.normalized) * Mathf.Sqrt(2 * Config.DashDrag * Config.DashDistance)
                 };
             }
 

@@ -77,7 +77,7 @@ namespace Octobass.Waves.Movement
                 CurrentState.Enter(PreviousStateId);
             }
 
-            StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot);
+            StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot, CurrentFacingDirection);
 
             Vector2 displacement = StateSnapshot.Velocity * Time.fixedDeltaTime;
             Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
