@@ -1773,6 +1773,18 @@ PrefabInstance:
       propertyPath: upgradeSFX
       value: event:/SFX/upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: Spawns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6809107531801228827}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'Spawns.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6809107531801228826}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -7537,6 +7549,28 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1329037021}
   m_SourcePrefab: {fileID: 100100000, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+--- !u!114 &6809107531801228826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1787874739021147090, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+  m_PrefabInstance: {fileID: 6809107531801228825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &6809107531801228827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 565243217430306313, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+  m_PrefabInstance: {fileID: 6809107531801228825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
 --- !u!4 &6823947987452947239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4883292383592331043, guid: cf241ebd398d6dc4786d2cf9affbf179, type: 3}
