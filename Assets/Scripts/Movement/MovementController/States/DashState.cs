@@ -7,6 +7,8 @@ namespace Octobass.Waves.Movement
         private readonly MovementConfig Config;
 
         private bool ImpulseApplied;
+        private float InputGracePeriodTimer;
+        private bool InputGracePeriodFinished;
 
         public DashState(MovementConfig config)
         {
@@ -16,11 +18,28 @@ namespace Octobass.Waves.Movement
         public override void Enter(CharacterStateId previousStateId)
         {
             ImpulseApplied = false;
+            InputGracePeriodFinished = false;
+            InputGracePeriodTimer = 50;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
-            if (!ImpulseApplied)
+            if (!InputGracePeriodFinished)
+            {
+                InputGracePeriodTimer -= Time.fixedDeltaTime * 1000;
+
+                if (InputGracePeriodTimer < 0)
+                {
+                    InputGracePeriodFinished = true;
+                }
+
+                return new StateSnapshot()
+                {
+                    Velocity = previousSnapshot.Velocity,
+                };
+            }
+
+            if (!ImpulseApplied && InputGracePeriodFinished)
             {
                 ImpulseApplied = true;
 
