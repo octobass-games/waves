@@ -21,7 +21,7 @@ namespace Octobass.Waves.Movement
             PreviousAttackState = CurrentAttackState;
             CurrentAttackState = attackSnapshot;
 
-            Animator.SetBool("IsGrounded 0", CurrentMovementSnapshot.State == CharacterStateId.Grounded);
+            Animator.SetBool("IsGrounded", CurrentMovementSnapshot.State == CharacterStateId.Grounded);
             Animator.SetBool("IsJumping", CurrentMovementSnapshot.State == CharacterStateId.Jumping || CurrentMovementSnapshot.State == CharacterStateId.WallJump);
             Animator.SetBool("IsFalling", CurrentMovementSnapshot.State == CharacterStateId.Falling);
             Animator.SetBool("IsWallClimbing", CurrentMovementSnapshot.State == CharacterStateId.WallClimb && CurrentMovementSnapshot.Displacement.y != 0);
