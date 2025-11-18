@@ -45,6 +45,6 @@ public class ControlsHintText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Debug.Log(ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(group: UnityEngine.Input.PlayerInput.currentControlScheme)));
     }
 }
