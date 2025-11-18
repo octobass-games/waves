@@ -29,7 +29,8 @@ namespace Octobass.Waves.Spawn
         {
             if (CurrentSpawnPoint != null)
             {
-                MovementController.ResetAtPosition(CurrentSpawnPoint.transform.position);
+                Vector2 bottomOfSpawnPoint = new(CurrentSpawnPoint.transform.position.x, CurrentSpawnPoint.GetComponent<BoxCollider2D>().bounds.min.y);
+                MovementController.ResetAtPosition(bottomOfSpawnPoint);
             }
             else
             {
