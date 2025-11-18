@@ -14,8 +14,6 @@ namespace Octobass.Waves.Movement
 
         public override StateSnapshot Tick(StateSnapshot previousStateSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
         {
-            Debug.Log(driverSnapshot.Movement.ProjectX());
-
             return new StateSnapshot()
             {
                 Velocity = driverSnapshot.Movement.ProjectX() * Config.Speed
