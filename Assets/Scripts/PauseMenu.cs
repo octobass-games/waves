@@ -29,10 +29,13 @@ public class PauseMenu : MonoBehaviour
         if (paused)
         {
             OpenPause();
+            Time.timeScale = 0;
         }
         else
         {
             ClosePause();
+            Time.timeScale = 1;
+
         }
     }
 
@@ -106,6 +109,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void ClickMainMenu() {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 }
