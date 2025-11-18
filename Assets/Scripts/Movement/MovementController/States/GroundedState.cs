@@ -1,3 +1,4 @@
+using Octobass.Waves.Extensions;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement
@@ -11,11 +12,11 @@ namespace Octobass.Waves.Movement
             Config = config;
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousStateSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
+        public override StateSnapshot Tick(StateSnapshot previousStateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             return new StateSnapshot()
             {
-                Velocity = driverSnapshot.Movement * Config.Speed
+                Velocity = driverSnapshot.Movement.ProjectX() * Config.Speed
             };
         }
     }

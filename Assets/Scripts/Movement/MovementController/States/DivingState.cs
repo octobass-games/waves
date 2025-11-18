@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Octobass.Waves.Movement
 {
     public class DivingState : CharacterState
@@ -9,7 +11,7 @@ namespace Octobass.Waves.Movement
             Config = config;
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot)
+        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             return new StateSnapshot()
             {

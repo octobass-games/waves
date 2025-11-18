@@ -21,40 +21,15 @@ namespace Octobass.Waves.Movement
             PreviousAttackState = CurrentAttackState;
             CurrentAttackState = attackSnapshot;
 
-            if (PreviousMovementSnapshot.State != CurrentMovementSnapshot.State)
-            {
-                switch (CurrentMovementSnapshot.State)
-                {
-                    case CharacterStateId.Grounded:
-                        Animator.SetTrigger("IsGrounded");
-                        break;
-                    case CharacterStateId.Jumping:
-                        Animator.SetTrigger("Jump");
-                        break;
-                    case CharacterStateId.Falling:
-                        Animator.SetTrigger("Fall");
-                        break;
-                    case CharacterStateId.WallClimb:
-                        Animator.SetTrigger("WallClimb");
-                        break;
-                    default:
-                    case CharacterStateId.WallJump:
-                        Animator.SetTrigger("Jump");
-                        break;
-                    case CharacterStateId.Swimming:
-                        Animator.SetTrigger("Swimming");
-                        break;
-                    case CharacterStateId.Diving:
-                        Animator.SetTrigger("Diving");
-                        break;
-                    case CharacterStateId.WallSlide:
-                        Animator.SetTrigger("WallSlide");
-                        break;
-                    case CharacterStateId.Dashing:
-                        Animator.SetTrigger("Dash");
-                        break;
-                }
-            }
+            Animator.SetBool("IsGrounded 0", CurrentMovementSnapshot.State == CharacterStateId.Grounded);
+            Animator.SetBool("IsJumping", CurrentMovementSnapshot.State == CharacterStateId.Jumping || CurrentMovementSnapshot.State == CharacterStateId.WallJump);
+            Animator.SetBool("IsFalling", CurrentMovementSnapshot.State == CharacterStateId.Falling);
+            Animator.SetBool("IsWallClimbing", CurrentMovementSnapshot.State == CharacterStateId.WallClimb && CurrentMovementSnapshot.Displacement.y != 0);
+            Animator.SetBool("IsWallHolding", CurrentMovementSnapshot.State == CharacterStateId.WallClimb && CurrentMovementSnapshot.Displacement.y == 0);
+            Animator.SetBool("IsSwimming", CurrentMovementSnapshot.State == CharacterStateId.Swimming);
+            Animator.SetBool("IsDiving", CurrentMovementSnapshot.State == CharacterStateId.Diving);
+            Animator.SetBool("IsWallSlide", CurrentMovementSnapshot.State == CharacterStateId.WallSlide);
+            Animator.SetBool("IsDashing", CurrentMovementSnapshot.State == CharacterStateId.Dashing);
 
             if (PreviousAttackState.IsAttacking != CurrentAttackState.IsAttacking && CurrentAttackState.IsAttacking)
             {
