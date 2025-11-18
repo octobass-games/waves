@@ -6,6 +6,7 @@ public class PlayerAnimationSounds : MonoBehaviour
     public string meleeSFX;
     public string splashSFX;
     public string upgradeSFX;
+    public string landSFX;
 
     void OnStep()
     {
@@ -35,5 +36,10 @@ public class PlayerAnimationSounds : MonoBehaviour
     void NotDiving() //set standard music
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("IsDiving", 1f);
+    }
+
+    void OnLanding()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(landSFX);
     }
 }
