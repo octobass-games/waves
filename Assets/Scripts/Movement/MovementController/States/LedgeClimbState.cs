@@ -9,6 +9,7 @@ namespace Octobass.Waves.Movement
         private readonly MovementControllerCollisionDetector CollisionDetector;
 
         private Vector2? LedgeClimbTargetPosition;
+        private Vector2 Direction;
 
         public LedgeClimbState(MovementConfig config, MovementControllerCollisionDetector collisionDetector)
         {
@@ -19,6 +20,7 @@ namespace Octobass.Waves.Movement
         public override void Enter(CharacterStateId previousStateId)
         {
             LedgeClimbTargetPosition = CollisionDetector.GetLedgeClimbTargetPosition();
+            Direction = CollisionDetector.IsTouchingRightWall() ? Vector2.right : Vector2.left;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
@@ -30,11 +32,11 @@ namespace Octobass.Waves.Movement
                     Velocity = Vector2.up * Config.VerticalLedgeClimbSpeed
                 };
             }
-            else if (!CollisionDetector.IsXCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.x))
+            else if (Direction == Vector2.right && !CollisionDetector.IsXCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.x) || Direction == Vector2.left && !CollisionDetector.IsXCoordinateLessThanOrEqualTo(LedgeClimbTargetPosition.Value.x))
             {
                 return new StateSnapshot()
                 {
-                    Velocity = Vector2.right * Config.HorizontalLedgeClimbSpeed
+                    Velocity = Direction * Config.HorizontalLedgeClimbSpeed
                 };
             }
 
