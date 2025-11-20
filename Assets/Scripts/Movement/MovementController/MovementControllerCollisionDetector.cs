@@ -82,6 +82,19 @@ namespace Octobass.Waves.Movement
             return null;
         }
 
+        public bool IsAtClimbHeight()
+        {
+            BoxCollider2D collider = Body.GetComponent<BoxCollider2D>();
+
+            float halfWidth = collider.bounds.extents.x;
+            Vector2 direction = IsTouchingRightWall() ? Vector2.right : Vector2.left;
+
+            Vector2 topRayOrigin = (Vector2)collider.bounds.center + new Vector2(0, 0.5f);
+            RaycastHit2D topRayHit = Physics2D.Raycast(topRayOrigin, direction, halfWidth + 0.03125f * 5, GroundContactFilter.layerMask);
+
+            return topRayHit.collider != null;
+        }
+
         public bool IsTouchingRightWall()
         {
             return Body.IsCollidingRight(GroundContactFilter, SkinWidth);
