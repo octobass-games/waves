@@ -27,9 +27,52 @@ namespace Octobass.Waves.Movement
             SwimmingBobHeight = characterController2DConfig.SwimmingBobHeight;
         }
 
+        public bool IsXCoordinateGreaterThanOrEqualTo(float xCoordinate)
+        {
+            return Body.position.x >= xCoordinate;
+        }
+
+        public bool IsYCoordinateGreaterThanOrEqualTo(float yCoordinate)
+        {
+            BoxCollider2D collider = Body.GetComponent<BoxCollider2D>();
+
+            Debug.Log($"{collider.bounds.min.y}, {yCoordinate}");
+
+            return collider.bounds.min.y >= yCoordinate;
+        }
+
         public bool IsGrounded()
         {
             return Body.IsCollidingDown(GroundContactFilter, SkinWidth);
+        }
+
+        public bool IsAtLedge()
+        {
+            return GetLedgeClimbTargetPosition() != null;
+        }
+
+        public Vector2? GetLedgeClimbTargetPosition()
+        {
+            BoxCollider2D collider = Body.GetComponent<BoxCollider2D>();
+            Vector2 colliderCenter = collider.bounds.center;
+            float halfWidth = collider.bounds.extents.x;
+            
+            Vector2 topRayOrigin = (Vector2)collider.bounds.center + new Vector2(0, 0.5f);
+
+            RaycastHit2D topRayHit = Physics2D.Raycast(topRayOrigin, Vector2.right, halfWidth + 0.03125f * 5, GroundContactFilter.layerMask);
+            RaycastHit2D bottomRayHit = Physics2D.Raycast(colliderCenter, Vector2.right, halfWidth + 0.03125f * 5, GroundContactFilter.layerMask);
+
+            if (topRayHit.collider == null && bottomRayHit.collider != null)
+            {
+                float verticalDistance = topRayOrigin.y - collider.bounds.min.y;
+                float horizontalDistance = bottomRayHit.distance + halfWidth / 2;
+
+                return new Vector2(horizontalDistance, verticalDistance) + new Vector2(colliderCenter.x, collider.bounds.min.y);
+            }
+
+            Debug.Log("World!");
+
+            return null;
         }
 
         public bool IsTouchingRightWall()

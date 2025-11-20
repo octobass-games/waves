@@ -13,6 +13,7 @@ namespace Octobass.Waves.Movement
         WallSlide,
         Swimming,
         Diving,
-        Dashing
+        Dashing,
+        LedgeClimb
     }
 }

@@ -76,5 +76,11 @@ namespace Octobass.Waves.Movement
 
         [Tooltip("The drag to apply to the character while dashing")]
         public float DashDrag;
+
+        [Tooltip("The vertical climb speed when ledge climbing")]
+        public float VerticalLedgeClimbSpeed;
+
+        [Tooltip("The horizontal climb speed when ledge climbing")]
+        public float HorizontalLedgeClimbSpeed;
     }
 }
