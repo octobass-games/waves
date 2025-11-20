@@ -82,9 +82,9 @@ namespace Octobass.Waves.Movement
             Vector2 displacement = StateSnapshot.Velocity * Time.fixedDeltaTime;
             Vector2 normalizedDisplacement = displacement == Vector2.zero ? Vector2.zero : displacement.normalized;
 
-            Vector2 safeXDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
-            Vector2 safeYDisplacement = Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
-            Body.MovePosition(Body.position + safeXDisplacement + safeYDisplacement);
+            Vector2 finalXDisplacement = StateSnapshot.UnsafeMovement ? displacement : Body.GetSafeDisplacement(normalizedDisplacement.ProjectX(), displacement.x, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
+            Vector2 finalYDisplacement = StateSnapshot.UnsafeMovement ? displacement : Body.GetSafeDisplacement(normalizedDisplacement.ProjectY(), displacement.y, CharacterControllerConfig.SkinWidth, AllGroundContactFilter);
+            Body.MovePosition(Body.position + finalXDisplacement + finalYDisplacement);
             
             CurrentFacingDirection = GetFacingDirection(displacement, driverSnapshot, CurrentFacingDirection);
 

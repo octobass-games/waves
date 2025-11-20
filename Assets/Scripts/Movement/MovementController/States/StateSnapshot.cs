@@ -8,5 +8,6 @@ namespace Octobass.Waves.Movement
         public Vector2 Direction;
         public bool IsCoyoteJumpAvailable;
         public bool IsLedgeClimbFinished;
+        public bool UnsafeMovement;
     }
 }

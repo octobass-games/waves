@@ -29,14 +29,16 @@ namespace Octobass.Waves.Movement
             {
                 return new StateSnapshot()
                 {
-                    Velocity = Vector2.up * Config.VerticalLedgeClimbSpeed
+                    Velocity = Vector2.up * Config.VerticalLedgeClimbSpeed,
+                    UnsafeMovement = true
                 };
             }
             else if (Direction == Vector2.right && !CollisionDetector.IsXCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.x) || Direction == Vector2.left && !CollisionDetector.IsXCoordinateLessThanOrEqualTo(LedgeClimbTargetPosition.Value.x))
             {
                 return new StateSnapshot()
                 {
-                    Velocity = Direction * Config.HorizontalLedgeClimbSpeed
+                    Velocity = Direction * Config.HorizontalLedgeClimbSpeed,
+                    UnsafeMovement = true
                 };
             }
 
