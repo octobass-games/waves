@@ -66,6 +66,9 @@ namespace Octobass.Waves.Movement
             RaycastHit2D topRayHit = Physics2D.Raycast(topRayOrigin, direction, halfWidth + 0.03125f * 5, GroundContactFilter.layerMask);
             RaycastHit2D bottomRayHit = Physics2D.Raycast(colliderCenter, direction, halfWidth + 0.03125f * 5, GroundContactFilter.layerMask);
 
+            Debug.DrawRay(topRayOrigin, direction * (halfWidth + 0.03125f * 2));
+            Debug.DrawRay(colliderCenter, direction * (halfWidth + 0.03125f * 2));
+
             if (topRayHit.collider == null && bottomRayHit.collider != null)
             {
                 float verticalDistance = topRayOrigin.y - collider.bounds.min.y;
