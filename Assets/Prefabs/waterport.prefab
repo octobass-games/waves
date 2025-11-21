@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2156961456024736572}
   - component: {fileID: 6419519696045422294}
   - component: {fileID: 6850245519609442418}
+  - component: {fileID: 8283292708231087785}
   m_Layer: 0
   m_Name: waterport
   m_TagString: Untagged
@@ -214,7 +215,32 @@ MonoBehaviour:
           m_StringArgument: open
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8283292708231087785}
+        m_TargetAssemblyTypeName: AudioOneShot, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: open
+          m_BoolArgument: 0
+        m_CallState: 2
   DisplayInspect: {fileID: 1927318565770141116}
+--- !u!114 &8283292708231087785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917287984924802649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b41edecc4c0d24a995a6704d16d8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioOneShot
+  SFX: event:/SFX/grate open
 --- !u!1001 &4830046979206419244
 PrefabInstance:
   m_ObjectHideFlags: 0
