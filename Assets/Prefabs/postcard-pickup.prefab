@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6561474032735170862}
   - component: {fileID: 7029568838498343827}
   - component: {fileID: 9202192664757252222}
+  - component: {fileID: 2639159549381844754}
   m_Layer: 0
   m_Name: postcard-pickup
   m_TagString: Untagged
@@ -153,8 +154,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.Inspectable
   OnInspect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2639159549381844754}
+        m_TargetAssemblyTypeName: Octobass.Waves.Item.PickupableItem, Assembly-CSharp
+        m_MethodName: PickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   DisplayInspect: {fileID: 8222522834994359305}
+--- !u!114 &2639159549381844754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350587697714077401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7c5039b7e56954e8da1c621b927fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.PickupableItem
+  ItemDefinition: {fileID: 11400000, guid: 5d59254379127e74fa60a80497a9b3eb, type: 2}
 --- !u!1001 &3144837250036195993
 PrefabInstance:
   m_ObjectHideFlags: 0
