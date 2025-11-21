@@ -31,11 +31,6 @@ namespace Octobass.Waves.Save
             }
         }
 
-        void Start()
-        {
-            Save();
-        }
-
         public void Register(Saver saver)
         {
             if (!Savers.Contains(saver))

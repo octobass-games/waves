@@ -1,5 +1,6 @@
 using Octobass.Waves.Save;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -81,6 +82,18 @@ namespace Octobass.Waves.Item
         public void Load(SaveData saveData)
         {
             Items = saveData.Load<List<ItemInstance>>(ItemsSaveKey);
+
+            List<PickupableItem> pickupableItems = FindObjectsByType<PickupableItem>(FindObjectsSortMode.None).ToList();
+
+            foreach (ItemInstance item in Items)
+            {
+                PickupableItem pickupableItem = pickupableItems.Find(pickupableItem => pickupableItem.ItemDefinition.Name == item.Name);
+
+                if (pickupableItem != null)
+                {
+                    Destroy(pickupableItem.gameObject);
+                }
+            }
         }
     }
 }

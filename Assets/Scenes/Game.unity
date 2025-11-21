@@ -1941,7 +1941,11 @@ PrefabInstance:
       objectReference: {fileID: 1535715693}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1952,11 +1956,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1448142539}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 666075284}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
@@ -1968,12 +1980,20 @@ PrefabInstance:
       value: OnItemPickedUp
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Save
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Octobass.Waves.Character.AbilityController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Octobass.Waves.Item.LoreInspector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Save.SaveManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1983,10 +2003,17 @@ PrefabInstance:
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1806367208770461159, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448142550}
   m_SourcePrefab: {fileID: 100100000, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
 --- !u!4 &1047319393 stripped
 Transform:
@@ -3138,6 +3165,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4c7ec9c59b2444392ae6b04e8cb9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.LoreInspector
+--- !u!114 &1448142550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448142502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
 --- !u!1 &1535715691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,7 +3534,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1448142539}
         m_TargetAssemblyTypeName: Octobass.Waves.Item.LoreInspector, Assembly-CSharp
-        m_MethodName: OnLoreRead
+        m_MethodName: OnLoreInspected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7583,7 +7622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.7885084
+      value: 5.1212454
       objectReference: {fileID: 0}
     - target: {fileID: 7126833721566518616, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_AllTileFlags
