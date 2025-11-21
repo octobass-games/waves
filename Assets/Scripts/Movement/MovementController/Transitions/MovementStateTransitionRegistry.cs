@@ -108,7 +108,8 @@ namespace Octobass.Waves.Movement
                 CharacterStateId.LedgeClimb,
                 new()
                 {
-                    new(CharacterStateId.Grounded, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.IsLedgeClimbFinished)
+                    new(CharacterStateId.Grounded, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.IsLedgeClimbFinished && collisionDetector.IsGrounded()),
+                    new(CharacterStateId.Falling, (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.IsLedgeClimbFinished)
                 }
             }
         };

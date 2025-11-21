@@ -25,20 +25,19 @@ namespace Octobass.Waves.Movement
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
-            if (!CollisionDetector.IsYCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.y))
+            // TODO: Have to snap to ground
+            if (!CollisionDetector.IsYCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.y) && !CollisionDetector.IsTouchingCeiling())
             {
                 return new StateSnapshot()
                 {
                     Velocity = Vector2.up * Config.VerticalLedgeClimbSpeed,
-                    UnsafeMovement = true
                 };
             }
-            else if (Direction == Vector2.right && !CollisionDetector.IsXCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.x) || Direction == Vector2.left && !CollisionDetector.IsXCoordinateLessThanOrEqualTo(LedgeClimbTargetPosition.Value.x))
+            else if (Direction == Vector2.right && !CollisionDetector.IsXCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.x) && !CollisionDetector.IsTouchingRightWall() || Direction == Vector2.left && !CollisionDetector.IsXCoordinateLessThanOrEqualTo(LedgeClimbTargetPosition.Value.x) && !CollisionDetector.IsTouchingLeftWall())
             {
                 return new StateSnapshot()
                 {
                     Velocity = Direction * Config.HorizontalLedgeClimbSpeed,
-                    UnsafeMovement = true
                 };
             }
 
