@@ -68,6 +68,27 @@ namespace Octobass.Waves.Item
 
                 return true;
             }
+            else if (item is ShellItemDefinition shellItemDefinition)
+            {
+                if (Items.Find(inventoryItem => inventoryItem.Name == item.Name) == null)
+                {
+                    if (shellItemDefinition.ToItemInstance() is ShellItemInstance instance)
+                    {
+                        Items.Add(instance);
+                        OnItemPickedUp.Invoke(instance);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[Inventory]: ShellItemDefinition return instance other than ShellItemInstance");
+                    }
+                }
+                else
+                {
+                    Debug.Log("[Inventory]: Attempting to add duplicate shell item to inventory");
+                }
+
+                return true;
+            }
 
             Debug.Log("[Inventory]: Attempting to add unsupported item type to inventory");
 
