@@ -15,7 +15,8 @@ namespace Octobass.Waves.Movement
         {
             return new StateSnapshot()
             {
-                Velocity = driverSnapshot.Climbing * Config.WallClimbSpeed
+                Velocity = driverSnapshot.Climbing * Config.WallClimbSpeed,
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }

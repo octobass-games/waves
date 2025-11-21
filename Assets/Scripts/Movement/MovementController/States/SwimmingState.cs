@@ -47,7 +47,8 @@ namespace Octobass.Waves.Movement
                 Velocity = new Vector2(
                     velocity.x,
                     IsRising ? (verticalDistanceFromBobHeight > 0 ? -(verticalDistanceFromBobHeight / Time.fixedDeltaTime) : (verticalDistanceFromBobHeight == 0) ? 0 : Config.BuoyancyAscentSpeed) : velocity.y
-                )
+                ),
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }

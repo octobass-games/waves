@@ -16,7 +16,8 @@ namespace Octobass.Waves.Movement
         {
             return new StateSnapshot()
             {
-                Velocity = driverSnapshot.Movement.ProjectX() * Config.Speed
+                Velocity = driverSnapshot.Movement.ProjectX() * Config.Speed,
+                IsDashAvailable = true
             };
         }
     }

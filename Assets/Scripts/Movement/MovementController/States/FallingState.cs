@@ -44,7 +44,8 @@ namespace Octobass.Waves.Movement
                     driverSnapshot.Movement.x * Config.AirMovementSpeedModifier * Config.Speed,
                     yVelocity
                 ),
-                IsCoyoteJumpAvailable = IsCoyoteJumpAvailable && CoyoteTimer != -1
+                IsCoyoteJumpAvailable = IsCoyoteJumpAvailable && CoyoteTimer != -1,
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }

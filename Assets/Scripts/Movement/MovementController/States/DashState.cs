@@ -36,6 +36,7 @@ namespace Octobass.Waves.Movement
                 return new StateSnapshot()
                 {
                     Velocity = previousSnapshot.Velocity,
+                    IsDashAvailable = false
                 };
             }
 
@@ -45,7 +46,8 @@ namespace Octobass.Waves.Movement
 
                 return new StateSnapshot()
                 {
-                    Velocity = (driverSnapshot.Movement == Vector2.zero ? facingDirection : driverSnapshot.Movement.normalized) * Mathf.Sqrt(2 * Config.DashDrag * Config.DashDistance)
+                    Velocity = (driverSnapshot.Movement == Vector2.zero ? facingDirection : driverSnapshot.Movement.normalized) * Mathf.Sqrt(2 * Config.DashDrag * Config.DashDistance),
+                    IsDashAvailable = false
                 };
             }
 
@@ -56,7 +58,8 @@ namespace Octobass.Waves.Movement
 
             return new StateSnapshot()
             {
-                Velocity = velocity
+                Velocity = velocity,
+                IsDashAvailable = false
             };
         }
     }

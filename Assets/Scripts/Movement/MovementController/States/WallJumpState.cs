@@ -71,7 +71,8 @@ namespace Octobass.Waves.Movement
             return new StateSnapshot()
             {
                 Velocity = velocity,
-                Direction = Direction
+                Direction = Direction,
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }

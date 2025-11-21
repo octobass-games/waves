@@ -24,7 +24,8 @@ namespace Octobass.Waves.Movement
         {
             return new StateSnapshot()
             {
-                Velocity = Rideable.GetVelocity() + new Vector2(driverSnapshot.Movement.x * Config.Speed, 0)
+                Velocity = Rideable.GetVelocity() + new Vector2(driverSnapshot.Movement.x * Config.Speed, 0),
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }

@@ -31,6 +31,7 @@ namespace Octobass.Waves.Movement
                 return new StateSnapshot()
                 {
                     Velocity = Vector2.up * Config.VerticalLedgeClimbSpeed,
+                    IsDashAvailable = previousSnapshot.IsDashAvailable
                 };
             }
             else if (Direction == Vector2.right && !CollisionDetector.IsXCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.x) && !CollisionDetector.IsTouchingRightWall() || Direction == Vector2.left && !CollisionDetector.IsXCoordinateLessThanOrEqualTo(LedgeClimbTargetPosition.Value.x) && !CollisionDetector.IsTouchingLeftWall())
@@ -38,12 +39,14 @@ namespace Octobass.Waves.Movement
                 return new StateSnapshot()
                 {
                     Velocity = Direction * Config.HorizontalLedgeClimbSpeed,
+                    IsDashAvailable = previousSnapshot.IsDashAvailable
                 };
             }
 
             return new()
             {
-                IsLedgeClimbFinished = true
+                IsLedgeClimbFinished = true,
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }

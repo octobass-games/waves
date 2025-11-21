@@ -15,7 +15,8 @@ namespace Octobass.Waves.Movement
         {
             return new StateSnapshot()
             {
-                Velocity = Vector2.down * Config.WallSlideSpeed
+                Velocity = Vector2.down * Config.WallSlideSpeed,
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }
