@@ -1,4 +1,4 @@
-using System.Linq;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,43 +8,28 @@ public class ControlsHintText : MonoBehaviour
     public TextMeshPro Text;
     public InputActionReference ActionReference;
 
-    private string GetFirstNonCompositeBindingDisplay(InputAction action)
-    {
-        var bindingString = "";
+    [SerializeField]
+    private UnityEngine.InputSystem.PlayerInput PlayerInput;
 
-        for (int i = 0; i < action.bindings.Count; i++)
-        {
-            var binding = action.bindings[i];
+    [SerializeField]
+    private List<string> CompositeParts;
 
-            // Skip composite itself
-            if (binding.isComposite) continue;
-
-
-            if (binding.isPartOfComposite)
-            {
-                bindingString = bindingString + " " +  InputControlPath.ToHumanReadableString(binding.effectivePath);
-                continue;
-            }
-           
-            return InputControlPath.ToHumanReadableString(binding.effectivePath);
-        }
-
-        return bindingString;
-    }
-
-
-    void Start()
-    {
-        InputAction action = ActionReference.action;
-
-       string str = InputControlPath.ToHumanReadableString(GetFirstNonCompositeBindingDisplay(action));
-
-        Text.text = str;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        // Debug.Log(ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(group: UnityEngine.Input.PlayerInput.currentControlScheme)));
+        string result = "";
+
+        if (CompositeParts.Count > 0)
+        {
+            foreach (var part in CompositeParts)
+            {
+                result += ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { name = part, groups = PlayerInput.currentControlScheme }));
+            }
+        }
+        else
+        {
+            result = ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { groups = PlayerInput.currentControlScheme }));
+        }
+
+        Text.text = result;
     }
 }
