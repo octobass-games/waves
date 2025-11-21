@@ -9,6 +9,10 @@ namespace Octobass.Waves.Item
     {
         public UnityEvent<ItemInstance> OnItemPickedUp;
 
+        [SerializeField]
+        [Tooltip("A registry of all items")]
+        private List<ItemDefinition> ItemRegistry;
+
         [SerializeReference]
         private List<ItemInstance> Items = new();
 
@@ -21,11 +25,11 @@ namespace Octobass.Waves.Item
 
         public bool PickUp(ItemDefinition item)
         {
-            if (item is AbilityItemDefinition definition)
+            if (item is AbilityItemDefinition abilityItemDefintion)
             {
                 if (Items.Find(inventoryItem => inventoryItem.Name == item.Name) == null)
                 {
-                    if (definition.ToItemInstance() is AbilityItemInstance instance)
+                    if (abilityItemDefintion.ToItemInstance() is AbilityItemInstance instance)
                     {
                         Items.Add(instance);
                         OnItemPickedUp.Invoke(instance);
@@ -38,6 +42,27 @@ namespace Octobass.Waves.Item
                 else
                 {
                     Debug.Log("[Inventory]: Attempting to add duplicate ability item to inventory");
+                }
+
+                return true;
+            }
+            else if (item is LoreItemDefinition loreItemDefintion)
+            {
+                if (Items.Find(inventoryItem => inventoryItem.Name == item.Name) == null)
+                {
+                    if (loreItemDefintion.ToItemInstance() is LoreItemInstance instance)
+                    {
+                        Items.Add(instance);
+                        OnItemPickedUp.Invoke(instance);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[Inventory]: LoreItemDefinition return instance other than LoreItemInstance");
+                    }
+                }
+                else
+                {
+                    Debug.Log("[Inventory]: Attempting to add duplicate lore item to inventory");
                 }
 
                 return true;

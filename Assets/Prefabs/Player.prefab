@@ -106,6 +106,8 @@ GameObject:
   - component: {fileID: 6471979937186483503}
   - component: {fileID: 5931426664578809513}
   - component: {fileID: 4374423792661856508}
+  - component: {fileID: 402517801013150}
+  - component: {fileID: 6076688350194074155}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -389,6 +391,9 @@ MonoBehaviour:
   OnItemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  ItemRegistry:
+  - {fileID: 11400000, guid: 68c8898b5fc840648ba68c4e37a02e2d, type: 2}
+  - {fileID: 11400000, guid: 5d59254379127e74fa60a80497a9b3eb, type: 2}
   Items: []
   references:
     version: 2
@@ -425,6 +430,52 @@ MonoBehaviour:
   upgradeSFX: 
   landSFX: 
   dashSFX: 
+--- !u!114 &402517801013150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5f29bc89bdd5d45a784db1c68c358f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Attack.Health
+  HealthPoints: 1
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthEmpty:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5931426664578809513}
+        m_TargetAssemblyTypeName: Octobass.Waves.Spawn.SpawnTracker, Assembly-CSharp
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6076688350194074155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4c7ec9c59b2444392ae6b04e8cb9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.LoreInspector
+  LoreRoot: {fileID: 0}
+  LoreText: {fileID: 0}
+  MovementController: {fileID: 7789577042043984978}
 --- !u!1 &2319988461481833929
 GameObject:
   m_ObjectHideFlags: 0

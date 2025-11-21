@@ -33066,16 +33066,65 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9202192664757252222, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202192664757252222, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202192664757252222, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7358382139744190273}
+    - target: {fileID: 9202192664757252222, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202192664757252222, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202192664757252222, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Item.PickupableItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202192664757252222, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4350587697714077401, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7358382139744190273}
   m_SourcePrefab: {fileID: 100100000, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
 --- !u!4 &8428788967731626871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3911102334148272932, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
   m_PrefabInstance: {fileID: 4809303654097739859}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9141867733671313034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4350587697714077401, guid: 1dd7ea4877bf1034cbeb9b6720b3a5b1, type: 3}
+  m_PrefabInstance: {fileID: 4809303654097739859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7358382139744190273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9141867733671313034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7c5039b7e56954e8da1c621b927fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.PickupableItem
+  ItemDefinition: {fileID: 11400000, guid: 5d59254379127e74fa60a80497a9b3eb, type: 2}
 --- !u!1001 &4874167700556865375
 PrefabInstance:
   m_ObjectHideFlags: 0
