@@ -15,7 +15,8 @@ namespace Octobass.Waves.Movement
         {
             return new StateSnapshot()
             {
-                Velocity = driverSnapshot.Swimming * Config.DivingSpeedModifier * Config.Speed
+                Velocity = driverSnapshot.Swimming * Config.DivingSpeedModifier * Config.Speed,
+                IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }
     }
