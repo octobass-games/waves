@@ -1,4 +1,5 @@
 using Octobass.Waves.Movement;
+using Octobass.Waves.Save;
 using Octobass.Waves.Spawn;
 using System;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace Octobass.Waves.Debugging
         public bool UnlockAllAbilitiesOnAwake = true;
         public GameObject DebugMenuUi;
         public SpawnTracker SpawnTracker;
+        public SaveManager SaveManager;
 
         private PlayerInput PlayerInput;
 
@@ -32,6 +34,11 @@ namespace Octobass.Waves.Debugging
             if (SpawnTracker == null)
             {
                 Debug.LogWarning("[DebugMenu]: SpawnTracker not set");
+            }
+
+            if (SaveManager == null)
+            {
+                Debug.LogWarning("[DebugMenu]: SaveManager not set");
             }
         }
 
@@ -72,6 +79,16 @@ namespace Octobass.Waves.Debugging
             {
                 Debug.LogWarning($"[DebugMenu]: Could not parse string to CharacterStateId - {state}");
             }
+        }
+
+        public void Save()
+        {
+            SaveManager.Save();
+        }
+
+        public void Load()
+        {
+            SaveManager.Load();
         }
     }
 }
