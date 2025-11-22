@@ -1,3 +1,4 @@
+using Octobass.Waves.Character;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -141,6 +142,11 @@ namespace Octobass.Waves.Map
             {
                 BigMap.SetActive(false);
             }
+        }
+
+        void OnDisable()
+        {
+            PlayerInput.Disable();
         }
     }
 }

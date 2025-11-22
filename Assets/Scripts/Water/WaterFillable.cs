@@ -1,3 +1,4 @@
+using Octobass.Waves.Character;
 using UnityEngine;
 
 namespace Octobass.Waves.Water

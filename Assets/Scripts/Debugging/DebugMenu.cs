@@ -1,3 +1,4 @@
+using Octobass.Waves.Character;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Save;
 using Octobass.Waves.Spawn;

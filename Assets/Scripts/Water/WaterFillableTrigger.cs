@@ -1,3 +1,4 @@
+using Octobass.Waves.Character;
 using UnityEngine;
 
 namespace Octobass.Waves.Water
@@ -45,6 +46,11 @@ namespace Octobass.Waves.Water
             {
                 IsFillable = false;
             }
+        }
+
+        void OnDisable()
+        {
+            PlayerInput.Disable();
         }
     }
 }
