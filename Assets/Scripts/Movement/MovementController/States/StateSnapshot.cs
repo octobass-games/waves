@@ -9,5 +9,6 @@ namespace Octobass.Waves.Movement
         public bool IsCoyoteJumpAvailable;
         public bool IsLedgeClimbFinished;
         public bool IsDashAvailable;
+        public bool IsDashGracePeriodFinished;
     }
 }
