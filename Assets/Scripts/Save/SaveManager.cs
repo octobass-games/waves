@@ -31,6 +31,14 @@ namespace Octobass.Waves.Save
             }
         }
 
+        void OnDisable()
+        {
+            if (ServiceLocator.Instance != null)
+            {
+                ServiceLocator.Instance.Unregister<SaveManager>();
+            }
+        }
+
         public void Register(Saver saver)
         {
             if (!Savers.Contains(saver))
