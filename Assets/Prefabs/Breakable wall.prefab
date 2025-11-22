@@ -98,40 +98,16 @@ MonoBehaviour:
   OnHealthEmpty:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7499814002654348222}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 1699407245871083742}
+        m_TargetAssemblyTypeName: Octobass.Waves.BreakableController, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: break
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2905452375908512487}
-        m_TargetAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: break
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8919458020806136625}
-        m_TargetAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: break
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &7992306442282523833
@@ -146,6 +122,8 @@ GameObject:
   - component: {fileID: 1906903214856193333}
   - component: {fileID: 7499814002654348222}
   - component: {fileID: 8919458020806136625}
+  - component: {fileID: 1699407245871083742}
+  - component: {fileID: 5708229579450111997}
   m_Layer: 3
   m_Name: Breakable wall
   m_TagString: Untagged
@@ -295,3 +273,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 3.09375}
   m_EdgeRadius: 0
+--- !u!114 &1699407245871083742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992306442282523833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb48b34fdc3b754d852070cb76d6dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.BreakableController
+  BreakableId: 
+  Animator: {fileID: 7499814002654348222}
+  BreakableCollider: {fileID: 8919458020806136625}
+  BreakableRangeCollider: {fileID: 2905452375908512487}
+  SpriteRenderer: {fileID: 1906903214856193333}
+  BrokenSprite: {fileID: -5127705358507184561, guid: 6894f2b7f9a4f9045994b0b2b4b9e908, type: 3}
+--- !u!114 &5708229579450111997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992306442282523833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver

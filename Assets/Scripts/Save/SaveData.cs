@@ -14,10 +14,7 @@ namespace Octobass.Waves.Save
         {
             SaveEntry entry = Entries.Find(entry => entry.key == key);
 
-            Type type = typeof(T);
-            string json = type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>)
-                ? JsonUtility.ToJson(new ListWrapper<T>(data))
-                : JsonUtility.ToJson(data);
+            string json = SerializeValue(data);
 
             if (entry != null)
             {
@@ -33,17 +30,50 @@ namespace Octobass.Waves.Save
         {
             SaveEntry entry = Entries.Find(entry => entry.key == key);
 
-            if (entry == null)
+            return entry == null ? default : DeserializeValue<T>(entry);
+        }
+
+        private string SerializeValue<T>(T value)
+        {
+            Type type = typeof(T);
+
+            if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>))
             {
-                return default;
+                return JsonUtility.ToJson(new ListWrapper<T>(value));
+            }
+            else if (value is bool boolValue)
+            {
+                return JsonUtility.ToJson(new BoolWrapper(boolValue));
+            }
+            else if (value is string stringValue)
+            {
+                return JsonUtility.ToJson(new StringWrapper(stringValue));
             }
             else
             {
-                Type type = typeof(T);
+                return JsonUtility.ToJson(value);
+            }
+        }
 
-                return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>)
-                    ? JsonUtility.FromJson<ListWrapper<T>>(entry.value).List
-                    : JsonUtility.FromJson<T>(entry.value);
+        private T DeserializeValue<T>(SaveEntry entry)
+        {
+            Type type = typeof(T);
+
+            if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>))
+            {
+                return JsonUtility.FromJson<ListWrapper<T>>(entry.value).List;
+            }
+            else if (type == typeof(bool))
+            {
+                return (T)(object)JsonUtility.FromJson<BoolWrapper>(entry.value).Value;
+            }
+            else if (type == typeof(string))
+            {
+                return (T)(object)JsonUtility.FromJson<StringWrapper>(entry.value).Value;
+            }
+            else
+            {
+                return JsonUtility.FromJson<T>(entry.value);
             }
         }
     }
