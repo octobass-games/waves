@@ -37,7 +37,7 @@ namespace Octobass.Waves.Attack
             CurrentAttackMove.Activate();
         }
 
-        void OnRecoveryFrame()
+        public void OnRecoveryFrame()
         {
             EndAttack();
         }
