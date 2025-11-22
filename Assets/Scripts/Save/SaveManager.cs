@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEngine;
 
 namespace Octobass.Waves.Save
@@ -81,8 +80,10 @@ namespace Octobass.Waves.Save
             {
                 var data = ReadData();
 
-                foreach (Saver saver in Savers)
+                for (int i = Savers.Count - 1; i >= 0; i--)
                 {
+                    Saver saver = Savers[i];
+
                     saver.Load(data);
                 }
             }

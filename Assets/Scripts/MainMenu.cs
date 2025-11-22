@@ -52,7 +52,13 @@ namespace Octobass.Waves
 
         public void NewGame()
         {
+            SaveManager.DeleteSaveData();
             SceneManager.LoadScene("OpeningScene");
+        }
+
+        public void LoadGame()
+        {
+            SceneManager.LoadScene("Game");
         }
 
         void Update()

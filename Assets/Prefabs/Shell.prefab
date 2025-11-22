@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6556799296684946418}
   - component: {fileID: 6407626737545775279}
   - component: {fileID: 3535389682098618268}
+  - component: {fileID: 2049931670778852215}
   m_Layer: 0
   m_Name: Shell
   m_TagString: Untagged
@@ -130,6 +131,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.PickupableItem
   ItemDefinition: {fileID: 11400000, guid: 2e710238f61a9d64b8079c7978899a3f, type: 2}
+--- !u!114 &2049931670778852215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5777483919292299749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
 --- !u!1 &8966307671798773221
 GameObject:
   m_ObjectHideFlags: 0
