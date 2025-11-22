@@ -45,5 +45,10 @@ namespace Octobass.Waves.Movement
         {
             Animator.SetTrigger("StaffUpgrade");
         }
+
+        public void PlayDeathAnimation()
+        {
+            Animator.SetTrigger("IsDying");
+        }
     }
 }

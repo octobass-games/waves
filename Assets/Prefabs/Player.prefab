@@ -109,6 +109,8 @@ GameObject:
   - component: {fileID: 402517801013150}
   - component: {fileID: 6076688350194074155}
   - component: {fileID: 215965231412949391}
+  - component: {fileID: 8439476345112410444}
+  - component: {fileID: 6640141045396107075}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -450,9 +452,9 @@ MonoBehaviour:
   OnHealthEmpty:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5931426664578809513}
-        m_TargetAssemblyTypeName: Octobass.Waves.Spawn.SpawnTracker, Assembly-CSharp
-        m_MethodName: Respawn
+      - m_Target: {fileID: 6640141045396107075}
+        m_TargetAssemblyTypeName: Octobass.Waves.DeathController, Assembly-CSharp
+        m_MethodName: Die
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -507,6 +509,33 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8439476345112410444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
+--- !u!114 &6640141045396107075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008eabfcfaabb954793c74ff0749188e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.DeathController
+  AnimationController: {fileID: 4136274269782190093}
+  MovementController: {fileID: 7789577042043984978}
+  SpawnTracker: {fileID: 5931426664578809513}
 --- !u!1 &2319988461481833929
 GameObject:
   m_ObjectHideFlags: 0
