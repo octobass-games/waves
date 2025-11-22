@@ -57,6 +57,8 @@ namespace Octobass.Waves.Spawn
                 Debug.Log($"[SpawnTracker]: SpawnPoint not found with name - {spawnPointName}");
                 CurrentSpawnPoint = Spawns[0];
             }
+
+            Respawn();
         }
 
         public void Save(SaveData saveData)

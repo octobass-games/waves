@@ -563,14 +563,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.055555556
-    width: 0.33333334
-    height: 0.3333333
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.875
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -595,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 393106800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.688705, y: -0.000000063304014, z: -1}
+  m_LocalPosition: {x: -75.91093, y: -0.000000063304014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1885,7 +1885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: Spawns.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: 'Spawns.Array.data[0]'
@@ -1930,7 +1930,7 @@ PrefabInstance:
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: 'Spawns.Array.data[10]'
       value: 
-      objectReference: {fileID: 7049680760765415748}
+      objectReference: {fileID: 1747657649}
     - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: LoreRoot
       value: 
@@ -2831,7 +2831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 213.5416, y: 101.5886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1301629298
@@ -3888,6 +3888,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+--- !u!114 &1747657649 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8337413964942517453, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+  m_PrefabInstance: {fileID: 1027136718174414632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
 --- !u!1 &1762191213
 GameObject:
   m_ObjectHideFlags: 0
@@ -8626,7 +8637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.436173
+      value: 5.623097
       objectReference: {fileID: 0}
     - target: {fileID: 7126833721566518616, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_AllTileFlags
