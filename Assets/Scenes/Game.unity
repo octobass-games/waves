@@ -4741,6 +4741,10 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1047319393}
+    - target: {fileID: 7826104287897672387, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 8401739070577046071, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
       propertyPath: m_LocalPosition.x
       value: 180
@@ -4788,6 +4792,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5999868758574091732, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1027136718174414634}
+    - targetCorrespondingSourceObject: {fileID: 8471527528170255546, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
 --- !u!1 &1027136718174414633 stripped
 GameObject:
@@ -7377,12 +7384,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5297126162557033251, guid: 00fbece12efc8174a84a5ff707b4bfad, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 578739309821237034, guid: 00fbece12efc8174a84a5ff707b4bfad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00fbece12efc8174a84a5ff707b4bfad, type: 3}
 --- !u!114 &3321884429360769405 stripped
 MonoBehaviour:
