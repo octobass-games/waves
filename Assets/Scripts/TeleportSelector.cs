@@ -12,21 +12,25 @@ public class TeleportSelector : MonoBehaviour, IPointerEnterHandler, IPointerCli
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Click");
         TeleportController.BeginTeleport();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log("Enter");
         TeleportController.SetDestination(SpawnPoint);
     }
 
     public void OnSelect(BaseEventData eventData)
     {
+        Debug.Log("Enter controller!");
         TeleportController.SetDestination(SpawnPoint);
     }
 
     public void OnSubmit(BaseEventData eventData)
     {
-        TeleportController.BeginTeleport();
+        Debug.Log("Submit!");
+        TeleportController.Teleport();
     }
 }

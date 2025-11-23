@@ -1,6 +1,7 @@
 using Octobass.Waves.Character;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Octobass.Waves.Map
 {
@@ -63,14 +64,13 @@ namespace Octobass.Waves.Map
 
                     if (renderer != null)
                     {
-                        renderer.Draw(room, playerInRoom, miniMode = true, teleportMode);
+                        renderer.Draw(room, playerInRoom, miniMode = true, false);
 
                         if (playerInRoom)
                         {
                             Vector3 translation = MiniMapCentre - renderer.transform.position;
 
                             MiniMapRows.transform.position += translation;
-
                         }
                     }
                     else
@@ -89,6 +89,11 @@ namespace Octobass.Waves.Map
                     if (renderer != null)
                     {
                         renderer.Draw(room, playerInRoom, miniMode = false, teleportMode);
+                        if (room.Id == ActiveRoom)
+                        {
+                            Debug.Log($"Int the room! {room.Id}");
+                            EventSystem.current.SetSelectedGameObject(renderer.gameObject);
+                        }
                     }
                     else
                     {

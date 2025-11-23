@@ -9,6 +9,7 @@ namespace Octobass.Waves.Map
 
         private Image Image;
         private Button Button;
+        private TeleportSelector TeleportSelector;
         private float Opacity;
 
         private MapRoomDetailsRenderer detailsRenderer;
@@ -16,6 +17,8 @@ namespace Octobass.Waves.Map
         void Awake()
         {
             Image = GetComponent<Image>();
+            Button = GetComponent<Button>();
+            TeleportSelector = GetComponent<TeleportSelector>();
 
             detailsRenderer = GetComponentInChildren<MapRoomDetailsRenderer>();
         }
@@ -31,7 +34,7 @@ namespace Octobass.Waves.Map
             else
             {
                 Image.enabled = true;
-                Image.color = new Color(color.r, color.g, color.b, room.State == RoomState.Discovered ? 0.5f : 1f); 
+                Image.color = new Color(color.r, color.g, color.b, room.State == RoomState.Discovered ? 0.5f : 1f);
             }
             if (!miniMode)
             {
@@ -42,13 +45,23 @@ namespace Octobass.Waves.Map
                 detailsRenderer.Shell.SetActive(true);
             }
 
-            if (teleportMode && room.IsTeleporterFound)
+            if (teleportMode)
             {
                 Button.enabled = true;
+                
+                if (TeleportSelector != null)
+                {
+                    TeleportSelector.enabled = true;
+                }
             }
             else
             {
                 Button.enabled = false;
+                
+                if (TeleportSelector != null)
+                {
+                    TeleportSelector.enabled = false;
+                }
             }
         }
     }

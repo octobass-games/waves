@@ -1,3 +1,4 @@
+using Octobass.Waves.Character;
 using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Spawn;
@@ -17,8 +18,31 @@ public class TeleportController : MonoBehaviour
     [SerializeField]
     private Cartographer Cartographer;
 
+    private PlayerInput PlayerInput;
+    private bool IsTeleporting;
+
+    void Awake()
+    {
+        PlayerInput = new PlayerInput();
+        PlayerInput.Enable();
+    }
+
+    void Update()
+    {
+        if (IsTeleporting && PlayerInput.Movement.Horizontal.ReadValue<Vector2>().y < 0)
+        {
+            Finish();
+        }
+    }
+
+    void OnDisable()
+    {
+        PlayerInput.Disable();
+    }
+
     public void BeginTeleport()
     {
+        IsTeleporting = true;
         MovementController.Freeze();
         MapRenderer.ShowTeleportMap();
     }
@@ -32,5 +56,14 @@ public class TeleportController : MonoBehaviour
     {
         MovementController.Unfreeze();
         SpawnTracker.Respawn();
+        MapRenderer.ToggleMode();
+        IsTeleporting = false;
+    }
+
+    private void Finish()
+    {
+        MovementController.Unfreeze();
+        MapRenderer.ToggleMode();
+        IsTeleporting = false;
     }
 }
