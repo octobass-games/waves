@@ -8734,6 +8734,10 @@ PrefabInstance:
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
       value: 4.003521
       objectReference: {fileID: 0}
+    - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 7126833721566518616, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_AllTileFlags
       value: 2147483649
@@ -16053,7 +16057,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4893870807649561356, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 402617311824c634da48d190faeb7ad6, type: 3}
 --- !u!114 &4096788883821409407 stripped
 MonoBehaviour:
