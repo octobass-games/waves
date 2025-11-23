@@ -33,7 +33,7 @@ public class ControlsHintText : MonoBehaviour
             result = ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { groups = PlayerInput.currentControlScheme }));
         }
 
-        var matchingImage = imageMap.Images.Find(i => i.MatchingString == result);
+        var matchingImage = imageMap.Images.Find(i => i.MatchingString.ToLower() == result.ToLower());
 
         if (matchingImage != null)
         {
