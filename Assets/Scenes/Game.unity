@@ -1566,6 +1566,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: dcef4dc7a014cda44bf9f318874b54a8, type: 3}
   m_PrefabInstance: {fileID: 808593324}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &808593326 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: dcef4dc7a014cda44bf9f318874b54a8, type: 3}
+  m_PrefabInstance: {fileID: 808593324}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &836377229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 836377231}
+  - component: {fileID: 836377230}
+  m_Layer: 0
+  m_Name: SceneBootstrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &836377230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836377229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef20f24126ce93418c344af16751475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.SceneBootstrap
+  Boat: {fileID: 1762191213}
+  BoatFinalPosition: {x: -74, y: -2.69}
+  Player: {fileID: 1448142502}
+  OpeningCamera: {fileID: 1295790160}
+  BoatDriverAnimator: {fileID: 1668696739}
+  BoatAnimator: {fileID: 808593326}
+  BoatBoatAnimator: {fileID: 1762191215}
+--- !u!4 &836377231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836377229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -69.14028, y: 0.41065, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &908922136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,6 +2853,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285287230}
   m_CullTransparentMesh: 1
+--- !u!1 &1295790160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3540131397325837127, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
+  m_PrefabInstance: {fileID: 2062222793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1301629296
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,6 +3735,11 @@ PrefabInstance:
 --- !u!4 &1668696738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 9dc12ad5f1ee26749bedc17217671e48, type: 3}
+  m_PrefabInstance: {fileID: 1668696737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1668696739 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: 9dc12ad5f1ee26749bedc17217671e48, type: 3}
   m_PrefabInstance: {fileID: 1668696737}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1679873418
@@ -17999,3 +18065,4 @@ SceneRoots:
   - {fileID: 657639031}
   - {fileID: 14005583}
   - {fileID: 3788814648448773181}
+  - {fileID: 836377231}
