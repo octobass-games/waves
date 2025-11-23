@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{c8c079fd-73c0-47ba-a444-3dd3b5e46021}">
 		<property name="name">
-			<value>Churchy Music Main</value>
+			<value>Churchy Music 1</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -72,6 +72,9 @@
 			<destination>{c4db316f-41d9-48b3-8f84-f2fa8badc22c}</destination>
 			<destination>{829deeb3-8682-4d07-9ff0-a7ce5e4832b6}</destination>
 		</relationship>
+		<relationship name="markers">
+			<destination>{874f7226-c234-4e80-ba8d-4f60daef91ea}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ed4cf0ba-e116-44d1-93cb-59264b5308ad}">
 		<relationship name="effectChain">
@@ -133,6 +136,20 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{ed4cf0ba-e116-44d1-93cb-59264b5308ad}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{874f7226-c234-4e80-ba8d-4f60daef91ea}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>2.5500000000000003</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{ed0364da-37f2-4a1e-92ab-150cdfd2a4ec}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{00c35714-66bb-40b9-80ab-f8dfd19f4861}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{801e4dfb-4725-45ac-bd72-73ce00a259d4}">
