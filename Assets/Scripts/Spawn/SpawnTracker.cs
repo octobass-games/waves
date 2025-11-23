@@ -45,7 +45,16 @@ namespace Octobass.Waves.Spawn
 
         public void SetSpawnPoint(SpawnPoint spawnPoint)
         {
-            CurrentSpawnPointRoomBinding = SpawnPointRoomBindings.Find(spawnPointRoomBinding => spawnPointRoomBinding.SpawnPoint == spawnPoint);
+            SpawnPointRoomBinding spawnPointRoomBinding = SpawnPointRoomBindings.Find(spawnPointRoomBinding => spawnPointRoomBinding.SpawnPoint == spawnPoint);
+
+            if (spawnPointRoomBinding != null)
+            {
+                CurrentSpawnPointRoomBinding = spawnPointRoomBinding;
+            }
+            else
+            {
+                Debug.Log($"[SpawnTracker]: Could not find binding for SpawnPoint - {spawnPoint.name}");
+            }
         }
 
         public void Load(SaveData saveData)
