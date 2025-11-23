@@ -563,14 +563,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.055555556
-    width: 0.33333334
-    height: 0.3333333
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.875
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1964,6 +1964,10 @@ PrefabInstance:
       value: event:/SFX/upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: CameraSwitcher
+      value: 
+      objectReference: {fileID: 393106807}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: Spawns.Array.size
       value: 11
       objectReference: {fileID: 0}
@@ -2011,6 +2015,18 @@ PrefabInstance:
       propertyPath: 'Spawns.Array.data[10]'
       value: 
       objectReference: {fileID: 1747657649}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: SpawnPointRoomBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: SpawnPointRoomBindings.Array.data[0].Room
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: SpawnPointRoomBindings.Array.data[0].SpawnPoint
+      value: 
+      objectReference: {fileID: 2074692212}
     - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: LoreRoot
       value: 
@@ -4376,6 +4392,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3104030822738732532, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104030822738732532, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104030822738732532, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3559305342209051809, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8919,7 +8947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.8830423
+      value: 4.370348
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
@@ -18167,6 +18195,10 @@ PrefabInstance:
     - target: {fileID: 2492311645621407331, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: TeleportController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492311645621407331, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2492311645621407331, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
