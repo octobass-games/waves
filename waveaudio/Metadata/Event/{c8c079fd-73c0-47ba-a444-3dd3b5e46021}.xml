@@ -5,7 +5,7 @@
 			<value>Churchy Music Main</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fb2c33be-75b2-4986-9a9a-738b5d47e2f2}</destination>
@@ -59,11 +59,18 @@
 	<object class="EventAutomatableProperties" id="{4084ae5a-4bc3-4b73-b988-3395754e6d08}" />
 	<object class="MarkerTrack" id="{00c35714-66bb-40b9-80ab-f8dfd19f4861}" />
 	<object class="GroupTrack" id="{de33b10b-8d82-4b25-a6a8-75ec59cec88c}">
+		<relationship name="modules">
+			<destination>{c4db316f-41d9-48b3-8f84-f2fa8badc22c}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{11591fb0-beab-414e-abf9-35caa61b4ed6}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{ed0364da-37f2-4a1e-92ab-150cdfd2a4ec}" />
+	<object class="Timeline" id="{ed0364da-37f2-4a1e-92ab-150cdfd2a4ec}">
+		<relationship name="modules">
+			<destination>{c4db316f-41d9-48b3-8f84-f2fa8badc22c}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{ed4cf0ba-e116-44d1-93cb-59264b5308ad}">
 		<relationship name="effectChain">
 			<destination>{801e4dfb-4725-45ac-bd72-73ce00a259d4}</destination>
@@ -81,6 +88,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c05b6455-33cf-4e5e-a1c2-773176d700de}" />
+	<object class="SingleSound" id="{c4db316f-41d9-48b3-8f84-f2fa8badc22c}">
+		<property name="length">
+			<value>2.2414058956916101</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.5</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{54ffe3c5-2a49-4efc-b97f-0fd6c2c44a66}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{11591fb0-beab-414e-abf9-35caa61b4ed6}">
 		<property name="name">
 			<value>Audio 1</value>

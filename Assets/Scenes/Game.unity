@@ -4168,6 +4168,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2023453014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6082136101445701239, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+  m_PrefabInstance: {fileID: 5117037892847758983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2062222793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4456,7 +4461,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5596511387149209249, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
   m_PrefabInstance: {fileID: 1027136718174414632}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1027136718174414633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
@@ -4779,8 +4784,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5999868758574091732, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1027136718174414634}
   m_SourcePrefab: {fileID: 100100000, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+--- !u!1 &1027136718174414633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5999868758574091732, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+  m_PrefabInstance: {fileID: 1027136718174414632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027136718174414634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027136718174414633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: Area
+  TriggerEvent: 11
+  Value: 1
 --- !u!4 &1106052054739660626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9071834138573940877, guid: 0a3b9b96ab1520a4dbb0589b43b49fc8, type: 3}
@@ -16272,14 +16301,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6082136101445701239, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5117037892847758987}
   m_SourcePrefab: {fileID: 100100000, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
 --- !u!114 &5117037892847758984 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5368584479309876482, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
   m_PrefabInstance: {fileID: 5117037892847758983}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2023453014}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
@@ -16307,6 +16339,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &5117037892847758987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023453014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: Area
+  TriggerEvent: 11
+  Value: 0
 --- !u!4 &5188070695413835859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4771669468361460541, guid: 8f6f73275025e5542be4136d61ddc594, type: 3}
