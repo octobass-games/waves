@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6407626737545775279}
   - component: {fileID: 3535389682098618268}
   - component: {fileID: 2049931670778852215}
+  - component: {fileID: 8331922797153345595}
   m_Layer: 0
   m_Name: Shell
   m_TagString: Untagged
@@ -143,6 +144,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
+--- !u!114 &8331922797153345595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5777483919292299749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1787191597
+      Data2: 1095494194
+      Data3: -1132719968
+      Data4: 515983808
+    Path: event:/SFX/loot shell
+  Event: 
+  EventPlayTrigger: 12
+  EventStopTrigger: 11
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &8966307671798773221
 GameObject:
   m_ObjectHideFlags: 0
