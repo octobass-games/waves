@@ -570,7 +570,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4334,6 +4334,34 @@ PrefabInstance:
     - target: {fileID: 4949011625248796602, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
       propertyPath: m_Name
       value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435755168346317742, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435755168346317742, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435755168346317742, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435755168346317742, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435755168346317742, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDestination
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435755168346317742, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeleportController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435755168346317742, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Octobass.Waves.Map.MapRoomRenderer, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8732,7 +8760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.003521
+      value: 5.4322953
       objectReference: {fileID: 0}
     - target: {fileID: 7126833721566518616, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_AllTileFlags

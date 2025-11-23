@@ -52,7 +52,7 @@ namespace Octobass.Waves.Map
             Draw();
         }
 
-        private void Draw()
+        private void Draw(bool teleportMode = false)
         {
             if (miniMode)
             {
@@ -63,7 +63,7 @@ namespace Octobass.Waves.Map
 
                     if (renderer != null)
                     {
-                        renderer.Draw(room, playerInRoom, miniMode = true);
+                        renderer.Draw(room, playerInRoom, miniMode = true, teleportMode);
 
                         if (playerInRoom)
                         {
@@ -88,7 +88,7 @@ namespace Octobass.Waves.Map
 
                     if (renderer != null)
                     {
-                        renderer.Draw(room, playerInRoom, miniMode = false);
+                        renderer.Draw(room, playerInRoom, miniMode = false, teleportMode);
                     }
                     else
                     {
@@ -129,6 +129,16 @@ namespace Octobass.Waves.Map
             {
                 BigMap.SetActive(true);
             }
+        }
+
+        public void ShowTeleportMap()
+        {
+            if (miniMode)
+            {
+                ToggleMode();
+            }
+
+            Draw(true);
         }
 
         public void HideMap()

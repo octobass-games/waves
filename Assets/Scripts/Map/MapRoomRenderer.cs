@@ -8,6 +8,7 @@ namespace Octobass.Waves.Map
         public RoomId Id;
 
         private Image Image;
+        private Button Button;
         private float Opacity;
 
         private MapRoomDetailsRenderer detailsRenderer;
@@ -19,7 +20,7 @@ namespace Octobass.Waves.Map
             detailsRenderer = GetComponentInChildren<MapRoomDetailsRenderer>();
         }
 
-        public void Draw(Room room, bool isPlayerInRoom, bool miniMode)
+        public void Draw(Room room, bool isPlayerInRoom, bool miniMode, bool teleportMode)
         {
             Color color = Image.color;
 
@@ -39,6 +40,15 @@ namespace Octobass.Waves.Map
             if (room.IsShellFound)
             {
                 detailsRenderer.Shell.SetActive(true);
+            }
+
+            if (teleportMode && room.IsTeleporterFound)
+            {
+                Button.enabled = true;
+            }
+            else
+            {
+                Button.enabled = false;
             }
         }
     }
