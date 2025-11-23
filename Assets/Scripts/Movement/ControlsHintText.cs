@@ -14,6 +14,9 @@ public class ControlsHintText : MonoBehaviour
     [SerializeField]
     private List<string> CompositeParts;
 
+    public ControlsImageMap imageMap;
+    public SpriteRenderer ControlSprite;
+
     void Update()
     {
         string result = "";
@@ -30,6 +33,19 @@ public class ControlsHintText : MonoBehaviour
             result = ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { groups = PlayerInput.currentControlScheme }));
         }
 
-        Text.text = result;
+        var matchingImage = imageMap.Images.Find(i => i.MatchingString == result);
+
+        if (matchingImage != null)
+        {
+            Text.gameObject.SetActive(false);
+            ControlSprite.gameObject.SetActive(true);
+            ControlSprite.sprite = matchingImage.Sprite;
+        }
+        else
+        {
+            Text.text = result;
+            Text.gameObject.SetActive(true);
+            ControlSprite.gameObject.SetActive(false);
+        }
     }
 }
