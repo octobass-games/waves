@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5292491080746401252}
   - component: {fileID: 2346670546660180665}
   - component: {fileID: 2127448965774205677}
+  - component: {fileID: 7252226345088659230}
   m_Layer: 0
   m_Name: Room Camera
   m_TagString: Untagged
@@ -129,3 +130,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePixelPerfect
+--- !u!114 &7252226345088659230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3540131397325837127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: Area
+  TriggerEvent: 11
+  Value: 0

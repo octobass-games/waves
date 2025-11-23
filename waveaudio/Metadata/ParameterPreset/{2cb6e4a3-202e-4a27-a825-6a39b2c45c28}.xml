@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="ParameterPreset" id="{53adfbef-fab2-4b64-8c7a-1b81611441a2}">
+	<object class="ParameterPreset" id="{2cb6e4a3-202e-4a27-a825-6a39b2c45c28}">
 		<property name="name">
-			<value>Area</value>
+			<value>IsAmbiant</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8f379127-3185-4ca4-9235-13711e27aa30}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{c8294774-1541-4477-b4eb-b91bd0f76c9a}</destination>
+			<destination>{5e4260ca-54f4-4738-9d2b-602b8ea6f3bb}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{c8294774-1541-4477-b4eb-b91bd0f76c9a}">
+	<object class="GameParameter" id="{5e4260ca-54f4-4738-9d2b-602b8ea6f3bb}">
 		<property name="parameterType">
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Main</value>
-			<value>Main Ambiant</value>
-			<value>Church</value>
+			<value>No</value>
+			<value>Yes</value>
 		</property>
 		<property name="isGlobal">
 			<value>true</value>

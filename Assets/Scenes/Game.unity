@@ -640,14 +640,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.055555556
-    width: 0.33333334
-    height: 0.3333333
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.875
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -672,7 +672,7 @@ Transform:
   m_GameObject: {fileID: 393106800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.688705, y: -0.000000063304014, z: -1}
+  m_LocalPosition: {x: -75.91093, y: -0.000000063304014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1266,10 +1266,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657639031}
-  - component: {fileID: 657639032}
   - component: {fileID: 657639033}
   - component: {fileID: 657639034}
   - component: {fileID: 657639035}
+  - component: {fileID: 657639036}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -1292,33 +1292,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &657639032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657639030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4311e18118ba664d8343422b97153a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Music
-  mainThemeEvent:
-    Guid:
-      Data1: 1128691623
-      Data2: 1162766784
-      Data3: -1565910356
-      Data4: -1653037154
-    Path: event:/Music/Main Music/Main Music
-  ambientEvent:
-    Guid:
-      Data1: 1202124136
-      Data2: 1141663832
-      Data3: -599320926
-      Data4: 349585416
-    Path: event:/Music/Ambient Chords/Main Ambient
-  MusicState: MusicState
 --- !u!114 &657639033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,6 +1354,37 @@ MonoBehaviour:
   Parameter: IsDiving
   TriggerEvent: 1
   Value: 1
+--- !u!114 &657639036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657639030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1280098107
+      Data2: 1312565878
+      Data3: -1700125796
+      Data4: -2130899812
+    Path: event:/Music/All Music
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &666075283
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,7 +3263,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 657639032}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: OnRoomEnter
         m_Mode: 0
@@ -9611,7 +9615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 5.3840127
+      value: 5.5452967
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
