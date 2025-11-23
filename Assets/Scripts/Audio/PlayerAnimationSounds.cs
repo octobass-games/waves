@@ -8,6 +8,9 @@ public class PlayerAnimationSounds : MonoBehaviour
     public string upgradeSFX;
     public string landSFX;
     public string dashSFX;
+    public string deathSFX;
+    public string respawnSFX;
+    public string tpSFX;
 
     void OnStep()
     {
@@ -47,4 +50,20 @@ public class PlayerAnimationSounds : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(dashSFX);
     }
+
+    void OnDeath()
+	{
+		FMODUnity.RuntimeManager.PlayOneShot(deathSFX);
+	}
+
+	void OnRespawn()
+	{
+		FMODUnity.RuntimeManager.PlayOneShot(respawnSFX);
+	}
+
+	void OnTP()
+	{
+		FMODUnity.RuntimeManager.PlayOneShot(tpSFX);
+	}
+
 }
