@@ -563,9 +563,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.055555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -4916,6 +4916,10 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1047319393}
+    - target: {fileID: 7826104287897672387, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 8401739070577046071, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
       propertyPath: m_LocalPosition.x
       value: 180
@@ -4963,6 +4967,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5999868758574091732, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1027136718174414634}
+    - targetCorrespondingSourceObject: {fileID: 8471527528170255546, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
 --- !u!1 &1027136718174414633 stripped
 GameObject:
@@ -7499,6 +7506,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 586328210}
     m_Modifications:
+    - target: {fileID: 1225851370963843411, guid: 00fbece12efc8174a84a5ff707b4bfad, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 4154398786266538959, guid: 00fbece12efc8174a84a5ff707b4bfad, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -7548,7 +7559,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5297126162557033251, guid: 00fbece12efc8174a84a5ff707b4bfad, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00fbece12efc8174a84a5ff707b4bfad, type: 3}
@@ -8909,6 +8921,10 @@ PrefabInstance:
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
       value: 4.8830423
       objectReference: {fileID: 0}
+    - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 7126833721566518616, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_AllTileFlags
       value: 2147483649
@@ -16228,7 +16244,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4893870807649561356, guid: 402617311824c634da48d190faeb7ad6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 402617311824c634da48d190faeb7ad6, type: 3}
 --- !u!114 &4096788883821409407 stripped
 MonoBehaviour:
