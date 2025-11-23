@@ -2512,11 +2512,15 @@ PrefabInstance:
       objectReference: {fileID: 1535715693}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2531,6 +2535,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 666075284}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1253435447}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -2540,6 +2548,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
@@ -2555,6 +2567,10 @@ PrefabInstance:
       value: Save
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: OnItemPickedUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Octobass.Waves.Character.AbilityController, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -2567,6 +2583,10 @@ PrefabInstance:
       value: Octobass.Waves.Save.SaveManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Map.Cartographer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -2576,6 +2596,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5452,10 +5476,6 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1047319393}
-    - target: {fileID: 6435182485079705301, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
-      propertyPath: Name
-      value: control-hint-grab
-      objectReference: {fileID: 0}
     - target: {fileID: 7826104287897672387, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
       propertyPath: PlayerInput
       value: 
