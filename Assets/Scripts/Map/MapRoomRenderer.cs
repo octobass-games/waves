@@ -36,6 +36,10 @@ namespace Octobass.Waves.Map
             {
                 detailsRenderer.Player.SetActive(isPlayerInRoom);
             }
+            if (room.IsShellFound)
+            {
+                detailsRenderer.Shell.SetActive(true);
+            }
         }
     }
 }

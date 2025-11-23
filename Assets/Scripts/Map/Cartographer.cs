@@ -1,3 +1,4 @@
+using Octobass.Waves.Item;
 using Octobass.Waves.Save;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,25 @@ namespace Octobass.Waves.Map
             ServiceLocator.Instance.Register(this);
 
             OnRoomStateChanged.Invoke(Rooms, RoomId.A4);
+        }
+
+        public void OnItemPickedUp(ItemInstance item)
+        {
+            if (item is ShellItemInstance)
+            {
+                Room room = Rooms.Find(room => room.Id == ActiveRoomId);
+
+                if (room != null)
+                {
+                    room.IsShellFound = true;
+
+                    OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
+                }
+                else
+                {
+                    Debug.Log($"[Cartographer]: Room with ID - {ActiveRoomId} not found");
+                }
+            }
         }
 
         private void GenerateRoomsFromEnums()

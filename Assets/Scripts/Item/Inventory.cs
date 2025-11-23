@@ -114,6 +114,10 @@ namespace Octobass.Waves.Item
                 {
                     Destroy(pickupableItem.gameObject);
                 }
+                else
+                {
+                    Debug.Log($"[Inventory]: PickupableItem not found for {item.Name}");
+                }
             }
         }
     }

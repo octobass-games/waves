@@ -7,5 +7,7 @@ namespace Octobass.Waves.Map
     {
         public RoomId Id;
         public RoomState State;
+        public bool IsShellFound;
+        public bool IsTeleporterFound;
     }
 }
