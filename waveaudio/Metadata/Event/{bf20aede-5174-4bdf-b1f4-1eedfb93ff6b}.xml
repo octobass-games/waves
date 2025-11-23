@@ -89,6 +89,9 @@
 		<property name="length">
 			<value>66</value>
 		</property>
+		<relationship name="triggerConditions">
+			<destination>{dcdf2dcc-7123-41fd-9453-d658d1efbf0b}</destination>
+		</relationship>
 		<relationship name="fadeOutCurve">
 			<destination>{7c32073d-262c-4499-9886-adcc62d1bfcf}</destination>
 		</relationship>
@@ -117,6 +120,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{fee0bdf0-fcfc-4a9b-96e7-fe6f9a08dab0}" />
 	<object class="MixerBusFader" id="{538b5c8c-be40-4ea5-bf13-0786b61a59d9}" />
+	<object class="ParameterCondition" id="{dcdf2dcc-7123-41fd-9453-d658d1efbf0b}">
+		<property name="minimum">
+			<value>0</value>
+		</property>
+		<property name="maximum">
+			<value>0</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{c8294774-1541-4477-b4eb-b91bd0f76c9a}</destination>
+		</relationship>
+	</object>
 	<object class="FadeCurve" id="{7c32073d-262c-4499-9886-adcc62d1bfcf}">
 		<relationship name="startPoint">
 			<destination>{60a8d148-f934-4118-8e4c-168598eaeb68}</destination>
