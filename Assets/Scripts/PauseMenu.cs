@@ -25,8 +25,9 @@ namespace Octobass.Waves
         private PlayerInput PlayerInput;
 
         private bool paused = false;
-        // TODO: see if there's a way to have this span maps, possible with third map?
         private InputAction PauseAction;
+        private InputActionMap GameplayActionMap;
+        private InputActionMap UiActionMap;
 
         void Awake()
         {
@@ -35,27 +36,29 @@ namespace Octobass.Waves
                 Debug.Log("[PauseMenu]: PlayerInput not set");
             }
 
+            GameplayActionMap = PlayerInput.actions.FindActionMap("Gameplay");
+            UiActionMap = PlayerInput.actions.FindActionMap("UI");
+
+            PlayerInput.actions.FindActionMap("Global").Enable();
             PauseAction = PlayerInput.actions.FindAction("Pause");
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (PauseAction.WasPerformedThisFrame())
             {
-                paused = !paused;
-            }
-
-            if (paused)
-            {
-                OpenPause();
-                Time.timeScale = 0;
-            }
-            else
-            {
-                ClosePause();
-                Time.timeScale = 1;
-
+                if (!paused)
+                {
+                    OpenPause();
+                    Time.timeScale = 0;
+                    paused = true;
+                }
+                else
+                {
+                    ClosePause();
+                    Time.timeScale = 1;
+                    paused = false;
+                }
             }
         }
 
@@ -77,7 +80,8 @@ namespace Octobass.Waves
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
 
-
+            GameplayActionMap.Disable();
+            UiActionMap.Enable();
         }
 
         public void ClosePause()
@@ -87,8 +91,9 @@ namespace Octobass.Waves
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
-
-
+            
+            GameplayActionMap.Enable();
+            UiActionMap.Disable();
         }
 
         public void ClickStaff()
