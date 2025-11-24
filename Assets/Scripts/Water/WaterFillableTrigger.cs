@@ -1,5 +1,5 @@
-using Octobass.Waves.Character;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Octobass.Waves.Water
 {
@@ -8,24 +8,34 @@ namespace Octobass.Waves.Water
         [SerializeField]
         private WaterFillable Fillable;
 
-        private bool IsFillable;
+        [SerializeField]
         private PlayerInput PlayerInput;
+
+        private InputAction RaiseWaterAction;
+        private InputAction LowerWaterAction;
+        
+        private bool IsFillable;
 
         void Awake()
         {
-            PlayerInput = new PlayerInput();
-            PlayerInput.Enable();
+            if (PlayerInput == null)
+            {
+                Debug.Log("[WaterFillableTrigger]: PlayerInput not set");
+            }
+
+            RaiseWaterAction = PlayerInput.actions.FindAction("Inspect");
+            LowerWaterAction = PlayerInput.actions.FindAction("Attack");
         }
 
         void Update()
         {
             if (IsFillable)
             {
-                if (PlayerInput.Movement.Inspect.IsPressed())
+                if (RaiseWaterAction.IsPressed())
                 {
                     Fillable.Fill();
                 }
-                else if (PlayerInput.Movement.Attack.IsPressed())
+                else if (LowerWaterAction.IsPressed())
                 {
                     Fillable.Drain();
                 }
@@ -46,11 +56,6 @@ namespace Octobass.Waves.Water
             {
                 IsFillable = false;
             }
-        }
-
-        void OnDisable()
-        {
-            PlayerInput.Disable();
         }
     }
 }

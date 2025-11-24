@@ -1,4 +1,3 @@
-using Octobass.Waves.Character;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Save;
 using Octobass.Waves.Spawn;
@@ -10,14 +9,23 @@ namespace Octobass.Waves.Debugging
 {
     public class DebugMenu : MonoBehaviour
     {
-        public MovementController PlayerMovementController;
-        public bool UnlockAllAbilitiesOnAwake = true;
-        public GameObject DebugMenuUi;
-        public SpawnTracker SpawnTracker;
-        public SaveManager SaveManager;
+        [SerializeField]
+        private bool UnlockAllAbilitiesOnAwake = true;
+        
+        [SerializeField]
+        private MovementController PlayerMovementController;
 
         [SerializeField]
-        private UnityEngine.InputSystem.PlayerInput PlayerInput;
+        private GameObject DebugMenuUi;
+        
+        [SerializeField]
+        private SpawnTracker SpawnTracker;
+        
+        [SerializeField]
+        private SaveManager SaveManager;
+
+        [SerializeField]
+        private PlayerInput PlayerInput;
 
         private InputAction RightClickAction;
 
