@@ -4,6 +4,7 @@ using Octobass.Waves.Save;
 using Octobass.Waves.Spawn;
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Octobass.Waves.Debugging
 {
@@ -15,12 +16,17 @@ namespace Octobass.Waves.Debugging
         public SpawnTracker SpawnTracker;
         public SaveManager SaveManager;
 
-        private PlayerInput PlayerInput;
+        [SerializeField]
+        private UnityEngine.InputSystem.PlayerInput PlayerInput;
+
+        private InputAction RightClickAction;
 
         void Awake()
         {
-            PlayerInput = new PlayerInput();
-            PlayerInput.Enable();
+            if (PlayerInput == null)
+            {
+                Debug.LogWarning("[DebugMenu]: PlayerInput not set");
+            }
 
             if (DebugMenuUi == null)
             {
@@ -41,6 +47,8 @@ namespace Octobass.Waves.Debugging
             {
                 Debug.LogWarning("[DebugMenu]: SaveManager not set");
             }
+
+            RightClickAction = PlayerInput.actions.FindAction("RightClick");
         }
 
         void Start()
@@ -58,7 +66,7 @@ namespace Octobass.Waves.Debugging
 
         void Update()
         {
-            if (PlayerInput.UI.RightClick.WasPressedThisFrame())
+            if (RightClickAction.WasPressedThisFrame())
             {
                 DebugMenuUi.SetActive(!DebugMenuUi.activeSelf);
             }

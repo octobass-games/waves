@@ -1,12 +1,15 @@
-using Octobass.Waves.Character;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace Octobass.Waves.Map
 {
     public class MapRenderer : MonoBehaviour
     {
+        [SerializeField]
+        private PlayerInput PlayerInput;
+
         public List<MapRoomRenderer> RoomRenderers;
         public List<MapRoomRenderer> BigMapRenderers;
 
@@ -19,16 +22,12 @@ namespace Octobass.Waves.Map
         public GameObject BigMap;
 
         private Vector3 MiniMapCentre;
-        private PlayerInput PlayerInput;
 
         private List<Room> Rooms = new();
         private RoomId ActiveRoom;
 
         void Awake()
         {
-            PlayerInput = new PlayerInput();
-            PlayerInput.Enable();
-
             MiniMapCentre = MiniMapRows.transform.position;
 
             if (HideOnAwake)
@@ -39,7 +38,7 @@ namespace Octobass.Waves.Map
 
         void Update()
         {
-            if (PlayerInput.Movement.InspectMap.WasPressedThisFrame())
+            if (PlayerInput.actions.FindAction("InspectMap").WasPressedThisFrame())
             {
                 ToggleMode();
             }
@@ -157,11 +156,6 @@ namespace Octobass.Waves.Map
             {
                 BigMap.SetActive(false);
             }
-        }
-
-        void OnDisable()
-        {
-            PlayerInput.Disable();
         }
     }
 }

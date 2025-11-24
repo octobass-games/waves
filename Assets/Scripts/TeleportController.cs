@@ -3,6 +3,7 @@ using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Spawn;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TeleportController : MonoBehaviour
 {
@@ -18,26 +19,29 @@ public class TeleportController : MonoBehaviour
     [SerializeField]
     private Cartographer Cartographer;
 
-    private PlayerInput PlayerInput;
+    [SerializeField]
+    private UnityEngine.InputSystem.PlayerInput PlayerInput;
+    // Todo: add action for this
+    private InputAction CancelTeleportAction;
+
     private bool IsTeleporting;
 
     void Awake()
     {
-        PlayerInput = new PlayerInput();
-        PlayerInput.Enable();
+        if (PlayerInput == null)
+        {
+            Debug.Log("[TeleportController]: PlayerInput not set");
+        }
+
+        CancelTeleportAction = PlayerInput.actions.FindAction("Cancel");
     }
 
     void Update()
     {
-        if (IsTeleporting && PlayerInput.Movement.Horizontal.ReadValue<Vector2>().y < 0)
+        if (IsTeleporting && CancelTeleportAction.WasPressedThisFrame())
         {
             Finish();
         }
-    }
-
-    void OnDisable()
-    {
-        PlayerInput.Disable();
     }
 
     public void BeginTeleport()

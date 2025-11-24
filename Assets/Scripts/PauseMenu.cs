@@ -1,5 +1,6 @@
 using Octobass.Waves.Character;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -9,19 +10,27 @@ public class PauseMenu : MonoBehaviour
     public GameObject MainMenuPanel;
     public GameObject ControlsPanel;
     public GameObject PostcardsPanel;
-    private PlayerInput PlayerInput;
+    [SerializeField]
+    private UnityEngine.InputSystem.PlayerInput PlayerInput;
 
     private bool paused = false;
-    void Start()
+    // TODO: see if there's a way to have this span maps, possible with third map?
+    private InputAction PauseAction;
+
+    void Awake()
     {
-        PlayerInput = new PlayerInput();
-        PlayerInput.Enable();
+        if (PlayerInput == null)
+        {
+            Debug.Log("[PauseMenu]: PlayerInput not set");
+        }
+
+        PauseAction = PlayerInput.actions.FindAction("Pause");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerInput.Movement.Pause.WasPerformedThisFrame())
+        if (PauseAction.WasPerformedThisFrame())
         {
             paused = !paused;
         }

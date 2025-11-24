@@ -25,7 +25,6 @@ namespace Octobass.Waves.Water
 
         private Material FillableMaterial;
         private float FillableLine;
-        private PlayerInput PlayerInput;
 
         void Awake()
         {
@@ -65,9 +64,6 @@ namespace Octobass.Waves.Water
 
             Collider.size = new Vector3(Collider.size.x, (FillableBottom.position.y - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
             Collider.offset = new Vector2(0, FillableBottom.position.y / transform.lossyScale.y);
-
-            PlayerInput = new PlayerInput();
-            PlayerInput.Enable();
         }
 
         public void Fill()

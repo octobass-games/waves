@@ -1,6 +1,7 @@
 using Octobass.Waves.Character;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 namespace Octobass.Waves.Item
 {
@@ -8,20 +9,27 @@ namespace Octobass.Waves.Item
     {
         public UnityEvent OnInspect;
 
-        private PlayerInput PlayerInput;
+        [SerializeField]
+        private UnityEngine.InputSystem.PlayerInput PlayerInput;
         private bool IsInspectable;
         private bool InspectPressed;
         public GameObject DisplayInspect;
 
+        private InputAction InspectAction;
+
         void Awake()
         {
-            PlayerInput = new PlayerInput();
-            PlayerInput.Enable();
+            if (PlayerInput == null)
+            {
+                Debug.Log("[Inspectable]: PlayerInput not set");
+            }
+
+            InspectAction = PlayerInput.actions.FindAction("Inspect");
         }
 
         void Update()
         {
-            if (PlayerInput.Movement.Inspect.WasPressedThisFrame() && IsInspectable)
+            if (InspectAction.WasPressedThisFrame() && IsInspectable)
             {
                 InspectPressed = true;
             }
@@ -57,11 +65,6 @@ namespace Octobass.Waves.Item
                     DisplayInspect.SetActive(false);
                 }
             }
-        }
-
-        void OnDisable()
-        {
-            PlayerInput.Disable();
         }
     }
 }

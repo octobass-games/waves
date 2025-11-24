@@ -1,11 +1,21 @@
 using Octobass.Waves.Movement;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Octobass.Waves.Character
 {
     public class PlayerInputCharacterController2DDriver : CharacterController2DDriver
     {
-        private PlayerInput PlayerInput;
+        [SerializeField]
+        private UnityEngine.InputSystem.PlayerInput PlayerInput;
+
+        private InputAction JumpAction;
+        private InputAction GrabAction;
+        private InputAction AttackAction;
+        private InputAction DashAction;
+        private InputAction HorizontalAction;
+        private InputAction ClimbingAction;
+        private InputAction SwimmingAction;
 
         private bool JumpPressed;
         private bool JumpReleased;
@@ -18,48 +28,58 @@ namespace Octobass.Waves.Character
 
         void Awake()
         {
-            PlayerInput = new PlayerInput();
-            PlayerInput.Enable();
+            if (PlayerInput == null)
+            {
+                Debug.Log("[PlayerInputCharacterController2DDriver]: PlayerInput not set");
+            }
+
+            JumpAction = PlayerInput.actions.FindAction("Jump");
+            GrabAction = PlayerInput.actions.FindAction("Grab");
+            AttackAction = PlayerInput.actions.FindAction("Attack");
+            DashAction = PlayerInput.actions.FindAction("Dash");
+            HorizontalAction = PlayerInput.actions.FindAction("Horizontal");
+            ClimbingAction = PlayerInput.actions.FindAction("Climbing");
+            SwimmingAction = PlayerInput.actions.FindAction("Swimming");
         }
 
         public override CharacterController2DDriverSnapshot TakeSnapshot()
         {
-            if (PlayerInput.Movement.Jump.WasPerformedThisFrame())
+            if (JumpAction.WasPerformedThisFrame())
             {
                 JumpPressed = true;
             }
 
-            if (PlayerInput.Movement.Jump.WasReleasedThisFrame())
+            if (JumpAction.WasReleasedThisFrame())
             {
                 JumpReleased = true;
             }
 
-            if (PlayerInput.Movement.Grab.WasPerformedThisFrame())
+            if (GrabAction.WasPerformedThisFrame())
             {
                 GrabPressed = true;
             }
 
-            if (PlayerInput.Movement.Grab.WasReleasedThisFrame())
+            if (GrabAction.WasReleasedThisFrame())
             {
                 GrabReleased = true;
             }
 
-            if (PlayerInput.Movement.Attack.WasPerformedThisFrame())
+            if (AttackAction.WasPerformedThisFrame())
             {
                 AttackPressed = true;
             }
 
-            if (PlayerInput.Movement.Attack.WasReleasedThisFrame())
+            if (AttackAction.WasReleasedThisFrame())
             {
                 AttackReleased = true;
             }
 
-            if (PlayerInput.Movement.Dash.WasPerformedThisFrame())
+            if (DashAction.WasPerformedThisFrame())
             {
                 DashPressed = true;
             }
 
-            if (PlayerInput.Movement.Dash.WasReleasedThisFrame())
+            if (DashAction.WasReleasedThisFrame())
             {
                 DashReleased = true;
             }
@@ -67,11 +87,11 @@ namespace Octobass.Waves.Character
 
             return new CharacterController2DDriverSnapshot
             {
-                Movement = PlayerInput.Movement.Horizontal.ReadValue<Vector2>(),
-                Climbing = new Vector2(0, PlayerInput.Movement.Climbing.ReadValue<float>()),
+                Movement = HorizontalAction.ReadValue<Vector2>(),
+                Climbing = new Vector2(0, ClimbingAction.ReadValue<float>()),
                 DashPressed = DashPressed,
                 DashReleased = DashReleased,
-                Swimming = PlayerInput.Movement.Swimming.ReadValue<Vector2>(),
+                Swimming = SwimmingAction.ReadValue<Vector2>(),
                 JumpPressed = JumpPressed,
                 JumpReleased = JumpReleased,
                 GrabPressed = GrabPressed,
