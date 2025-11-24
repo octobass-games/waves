@@ -1,5 +1,5 @@
 using Octobass.Waves.Attack;
-using Octobass.Waves.Character;
+using Octobass.Waves.Movement;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement

@@ -1,8 +1,7 @@
-using Octobass.Waves.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
     public class MovementDriver : MonoBehaviour
     {
