@@ -48,9 +48,10 @@ namespace Octobass.Waves.Camera
         {
             if (RoomCameraBindingRegistry.TryGetValue(room, out CinemachineCamera camera))
             {
-                RoomCamera.gameObject.SetActive(false);
+
+                RoomCamera.Priority = 0;
                 RoomCamera = camera;
-                RoomCamera.gameObject.SetActive(true);
+                RoomCamera.Priority = 2;
             }
             else
             {
@@ -60,14 +61,14 @@ namespace Octobass.Waves.Camera
 
         public void OnUpgradeStart()
         {
-            RoomCamera.gameObject.SetActive(false);
-            UpgradeCamera.gameObject.SetActive(true);
+            RoomCamera.Priority = 0;
+            UpgradeCamera.Priority = 2;
         }
 
         public void OnUpgradeEnd()
         {
-            UpgradeCamera.gameObject.SetActive(false);
-            RoomCamera.gameObject.SetActive(true);
+            UpgradeCamera.Priority = 0;
+            RoomCamera.Priority = 2;
         }
     }
 }
