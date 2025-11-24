@@ -5,13 +5,13 @@ namespace Octobass.Waves.Item
     public class AutoPickUp : MonoBehaviour
     {
         [SerializeField]
-        private PickupableItem PickupableItem;
+        private Animator Animator;
 
         void Awake()
         {
-            if (PickupableItem == null)
+            if (Animator == null)
             {
-                Debug.LogWarning("[AutoPickUp]: PickupableItem not set");
+                Debug.LogWarning("[AutoPickUp]: Animator not set");
             }
         }
 
@@ -19,7 +19,7 @@ namespace Octobass.Waves.Item
         {
             if (collision.CompareTag(Tags.Player))
             {
-                PickupableItem.PickUp();
+                Animator.SetTrigger("PickUp");
             }
         }
     }
