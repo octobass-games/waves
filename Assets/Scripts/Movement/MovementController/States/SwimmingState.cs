@@ -34,7 +34,7 @@ namespace Octobass.Waves.Movement
 
             Vector2 velocity = previousSnapshot.Velocity;
 
-            velocity.x = verticalDistanceFromBobHeight == 0 ? driverSnapshot.Movement.x * Config.SwimmingSpeed : 0;
+            velocity.x = IsRising && verticalDistanceFromBobHeight <= 0.03f ? driverSnapshot.Movement.x * Config.SwimmingSpeed : 0;
             velocity.y = velocity.y + Config.Gravity * Config.BuoyancyDescentModifier * Time.fixedDeltaTime;
 
             if (velocity.y >= 0)

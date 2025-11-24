@@ -91,7 +91,7 @@ namespace Octobass.Waves.Movement
                 CharacterStateId.Diving,
                 new()
                 {
-                    new(CharacterStateId.Swimming,  (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsSwimmingAtWaterwayEntrance())
+                    new(CharacterStateId.Swimming,  (StateSnapshot stateSnapshot, CharacterController2DDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsSwimmingAtWaterwayEntrance() && driverSnapshot.Swimming.y > 0)
                 }
             },
             {
