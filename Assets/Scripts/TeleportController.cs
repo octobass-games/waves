@@ -1,4 +1,3 @@
-using Octobass.Waves.Character;
 using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Spawn;
@@ -20,7 +19,8 @@ public class TeleportController : MonoBehaviour
     private Cartographer Cartographer;
 
     [SerializeField]
-    private UnityEngine.InputSystem.PlayerInput PlayerInput;
+    private PlayerInput PlayerInput;
+    
     // Todo: add action for this
     private InputAction CancelTeleportAction;
 

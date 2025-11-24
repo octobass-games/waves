@@ -1,4 +1,3 @@
-using Octobass.Waves.Character;
 using System;
 
 namespace Octobass.Waves.Item

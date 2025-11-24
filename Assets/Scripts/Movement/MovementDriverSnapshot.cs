@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Octobass.Waves.Movement
 {
-    public class CharacterController2DDriverSnapshot
+    public class MovementDriverSnapshot
     {
         public Vector2 Movement;
         public Vector2 Swimming;

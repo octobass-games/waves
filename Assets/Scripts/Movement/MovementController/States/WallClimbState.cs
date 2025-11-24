@@ -11,7 +11,7 @@ namespace Octobass.Waves.Movement
             Config = config;
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
+        public override StateSnapshot Tick(StateSnapshot previousSnapshot, MovementDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             return new StateSnapshot()
             {

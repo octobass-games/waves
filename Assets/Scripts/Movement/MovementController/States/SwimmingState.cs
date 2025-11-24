@@ -23,7 +23,7 @@ namespace Octobass.Waves.Movement
             IsRising = previousStateId == CharacterStateId.Diving;
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
+        public override StateSnapshot Tick(StateSnapshot previousSnapshot, MovementDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             Collider2D waterCollider = CollisionDetector.DetectWaterway();
 

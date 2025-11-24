@@ -1,4 +1,3 @@
-using Octobass.Waves.Character;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -10,11 +9,13 @@ namespace Octobass.Waves.Item
         public UnityEvent OnInspect;
 
         [SerializeField]
-        private UnityEngine.InputSystem.PlayerInput PlayerInput;
+        private PlayerInput PlayerInput;
+
+        [SerializeField]
+        private GameObject DisplayInspect;
+        
         private bool IsInspectable;
         private bool InspectPressed;
-        public GameObject DisplayInspect;
-
         private InputAction InspectAction;
 
         void Awake()

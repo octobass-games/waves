@@ -1,13 +1,12 @@
-using Octobass.Waves.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Octobass.Waves.Character
+namespace Octobass.Waves.Movement
 {
-    public class PlayerInputCharacterController2DDriver : CharacterController2DDriver
+    public class MovementDriver : MonoBehaviour
     {
         [SerializeField]
-        private UnityEngine.InputSystem.PlayerInput PlayerInput;
+        private PlayerInput PlayerInput;
 
         private InputAction JumpAction;
         private InputAction GrabAction;
@@ -42,7 +41,7 @@ namespace Octobass.Waves.Character
             SwimmingAction = PlayerInput.actions.FindAction("Swimming");
         }
 
-        public override CharacterController2DDriverSnapshot TakeSnapshot()
+        public MovementDriverSnapshot TakeSnapshot()
         {
             if (JumpAction.WasPerformedThisFrame())
             {
@@ -85,7 +84,7 @@ namespace Octobass.Waves.Character
             }
 
 
-            return new CharacterController2DDriverSnapshot
+            return new MovementDriverSnapshot
             {
                 Movement = HorizontalAction.ReadValue<Vector2>(),
                 Climbing = new Vector2(0, ClimbingAction.ReadValue<float>()),
@@ -102,7 +101,7 @@ namespace Octobass.Waves.Character
             };
         }
 
-        public override void Consume()
+        public void Consume()
         {
             JumpPressed = false;
             JumpReleased = false;
