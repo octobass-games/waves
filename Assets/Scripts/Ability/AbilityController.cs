@@ -18,10 +18,7 @@ namespace Octobass.Waves.Ability
         private AnimationController AnimationController;
 
         [SerializeField]
-        private GameObject ExplainerRoot;
-        
-        [SerializeField]
-        private TextMeshProUGUI ExplainerText;
+        private AbilityExplainer AbilityExplainer;
         
         private AbilityItemInstance PickedUpItem;
 
@@ -37,14 +34,9 @@ namespace Octobass.Waves.Ability
                 Debug.LogWarning("[AbilityController]: AnimationController not set");
             }
 
-            if (ExplainerRoot == null)
+            if (AbilityExplainer == null)
             {
-                Debug.LogWarning("[AbilityController]: ExplainerRoot not set");
-            }
-
-            if (ExplainerText == null)
-            {
-                Debug.LogWarning("[AbilityController]: ExplainerText not set");
+                Debug.LogWarning("[AbilityController]: AbilityExplainer not set");
             }
         }
 
@@ -67,15 +59,12 @@ namespace Octobass.Waves.Ability
 
         public void OnUpgradeAnimationEnd()
         {
-            ExplainerRoot.SetActive(true);
-            ExplainerText.text = PickedUpItem.Ability.Explainer;
+            AbilityExplainer.Explain(PickedUpItem.Ability);
         }
 
-        public void OnUpgradeExplainerDismissed()
+        public void EndUpgrade()
         {
             PickedUpItem = null;
-            ExplainerRoot.SetActive(false);
-            ExplainerText.text = "";
             MovementController.Unfreeze();
             OnUpgradeEnd.Invoke();
         }

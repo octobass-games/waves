@@ -639,10 +639,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.21354167
+    y: 0.06666666
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1931,6 +1931,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1183648943}
     - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: AbilityExplainer
+      value: 
+      objectReference: {fileID: 1448142540}
+    - target: {fileID: 3985318897784524841, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnUpgradeEnd.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2066,6 +2070,14 @@ PrefabInstance:
       propertyPath: upgradeSFX
       value: event:/SFX/upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 5700833244494442763, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: ExplainerRoot
+      value: 
+      objectReference: {fileID: 1230198144}
+    - target: {fileID: 5700833244494442763, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: ExplainerText
+      value: 
+      objectReference: {fileID: 1183648943}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: CameraSwitcher
       value: 
@@ -3799,6 +3811,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4c7ec9c59b2444392ae6b04e8cb9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.LoreInspector
+--- !u!114 &1448142540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5700833244494442763, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+  m_PrefabInstance: {fileID: 1047319392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448142502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32086595bcf15c4f8402ce5759bee5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityExplainer
 --- !u!1 &1535715691
 GameObject:
   m_ObjectHideFlags: 0

@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 215965231412949391}
   - component: {fileID: 8439476345112410444}
   - component: {fileID: 6640141045396107075}
+  - component: {fileID: 5700833244494442763}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -214,8 +215,7 @@ MonoBehaviour:
       m_Calls: []
   MovementController: {fileID: 7789577042043984978}
   AnimationController: {fileID: 4136274269782190093}
-  ExplainerRoot: {fileID: 0}
-  ExplainerText: {fileID: 0}
+  AbilityExplainer: {fileID: 0}
 --- !u!50 &6662430300472696404
 Rigidbody2D:
   serializedVersion: 5
@@ -346,7 +346,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 525822917
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2963520031981614635, guid: 24abfcff8dd7fbd41ae255667fa0a93c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -416,7 +416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.SpawnTracker
   MovementController: {fileID: 7789577042043984978}
-  Spawns: []
+  CameraSwitcher: {fileID: 0}
+  SpawnPointRoomBindings: []
 --- !u!114 &4374423792661856508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +436,9 @@ MonoBehaviour:
   upgradeSFX: 
   landSFX: 
   dashSFX: 
+  deathSFX: 
+  respawnSFX: 
+  tpSFX: 
 --- !u!114 &402517801013150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,6 +542,21 @@ MonoBehaviour:
   AnimationController: {fileID: 4136274269782190093}
   MovementController: {fileID: 7789577042043984978}
   SpawnTracker: {fileID: 5931426664578809513}
+--- !u!114 &5700833244494442763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32086595bcf15c4f8402ce5759bee5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityExplainer
+  AbilityController: {fileID: 3985318897784524841}
+  ExplainerRoot: {fileID: 0}
+  ExplainerText: {fileID: 0}
 --- !u!1 &2319988461481833929
 GameObject:
   m_ObjectHideFlags: 0
