@@ -19,7 +19,7 @@ namespace Octobass.Waves.Movement
             ImpulseApplied = false;
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
+        public override StateSnapshot Tick(StateSnapshot previousSnapshot, MovementDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             Vector2 velocity = driverSnapshot.Movement.ProjectX() * Config.AirMovementSpeedModifier * Config.Speed;
 

@@ -42,7 +42,7 @@ namespace Octobass.Waves.Attack
             EndAttack();
         }
 
-        public AttackSnapshot Tick(CharacterController2DDriverSnapshot driverSnapshot, MovementSnapshot movementSnapshot)
+        public AttackSnapshot Tick(MovementDriverSnapshot driverSnapshot, MovementSnapshot movementSnapshot)
         {
             bool changedFacingDirection = FacingDirection != movementSnapshot.FacingDirection;
 

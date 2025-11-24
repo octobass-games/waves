@@ -47,7 +47,7 @@ namespace Octobass.Waves.Movement
             CurrentState = StateRegistry[CharacterStateId.Grounded];
         }
 
-        public MovementSnapshot Tick(CharacterController2DDriverSnapshot driverSnapshot)
+        public MovementSnapshot Tick(MovementDriverSnapshot driverSnapshot)
         {
             if (IsFrozen)
             {
@@ -147,7 +147,7 @@ namespace Octobass.Waves.Movement
             IsFrozen = false;
         }
 
-        private CharacterStateId? GetNextTransition(CharacterController2DDriverSnapshot driverSnapshot)
+        private CharacterStateId? GetNextTransition(MovementDriverSnapshot driverSnapshot)
         {
             if (MovementStateTransitionRegistry.Transitions.TryGetValue(CurrentStateId, out List<MovementStateTransition> transitions))
             {
@@ -167,7 +167,7 @@ namespace Octobass.Waves.Movement
             return null;
         }
 
-        private Vector2 GetFacingDirection(Vector2 displacement, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
+        private Vector2 GetFacingDirection(Vector2 displacement, MovementDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             if (CurrentStateId == CharacterStateId.WallClimb || CurrentStateId == CharacterStateId.WallSlide)
             {

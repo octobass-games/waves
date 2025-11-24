@@ -22,7 +22,7 @@ namespace Octobass.Waves.Movement
             Direction = CollisionDetector.IsTouchingRightWall() ? Vector2.right : Vector2.left;
         }
 
-        public override StateSnapshot Tick(StateSnapshot previousSnapshot, CharacterController2DDriverSnapshot driverSnapshot, Vector2 facingDirection)
+        public override StateSnapshot Tick(StateSnapshot previousSnapshot, MovementDriverSnapshot driverSnapshot, Vector2 facingDirection)
         {
             // TODO: Have to snap to ground
             if (!CollisionDetector.IsYCoordinateGreaterThanOrEqualTo(LedgeClimbTargetPosition.Value.y) && !CollisionDetector.IsTouchingCeiling())

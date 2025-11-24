@@ -10,9 +10,9 @@ namespace Octobass.Waves.Movement
         public AttackController AttackController;
         public AnimationController AnimationController;
 
-        public CharacterController2DDriver Driver;
+        public MovementDriver Driver;
 
-        private CharacterController2DDriverSnapshot DriverSnapshot = new();
+        private MovementDriverSnapshot DriverSnapshot = new();
         private MovementSnapshot MovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
         private AttackSnapshot AttackSnapshot = new(false);
 
