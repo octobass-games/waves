@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d29ceea822bc743be0c88967eaf3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.MapRenderer
+  PlayerInput: {fileID: 0}
   RoomRenderers:
   - {fileID: 5616713544566617856}
   - {fileID: 662554316483798469}
@@ -1232,6 +1233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7368589003342350629}
     m_Modifications:
+    - target: {fileID: 1373385308838842617, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5828183521677295596, guid: 2eec9c57deaa7fd489f23e074d81dd58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

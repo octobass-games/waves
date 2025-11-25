@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &167694381676598619
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &844433710512300150
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +479,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
+--- !u!1 &1373385308838842617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5934388345441213329}
+  - component: {fileID: 8684936124676241804}
+  - component: {fileID: 5642282980755137271}
+  m_Layer: 0
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5934388345441213329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373385308838842617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5828183521677295596}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 45, y: -60}
+  m_SizeDelta: {x: 234, y: 162}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8684936124676241804
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373385308838842617}
+  m_CullTransparentMesh: 1
+--- !u!114 &5642282980755137271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373385308838842617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -57055696321173974, guid: 2f2cff702e115434ead5394dd7f20b34, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1376121809054117904
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &2077737920099579559
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &2492755216075307807
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &2667981553263391795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &2674396426318320444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &2714645348038102555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &2751847022393753575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &3037072642860946318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,7 +1738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &3102392378003901502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &3194965490901157811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +2034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &3266101048564249736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,7 +2182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &3654026838241221447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,7 +2330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &3708304238580797312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,7 +2478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &3722729344948839013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,7 +2626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &4058179307962250320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2716,7 +2774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &4167424356093699165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,7 +2957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &4356393601945832305
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,7 +3105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &4456581391793190085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &4630105667973763949
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,7 +3444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &4702241371243222136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,7 +3592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5060649222990646184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,7 +3780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5179747639772641320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5340602997253301046
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,7 +4076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5517343932623356703
 GameObject:
   m_ObjectHideFlags: 0
@@ -4175,7 +4224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5596369403667205566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,7 +4372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5828838551489716304
 GameObject:
   m_ObjectHideFlags: 0
@@ -4473,7 +4520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5917884756773429892
 GameObject:
   m_ObjectHideFlags: 0
@@ -4622,7 +4668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &5954782043591366560
 GameObject:
   m_ObjectHideFlags: 0
@@ -4652,6 +4697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5934388345441213329}
   - {fileID: 2587805122944058306}
   - {fileID: 2062924154452071914}
   - {fileID: 5955483686069882023}
@@ -4810,7 +4856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6046773292736677011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,7 +5004,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6142592127557735690
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,7 +5152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6343375995813288446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,7 +5300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6514867356149040651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5406,7 +5448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6588343456490347725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5555,7 +5596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6634691101473571266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,7 +5744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6651768987701968823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5853,7 +5892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6725313581882267632
 GameObject:
   m_ObjectHideFlags: 0
@@ -6002,7 +6040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &6964252628186704702
 GameObject:
   m_ObjectHideFlags: 0
@@ -6188,7 +6225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &7020079939627391610
 GameObject:
   m_ObjectHideFlags: 0
@@ -6409,7 +6445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &8142281250399070852
 GameObject:
   m_ObjectHideFlags: 0
@@ -6558,7 +6593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &8416401595674192205
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,7 +6741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &8489183806891412547
 GameObject:
   m_ObjectHideFlags: 0
@@ -6856,7 +6889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &8595433166119867546
 GameObject:
   m_ObjectHideFlags: 0
@@ -7005,7 +7037,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &8735781857902039346
 GameObject:
   m_ObjectHideFlags: 0
@@ -7188,7 +7219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &9046350781880908247
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,7 +7367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1 &9146052046112662154
 GameObject:
   m_ObjectHideFlags: 0
@@ -7486,7 +7515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  Teleporter: {fileID: 0}
 --- !u!1001 &32907625304241354
 PrefabInstance:
   m_ObjectHideFlags: 0
