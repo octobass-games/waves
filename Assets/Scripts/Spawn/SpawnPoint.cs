@@ -1,3 +1,4 @@
+using Octobass.Waves.Map;
 using UnityEngine;
 
 namespace Octobass.Waves.Spawn
@@ -5,6 +6,7 @@ namespace Octobass.Waves.Spawn
     public class SpawnPoint : MonoBehaviour
     {
         public string Name;
+        public RoomId Room;
 
         public bool AutoTrack = true;
 
@@ -20,6 +22,14 @@ namespace Octobass.Waves.Spawn
                 {
                     Debug.Log("[SpawnPoint]: Could not find SpawnTracker");
                 }
+            }
+        }
+
+        void OnValidate()
+        {
+            if (string.IsNullOrEmpty(Name))
+            {
+                Name = System.Guid.NewGuid().ToString();
             }
         }
     }

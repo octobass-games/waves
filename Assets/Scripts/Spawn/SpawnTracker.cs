@@ -2,6 +2,7 @@ using Octobass.Waves.Camera;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Save;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Octobass.Waves.Spawn
@@ -15,9 +16,9 @@ namespace Octobass.Waves.Spawn
         private CameraSwitcher CameraSwitcher;
 
         [SerializeField]
-        private List<SpawnPointRoomBinding> SpawnPointRoomBindings;
+        private SpawnPoint DefaultSpawnPoint;
 
-        private SpawnPointRoomBinding CurrentSpawnPointRoomBinding;
+        private SpawnPoint CurrentSpawnPoint;
 
         private const string SpawnPointSaveKey = "spawn-point";
 
@@ -31,11 +32,11 @@ namespace Octobass.Waves.Spawn
 
         public void Respawn()
         {
-            if (CurrentSpawnPointRoomBinding != null)
+            if (CurrentSpawnPoint != null)
             {
-                Vector2 bottomOfSpawnPoint = new(CurrentSpawnPointRoomBinding.SpawnPoint.transform.position.x, CurrentSpawnPointRoomBinding.SpawnPoint.GetComponent<BoxCollider2D>().bounds.min.y);
+                Vector2 bottomOfSpawnPoint = new(CurrentSpawnPoint.transform.position.x, CurrentSpawnPoint.GetComponent<BoxCollider2D>().bounds.min.y);
                 MovementController.ResetAtPosition(bottomOfSpawnPoint);
-                CameraSwitcher.OnRoomEntered(CurrentSpawnPointRoomBinding.Room);
+                CameraSwitcher.OnRoomEntered(CurrentSpawnPoint.Room);
             }
             else
             {
@@ -45,31 +46,24 @@ namespace Octobass.Waves.Spawn
 
         public void SetSpawnPoint(SpawnPoint spawnPoint)
         {
-            SpawnPointRoomBinding spawnPointRoomBinding = SpawnPointRoomBindings.Find(spawnPointRoomBinding => spawnPointRoomBinding.SpawnPoint == spawnPoint);
-
-            if (spawnPointRoomBinding != null)
-            {
-                CurrentSpawnPointRoomBinding = spawnPointRoomBinding;
-            }
-            else
-            {
-                Debug.Log($"[SpawnTracker]: Could not find binding for SpawnPoint - {spawnPoint.name}");
-            }
+            CurrentSpawnPoint = spawnPoint;
         }
 
         public void Load(SaveData saveData)
         {
             string spawnPointName = saveData.Load<string>(SpawnPointSaveKey);
-            SpawnPointRoomBinding spawnPointRoomBinding = SpawnPointRoomBindings.Find(spawnPointRoomBinding => spawnPointRoomBinding.SpawnPoint.Name == spawnPointName);
 
-            if (spawnPointRoomBinding != null)
+            List<SpawnPoint> spawnPoints = FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None).ToList();
+            SpawnPoint spawnPoint = spawnPoints.Find(spawnPoint => spawnPoint.Name == spawnPointName);
+
+            if (spawnPoint != null)
             {
-                CurrentSpawnPointRoomBinding = spawnPointRoomBinding;
+                CurrentSpawnPoint = spawnPoint;
             }
             else
             {
                 Debug.Log($"[SpawnTracker]: SpawnPoint not found with name - {spawnPointName}");
-                CurrentSpawnPointRoomBinding = SpawnPointRoomBindings[0];
+                CurrentSpawnPoint = DefaultSpawnPoint;
             }
 
             Respawn();
@@ -77,7 +71,10 @@ namespace Octobass.Waves.Spawn
 
         public void Save(SaveData saveData)
         {
-            saveData.Add(SpawnPointSaveKey, CurrentSpawnPointRoomBinding.SpawnPoint.Name);
+            if (CurrentSpawnPoint != null)
+            {
+                saveData.Add(SpawnPointSaveKey, CurrentSpawnPoint.Name);
+            }
         }
     }
 }

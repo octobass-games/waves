@@ -727,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 393106800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.91093, y: -0.000000063304014, z: -1}
+  m_LocalPosition: {x: -76.10536, y: -0.000000063304014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2177,6 +2177,10 @@ PrefabInstance:
       propertyPath: CameraSwitcher
       value: 
       objectReference: {fileID: 393106807}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: DefaultSpawnPoint
+      value: 
+      objectReference: {fileID: 9155442939798803096}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: Spawns.Array.size
       value: 11
@@ -9310,7 +9314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.524263
+      value: 5.2519536
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
