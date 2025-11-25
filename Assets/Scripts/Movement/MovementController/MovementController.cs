@@ -23,6 +23,9 @@ namespace Octobass.Waves.Movement
         private bool IsFrozen;
         private List<CharacterStateId> UnlockedStates = new();
 
+        private const string HasNoStaffAnimatorBool = "HasNoStaff";
+        private const string SaveKey = "unlocked-states";
+
         void Awake()
         {
             CollisionDetector = new MovementControllerCollisionDetector(Body, CharacterControllerConfig);
@@ -113,7 +116,7 @@ namespace Octobass.Waves.Movement
                         
                         if (TryGetComponent(out Animator animator))
                         {
-                            animator.SetBool("HasNoStaff", false);
+                            animator.SetBool(HasNoStaffAnimatorBool, false);
                         }
                         else
                         {
@@ -204,12 +207,12 @@ namespace Octobass.Waves.Movement
 
         public void Save(SaveData saveData)
         {
-            saveData.Add("unlocked-states", UnlockedStates);
+            saveData.Add(SaveKey, UnlockedStates);
         }
 
         public void Load(SaveData saveData)
         {
-            List<CharacterStateId> unlockedStates = saveData.Load<List<CharacterStateId>>("unlocked-states");
+            List<CharacterStateId> unlockedStates = saveData.Load<List<CharacterStateId>>(SaveKey);
 
             foreach (CharacterStateId state in unlockedStates)
             {
