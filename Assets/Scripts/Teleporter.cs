@@ -1,21 +1,22 @@
 using Octobass.Waves;
 using Octobass.Waves.Map;
 using Octobass.Waves.Save;
+using Octobass.Waves.Spawn;
 using UnityEngine;
 
 public class Teleporter : MonoBehaviour, ISavable
 {
     [SerializeField]
-    private RoomId Name;
+    private RoomId Room;
 
     [SerializeField]
     private Animator Animator;
 
     [SerializeField]
-    private TeleportController TeleportController;
+    private AudioOneShot Audio;
 
     [SerializeField]
-    private AudioOneShot Audio;
+    private SpawnPoint SpawnPoint;
 
     private string SaveKey;
 
@@ -23,12 +24,7 @@ public class Teleporter : MonoBehaviour, ISavable
 
     void Awake()
     {
-        SaveKey = $"teleporter-{Name}";
-
-        if (TeleportController == null)
-        {
-            Debug.LogWarning($"[Teleporter]: TeleportController not set for {gameObject.name}");
-        }
+        SaveKey = $"teleporter-{Room}";
     }
 
     public void Interact()
@@ -45,13 +41,13 @@ public class Teleporter : MonoBehaviour, ISavable
 
                 if (cartographer != null)
                 {
-                    cartographer.OnTeleporterUnlocked(Name);
+                    cartographer.OnTeleporterUnlocked(Room);
                 }
             }
         }
         else
         {
-            TeleportController.BeginTeleport();
+            ServiceLocator.Instance.Get<TeleportController>().BeginTeleport();
         }
     }
 
@@ -63,6 +59,11 @@ public class Teleporter : MonoBehaviour, ISavable
         {
             Unlock();
         }
+    }
+
+    public RoomId GetRoom()
+    {
+        return Room;
     }
 
     public void Save(SaveData saveData)

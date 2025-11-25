@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
-  Name: 
+  Name: fc4d1624-c429-4d8e-970f-ea53b835169c
+  Room: 28
   AutoTrack: 1
 --- !u!61 &6250408540567972925
 BoxCollider2D:
@@ -326,10 +327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2265523e5c605524f8e33473c5396efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Teleporter
-  Name: 0
+  Room: 0
   Animator: {fileID: 3412939388216648953}
-  TeleportController: {fileID: 0}
   Audio: {fileID: 8283292708231087785}
+  SpawnPoint: {fileID: 1922149762785621943}
 --- !u!114 &5421151400227971535
 MonoBehaviour:
   m_ObjectHideFlags: 0

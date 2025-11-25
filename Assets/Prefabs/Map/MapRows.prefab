@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 793266638727230795}
   - component: {fileID: 4306268155834661771}
   - component: {fileID: 4253366244520980605}
+  - component: {fileID: 2475898470524593204}
   m_Layer: 0
   m_Name: b9
   m_TagString: Untagged
@@ -135,6 +136,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2475898470524593204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128103963982944656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &167694381676598619
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +197,7 @@ GameObject:
   - component: {fileID: 4203197894706083192}
   - component: {fileID: 7105563802618355758}
   - component: {fileID: 715267751319055552}
+  - component: {fileID: 7073442979262338503}
   m_Layer: 0
   m_Name: d8
   m_TagString: Untagged
@@ -305,6 +320,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7073442979262338503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664534409887724066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &844433710512300150
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +346,7 @@ GameObject:
   - component: {fileID: 4432873246321198232}
   - component: {fileID: 1542769810626881771}
   - component: {fileID: 9032175427985525934}
+  - component: {fileID: 7001689775089812535}
   m_Layer: 0
   m_Name: c9
   m_TagString: Untagged
@@ -440,6 +469,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7001689775089812535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844433710512300150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &1376121809054117904
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +495,7 @@ GameObject:
   - component: {fileID: 8523722181090032057}
   - component: {fileID: 2286785852664879364}
   - component: {fileID: 6449904182748406686}
+  - component: {fileID: 8366344794924908573}
   m_Layer: 0
   m_Name: b6
   m_TagString: Untagged
@@ -575,6 +618,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8366344794924908573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376121809054117904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &2077737920099579559
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +644,7 @@ GameObject:
   - component: {fileID: 770488464449479189}
   - component: {fileID: 9106005277888549142}
   - component: {fileID: 8944046577882736638}
+  - component: {fileID: 705263404553724753}
   m_Layer: 0
   m_Name: c10
   m_TagString: Untagged
@@ -710,6 +767,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &705263404553724753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077737920099579559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &2492755216075307807
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +793,7 @@ GameObject:
   - component: {fileID: 4355135329569248024}
   - component: {fileID: 7129660596875897352}
   - component: {fileID: 8537615074388968949}
+  - component: {fileID: 1359634598722147915}
   m_Layer: 0
   m_Name: a4
   m_TagString: Untagged
@@ -845,6 +916,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1359634598722147915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2492755216075307807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &2667981553263391795
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +942,7 @@ GameObject:
   - component: {fileID: 998391207287791862}
   - component: {fileID: 7036549282455492174}
   - component: {fileID: 5196888310686090042}
+  - component: {fileID: 2219790490665106903}
   m_Layer: 0
   m_Name: e5
   m_TagString: Untagged
@@ -980,6 +1065,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2219790490665106903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2667981553263391795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &2674396426318320444
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +1091,7 @@ GameObject:
   - component: {fileID: 6855028019585094221}
   - component: {fileID: 6724545679428927592}
   - component: {fileID: 4979802504651508972}
+  - component: {fileID: 6901814292877451847}
   m_Layer: 0
   m_Name: a9
   m_TagString: Untagged
@@ -1115,6 +1214,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6901814292877451847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674396426318320444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &2714645348038102555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1240,7 @@ GameObject:
   - component: {fileID: 6364065497337266588}
   - component: {fileID: 2717394351270572161}
   - component: {fileID: 4762576945726326747}
+  - component: {fileID: 9030134100330483563}
   m_Layer: 0
   m_Name: c8
   m_TagString: Untagged
@@ -1250,6 +1363,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9030134100330483563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714645348038102555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &2751847022393753575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1389,7 @@ GameObject:
   - component: {fileID: 7939591938094917626}
   - component: {fileID: 5354231961390822615}
   - component: {fileID: 8885389769288630131}
+  - component: {fileID: 6728368642963496128}
   m_Layer: 0
   m_Name: d5
   m_TagString: Untagged
@@ -1385,6 +1512,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6728368642963496128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751847022393753575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &3037072642860946318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1538,7 @@ GameObject:
   - component: {fileID: 2119653522842886541}
   - component: {fileID: 5652320914211293551}
   - component: {fileID: 2844296395697276}
+  - component: {fileID: 5689198013565222816}
   m_Layer: 0
   m_Name: h7
   m_TagString: Untagged
@@ -1520,6 +1661,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5689198013565222816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037072642860946318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &3102392378003901502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,6 +1687,7 @@ GameObject:
   - component: {fileID: 8347474739735352228}
   - component: {fileID: 2414419688222293139}
   - component: {fileID: 3196445493117709146}
+  - component: {fileID: 1412651506060248854}
   m_Layer: 0
   m_Name: d12
   m_TagString: Untagged
@@ -1655,6 +1810,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1412651506060248854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102392378003901502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &3194965490901157811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,6 +1836,7 @@ GameObject:
   - component: {fileID: 7200558993858976921}
   - component: {fileID: 1563160494687692072}
   - component: {fileID: 7069248984711035424}
+  - component: {fileID: 997825502134786290}
   m_Layer: 0
   m_Name: b4
   m_TagString: Untagged
@@ -1790,6 +1959,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &997825502134786290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3194965490901157811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &3266101048564249736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1985,7 @@ GameObject:
   - component: {fileID: 4422078453268999490}
   - component: {fileID: 9072477651702016188}
   - component: {fileID: 6538817666474077273}
+  - component: {fileID: 7227160330732755692}
   m_Layer: 0
   m_Name: e10
   m_TagString: Untagged
@@ -1925,6 +2108,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7227160330732755692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266101048564249736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &3654026838241221447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,6 +2134,7 @@ GameObject:
   - component: {fileID: 1688549641650913574}
   - component: {fileID: 6809699419158034914}
   - component: {fileID: 5576913372122107742}
+  - component: {fileID: 2026679798870962955}
   m_Layer: 0
   m_Name: a6
   m_TagString: Untagged
@@ -2060,6 +2257,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2026679798870962955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654026838241221447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &3708304238580797312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2283,7 @@ GameObject:
   - component: {fileID: 8194176514154907620}
   - component: {fileID: 4035386491751581886}
   - component: {fileID: 3009267246901137394}
+  - component: {fileID: 5563929810771445909}
   m_Layer: 0
   m_Name: d7
   m_TagString: Untagged
@@ -2195,6 +2406,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5563929810771445909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708304238580797312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &3722729344948839013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,6 +2432,7 @@ GameObject:
   - component: {fileID: 241258270863214406}
   - component: {fileID: 8682346411341622147}
   - component: {fileID: 6727417056103251821}
+  - component: {fileID: 4633823180720010397}
   m_Layer: 0
   m_Name: d9
   m_TagString: Untagged
@@ -2330,6 +2555,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4633823180720010397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722729344948839013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &4058179307962250320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,6 +2581,7 @@ GameObject:
   - component: {fileID: 5987624251235125730}
   - component: {fileID: 8046877815718416026}
   - component: {fileID: 832341454488761532}
+  - component: {fileID: 4899532246152550979}
   m_Layer: 0
   m_Name: e9
   m_TagString: Untagged
@@ -2465,6 +2704,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4899532246152550979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058179307962250320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &4167424356093699165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,6 +2765,7 @@ GameObject:
   - component: {fileID: 7551227779094025208}
   - component: {fileID: 6903314598374755299}
   - component: {fileID: 7194287257404947091}
+  - component: {fileID: 4729827908729074111}
   m_Layer: 0
   m_Name: a7
   m_TagString: Untagged
@@ -2635,6 +2888,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4729827908729074111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242475667751175471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &4356393601945832305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,6 +2914,7 @@ GameObject:
   - component: {fileID: 8532662705066541955}
   - component: {fileID: 5875385114742967883}
   - component: {fileID: 2916602592513459119}
+  - component: {fileID: 6877705123077455537}
   m_Layer: 0
   m_Name: e1
   m_TagString: Untagged
@@ -2770,6 +3037,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6877705123077455537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356393601945832305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &4456581391793190085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,6 +3106,7 @@ GameObject:
   - component: {fileID: 2847054017663822423}
   - component: {fileID: 7199063857213586323}
   - component: {fileID: 8287835043222535859}
+  - component: {fileID: 919490051294834248}
   m_Layer: 0
   m_Name: e4
   m_TagString: Untagged
@@ -2948,6 +3229,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &919490051294834248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563424664282466246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &4630105667973763949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,6 +3255,7 @@ GameObject:
   - component: {fileID: 6326338912607242118}
   - component: {fileID: 7924530376878600308}
   - component: {fileID: 3669707364329537501}
+  - component: {fileID: 3853165349489955263}
   m_Layer: 0
   m_Name: g4
   m_TagString: Untagged
@@ -3083,6 +3378,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3853165349489955263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630105667973763949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &4702241371243222136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,6 +3404,7 @@ GameObject:
   - component: {fileID: 4090661095302777651}
   - component: {fileID: 8767182051892368468}
   - component: {fileID: 3342877054142630764}
+  - component: {fileID: 9124671332334115855}
   m_Layer: 0
   m_Name: d6
   m_TagString: Untagged
@@ -3218,6 +3527,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9124671332334115855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702241371243222136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5060649222990646184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,6 +3593,7 @@ GameObject:
   - component: {fileID: 8621709890484996490}
   - component: {fileID: 4096861354238348906}
   - component: {fileID: 2773380316880127263}
+  - component: {fileID: 124296033988591024}
   m_Layer: 0
   m_Name: g5
   m_TagString: Untagged
@@ -3393,6 +3716,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &124296033988591024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168096159459834069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5179747639772641320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,6 +3742,7 @@ GameObject:
   - component: {fileID: 3656625251030709999}
   - component: {fileID: 185218099738165887}
   - component: {fileID: 8973171614693012754}
+  - component: {fileID: 6529370131052322103}
   m_Layer: 0
   m_Name: c6
   m_TagString: Untagged
@@ -3528,6 +3865,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6529370131052322103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179747639772641320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5340602997253301046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +3891,7 @@ GameObject:
   - component: {fileID: 3467151743355475666}
   - component: {fileID: 5401931652169600396}
   - component: {fileID: 8829982782091836550}
+  - component: {fileID: 3545743799621661338}
   m_Layer: 0
   m_Name: f5
   m_TagString: Untagged
@@ -3663,6 +4014,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3545743799621661338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5340602997253301046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5517343932623356703
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,6 +4040,7 @@ GameObject:
   - component: {fileID: 7791887661107188212}
   - component: {fileID: 7083042692093140287}
   - component: {fileID: 5562407103488409745}
+  - component: {fileID: 2840489823029695946}
   m_Layer: 0
   m_Name: e12
   m_TagString: Untagged
@@ -3798,6 +4163,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2840489823029695946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517343932623356703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5596369403667205566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,6 +4189,7 @@ GameObject:
   - component: {fileID: 8528266514523992734}
   - component: {fileID: 5881847934159700902}
   - component: {fileID: 2605780462319637986}
+  - component: {fileID: 4769142172170044419}
   m_Layer: 0
   m_Name: c5
   m_TagString: Untagged
@@ -3933,6 +4312,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4769142172170044419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596369403667205566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5828838551489716304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,6 +4338,7 @@ GameObject:
   - component: {fileID: 6328157424793359420}
   - component: {fileID: 9041278359948150548}
   - component: {fileID: 7507692813179745401}
+  - component: {fileID: 6159057060584535894}
   m_Layer: 0
   m_Name: c12
   m_TagString: Untagged
@@ -4068,6 +4461,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6159057060584535894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5828838551489716304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5917884756773429892
 GameObject:
   m_ObjectHideFlags: 0
@@ -4081,6 +4487,7 @@ GameObject:
   - component: {fileID: 3464384956806653614}
   - component: {fileID: 7284267160771754665}
   - component: {fileID: 4649075065270936109}
+  - component: {fileID: 4147842035864606350}
   m_Layer: 0
   m_Name: f7
   m_TagString: Untagged
@@ -4203,6 +4610,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4147842035864606350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917884756773429892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &5954782043591366560
 GameObject:
   m_ObjectHideFlags: 0
@@ -4255,6 +4675,7 @@ GameObject:
   - component: {fileID: 57884700965023178}
   - component: {fileID: 9203842277580192077}
   - component: {fileID: 1042102799569934370}
+  - component: {fileID: 3333680156968385182}
   m_Layer: 0
   m_Name: e6
   m_TagString: Untagged
@@ -4377,6 +4798,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3333680156968385182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032226467692288019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6046773292736677011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +4824,7 @@ GameObject:
   - component: {fileID: 2619818903355085861}
   - component: {fileID: 7270692856970708306}
   - component: {fileID: 4899791053745341082}
+  - component: {fileID: 3750981770108470330}
   m_Layer: 0
   m_Name: c4
   m_TagString: Untagged
@@ -4512,6 +4947,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3750981770108470330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6046773292736677011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6142592127557735690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4525,6 +4973,7 @@ GameObject:
   - component: {fileID: 792229724322752533}
   - component: {fileID: 9140974369708268963}
   - component: {fileID: 2295895718089256204}
+  - component: {fileID: 7237052763198465214}
   m_Layer: 0
   m_Name: g7
   m_TagString: Untagged
@@ -4647,6 +5096,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7237052763198465214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6142592127557735690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6343375995813288446
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,6 +5122,7 @@ GameObject:
   - component: {fileID: 617948061409226935}
   - component: {fileID: 3110055792544880839}
   - component: {fileID: 4446670940106935212}
+  - component: {fileID: 8252944504830687368}
   m_Layer: 0
   m_Name: d2
   m_TagString: Untagged
@@ -4782,6 +5245,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8252944504830687368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343375995813288446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6514867356149040651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,6 +5271,7 @@ GameObject:
   - component: {fileID: 9084691964497768216}
   - component: {fileID: 9194868811282508249}
   - component: {fileID: 9119244191873274141}
+  - component: {fileID: 7282670938151365240}
   m_Layer: 0
   m_Name: g3
   m_TagString: Untagged
@@ -4917,6 +5394,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7282670938151365240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514867356149040651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6588343456490347725
 GameObject:
   m_ObjectHideFlags: 0
@@ -4930,6 +5420,7 @@ GameObject:
   - component: {fileID: 1748213155386582323}
   - component: {fileID: 6509744273484204749}
   - component: {fileID: 6341800911830828606}
+  - component: {fileID: 6267175431232741394}
   m_Layer: 0
   m_Name: e8
   m_TagString: Untagged
@@ -5052,6 +5543,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6267175431232741394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588343456490347725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6634691101473571266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5065,6 +5569,7 @@ GameObject:
   - component: {fileID: 6146785863014588489}
   - component: {fileID: 4238853398021753733}
   - component: {fileID: 3574909101717061508}
+  - component: {fileID: 7998684195359026242}
   m_Layer: 0
   m_Name: e3
   m_TagString: Untagged
@@ -5187,6 +5692,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7998684195359026242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6634691101473571266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6651768987701968823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,6 +5718,7 @@ GameObject:
   - component: {fileID: 4508702027740447620}
   - component: {fileID: 6629418775066855521}
   - component: {fileID: 2980913203482402185}
+  - component: {fileID: 7840430658074327132}
   m_Layer: 0
   m_Name: e2
   m_TagString: Untagged
@@ -5322,6 +5841,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7840430658074327132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651768987701968823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6725313581882267632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,6 +5867,7 @@ GameObject:
   - component: {fileID: 4134784123866813500}
   - component: {fileID: 955548888309202098}
   - component: {fileID: 6486497508507121287}
+  - component: {fileID: 7749236832603787804}
   m_Layer: 0
   m_Name: b8
   m_TagString: Untagged
@@ -5457,6 +5990,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7749236832603787804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725313581882267632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &6964252628186704702
 GameObject:
   m_ObjectHideFlags: 0
@@ -5507,6 +6053,7 @@ GameObject:
   - component: {fileID: 3964828440143409017}
   - component: {fileID: 4190586318524246447}
   - component: {fileID: 7404835778192330008}
+  - component: {fileID: 3333351072086579754}
   m_Layer: 0
   m_Name: e11
   m_TagString: Untagged
@@ -5629,6 +6176,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3333351072086579754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6974163340419251773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &7020079939627391610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5714,6 +6274,7 @@ GameObject:
   - component: {fileID: 804514247807763399}
   - component: {fileID: 1780016082402554301}
   - component: {fileID: 8613996443458848148}
+  - component: {fileID: 502478053871522990}
   m_Layer: 0
   m_Name: d3
   m_TagString: Untagged
@@ -5836,6 +6397,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &502478053871522990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596362516037256036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &8142281250399070852
 GameObject:
   m_ObjectHideFlags: 0
@@ -5849,6 +6423,7 @@ GameObject:
   - component: {fileID: 7473632970000610729}
   - component: {fileID: 3959352463653107385}
   - component: {fileID: 6314489826844716523}
+  - component: {fileID: 8375198567936100382}
   m_Layer: 0
   m_Name: f3
   m_TagString: Untagged
@@ -5971,6 +6546,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8375198567936100382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142281250399070852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &8416401595674192205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5984,6 +6572,7 @@ GameObject:
   - component: {fileID: 2920217736696934424}
   - component: {fileID: 1473844539302037867}
   - component: {fileID: 5516752658388102726}
+  - component: {fileID: 289199441336888556}
   m_Layer: 0
   m_Name: d4
   m_TagString: Untagged
@@ -6106,6 +6695,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &289199441336888556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416401595674192205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &8489183806891412547
 GameObject:
   m_ObjectHideFlags: 0
@@ -6119,6 +6721,7 @@ GameObject:
   - component: {fileID: 6291718279960071568}
   - component: {fileID: 646396174551786842}
   - component: {fileID: 2997227254752742537}
+  - component: {fileID: 1146295639185559695}
   m_Layer: 0
   m_Name: a5
   m_TagString: Untagged
@@ -6241,6 +6844,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1146295639185559695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489183806891412547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &8595433166119867546
 GameObject:
   m_ObjectHideFlags: 0
@@ -6254,6 +6870,7 @@ GameObject:
   - component: {fileID: 7344447769553317923}
   - component: {fileID: 6065327265997784459}
   - component: {fileID: 2414521214169629026}
+  - component: {fileID: 6621353436858250665}
   m_Layer: 0
   m_Name: c11
   m_TagString: Untagged
@@ -6376,6 +6993,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6621353436858250665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595433166119867546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &8735781857902039346
 GameObject:
   m_ObjectHideFlags: 0
@@ -6423,6 +7053,7 @@ GameObject:
   - component: {fileID: 521498780375754392}
   - component: {fileID: 3124934363714696777}
   - component: {fileID: 2402058469829502008}
+  - component: {fileID: 4724144907440917074}
   m_Layer: 0
   m_Name: a8
   m_TagString: Untagged
@@ -6545,6 +7176,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4724144907440917074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8813928537018267695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &9046350781880908247
 GameObject:
   m_ObjectHideFlags: 0
@@ -6558,6 +7202,7 @@ GameObject:
   - component: {fileID: 4284374793277017805}
   - component: {fileID: 7670491285983854616}
   - component: {fileID: 1687831896358461326}
+  - component: {fileID: 4482306465714226195}
   m_Layer: 0
   m_Name: c3
   m_TagString: Untagged
@@ -6680,6 +7325,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4482306465714226195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9046350781880908247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1 &9146052046112662154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6693,6 +7351,7 @@ GameObject:
   - component: {fileID: 3413874012745243564}
   - component: {fileID: 992378583907774248}
   - component: {fileID: 2527144084890396076}
+  - component: {fileID: 4774197351989103144}
   m_Layer: 0
   m_Name: e7
   m_TagString: Untagged
@@ -6815,6 +7474,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4774197351989103144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146052046112662154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  Teleporter: {fileID: 0}
 --- !u!1001 &32907625304241354
 PrefabInstance:
   m_ObjectHideFlags: 0

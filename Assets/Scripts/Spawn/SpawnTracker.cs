@@ -36,6 +36,7 @@ namespace Octobass.Waves.Spawn
             {
                 Vector2 bottomOfSpawnPoint = new(CurrentSpawnPoint.transform.position.x, CurrentSpawnPoint.GetComponent<BoxCollider2D>().bounds.min.y);
                 MovementController.ResetAtPosition(bottomOfSpawnPoint);
+
                 CameraSwitcher.OnRoomEntered(CurrentSpawnPoint.Room);
             }
             else

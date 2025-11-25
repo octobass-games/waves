@@ -1,6 +1,9 @@
+using Octobass.Waves;
 using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Spawn;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,9 +26,11 @@ public class TeleportController : MonoBehaviour
 
     [SerializeField]
     private PlayerInput PlayerInput;
-    
+
     // Todo: add action for this
     private InputAction CancelTeleportAction;
+
+    private List<Teleporter> Teleporters;
 
     private bool IsTeleporting;
 
@@ -36,7 +41,18 @@ public class TeleportController : MonoBehaviour
             Debug.Log("[TeleportController]: PlayerInput not set");
         }
 
+        if (ServiceLocator.Instance != null)
+        {
+            ServiceLocator.Instance.Register(this);
+        }
+        else
+        {
+            Debug.Log("[TeleportController]: Could not register self with ServiceLocator");
+        }
+
         CancelTeleportAction = PlayerInput.actions.FindAction("Cancel");
+
+        Teleporters = FindObjectsByType<Teleporter>(FindObjectsSortMode.None).ToList();
     }
 
     void Update()
@@ -50,7 +66,7 @@ public class TeleportController : MonoBehaviour
     public void BeginTeleport()
     {
         IsTeleporting = true;
-        
+
         PlayerInput.actions.FindActionMap("Gameplay").Disable();
         PlayerInput.actions.FindActionMap("UI").Enable();
 
@@ -62,10 +78,23 @@ public class TeleportController : MonoBehaviour
         MapRenderer.ShowTeleportMap();
     }
 
-    public void Teleport(SpawnPoint teleportPoint)
+    public void Teleport(RoomId room)
     {
-        SpawnTracker.SetSpawnPoint(teleportPoint);
-        SpawnTracker.Respawn();
+        Teleporter teleport = Teleporters.Find(teleporter => teleporter.GetRoom() == room);
+
+        if (teleport != null)
+        {
+            SpawnPoint spawnPoint = teleport.GetComponentInChildren<SpawnPoint>();
+
+            if (spawnPoint != null)
+            {
+                Debug.Log(spawnPoint.Room);
+
+                SpawnTracker.SetSpawnPoint(spawnPoint);
+                SpawnTracker.Respawn();
+            }
+        }
+
         MapRenderer.ToggleMode();
         IsTeleporting = false;
         Finish();
@@ -78,7 +107,7 @@ public class TeleportController : MonoBehaviour
 
         PlayerInput.actions.FindActionMap("Gameplay").Enable();
         PlayerInput.actions.FindActionMap("UI").Disable();
-        
+
         IsTeleporting = false;
     }
 }
