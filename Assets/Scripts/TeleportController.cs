@@ -19,9 +19,6 @@ public class TeleportController : MonoBehaviour
     private SpawnTracker SpawnTracker;
 
     [SerializeField]
-    private Cartographer Cartographer;
-
-    [SerializeField]
     private Animator Animator;
 
     [SerializeField]

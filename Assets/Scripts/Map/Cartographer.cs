@@ -96,11 +96,14 @@ namespace Octobass.Waves.Map
         {
             Room room = FindRoomById(roomId);
 
-            if (room != null && room.State != RoomState.Visited)
+            if (room != null)
             {
-                room.State = RoomState.Discovered;
+                if (room.State != RoomState.Visited)
+                {
+                    room.State = RoomState.Discovered;
 
-                OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
+                    OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
+                }
             }
             else
             {

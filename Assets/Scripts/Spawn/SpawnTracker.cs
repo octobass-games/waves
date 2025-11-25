@@ -1,4 +1,5 @@
 using Octobass.Waves.Camera;
+using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Save;
 using System.Collections.Generic;
@@ -18,6 +19,9 @@ namespace Octobass.Waves.Spawn
         [SerializeField]
         private SpawnPoint DefaultSpawnPoint;
 
+        [SerializeField]
+        private Cartographer Cartographer;
+
         private SpawnPoint CurrentSpawnPoint;
 
         private const string SpawnPointSaveKey = "spawn-point";
@@ -28,6 +32,11 @@ namespace Octobass.Waves.Spawn
             {
                 Debug.LogWarning("[SpawnTracker]: MovementController not set");
             }
+
+            if (Cartographer == null)
+            {
+                Debug.LogWarning("[SpawnTracker]: Cartographer not set");
+            }
         }
 
         public void Respawn()
@@ -36,8 +45,7 @@ namespace Octobass.Waves.Spawn
             {
                 Vector2 bottomOfSpawnPoint = new(CurrentSpawnPoint.transform.position.x, CurrentSpawnPoint.GetComponent<BoxCollider2D>().bounds.min.y);
                 MovementController.ResetAtPosition(bottomOfSpawnPoint);
-
-                CameraSwitcher.OnRoomEntered(CurrentSpawnPoint.Room);
+                Cartographer.EnterRoom(CurrentSpawnPoint.Room);
             }
             else
             {
