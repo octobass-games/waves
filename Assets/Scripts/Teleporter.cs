@@ -22,6 +22,11 @@ public class Teleporter : MonoBehaviour, ISavable
     void Awake()
     {
         SaveKey = $"teleporter-{Name}";
+
+        if (TeleportController == null)
+        {
+            Debug.LogWarning($"[Teleporter]: TeleportController not set for {gameObject.name}");
+        }
     }
 
     public void Interact()
