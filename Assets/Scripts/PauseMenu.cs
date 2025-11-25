@@ -8,9 +8,6 @@ namespace Octobass.Waves
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField]
-        private GameObject CollectablesPanel;
-
-        [SerializeField]
         private GameObject StaffPanel;
 
         [SerializeField]
@@ -86,7 +83,6 @@ namespace Octobass.Waves
         public void ClickCollectables()
         {
             MainMenuPanel.SetActive(false);
-            CollectablesPanel.SetActive(true);
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
@@ -102,7 +98,6 @@ namespace Octobass.Waves
             MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
 
             MainMenuPanel.SetActive(true);
-            CollectablesPanel.SetActive(false);
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
@@ -117,7 +112,6 @@ namespace Octobass.Waves
             SelectedGameObjectBeforePause = null;
 
             MainMenuPanel.SetActive(false);
-            CollectablesPanel.SetActive(false);
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
@@ -126,7 +120,6 @@ namespace Octobass.Waves
         public void ClickStaff()
         {
             MainMenuPanel.SetActive(false);
-            CollectablesPanel.SetActive(false);
             StaffPanel.SetActive(true);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
@@ -137,7 +130,6 @@ namespace Octobass.Waves
         public void ClickControls()
         {
             MainMenuPanel.SetActive(false);
-            CollectablesPanel.SetActive(false);
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(true);
             PostcardsPanel.SetActive(false);
@@ -147,7 +139,6 @@ namespace Octobass.Waves
         public void ClickPostcards()
         {
             MainMenuPanel.SetActive(false);
-            CollectablesPanel.SetActive(false);
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(true);
