@@ -30,6 +30,7 @@ namespace Octobass.Waves.Movement
             Animator.SetBool("IsDiving", CurrentMovementSnapshot.State == CharacterStateId.Diving);
             Animator.SetBool("IsWallSlide", CurrentMovementSnapshot.State == CharacterStateId.WallSlide);
             Animator.SetBool("IsDashing", CurrentMovementSnapshot.State == CharacterStateId.Dashing);
+            Animator.SetBool("IsLedgeClimbing", CurrentMovementSnapshot.State == CharacterStateId.LedgeClimb);
 
             if (PreviousAttackState.IsAttacking != CurrentAttackState.IsAttacking && CurrentAttackState.IsAttacking)
             {

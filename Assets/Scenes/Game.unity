@@ -702,7 +702,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1607,20 +1607,11 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
-    - target: {fileID: 5337127993354170949, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
-      propertyPath: InitiallySelectedGameObject
-      value: 
-      objectReference: {fileID: 767510831}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
---- !u!1 &767510831 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8685052962297194165, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
-  m_PrefabInstance: {fileID: 767510830}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &770149403
 GameObject:
   m_ObjectHideFlags: 0
