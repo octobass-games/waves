@@ -695,14 +695,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.055555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5000,6 +5000,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1094848975582486802, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094848975582486802, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094848975582486802, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1448142553}
+    - target: {fileID: 1094848975582486802, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094848975582486802, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Finish
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094848975582486802, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeleportController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094848975582486802, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1128378588259944467, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
       propertyPath: Teleporter
       value: 
