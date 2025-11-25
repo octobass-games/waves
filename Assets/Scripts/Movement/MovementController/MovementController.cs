@@ -1,6 +1,7 @@
 using Octobass.Waves.Extensions;
 using Octobass.Waves.Save;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement
@@ -203,6 +204,11 @@ namespace Octobass.Waves.Movement
             {
                 return facingDirection;
             }
+        }
+
+        public bool CanSwim()
+        {
+            return UnlockedStates.Any(state => state == CharacterStateId.Swimming);
         }
 
         public void Save(SaveData saveData)
