@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -22,12 +23,19 @@ namespace Octobass.Waves
         private GameObject PostcardsPanel;
 
         [SerializeField]
+        private GameObject InitiallySelectedGameObject;
+
+        [SerializeField]
         private PlayerInput PlayerInput;
 
-        private bool paused = false;
+        private bool IsPaused = false;
+
         private InputAction PauseAction;
         private InputActionMap GameplayActionMap;
         private InputActionMap UiActionMap;
+
+        private GameObject SelectedGameObjectBeforePause;
+        private GameObject MostRecentlySelectedGameObject;
 
         void Awake()
         {
@@ -45,19 +53,31 @@ namespace Octobass.Waves
 
         void Update()
         {
-            if (PauseAction.WasPerformedThisFrame())
+            if (IsPaused)
             {
-                if (!paused)
+                if (EventSystem.current.currentSelectedGameObject != null && EventSystem.current.currentSelectedGameObject != MostRecentlySelectedGameObject)
                 {
-                    OpenPause();
-                    Time.timeScale = 0;
-                    paused = true;
+                    MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
                 }
-                else
+                else if (EventSystem.current.currentSelectedGameObject == null)
+                {
+                    EventSystem.current.SetSelectedGameObject(MostRecentlySelectedGameObject);
+                }
+
+                if (PauseAction.WasPerformedThisFrame())
                 {
                     ClosePause();
                     Time.timeScale = 1;
-                    paused = false;
+                    IsPaused = false;
+                }
+            }
+            else
+            {
+                if (PauseAction.WasPerformedThisFrame())
+                {
+                    OpenPause();
+                    Time.timeScale = 0;
+                    IsPaused = true;
                 }
             }
         }
@@ -74,26 +94,33 @@ namespace Octobass.Waves
 
         public void OpenPause()
         {
+            GameplayActionMap.Disable();
+            UiActionMap.Enable();
+
+            SelectedGameObjectBeforePause = EventSystem.current.currentSelectedGameObject;
+            EventSystem.current.SetSelectedGameObject(InitiallySelectedGameObject);
+            MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
+
             MainMenuPanel.SetActive(true);
             CollectablesPanel.SetActive(false);
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
-
-            GameplayActionMap.Disable();
-            UiActionMap.Enable();
         }
 
         public void ClosePause()
         {
+            GameplayActionMap.Enable();
+            UiActionMap.Disable();
+
+            EventSystem.current.SetSelectedGameObject(SelectedGameObjectBeforePause);
+            SelectedGameObjectBeforePause = null;
+
             MainMenuPanel.SetActive(false);
             CollectablesPanel.SetActive(false);
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
-            
-            GameplayActionMap.Enable();
-            UiActionMap.Disable();
         }
 
         public void ClickStaff()
@@ -114,7 +141,6 @@ namespace Octobass.Waves
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(true);
             PostcardsPanel.SetActive(false);
-
         }
 
 
@@ -125,7 +151,6 @@ namespace Octobass.Waves
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(true);
-
         }
 
         public void ClickRestartRoom()
