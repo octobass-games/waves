@@ -1680,7 +1680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &836377230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,6 +1700,7 @@ MonoBehaviour:
   BoatDriverAnimator: {fileID: 1668696739}
   BoatAnimator: {fileID: 808593326}
   BoatBoatAnimator: {fileID: 1762191215}
+  PlayerInput: {fileID: 1047319394}
 --- !u!4 &836377231
 Transform:
   m_ObjectHideFlags: 0
@@ -1886,7 +1887,7 @@ PrefabInstance:
       objectReference: {fileID: 1330039399}
     - target: {fileID: 215965231412949391, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: m_DefaultActionMap
-      value: Gameplay
+      value: 5fe05bf7-030e-4cbe-93e7-ce093ae7619b
       objectReference: {fileID: 0}
     - target: {fileID: 1806367208770461159, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: m_Name
@@ -4723,6 +4724,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1047319394}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+        m_MethodName: SwitchCurrentActionMap
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Gameplay
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1784578591 stripped
@@ -17270,7 +17283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.7377005
+      value: 5.4428086
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput

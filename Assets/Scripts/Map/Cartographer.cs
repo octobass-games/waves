@@ -21,7 +21,7 @@ namespace Octobass.Waves.Map
         private const string RoomsSaveKey = "cartographer-rooms";
         private const string ActiveRoomSaveKey = "cartographer-active-room";
 
-        void Start()
+        void Awake()
         {
             GenerateRoomsFromEnums();
             ServiceLocator.Instance.Register(this);
