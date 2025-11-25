@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 8439476345112410444}
   - component: {fileID: 6640141045396107075}
   - component: {fileID: 5700833244494442763}
+  - component: {fileID: 7537846986049989546}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -255,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde45f79b5301cb47806569d5f57ae26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.CharacterController2D.PlayerInputCharacterController2DDriver
+  PlayerInput: {fileID: 0}
 --- !u!61 &3962255609282539790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -557,6 +559,24 @@ MonoBehaviour:
   AbilityController: {fileID: 3985318897784524841}
   ExplainerRoot: {fileID: 0}
   ExplainerText: {fileID: 0}
+--- !u!114 &7537846986049989546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5385ac18c37dd924c9c6b4305b1cd014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportController
+  MovementController: {fileID: 7789577042043984978}
+  MapRenderer: {fileID: 0}
+  SpawnTracker: {fileID: 5931426664578809513}
+  Cartographer: {fileID: 0}
+  Animator: {fileID: 881346472432367290}
+  PlayerInput: {fileID: 215965231412949391}
 --- !u!1 &2319988461481833929
 GameObject:
   m_ObjectHideFlags: 0

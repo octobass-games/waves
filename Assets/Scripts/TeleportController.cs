@@ -19,6 +19,9 @@ public class TeleportController : MonoBehaviour
     private Cartographer Cartographer;
 
     [SerializeField]
+    private Animator Animator;
+
+    [SerializeField]
     private PlayerInput PlayerInput;
     
     // Todo: add action for this
@@ -33,7 +36,7 @@ public class TeleportController : MonoBehaviour
             Debug.Log("[TeleportController]: PlayerInput not set");
         }
 
-        CancelTeleportAction = PlayerInput.actions.FindAction("Cancel");
+        CancelTeleportAction = PlayerInput.actions.FindAction("Grab");
     }
 
     void Update()
@@ -48,6 +51,11 @@ public class TeleportController : MonoBehaviour
     {
         IsTeleporting = true;
         MovementController.Freeze();
+        Animator.SetTrigger("IsEnteringTeleporter");
+    }
+
+    void OnTeleporterAnimationEnd()
+    {
         MapRenderer.ShowTeleportMap();
     }
 
@@ -68,6 +76,7 @@ public class TeleportController : MonoBehaviour
     {
         MovementController.Unfreeze();
         MapRenderer.ToggleMode();
+        Animator.SetTrigger("IsTeleportingCancelled");
         IsTeleporting = false;
     }
 }
