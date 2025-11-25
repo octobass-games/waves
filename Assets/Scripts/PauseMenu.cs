@@ -34,7 +34,7 @@ namespace Octobass.Waves
         private GameObject SelectedGameObjectBeforePause;
         private GameObject MostRecentlySelectedGameObject;
 
-        void Awake()
+        void Start()
         {
             if (PlayerInput == null)
             {

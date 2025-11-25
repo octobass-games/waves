@@ -19,9 +19,17 @@ namespace Octobass.Waves.Item
 
         private const string ItemsSaveKey = "inventory-items";
 
-        void Awake()
+        void OnEnable()
         {
             ServiceLocator.Instance.Register(this);
+        }
+
+        void OnDisable()
+        {
+            if (ServiceLocator.Instance != null)
+            {
+                ServiceLocator.Instance.Unregister<Inventory>();
+            }
         }
 
         public bool PickUp(ItemDefinition item)

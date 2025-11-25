@@ -16,7 +16,7 @@ namespace Octobass.Waves.Water
         
         private bool IsFillable;
 
-        void Awake()
+        void Start()
         {
             if (PlayerInput == null)
             {

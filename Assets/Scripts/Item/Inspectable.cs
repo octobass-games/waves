@@ -18,7 +18,7 @@ namespace Octobass.Waves.Item
         private bool InspectPressed;
         private InputAction InspectAction;
 
-        void Awake()
+        void Start()
         {
             if (PlayerInput == null)
             {

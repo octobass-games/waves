@@ -25,7 +25,7 @@ namespace Octobass.Waves.Movement
         private bool AttackPressed;
         private bool AttackReleased;
 
-        void Awake()
+        void Start()
         {
             if (PlayerInput == null)
             {

@@ -1680,7 +1680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &836377230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6455,6 +6455,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8949426976143062601, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16676,6 +16680,10 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1047319393}
+    - target: {fileID: 2939598866150053122, guid: 9baa14a9f805da742bf641dcb703ff05, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 3557106338980841026, guid: 9baa14a9f805da742bf641dcb703ff05, type: 3}
       propertyPath: m_LocalPosition.x
       value: 190
@@ -17112,6 +17120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: C3
       objectReference: {fileID: 0}
+    - target: {fileID: 4783743737297191633, guid: da33cb8dad98a364a8d535af8f05e435, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 5381031280920287595, guid: da33cb8dad98a364a8d535af8f05e435, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -17283,7 +17295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 5.4428086
+      value: 5.7549067
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput

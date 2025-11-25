@@ -13,21 +13,17 @@ namespace Octobass.Waves.Save
         public string SaveDataKey = "save-data";
 
         private List<Saver> Savers = new();
-        
+
         private string SaveFilePath;
 
         void Awake()
         {
             SaveFilePath = Path.Combine(Application.persistentDataPath, SaveFileName + ".json");
+        }
 
-            if (ServiceLocator.Instance != null)
-            {
-                ServiceLocator.Instance.Register(this);
-            }
-            else
-            {
-                Debug.LogWarning("[SaveManager]: Attempting to register self with ServiceLocator but instance not available");
-            }
+        void OnEnable()
+        {
+            ServiceLocator.Instance.Register(this);
         }
 
         void OnDisable()

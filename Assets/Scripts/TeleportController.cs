@@ -31,25 +31,29 @@ public class TeleportController : MonoBehaviour
 
     private bool IsTeleporting;
 
-    void Awake()
+    void Start()
     {
         if (PlayerInput == null)
         {
             Debug.Log("[TeleportController]: PlayerInput not set");
         }
 
-        if (ServiceLocator.Instance != null)
-        {
-            ServiceLocator.Instance.Register(this);
-        }
-        else
-        {
-            Debug.Log("[TeleportController]: Could not register self with ServiceLocator");
-        }
-
         CancelTeleportAction = PlayerInput.actions.FindAction("Cancel");
 
         Teleporters = FindObjectsByType<Teleporter>(FindObjectsSortMode.None).ToList();
+    }
+
+    void OnEnable()
+    {
+        ServiceLocator.Instance.Register(this);
+    }
+
+    void OnDisable()
+    {
+        if (ServiceLocator.Instance != null)
+        {
+            ServiceLocator.Instance.Unregister<TeleportController>();
+        }
     }
 
     public void BeginTeleport()
