@@ -63,6 +63,15 @@ namespace Octobass.Waves.Map
                     TeleportSelector.enabled = false;
                 }
             }
+
+            if (room.IsTeleporterFound)
+            {
+                detailsRenderer.Waterporter.SetActive(true);
+            }
+            else
+            {
+                detailsRenderer.Waterporter.SetActive(false);
+            }
         }
     }
 }

@@ -1,10 +1,12 @@
+using Octobass.Waves;
+using Octobass.Waves.Map;
 using Octobass.Waves.Save;
 using UnityEngine;
 
 public class Teleporter : MonoBehaviour, ISavable
 {
     [SerializeField]
-    private string Name;
+    private RoomId Name;
 
     [SerializeField]
     private Animator Animator;
@@ -33,7 +35,19 @@ public class Teleporter : MonoBehaviour, ISavable
     {
         if (!IsUnlocked)
         {
+            Audio.PlayOneShot();
+            
             Unlock();
+
+            if (ServiceLocator.Instance != null)
+            {
+                Cartographer cartographer = ServiceLocator.Instance.Get<Cartographer>();
+
+                if (cartographer != null)
+                {
+                    cartographer.OnTeleporterUnlocked(Name);
+                }
+            }
         }
         else
         {
@@ -44,6 +58,11 @@ public class Teleporter : MonoBehaviour, ISavable
     public void Load(SaveData saveData)
     {
         IsUnlocked = saveData.Load<bool>(SaveKey);
+
+        if (IsUnlocked)
+        {
+            Unlock();
+        }
     }
 
     public void Save(SaveData saveData)
@@ -54,7 +73,6 @@ public class Teleporter : MonoBehaviour, ISavable
     private void Unlock()
     {
         Animator.SetTrigger("open");
-        Audio.PlayOneShot();
         IsUnlocked = true;
     }
 }

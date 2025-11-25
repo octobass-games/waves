@@ -48,6 +48,18 @@ namespace Octobass.Waves.Map
             }
         }
 
+        public void OnTeleporterUnlocked(RoomId roomId)
+        {
+            Room room = FindRoomById(roomId);
+
+            if (room != null)
+            {
+                room.IsTeleporterFound = true;
+            }
+
+            OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
+        }
+
         private void GenerateRoomsFromEnums()
         {
             Rooms = new List<Room>();
