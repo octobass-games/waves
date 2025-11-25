@@ -62,13 +62,9 @@ public class TeleportController : MonoBehaviour
         MapRenderer.ShowTeleportMap();
     }
 
-    public void SetDestination(SpawnPoint spawnPoint)
+    public void Teleport(SpawnPoint teleportPoint)
     {
-        SpawnTracker.SetSpawnPoint(spawnPoint);
-    }
-
-    public void Teleport()
-    {
+        SpawnTracker.SetSpawnPoint(teleportPoint);
         SpawnTracker.Respawn();
         MapRenderer.ToggleMode();
         IsTeleporting = false;

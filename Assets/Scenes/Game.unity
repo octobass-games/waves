@@ -1700,6 +1700,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: dcef4dc7a014cda44bf9f318874b54a8, type: 3}
   m_PrefabInstance: {fileID: 808593324}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &815217791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6606311703381552156, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+  m_PrefabInstance: {fileID: 6809107531801228825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b41edecc4c0d24a995a6704d16d8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioOneShot
 --- !u!114 &829930178 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2033178787971743554, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
@@ -2197,7 +2208,7 @@ PrefabInstance:
       objectReference: {fileID: 1747657649}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: SpawnPointRoomBindings.Array.size
-      value: 48
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: SpawnPointRoomBindings.Array.data[0].Room
@@ -2392,6 +2403,10 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: SpawnPointRoomBindings.Array.data[48].Room
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: SpawnPointRoomBindings.Array.data[0].SpawnPoint
       value: 
       objectReference: {fileID: 9155442939798803097}
@@ -2583,6 +2598,10 @@ PrefabInstance:
       propertyPath: SpawnPointRoomBindings.Array.data[47].SpawnPoint
       value: 
       objectReference: {fileID: 4054883689291170595}
+    - target: {fileID: 5931426664578809513, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: SpawnPointRoomBindings.Array.data[48].SpawnPoint
+      value: 
+      objectReference: {fileID: 9155442939798803098}
     - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: LoreRoot
       value: 
@@ -3429,43 +3448,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: e1cd2d3df1d138c4d9577775ce86eba0, type: 3}
   m_ActionId: 6147cd2d-63c0-4e0e-b8d9-3fa35e29cd36
---- !u!1 &1263484106 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2484204655775072328, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
-  m_PrefabInstance: {fileID: 9155442939798803094}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1263484108 stripped
+--- !u!114 &1263484114 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1113133382624082104, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4961065172655718103, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
   m_PrefabInstance: {fileID: 9155442939798803094}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263484106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b41edecc4c0d24a995a6704d16d8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioOneShot
---- !u!95 &1263484112 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5970572953061612264, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
-  m_PrefabInstance: {fileID: 9155442939798803094}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1263484114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263484106}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2265523e5c605524f8e33473c5396efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Teleporter
-  Name: E1
-  Animator: {fileID: 1263484112}
-  TeleportController: {fileID: 1448142553}
-  Audio: {fileID: 1263484108}
 --- !u!1 &1285287230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5270,7 +5263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
-  SpawnPoint: {fileID: 6809107531801228827}
+  SpawnPoint: {fileID: 9155442939798803098}
   TeleportController: {fileID: 1448142553}
 --- !u!114 &2109785064 stripped
 MonoBehaviour:
@@ -9295,7 +9288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.8571167
+      value: 4.1694055
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
@@ -10017,6 +10010,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1061778173}
     m_Modifications:
+    - target: {fileID: 1154557486553590387, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: Name
+      value: E2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154557486553590387, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: TeleportController
+      value: 
+      objectReference: {fileID: 1448142553}
     - target: {fileID: 1776599706522154879, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -11490,28 +11491,52 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1047319394}
     - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6809107531801228828}
+    - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 815217791}
+    - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTrigger
+      value: Interact
       objectReference: {fileID: 0}
     - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_enabled
+      value: PlayOneShot
       objectReference: {fileID: 0}
     - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
+      value: Teleporter, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Octobass.Waves.Item.Inspectable, Assembly-CSharp
+      value: AudioOneShot, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: open
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8523776613419752135, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8743881962023922343, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: m_TileSpriteArray.Array.size
@@ -16873,6 +16898,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &6809107531801228828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1154557486553590387, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
+  m_PrefabInstance: {fileID: 6809107531801228825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2265523e5c605524f8e33473c5396efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleporter
 --- !u!4 &6823947987452947239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4883292383592331043, guid: cf241ebd398d6dc4786d2cf9affbf179, type: 3}
@@ -18286,6 +18322,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.14611015
       objectReference: {fileID: 0}
+    - target: {fileID: 4961065172655718103, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: TeleportController
+      value: 
+      objectReference: {fileID: 1448142553}
     - target: {fileID: 5377121894865228815, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: IsComposite
       value: 1
@@ -18366,6 +18406,10 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7433850047213423014, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: Name
+      value: E1-Teleporter
+      objectReference: {fileID: 0}
     - target: {fileID: 8311678071600866508, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: m_Name
       value: E1
@@ -18381,9 +18425,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1340303693900578863, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9155442939798803100}
-    - targetCorrespondingSourceObject: {fileID: 2484204655775072328, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1263484114}
     - targetCorrespondingSourceObject: {fileID: 4447766627213842465, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -18416,6 +18457,17 @@ MonoBehaviour:
 --- !u!114 &9155442939798803097 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6396793279942415344, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+  m_PrefabInstance: {fileID: 9155442939798803094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &9155442939798803098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7433850047213423014, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
   m_PrefabInstance: {fileID: 9155442939798803094}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

@@ -12,13 +12,11 @@ public class TeleportSelector : MonoBehaviour, IPointerClickHandler, ISubmitHand
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        TeleportController.SetDestination(SpawnPoint);
-        TeleportController.Teleport();
+        TeleportController.Teleport(SpawnPoint);
     }
 
     public void OnSubmit(BaseEventData eventData)
     {
-        TeleportController.SetDestination(SpawnPoint);
-        TeleportController.Teleport();
+        TeleportController.Teleport(SpawnPoint);
     }
 }
