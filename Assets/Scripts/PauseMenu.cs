@@ -31,7 +31,7 @@ namespace Octobass.Waves
         private bool IsPaused = false;
 
         private InputAction PauseAction;
-        private InputActionMap GameplayActionMap;
+        private InputActionMap InputActionMapBeforePausing;
         private InputActionMap UiActionMap;
 
         private GameObject SelectedGameObjectBeforePause;
@@ -44,7 +44,6 @@ namespace Octobass.Waves
                 Debug.Log("[PauseMenu]: PlayerInput not set");
             }
 
-            GameplayActionMap = PlayerInput.actions.FindActionMap("Gameplay");
             UiActionMap = PlayerInput.actions.FindActionMap("UI");
 
             PlayerInput.actions.FindActionMap("Global").Enable();
@@ -75,6 +74,7 @@ namespace Octobass.Waves
             {
                 if (PauseAction.WasPerformedThisFrame())
                 {
+                    InputActionMapBeforePausing = PlayerInput.currentActionMap;
                     OpenPause();
                     Time.timeScale = 0;
                     IsPaused = true;
@@ -94,7 +94,7 @@ namespace Octobass.Waves
 
         public void OpenPause()
         {
-            GameplayActionMap.Disable();
+            InputActionMapBeforePausing.Disable();
             UiActionMap.Enable();
 
             SelectedGameObjectBeforePause = EventSystem.current.currentSelectedGameObject;
@@ -110,8 +110,8 @@ namespace Octobass.Waves
 
         public void ClosePause()
         {
-            GameplayActionMap.Enable();
             UiActionMap.Disable();
+            InputActionMapBeforePausing.Enable();
 
             EventSystem.current.SetSelectedGameObject(SelectedGameObjectBeforePause);
             SelectedGameObjectBeforePause = null;
