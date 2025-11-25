@@ -48,10 +48,20 @@ namespace Octobass.Waves.Camera
         {
             if (RoomCameraBindingRegistry.TryGetValue(room, out CinemachineCamera camera))
             {
-
                 RoomCamera.Priority = 0;
+                
+                if (RoomCamera.transform.childCount > 0)
+                {
+                    RoomCamera.transform.GetChild(0).gameObject.SetActive(false);
+                }
+
                 RoomCamera = camera;
                 RoomCamera.Priority = 2;
+
+                if (RoomCamera.transform.childCount > 0)
+                {
+                    RoomCamera.transform.GetChild(0).gameObject.SetActive(true);
+                }
             }
             else
             {

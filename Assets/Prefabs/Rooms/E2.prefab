@@ -75838,8 +75838,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3259066251705431152, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2453985400510549466}
   m_SourcePrefab: {fileID: 100100000, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
+--- !u!1 &1897502444375364413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3259066251705431152, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
+  m_PrefabInstance: {fileID: 3994639089729038157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2453985400510549466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897502444375364413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!4 &6210716285952916263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7016373576886688874, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
