@@ -36,7 +36,7 @@ public class TeleportController : MonoBehaviour
             Debug.Log("[TeleportController]: PlayerInput not set");
         }
 
-        CancelTeleportAction = PlayerInput.actions.FindAction("Grab");
+        CancelTeleportAction = PlayerInput.actions.FindAction("Cancel");
     }
 
     void Update()
@@ -50,7 +50,10 @@ public class TeleportController : MonoBehaviour
     public void BeginTeleport()
     {
         IsTeleporting = true;
-        MovementController.Freeze();
+        
+        PlayerInput.actions.FindActionMap("Gameplay").Disable();
+        PlayerInput.actions.FindActionMap("UI").Enable();
+
         Animator.SetTrigger("IsEnteringTeleporter");
     }
 
@@ -66,7 +69,6 @@ public class TeleportController : MonoBehaviour
 
     public void Teleport()
     {
-        MovementController.Unfreeze();
         SpawnTracker.Respawn();
         MapRenderer.ToggleMode();
         IsTeleporting = false;
@@ -77,6 +79,10 @@ public class TeleportController : MonoBehaviour
         MovementController.Unfreeze();
         MapRenderer.ToggleMode();
         Animator.SetTrigger("IsTeleportingCancelled");
+
+        PlayerInput.actions.FindActionMap("Gameplay").Enable();
+        PlayerInput.actions.FindActionMap("UI").Disable();
+        
         IsTeleporting = false;
     }
 }
