@@ -88,8 +88,7 @@ namespace Octobass.Waves
 
         public void OpenPause()
         {
-            InputActionMapBeforePausing.Disable();
-            UiActionMap.Enable();
+            PlayerInput.SwitchCurrentActionMap(UiActionMap.name);
 
             SelectedGameObjectBeforePause = EventSystem.current.currentSelectedGameObject;
             EventSystem.current.SetSelectedGameObject(InitiallySelectedGameObject);
@@ -103,8 +102,7 @@ namespace Octobass.Waves
 
         public void ClosePause()
         {
-            UiActionMap.Disable();
-            InputActionMapBeforePausing.Enable();
+            PlayerInput.SwitchCurrentActionMap(InputActionMapBeforePausing.name);
 
             EventSystem.current.SetSelectedGameObject(SelectedGameObjectBeforePause);
             SelectedGameObjectBeforePause = null;

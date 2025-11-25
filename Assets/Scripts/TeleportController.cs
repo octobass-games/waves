@@ -52,20 +52,11 @@ public class TeleportController : MonoBehaviour
         Teleporters = FindObjectsByType<Teleporter>(FindObjectsSortMode.None).ToList();
     }
 
-    void Update()
-    {
-        if (IsTeleporting && CancelTeleportAction.WasPressedThisFrame())
-        {
-            Finish();
-        }
-    }
-
     public void BeginTeleport()
     {
         IsTeleporting = true;
 
-        PlayerInput.actions.FindActionMap("Gameplay").Disable();
-        PlayerInput.actions.FindActionMap("UI").Enable();
+        PlayerInput.SwitchCurrentActionMap("UI");
 
         Animator.SetTrigger("IsEnteringTeleporter");
     }
@@ -100,8 +91,7 @@ public class TeleportController : MonoBehaviour
         MapRenderer.ToggleMode();
         Animator.SetTrigger("IsTeleportingFinished");
 
-        PlayerInput.actions.FindActionMap("Gameplay").Enable();
-        PlayerInput.actions.FindActionMap("UI").Disable();
+        PlayerInput.SwitchCurrentActionMap("Gameplay");
 
         IsTeleporting = false;
     }
