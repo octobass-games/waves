@@ -45,7 +45,7 @@ namespace Octobass.Waves.Map
                 detailsRenderer.Shell.SetActive(true);
             }
 
-            if (teleportMode)
+            if (teleportMode && room.IsTeleporterFound)
             {
                 Button.enabled = true;
                 

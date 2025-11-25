@@ -1773,6 +1773,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &846995678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6856085750889601516, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+  m_PrefabInstance: {fileID: 2093304771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &846995684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846995678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035108fcd8f714944b446e415f52b8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSelector
+  SpawnPoint: {fileID: 0}
+  TeleportController: {fileID: 1448142553}
 --- !u!114 &890246643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5245,6 +5264,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4548466208077196586, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2093304773}
+    - targetCorrespondingSourceObject: {fileID: 6856085750889601516, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 846995684}
   m_SourcePrefab: {fileID: 100100000, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
 --- !u!1 &2093304772 stripped
 GameObject:
@@ -9288,7 +9310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.2170525
+      value: 4.524263
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
@@ -10012,7 +10034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1154557486553590387, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: Name
-      value: 0
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1154557486553590387, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
       propertyPath: TeleportController

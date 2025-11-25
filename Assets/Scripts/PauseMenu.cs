@@ -63,8 +63,6 @@ namespace Octobass.Waves
                 if (PauseAction.WasPerformedThisFrame())
                 {
                     ClosePause();
-                    Time.timeScale = 1;
-                    IsPaused = false;
                 }
             }
             else
@@ -115,6 +113,9 @@ namespace Octobass.Waves
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
+
+            Time.timeScale = 1;
+            IsPaused = false;
         }
 
         public void ClickStaff()
