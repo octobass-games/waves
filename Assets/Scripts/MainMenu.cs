@@ -10,7 +10,7 @@ namespace Octobass.Waves
     public class MainMenu : MonoBehaviour
     {
         [SerializeField]
-        private GameObject InitiallySelectedButton;
+        private GameObject InitiallySelectedGameObject;
 
         [SerializeField]
         private Button LoadButton;
@@ -18,10 +18,7 @@ namespace Octobass.Waves
         [SerializeField]
         private SaveManager SaveManager;
 
-        [SerializeField]
-        private PlayerInput PlayerInput;
-
-        private string CurrentControlScheme;
+        private GameObject MostRecentlySelectedGameObject;
 
         void Start()
         {
@@ -35,9 +32,9 @@ namespace Octobass.Waves
                 Debug.LogWarning("[MainMenu]: LoadButton not set");
             }
 
-            if (InitiallySelectedButton == null)
+            if (InitiallySelectedGameObject == null)
             {
-                Debug.LogWarning("[MainMenu]: InitiallySelectedButton not set");
+                Debug.LogWarning("[MainMenu]: InitiallySelectedGameObject not set");
             }
 
             if (SaveManager.HasSaveData())
@@ -45,9 +42,7 @@ namespace Octobass.Waves
                 LoadButton.interactable = true;
             }
 
-            EventSystem.current.SetSelectedGameObject(InitiallySelectedButton);
-
-            CurrentControlScheme = PlayerInput.currentControlScheme;
+            EventSystem.current.SetSelectedGameObject(InitiallySelectedGameObject);
         }
 
         public void NewGame()
@@ -63,14 +58,13 @@ namespace Octobass.Waves
 
         void Update()
         {
-            if (CurrentControlScheme != PlayerInput.currentControlScheme)
+            if (EventSystem.current.currentSelectedGameObject != null && EventSystem.current.currentSelectedGameObject != MostRecentlySelectedGameObject)
             {
-                if (PlayerInput.currentControlScheme == "Gamepad")
-                {
-                    EventSystem.current.SetSelectedGameObject(InitiallySelectedButton);
-                }
-
-                CurrentControlScheme = PlayerInput.currentControlScheme;
+                MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
+            }
+            else if (EventSystem.current.currentSelectedGameObject == null)
+            {
+                EventSystem.current.SetSelectedGameObject(MostRecentlySelectedGameObject);
             }
         }
     }
