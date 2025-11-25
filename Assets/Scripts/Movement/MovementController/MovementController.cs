@@ -1,10 +1,11 @@
 using Octobass.Waves.Extensions;
+using Octobass.Waves.Save;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement
 {
-    public class MovementController : MonoBehaviour
+    public class MovementController : MonoBehaviour, ISavable
     {
         private Dictionary<CharacterStateId, CharacterState> StateRegistry = new();
         private CharacterState CurrentState;
@@ -20,6 +21,7 @@ namespace Octobass.Waves.Movement
         private StateSnapshot StateSnapshot = new();
         private Vector2 CurrentFacingDirection = Vector2.right;
         private bool IsFrozen;
+        private List<CharacterStateId> UnlockedStates = new();
 
         void Awake()
         {
@@ -108,6 +110,16 @@ namespace Octobass.Waves.Movement
                         break;
                     case CharacterStateId.Jumping:
                         StateRegistry[CharacterStateId.Jumping] = new JumpingState(CharacterControllerConfig);
+                        
+                        if (TryGetComponent(out Animator animator))
+                        {
+                            animator.SetBool("HasNoStaff", false);
+                        }
+                        else
+                        {
+                            Debug.Log("[MovementController]: Animator not found");
+                        }
+
                         break;
                     case CharacterStateId.WallClimb:
                         StateRegistry[CharacterStateId.WallClimb] = new WallClimbState(CharacterControllerConfig);
@@ -135,6 +147,8 @@ namespace Octobass.Waves.Movement
             {
                 Debug.LogWarning($"[MovementStateMachine]: State already exists in state machine - {stateId}");
             }
+            
+            UnlockedStates.Add(stateId);
         }
 
         public void Freeze()
@@ -185,6 +199,21 @@ namespace Octobass.Waves.Movement
             else
             {
                 return facingDirection;
+            }
+        }
+
+        public void Save(SaveData saveData)
+        {
+            saveData.Add("unlocked-states", UnlockedStates);
+        }
+
+        public void Load(SaveData saveData)
+        {
+            List<CharacterStateId> unlockedStates = saveData.Load<List<CharacterStateId>>("unlocked-states");
+
+            foreach (CharacterStateId state in unlockedStates)
+            {
+                AddState(state);
             }
         }
     }
