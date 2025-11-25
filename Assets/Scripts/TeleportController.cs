@@ -88,8 +88,6 @@ public class TeleportController : MonoBehaviour
 
             if (spawnPoint != null)
             {
-                Debug.Log(spawnPoint.Room);
-
                 SpawnTracker.SetSpawnPoint(spawnPoint);
                 SpawnTracker.Respawn();
             }
