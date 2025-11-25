@@ -95,7 +95,7 @@ public class TeleportController : MonoBehaviour
         Finish();
     }
 
-    private void Finish()
+    public void Finish()
     {
         MapRenderer.ToggleMode();
         Animator.SetTrigger("IsTeleportingFinished");
