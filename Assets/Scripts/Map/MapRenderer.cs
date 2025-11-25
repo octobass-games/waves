@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace Octobass.Waves.Map
 {
@@ -12,6 +13,7 @@ namespace Octobass.Waves.Map
 
         public List<MapRoomRenderer> RoomRenderers;
         public List<MapRoomRenderer> BigMapRenderers;
+        public Button CloseButton;
 
         public bool miniMode = true;
         public bool HideOnAwake = true;
@@ -98,6 +100,15 @@ namespace Octobass.Waves.Map
                         Debug.LogWarning($"[MapRenderer]: Could not find MapRoomRenderer for {room.Id}");
                     }
                 }
+            }
+
+            if (teleportMode)
+            {
+                CloseButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                CloseButton.gameObject.SetActive(false);
             }
         }
 
