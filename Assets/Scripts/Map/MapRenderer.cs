@@ -90,7 +90,6 @@ namespace Octobass.Waves.Map
                         renderer.Draw(room, playerInRoom, miniMode = false, teleportMode);
                         if (room.Id == ActiveRoom)
                         {
-                            Debug.Log($"Int the room! {room.Id}");
                             EventSystem.current.SetSelectedGameObject(renderer.gameObject);
                         }
                     }

@@ -72,13 +72,13 @@ public class TeleportController : MonoBehaviour
         SpawnTracker.Respawn();
         MapRenderer.ToggleMode();
         IsTeleporting = false;
+        Finish();
     }
 
     private void Finish()
     {
-        MovementController.Unfreeze();
         MapRenderer.ToggleMode();
-        Animator.SetTrigger("IsTeleportingCancelled");
+        Animator.SetTrigger("IsTeleportingFinished");
 
         PlayerInput.actions.FindActionMap("Gameplay").Enable();
         PlayerInput.actions.FindActionMap("UI").Disable();
