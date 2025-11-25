@@ -380,6 +380,48 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
+  - name: close-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 667
+      y: 54
+      width: 9
+      height: 9
+    spriteID: 9d7769202817a7c408fe96a9544332c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: back-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 751
+      y: 10
+      width: 12
+      height: 13
+    spriteID: f3e9094e633f63d45ba601cf9bb2cc7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   tileSetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -528,6 +570,56 @@ ScriptedImporter:
         width: 24
         height: 24
       spriteId: 41420aa3f5cb86d489971a8e0fa2b18d
+    linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
+    parentIndex: -1
+  - layerIndex: 6
+    uuid:
+      value0: 2778557519
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 0
+    name: back
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: back
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 564
+        y: 315
+        width: 12
+        height: 13
+      spriteId: fde29bb3d8431af4b88c9d09935a9505
+    linkedCells: []
+    tileCells: []
+    tileSetIndex: 0
+    parentIndex: -1
+  - layerIndex: 7
+    uuid:
+      value0: 3033369902
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 0
+    name: close
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: close
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 567
+        y: 317
+        width: 9
+        height: 9
+      spriteId: b0716f158a00a0348bc9c218fac28c39
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
