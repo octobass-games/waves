@@ -17,6 +17,8 @@ namespace Octobass.Waves
         [SerializeField]
         private BoxCollider2D BreakableRangeCollider;
 
+        private bool IsBroken;
+
         private string SaveKey;
 
         void Awake()
@@ -46,6 +48,8 @@ namespace Octobass.Waves
 
         public void Break()
         {
+            IsBroken = true;
+
             Animator.SetTrigger("break");
 
             DisableColliders();
@@ -53,12 +57,14 @@ namespace Octobass.Waves
 
         public void Save(SaveData saveData)
         {
-            saveData.Add(SaveKey, true);
+            saveData.Add(SaveKey, IsBroken);
         }
 
         public void Load(SaveData saveData)
         {
-            if (saveData.Load<bool>(SaveKey))
+            IsBroken = saveData.Load<bool>(SaveKey);
+
+            if (IsBroken)
             {
                 Animator.SetBool("ImmediateBreak", true);
 
