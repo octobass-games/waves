@@ -2126,7 +2126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2756,10 +2756,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: D4 - LetterOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1948669851660180114, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 5aac41d33a7e995429804f25bb26aa71, type: 2}
     - target: {fileID: 8944136321194839879, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2873,6 +2881,10 @@ PrefabInstance:
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 4891608872766187716, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: de7d4a042c6f5fe46a229acb7af86481, type: 2}
     - target: {fileID: 5907856110498760434, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2961,6 +2973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: A5 - PostCardOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7002776000248227147, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2994,6 +3010,10 @@ PrefabInstance:
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 4891608872766187716, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: bfa5d7988922b5f4ca00add0a2ef3e10, type: 2}
     - target: {fileID: 5907856110498760434, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3081,6 +3101,10 @@ PrefabInstance:
     - target: {fileID: 7002776000248227147, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
       propertyPath: m_Name
       value: E7 - PostCardOnPauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002776000248227147, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3259,6 +3283,10 @@ PrefabInstance:
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 4891608872766187716, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bc3c56ce5988fa40b6d49552a298cb4, type: 2}
     - target: {fileID: 5907856110498760434, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3346,6 +3374,10 @@ PrefabInstance:
     - target: {fileID: 7002776000248227147, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
       propertyPath: m_Name
       value: D12 - PostCardOnPauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002776000248227147, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3777,10 +3809,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: G5 - LetterOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1948669851660180114, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 86e4232df1c08494e862a50d7cbfffa7, type: 2}
     - target: {fileID: 8944136321194839879, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3994,6 +4034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: E1 - PostCardOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7002776000248227147, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4133,10 +4177,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: D2 - LetterOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1948669851660180114, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 4eaf970f4cdcf6c4996e7756fce63676, type: 2}
     - target: {fileID: 8944136321194839879, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4490,6 +4542,10 @@ PrefabInstance:
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 4891608872766187716, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 68e48bfcab6a47b4aae45121bd69c89b, type: 2}
     - target: {fileID: 5907856110498760434, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4578,6 +4634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: C8 - PostCardOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7002776000248227147, guid: 92797f9f87de3d14a90ecb95982d6c6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4615,10 +4675,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: D7 - LetterOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1948669851660180114, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 6dc32019cc933e74eab439c3a5c05449, type: 2}
     - target: {fileID: 8944136321194839879, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5234,10 +5302,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: F7 - LetterOnPauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1948669851660180114, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: Renderer
       value: 
       objectReference: {fileID: 9101333371744950328}
+    - target: {fileID: 6054876646853922489, guid: 92b4080745663984090f1ee85874bced, type: 3}
+      propertyPath: ItemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0182ee50fed4343a7b6acb4848a271, type: 2}
     - target: {fileID: 8944136321194839879, guid: 92b4080745663984090f1ee85874bced, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

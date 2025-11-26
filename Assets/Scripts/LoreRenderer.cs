@@ -14,7 +14,7 @@ public class LoreRenderer : MonoBehaviour
         renderers.ForEach(renderer =>
         {
             var item = inventory.FindItem(renderer.ItemDefinition);
-            renderer.gameObject.SetActive(item == null);
+            renderer.gameObject.SetActive(item != null);
         });
     }
 

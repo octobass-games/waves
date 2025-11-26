@@ -8,7 +8,7 @@ public class LoreItemRenderer : MonoBehaviour
     public Button Button;
     public LoreRenderer Renderer;
 
-    private void Awake()
+    void Awake()
     {
         Button.onClick.RemoveAllListeners();
         Button.onClick.AddListener(() => Renderer.PickItem(ItemDefinition));

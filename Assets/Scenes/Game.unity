@@ -1394,6 +1394,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 462780840417185076, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 3411235712750347685, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2516,6 +2520,54 @@ PrefabInstance:
       propertyPath: NonFlippableImage
       value: 
       objectReference: {fileID: 1252017545}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: ItemRegistry.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: de7d4a042c6f5fe46a229acb7af86481, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 68e48bfcab6a47b4aae45121bd69c89b, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4eaf970f4cdcf6c4996e7756fce63676, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5aac41d33a7e995429804f25bb26aa71, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6dc32019cc933e74eab439c3a5c05449, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bc3c56ce5988fa40b6d49552a298cb4, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a22204a255ba3e46ab9d97a4f3da3a2, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bfa5d7988922b5f4ca00add0a2ef3e10, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[9]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0182ee50fed4343a7b6acb4848a271, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 86e4232df1c08494e862a50d7cbfffa7, type: 2}
+    - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: 'ItemRegistry.Array.data[11]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 86e4232df1c08494e862a50d7cbfffa7, type: 2}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
       value: 4
@@ -16899,7 +16951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 5.1966667
+      value: 4.5452485
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput

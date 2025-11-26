@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6789448965209193695}
   - component: {fileID: 6569208687702406523}
   - component: {fileID: 4891608872766187716}
+  - component: {fileID: 7756166655333078679}
   m_Layer: 5
   m_Name: PostCardOnPauseMenu
   m_TagString: Untagged
@@ -96,7 +97,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -136,3 +137,25 @@ MonoBehaviour:
   ItemDefinition: {fileID: 11400000, guid: 7a22204a255ba3e46ab9d97a4f3da3a2, type: 2}
   Button: {fileID: 6569208687702406523}
   Renderer: {fileID: 0}
+--- !u!95 &7756166655333078679
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002776000248227147}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b78701d5d423cf4a81c7d847c40a96c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
