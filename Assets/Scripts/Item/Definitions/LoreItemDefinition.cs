@@ -7,6 +7,10 @@ namespace Octobass.Waves.Item
     {
         [TextArea]
         public string Text;
+
+        public Sprite FrontSprite;
+        public Sprite BackSprite;
+
         public override ItemInstance ToItemInstance()
         {
             return new LoreItemInstance(Name, this);

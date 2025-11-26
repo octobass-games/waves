@@ -1,6 +1,9 @@
 using Octobass.Waves.Movement;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace Octobass.Waves.Item
 {
@@ -14,6 +17,27 @@ namespace Octobass.Waves.Item
 
         [SerializeField]
         private MovementController MovementController;
+
+        [SerializeField]
+        private Image NonFlippableImage;
+
+        [SerializeField]
+        private GameObject Flippable;
+
+        [SerializeField]
+        private Image FlippableFront;
+
+        [SerializeField]
+        private Image FlippableBack;
+
+        [SerializeField]
+        private Button FlippableButton;
+
+        [SerializeField]
+        private GameObject CloseButton;
+
+        [SerializeField]
+        private PlayerInput PlayerInput;
 
         void Awake()
         {
@@ -38,17 +62,40 @@ namespace Octobass.Waves.Item
             if (item is LoreItemInstance loreItemInstance)
             {
                 LoreRoot.SetActive(true);
-                LoreText.text = loreItemInstance.GetText();
-                
-                MovementController.Freeze();
+
+                PlayerInput.SwitchCurrentActionMap("UI");
+
+                Sprite frontSideSprite = loreItemInstance.Definition.FrontSprite;
+                Sprite backSideSprite = loreItemInstance.Definition.BackSprite;
+
+                if (frontSideSprite != null && backSideSprite != null)
+                {
+                    NonFlippableImage.gameObject.SetActive(false);
+                    Flippable.SetActive(true);
+                    FlippableFront.sprite = frontSideSprite;
+                    FlippableFront.SetNativeSize();
+                    FlippableBack.sprite = backSideSprite;
+                    FlippableBack.SetNativeSize();
+
+                    EventSystem.current.SetSelectedGameObject(FlippableButton.gameObject);
+                }
+                else
+                {
+                    NonFlippableImage.sprite = frontSideSprite;
+                    NonFlippableImage.SetNativeSize();
+                    NonFlippableImage.gameObject.SetActive(true);
+                    Flippable.SetActive(false);
+
+                    EventSystem.current.SetSelectedGameObject(CloseButton);
+                }
             }
         }
 
         public void OnLoreInspected()
         {
             LoreRoot.SetActive(false);
-            
-            MovementController.Unfreeze();
+
+            PlayerInput.SwitchCurrentActionMap("Gameplay");
         }
     }
 }
