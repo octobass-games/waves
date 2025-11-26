@@ -16,7 +16,7 @@ namespace Octobass.Waves.Item
 
         public void PickUp()
         {
-            Inventory inventory = ServiceLocator.Instance.Get<Inventory>();
+            Inventory inventory = FindFirstObjectByType<Inventory>();
 
             if (inventory != null && inventory.PickUp(ItemDefinition))
             {

@@ -10,18 +10,11 @@ public class TeleportSelector : MonoBehaviour, IPointerClickHandler, ISubmitHand
 
     void Start()
     {
-        if (ServiceLocator.Instance != null)
-        {
-            TeleportController = ServiceLocator.Instance.Get<TeleportController>();
+        TeleportController = FindFirstObjectByType<TeleportController>();
 
-            if (TeleportController == null)
-            {
-                Debug.Log("[TeleportSelector]: TeleportController not found");
-            }
-        }
-        else
+        if (TeleportController == null)
         {
-            Debug.Log("[TeleportSelector]: ServiceLocator instance not found");
+            Debug.Log("[TeleportSelector]: TeleportController not found");
         }
 
         if (TryGetComponent(out MapRoomRenderer mapRoomRenderer))

@@ -30,34 +30,28 @@ namespace Octobass.Waves
         [SerializeField]
         private PlayerInput PlayerInput;
 
+        [SerializeField]
+        private SaveManager SaveManager;
+
         void Start()
         {
-            if (ServiceLocator.Instance != null)
+            if (SaveManager != null)
             {
-                SaveManager saveManager = ServiceLocator.Instance.Get<SaveManager>();
-
-                if (saveManager != null)
+                if (SaveManager.HasSaveData())
                 {
-                    if (saveManager.HasSaveData())
-                    {
-                        OpeningCamera.SetActive(false);
-                        BoatDriverAnimator.enabled = false;
-                        BoatAnimator.enabled = false;
-                        BoatBoatAnimator.enabled = false;
-                        Boat.transform.position = BoatFinalPosition;
-                        PlayerInput.SwitchCurrentActionMap("Gameplay");
+                    OpeningCamera.SetActive(false);
+                    BoatDriverAnimator.enabled = false;
+                    BoatAnimator.enabled = false;
+                    BoatBoatAnimator.enabled = false;
+                    Boat.transform.position = BoatFinalPosition;
+                    PlayerInput.SwitchCurrentActionMap("Gameplay");
 
-                        saveManager.Load();
-                    }
-                    else
-                    {
-                        Player.transform.SetParent(BoatAnimator.transform);
-                    }
+                    SaveManager.Load();
                 }
-            }
-            else
-            {
-                Debug.Log("[SceneBootstrap]: Could not find ServiceLocator");
+                else
+                {
+                    Player.transform.SetParent(BoatAnimator.transform);
+                }
             }
         }
     }

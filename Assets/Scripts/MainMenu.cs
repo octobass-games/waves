@@ -39,12 +39,12 @@ namespace Octobass.Waves
 
             if (SaveManager.HasSaveData())
             {
-                //LoadButton.interactable = true;
-                //EventSystem.current.SetSelectedGameObject(LoadButton.gameObject);
+                LoadButton.interactable = true;
+                EventSystem.current.SetSelectedGameObject(LoadButton.gameObject);
             }
             else
             {
-                //EventSystem.current.SetSelectedGameObject(NewGameButton.gameObject);
+                EventSystem.current.SetSelectedGameObject(NewGameButton.gameObject);
             }
         }
 

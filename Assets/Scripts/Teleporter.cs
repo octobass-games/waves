@@ -37,7 +37,7 @@ public class Teleporter : MonoBehaviour, ISavable
 
             if (ServiceLocator.Instance != null)
             {
-                Cartographer cartographer = ServiceLocator.Instance.Get<Cartographer>();
+                Cartographer cartographer = FindFirstObjectByType<Cartographer>();
 
                 if (cartographer != null)
                 {
@@ -47,7 +47,7 @@ public class Teleporter : MonoBehaviour, ISavable
         }
         else
         {
-            ServiceLocator.Instance.Get<TeleportController>().BeginTeleport();
+            FindFirstObjectByType<TeleportController>().BeginTeleport();
         }
     }
 

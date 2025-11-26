@@ -43,19 +43,6 @@ public class TeleportController : MonoBehaviour
         Teleporters = FindObjectsByType<Teleporter>(FindObjectsSortMode.None).ToList();
     }
 
-    void OnEnable()
-    {
-        ServiceLocator.Instance.Register(this);
-    }
-
-    void OnDisable()
-    {
-        if (ServiceLocator.Instance != null)
-        {
-            ServiceLocator.Instance.Unregister<TeleportController>();
-        }
-    }
-
     public void BeginTeleport()
     {
         IsTeleporting = true;

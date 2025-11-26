@@ -19,8 +19,12 @@ namespace Octobass.Waves
             else
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject);
             }
+        }
+
+        void OnDisable()
+        {
+            Instance = null;
         }
 
         public void Register<T>(T service) where T : class
