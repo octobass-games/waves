@@ -121,5 +121,10 @@ namespace Octobass.Waves.Item
         {
             return Items.Find(i => i.Name == item.Name);
         }
+
+        public List<AbilityItemInstance> GetAbilityItems()
+        {
+            return Items.OfType<AbilityItemInstance>().ToList();
+        }
     }
 }

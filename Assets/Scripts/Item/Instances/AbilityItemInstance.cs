@@ -9,7 +9,7 @@ namespace Octobass.Waves.Item
 
         public AbilityItemInstance(string name, AbilityDefinition abilityDefinition) : base(name)
         {
-            Ability = new AbilityInstance(abilityDefinition.name, abilityDefinition.NewState, abilityDefinition.Explainer);
+            Ability = new AbilityInstance(abilityDefinition.Name, abilityDefinition.NewState, abilityDefinition.Explainer, abilityDefinition);
         }
     }
 }
