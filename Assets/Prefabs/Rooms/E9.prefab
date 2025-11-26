@@ -646,6 +646,7 @@ Transform:
   - {fileID: 6891552907402919894}
   - {fileID: 8355085322860999694}
   - {fileID: 2800611158804836184}
+  - {fileID: 354381734165726527}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5883724353930277953
@@ -2145,6 +2146,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7055501717854003962, guid: f20b28d734eeda343a98fde393da7b4e, type: 3}
   m_PrefabInstance: {fileID: 6133688617374865130}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6267280071658525443
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2193952176572002248}
+    m_Modifications:
+    - target: {fileID: 1922149762785621943, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: Room
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4134216773986271430, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: Room
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.045685
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0790133
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917287984924802649, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: m_Name
+      value: waterport
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+--- !u!4 &354381734165726527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+  m_PrefabInstance: {fileID: 6267280071658525443}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6276653483578652618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2337,6 +2408,10 @@ PrefabInstance:
       propertyPath: Name
       value: E9-West
       objectReference: {fileID: 0}
+    - target: {fileID: 3125773744129716664, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
+      propertyPath: Room
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 8423480136970513959, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: m_Name
       value: E9 - Spawn West
@@ -2402,6 +2477,10 @@ PrefabInstance:
     - target: {fileID: 3125773744129716664, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: Name
       value: E9-East
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125773744129716664, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
+      propertyPath: Room
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 8423480136970513959, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: m_Name
