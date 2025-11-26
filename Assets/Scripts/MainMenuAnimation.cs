@@ -19,6 +19,5 @@ public class MainMenuAnimation : MonoBehaviour
     public void LoadButton(int button)
     {
         Buttons[button].SetTrigger("load");
-        Debug.Log("aspojidpasdipjasdjiop");
     }
 }
