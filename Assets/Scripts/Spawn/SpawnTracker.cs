@@ -56,6 +56,8 @@ namespace Octobass.Waves.Spawn
         public void SetSpawnPoint(SpawnPoint spawnPoint)
         {
             CurrentSpawnPoint = spawnPoint;
+
+            Debug.Log($"[SpawnPoint]: CurrentSpawnPoint set to {spawnPoint.Name}");
         }
 
         public void Load(SaveData saveData)
