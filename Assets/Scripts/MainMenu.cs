@@ -10,7 +10,7 @@ namespace Octobass.Waves
     public class MainMenu : MonoBehaviour
     {
         [SerializeField]
-        private GameObject InitiallySelectedGameObject;
+        private GameObject NewGameButton;
 
         [SerializeField]
         private Button LoadButton;
@@ -32,17 +32,20 @@ namespace Octobass.Waves
                 Debug.LogWarning("[MainMenu]: LoadButton not set");
             }
 
-            if (InitiallySelectedGameObject == null)
+            if (NewGameButton == null)
             {
                 Debug.LogWarning("[MainMenu]: InitiallySelectedGameObject not set");
             }
 
             if (SaveManager.HasSaveData())
             {
-                LoadButton.interactable = true;
+                //LoadButton.interactable = true;
+                //EventSystem.current.SetSelectedGameObject(LoadButton.gameObject);
             }
-
-            EventSystem.current.SetSelectedGameObject(InitiallySelectedGameObject);
+            else
+            {
+                //EventSystem.current.SetSelectedGameObject(NewGameButton.gameObject);
+            }
         }
 
         public void NewGame()

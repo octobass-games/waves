@@ -2,7 +2,7 @@ namespace Octobass.Waves.Item
 {
     public class LoreItemInstance : ItemInstance
     {
-        private LoreItemDefinition Definition;
+        public LoreItemDefinition Definition;
 
         public LoreItemInstance(string name, LoreItemDefinition definition) : base(name)
         {
