@@ -694,10 +694,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.20677084
+    y: 0.049074072
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -15434,6 +15434,10 @@ PrefabInstance:
     - target: {fileID: 8510857359090357894, guid: a0422a69122fa9f4b8b32a2669aee9b6, type: 3}
       propertyPath: m_Tiles.Array.data[1429].second.m_TileSpriteIndex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967489687464710045, guid: a0422a69122fa9f4b8b32a2669aee9b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
