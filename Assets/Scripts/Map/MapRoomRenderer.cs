@@ -14,17 +14,14 @@ namespace Octobass.Waves.Map
 
         private MapRoomDetailsRenderer detailsRenderer;
 
-        void Awake()
+        public void Draw(Room room, bool isPlayerInRoom, bool miniMode, bool teleportMode)
         {
             Image = GetComponent<Image>();
             Button = GetComponent<Button>();
             TeleportSelector = GetComponent<TeleportSelector>();
 
             detailsRenderer = GetComponentInChildren<MapRoomDetailsRenderer>();
-        }
 
-        public void Draw(Room room, bool isPlayerInRoom, bool miniMode, bool teleportMode)
-        {
             Color color = Image.color;
 
             if (room.State == RoomState.Unknown)

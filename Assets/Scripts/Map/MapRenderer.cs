@@ -22,16 +22,13 @@ namespace Octobass.Waves.Map
         public GameObject MiniMap;
         public GameObject MiniMask;
         public GameObject BigMap;
-
-        private Vector3 MiniMapCentre;
+        public Transform MiniMapCentre;
 
         private List<Room> Rooms = new();
         private RoomId ActiveRoom;
 
         void Awake()
         {
-            MiniMapCentre = MiniMapRows.transform.position;
-
             if (HideOnAwake)
             {
                 HideMap();
@@ -69,7 +66,7 @@ namespace Octobass.Waves.Map
 
                         if (playerInRoom)
                         {
-                            Vector3 translation = MiniMapCentre - renderer.transform.position;
+                            Vector3 translation = MiniMapCentre.position - renderer.transform.position;
 
                             MiniMapRows.transform.position += translation;
                         }
