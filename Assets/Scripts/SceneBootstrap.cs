@@ -1,3 +1,4 @@
+using Octobass.Waves.Map;
 using Octobass.Waves.Save;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -33,6 +34,9 @@ namespace Octobass.Waves
         [SerializeField]
         private SaveManager SaveManager;
 
+        [SerializeField]
+        private MapRenderer MapRenderer;
+
         void Start()
         {
             if (SaveManager != null)
@@ -45,6 +49,7 @@ namespace Octobass.Waves
                     BoatBoatAnimator.enabled = false;
                     Boat.transform.position = BoatFinalPosition;
                     PlayerInput.SwitchCurrentActionMap("Gameplay");
+                    MapRenderer.ShowMap();
 
                     SaveManager.Load();
                 }
