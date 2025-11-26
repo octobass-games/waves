@@ -13,12 +13,6 @@ namespace Octobass.Waves.Item
         private GameObject LoreRoot;
 
         [SerializeField]
-        private TextMeshProUGUI LoreText;
-
-        [SerializeField]
-        private MovementController MovementController;
-
-        [SerializeField]
         private Image NonFlippableImage;
 
         [SerializeField]
@@ -39,29 +33,15 @@ namespace Octobass.Waves.Item
         [SerializeField]
         private PlayerInput PlayerInput;
 
-        void Awake()
-        {
-            if (LoreRoot == null)
-            {
-                Debug.LogWarning("[LoreInspector]: LoreRoot not set");
-            }
-
-            if (LoreText == null)
-            {
-                Debug.LogWarning("[LoreInspector]: LoreText not set");
-            }
-
-            if (MovementController == null)
-            {
-                Debug.LogWarning("[LoreInspector]: MovementController not set");
-            }
-        }
 
         public void OnItemPickedUp(ItemInstance item)
         {
             if (item is LoreItemInstance loreItemInstance)
             {
-                LoreRoot.SetActive(true);
+                if (LoreRoot != null)
+                {
+                    LoreRoot.SetActive(true);
+                }
 
                 PlayerInput.SwitchCurrentActionMap("UI");
 
@@ -86,7 +66,10 @@ namespace Octobass.Waves.Item
                     NonFlippableImage.gameObject.SetActive(true);
                     Flippable.SetActive(false);
 
-                    EventSystem.current.SetSelectedGameObject(CloseButton);
+                    if (CloseButton != null)
+                    {
+                        EventSystem.current.SetSelectedGameObject(CloseButton);
+                    }
                 }
             }
         }

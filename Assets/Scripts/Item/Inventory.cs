@@ -1,4 +1,5 @@
 using Octobass.Waves.Save;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -114,6 +115,11 @@ namespace Octobass.Waves.Item
                     Debug.Log($"[Inventory]: PickupableItem not found for {item.Name}");
                 }
             }
+        }
+
+        public ItemInstance FindItem(ItemDefinition item)
+        {
+            return Items.Find(i => i.Name == item.Name);
         }
     }
 }
