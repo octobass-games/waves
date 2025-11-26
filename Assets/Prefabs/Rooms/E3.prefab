@@ -3543,7 +3543,7 @@ Tilemap:
       - {fileID: -8317056041114954161, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -8440385396302153196, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -5337844618644858084, guid: 5a1f94f460d015843945b80196c107df, type: 3}
-      m_AnimationSpeed: 4.900712
+      m_AnimationSpeed: 5.981882
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -33228,6 +33228,10 @@ PrefabInstance:
       propertyPath: Name
       value: E3-West
       objectReference: {fileID: 0}
+    - target: {fileID: 3125773744129716664, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
+      propertyPath: Room
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8423480136970513959, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: m_Name
       value: E3 - Spawn West
@@ -33324,6 +33328,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7984609605813208002}
     m_Modifications:
+    - target: {fileID: 1699407245871083742, guid: ea8123d65f28d984fb73581e76c15320, type: 3}
+      propertyPath: BreakableId
+      value: E3-breakable-wall
+      objectReference: {fileID: 0}
     - target: {fileID: 1906903214856193333, guid: ea8123d65f28d984fb73581e76c15320, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -33492,6 +33500,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7984609605813208002}
     m_Modifications:
+    - target: {fileID: 1922149762785621943, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: Name
+      value: E3-Teleporter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922149762785621943, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: Room
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4134216773986271430, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: Room
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5914033671320540732, guid: 91a172a38f72f01458fa39268b945336, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5299454
@@ -34051,6 +34071,10 @@ PrefabInstance:
     - target: {fileID: 3125773744129716664, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: Name
       value: E3-East
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125773744129716664, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
+      propertyPath: Room
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8423480136970513959, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: m_Name
