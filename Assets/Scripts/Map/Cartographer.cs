@@ -28,19 +28,6 @@ namespace Octobass.Waves.Map
             OnRoomStateChanged.Invoke(Rooms, RoomId.A4);
         }
 
-        void OnEnable()
-        {
-            ServiceLocator.Instance.Register(this);
-        }
-
-        void OnDisable()
-        {
-            if (ServiceLocator.Instance != null)
-            {
-                ServiceLocator.Instance.Unregister<Cartographer>();
-            }
-        }
-
         public void OnItemPickedUp(ItemInstance item)
         {
             if (item is ShellItemInstance)

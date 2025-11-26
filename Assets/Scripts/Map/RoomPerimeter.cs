@@ -10,7 +10,7 @@ namespace Octobass.Waves.Map
         {
             if (collision.CompareTag(Tags.Player))
             {
-                Cartographer cartographer = ServiceLocator.Instance.Get<Cartographer>();
+                Cartographer cartographer = FindFirstObjectByType<Cartographer>();
 
                 if (cartographer != null)
                 {

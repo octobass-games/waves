@@ -22,19 +22,6 @@ namespace Octobass.Waves.Save
             SaveFilePath = Path.Combine(Application.persistentDataPath, SaveFileName + ".json");
         }
 
-        void OnEnable()
-        {
-            ServiceLocator.Instance.Register(this);
-        }
-
-        void OnDisable()
-        {
-            if (ServiceLocator.Instance != null)
-            {
-                ServiceLocator.Instance.Unregister<SaveManager>();
-            }
-        }
-
         public void Register(Saver saver)
         {
             if (!Savers.Contains(saver))

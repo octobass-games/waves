@@ -24,22 +24,15 @@ namespace Octobass.Waves.Save
 
         void OnEnable()
         {
-            if (ServiceLocator.Instance != null)
-            {
-                SaveManager = ServiceLocator.Instance.Get<SaveManager>();
+            SaveManager = FindFirstObjectByType<SaveManager>();
 
-                if (SaveManager != null)
-                {
-                    SaveManager.Register(this);
-                }
-                else
-                {
-                    Debug.LogWarning("[Saver]: Could not retrieve SaveManager from ServiceLocator");
-                }
+            if (SaveManager != null)
+            {
+                SaveManager.Register(this);
             }
             else
             {
-                Debug.LogWarning("[Saver]: Attempted to get SaveManager but ServiceLocator instance not available");
+                Debug.LogWarning("[Saver]: Could not retrieve SaveManager");
             }
         }
 
