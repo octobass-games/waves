@@ -67,7 +67,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.6306076, y: -0.025224686}
+  m_Offset: {x: -1.1306076, y: -0.025224686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.2612152, y: 3.1692905}
+  m_Size: {x: 1.2612152, y: 3.1692905}
   m_EdgeRadius: 0
 --- !u!114 &2702275107260556103
 MonoBehaviour:
@@ -289,8 +289,6 @@ MonoBehaviour:
   Animator: {fileID: 7499814002654348222}
   BreakableCollider: {fileID: 8919458020806136625}
   BreakableRangeCollider: {fileID: 2905452375908512487}
-  SpriteRenderer: {fileID: 1906903214856193333}
-  BrokenSprite: {fileID: -5127705358507184561, guid: 6894f2b7f9a4f9045994b0b2b4b9e908, type: 3}
 --- !u!114 &5708229579450111997
 MonoBehaviour:
   m_ObjectHideFlags: 0

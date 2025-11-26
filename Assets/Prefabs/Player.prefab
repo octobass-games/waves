@@ -419,7 +419,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Character.SpawnTracker
   MovementController: {fileID: 7789577042043984978}
   CameraSwitcher: {fileID: 0}
-  SpawnPointRoomBindings: []
+  DefaultSpawnPoint: {fileID: 0}
+  Cartographer: {fileID: 0}
 --- !u!114 &4374423792661856508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,8 +486,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.LoreInspector
   LoreRoot: {fileID: 0}
-  LoreText: {fileID: 0}
-  MovementController: {fileID: 7789577042043984978}
+  NonFlippableImage: {fileID: 0}
+  Flippable: {fileID: 0}
+  FlippableFront: {fileID: 0}
+  FlippableBack: {fileID: 0}
+  FlippableButton: {fileID: 0}
+  CloseButton: {fileID: 0}
+  PlayerInput: {fileID: 0}
 --- !u!114 &215965231412949391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,7 +580,6 @@ MonoBehaviour:
   MovementController: {fileID: 7789577042043984978}
   MapRenderer: {fileID: 0}
   SpawnTracker: {fileID: 5931426664578809513}
-  Cartographer: {fileID: 0}
   Animator: {fileID: 881346472432367290}
   PlayerInput: {fileID: 215965231412949391}
 --- !u!1 &2319988461481833929
@@ -604,7 +609,7 @@ Transform:
   m_GameObject: {fileID: 2319988461481833929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: 0.69, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -696,7 +701,7 @@ Transform:
   m_GameObject: {fileID: 8827532984597487714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.38, y: 0.69, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
