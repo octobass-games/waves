@@ -20,4 +20,9 @@ public class MainMenuAnimation : MonoBehaviour
     {
         Buttons[button].SetTrigger("load");
     }
+
+    public void EndAnimation()
+    {
+
+    }
 }
