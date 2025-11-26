@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: mermaid-boss
     originalName: 
-    pivot: {x: 0.49691355, y: -0.03787879}
+    pivot: {x: 0.45061725, y: -0.32575756}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -148,6 +148,90 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Frame_1
+    originalName: 
+    pivot: {x: 0.45061725, y: -0.32575756}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 4
+      width: 162
+      height: 132
+    spriteID: c126954c31ac66643a1ff179c0978b99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 4}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.45061725, y: -0.32575756}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 344
+      y: 4
+      width: 162
+      height: 132
+    spriteID: 228f8faa23a3c6a46b18f5b839eea84e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 344, y: 4}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 0.45061725, y: -0.32575756}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 144
+      width: 162
+      height: 132
+    spriteID: cfea5010f723b2e4897ed88fea91727d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 144}
+  - name: Frame_4
+    originalName: 
+    pivot: {x: 0.45061725, y: -0.33076924}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 144
+      width: 162
+      height: 130
+    spriteID: 3c71618175ebe124190c2102c328ace6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 144}
   spriteSheetImportData: []
   tileSetImportData: []
   asepriteLayers:
@@ -163,15 +247,51 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: mermaid-boss
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 12
-        y: 5
+        x: 64
+        y: 43
         width: 162
         height: 132
       spriteId: bb680ae9f65dfea468427d5d4de8aacf
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 43
+        width: 162
+        height: 132
+      spriteId: c126954c31ac66643a1ff179c0978b99
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 43
+        width: 162
+        height: 132
+      spriteId: 228f8faa23a3c6a46b18f5b839eea84e
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 43
+        width: 162
+        height: 132
+      spriteId: cfea5010f723b2e4897ed88fea91727d
+    - name: Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 43
+        width: 162
+        height: 130
+      spriteId: 3c71618175ebe124190c2102c328ace6
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -205,5 +325,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 185, y: 146}
-  previousTextureSize: {x: 256, y: 256}
+  canvasSize: {x: 274, y: 228}
+  previousTextureSize: {x: 512, y: 512}
