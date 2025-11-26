@@ -1598,7 +1598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &836377230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,7 +1797,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1762191214}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 215965231412949391, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: m_UIInputModule
@@ -1821,11 +1821,11 @@ PrefabInstance:
       objectReference: {fileID: 1047319394}
     - target: {fileID: 3912023152736792653, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.02
+      value: -75.880005
       objectReference: {fileID: 0}
     - target: {fileID: 3912023152736792653, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: -0.59000015
       objectReference: {fileID: 0}
     - target: {fileID: 3912023152736792653, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4126,7 +4126,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1047319393}
   - {fileID: 808593325}
   - {fileID: 1078555613}
   - {fileID: 1865295163}
@@ -4142,7 +4141,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762191213}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 51e45f5140f458342ac0ac2b67676ef3, type: 2}
   m_CullingMode: 0
@@ -4163,7 +4162,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762191213}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38a49b1721040264c8e4bcf118fd2214, type: 3}
   m_Name: 
@@ -16590,7 +16589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.777485
+      value: 5.047575
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
@@ -36559,3 +36558,4 @@ SceneRoots:
   - {fileID: 14005583}
   - {fileID: 3788814648448773181}
   - {fileID: 836377231}
+  - {fileID: 1047319392}

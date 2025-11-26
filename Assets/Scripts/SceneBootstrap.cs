@@ -36,17 +36,23 @@ namespace Octobass.Waves
             {
                 SaveManager saveManager = ServiceLocator.Instance.Get<SaveManager>();
 
-                if (saveManager != null && saveManager.HasSaveData())
+                if (saveManager != null)
                 {
-                    OpeningCamera.SetActive(false);
-                    BoatDriverAnimator.enabled = false;
-                    BoatAnimator.enabled = false;
-                    BoatBoatAnimator.enabled = false;
-                    Boat.transform.position = BoatFinalPosition;
-                    Player.transform.parent = null;
-                    PlayerInput.SwitchCurrentActionMap("Gameplay");
+                    if (saveManager.HasSaveData())
+                    {
+                        OpeningCamera.SetActive(false);
+                        BoatDriverAnimator.enabled = false;
+                        BoatAnimator.enabled = false;
+                        BoatBoatAnimator.enabled = false;
+                        Boat.transform.position = BoatFinalPosition;
+                        PlayerInput.SwitchCurrentActionMap("Gameplay");
 
-                    saveManager.Load();
+                        saveManager.Load();
+                    }
+                    else
+                    {
+                        Player.transform.SetParent(BoatAnimator.transform);
+                    }
                 }
             }
             else
