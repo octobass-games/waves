@@ -695,14 +695,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.055555556
-    width: 0.33333334
-    height: 0.3333333
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.875
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -727,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 393106800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.10536, y: -0.000000063304014, z: -1}
+  m_LocalPosition: {x: -75.91093, y: -0.000000063304014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2829,8 +2829,9 @@ GameObject:
   - component: {fileID: 1087556907}
   - component: {fileID: 1087556906}
   - component: {fileID: 1087556905}
+  - component: {fileID: 1087556908}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: LoadFade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2849,7 +2850,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1301629297}
-  m_Father: {fileID: 1762191214}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2919,6 +2920,28 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &1087556908
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087556903}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9a3e2b6cf8e61546a0f6c5bd8ec6141, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1133735753 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1776599706522154879, guid: e795984894612b14fa148cbe33ec5f16, type: 3}
@@ -4109,7 +4132,6 @@ Transform:
   - {fileID: 1865295163}
   - {fileID: 1668696738}
   - {fileID: 1686493099}
-  - {fileID: 1087556904}
   m_Father: {fileID: 14005583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1762191215
@@ -36533,6 +36555,7 @@ SceneRoots:
   - {fileID: 908922137}
   - {fileID: 1330039401}
   - {fileID: 657639031}
+  - {fileID: 1087556904}
   - {fileID: 14005583}
   - {fileID: 3788814648448773181}
   - {fileID: 836377231}
