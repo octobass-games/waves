@@ -694,15 +694,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.20677084
-    y: 0.049074072
-    width: 0.5
-    height: 0.5
+    x: 0
+    y: 0.055555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8147,10 +8147,6 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
-    - target: {fileID: 7480176792827956467, guid: a0422a69122fa9f4b8b32a2669aee9b6, type: 3}
-      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7758397012562293310, guid: a0422a69122fa9f4b8b32a2669aee9b6, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[0].m_Data
       value: 
