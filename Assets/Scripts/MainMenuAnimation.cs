@@ -1,9 +1,12 @@
+using Octobass.Waves;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuAnimation : MonoBehaviour
 {
+    public MainMenu MainMenu;
     public List<Animator> Buttons;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +26,6 @@ public class MainMenuAnimation : MonoBehaviour
 
     public void EndAnimation()
     {
-
+        MainMenu.EnableButtons();
     }
 }

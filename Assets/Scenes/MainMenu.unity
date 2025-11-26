@@ -603,7 +603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3055244062995602672, guid: 9ab75d611e6254840a9076c4b3453acf, type: 3}
+  m_Sprite: {fileID: -5665854073740993839, guid: 9ab75d611e6254840a9076c4b3453acf, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -707,11 +707,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1963438187}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1963438187}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 2
   m_Colors:
@@ -737,7 +737,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430232996}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 812424740}
+        m_TargetAssemblyTypeName: Octobass.Waves.MainMenu, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &430232996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,7 +958,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 812424740}
         m_TargetAssemblyTypeName: Octobass.Waves.MainMenu, Assembly-CSharp
-        m_MethodName: NewGame
+        m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1196,6 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23c12031ce9d6e4f8356e94fbb34eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  MainMenu: {fileID: 812424740}
   Buttons:
   - {fileID: 1211014889}
   - {fileID: 626233276}
@@ -1442,8 +1455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd41be91b5a40b4ba2662cdec0e87d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  NewGameButton: {fileID: 626233270}
-  LoadButton: {fileID: 1211014888}
+  NewGameButton: {fileID: 1211014883}
+  LoadButton: {fileID: 626233275}
+  QuitButton: {fileID: 430232992}
   SaveManager: {fileID: 1284908322}
 --- !u!114 &1059275953
 MonoBehaviour:
@@ -1516,7 +1530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5665854073740993839, guid: 9ab75d611e6254840a9076c4b3453acf, type: 3}
+  m_Sprite: {fileID: -3055244062995602672, guid: 9ab75d611e6254840a9076c4b3453acf, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1794,7 +1808,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 812424740}
         m_TargetAssemblyTypeName: Octobass.Waves.MainMenu, Assembly-CSharp
-        m_MethodName: LoadGame
+        m_MethodName: NewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
