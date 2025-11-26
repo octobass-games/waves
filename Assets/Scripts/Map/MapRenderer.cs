@@ -155,6 +155,12 @@ namespace Octobass.Waves.Map
             Draw(true);
         }
 
+        public void ShowMiniMap()
+        {
+            miniMode = false;
+            ToggleMode();
+        }
+
         public void HideMap()
         {
             if (miniMode)

@@ -60,6 +60,7 @@ public class TeleportController : MonoBehaviour
     {
         IsTeleporting = true;
 
+        MapRenderer.ShowMiniMap();
         PlayerInput.SwitchCurrentActionMap("UI");
 
         Animator.SetTrigger("IsEnteringTeleporter");
@@ -92,7 +93,7 @@ public class TeleportController : MonoBehaviour
 
     public void Finish()
     {
-        MapRenderer.ToggleMode();
+        MapRenderer.ShowMiniMap();
         Animator.SetTrigger("IsTeleportingFinished");
 
         PlayerInput.SwitchCurrentActionMap("Gameplay");
