@@ -727,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 393106800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.91093, y: -0.000000063304014, z: -1}
+  m_LocalPosition: {x: -76.10536, y: -0.000000063304014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2478,7 +2478,7 @@ PrefabInstance:
     - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: LoreText
       value: 
-      objectReference: {fileID: 1535715693}
+      objectReference: {fileID: 0}
     - target: {fileID: 6471979937186483503, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: OnItemPickedUp.m_PersistentCalls.m_Calls.Array.size
       value: 4
@@ -3575,17 +3575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: e1cd2d3df1d138c4d9577775ce86eba0, type: 3}
   m_ActionId: cfb825c0-2eed-4f35-a167-acccb99b7a61
---- !u!114 &1535715693 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1904590628775017627, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
-  m_PrefabInstance: {fileID: 950785971914746239}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1539800906
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,6 +5219,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3037565499457933741, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037565499457933741, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037565499457933741, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+    - target: {fileID: 3037565499457933741, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037565499457933741, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLoreInspected
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037565499457933741, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Item.LoreInspector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037565499457933741, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4234245750847214340, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
       propertyPath: m_Name
       value: LoreRoot
@@ -5238,6 +5255,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1448142539}
+    - target: {fileID: 6139950563356754859, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.673462
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
