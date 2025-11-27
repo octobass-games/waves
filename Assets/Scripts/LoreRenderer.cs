@@ -1,6 +1,8 @@
 using Octobass.Waves.Item;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class LoreRenderer : MonoBehaviour
 {
@@ -8,10 +10,12 @@ public class LoreRenderer : MonoBehaviour
     public Inventory inventory;
 
     public List<LoreItemRenderer> renderers;
+    public Button BackButton;
 
     void Awake()
     {
         initaliseRenderers(null);
+        EventSystem.current.SetSelectedGameObject(BackButton.gameObject);
     }
 
     public void PickItem(ItemDefinition item)
@@ -30,5 +34,13 @@ public class LoreRenderer : MonoBehaviour
             var item = inventory.FindItem(renderer.ItemDefinition);
             renderer.gameObject.SetActive(item != null && renderer.ItemDefinition != active);
         });
+    }
+
+    void Update()
+    {
+           if (EventSystem.current.currentSelectedGameObject == null)
+            {
+                EventSystem.current.SetSelectedGameObject(BackButton.gameObject);
+            }
     }
 }

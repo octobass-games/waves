@@ -2884,6 +2884,7 @@ MonoBehaviour:
   - {fileID: 3576435834050058614}
   - {fileID: 3138010269840692086}
   - {fileID: 9188700428335344326}
+  BackButton: {fileID: 5377670508011689400}
 --- !u!1001 &118326052318926877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3932,6 +3933,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fca3ba2f952408f41b7385df652d056d, type: 3}
+--- !u!114 &5377670508011689400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7144677999889928067, guid: fca3ba2f952408f41b7385df652d056d, type: 3}
+  m_PrefabInstance: {fileID: 2992549717241322043}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!224 &8454496679773115073 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6688914117929322746, guid: fca3ba2f952408f41b7385df652d056d, type: 3}
