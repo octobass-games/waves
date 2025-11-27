@@ -209,6 +209,11 @@ namespace Octobass.Waves.Movement
             return UnlockedStates.Any(state => state == CharacterStateId.Swimming);
         }
 
+        public bool IsGrounded()
+        {
+            return CollisionDetector.IsGrounded();
+        }
+
         public void Save(SaveData saveData)
         {
             saveData.Add(SaveKey, UnlockedStates);

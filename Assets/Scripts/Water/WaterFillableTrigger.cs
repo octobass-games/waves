@@ -1,3 +1,4 @@
+using Octobass.Waves.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,7 +14,8 @@ namespace Octobass.Waves.Water
 
         private InputAction RaiseWaterAction;
         private InputAction LowerWaterAction;
-        
+
+        private GameObject Player;
         private bool IsFillable;
 
         void Start()
@@ -23,21 +25,41 @@ namespace Octobass.Waves.Water
                 Debug.Log("[WaterFillableTrigger]: PlayerInput not set");
             }
 
-            RaiseWaterAction = PlayerInput.actions.FindAction("Inspect");
-            LowerWaterAction = PlayerInput.actions.FindAction("Attack");
+            RaiseWaterAction = PlayerInput.actions.FindAction("RaiseWater");
+            LowerWaterAction = PlayerInput.actions.FindAction("LowerWater");
         }
 
         void Update()
         {
             if (IsFillable)
             {
-                if (RaiseWaterAction.IsPressed())
+                bool isRaisingWater = RaiseWaterAction.IsPressed();
+                bool isLoweringWater = LowerWaterAction.IsPressed();
+
+                if (isRaisingWater || isLoweringWater)
                 {
-                    Fillable.Fill();
+                    if (Player.GetComponent<MovementController>().IsGrounded())
+                    {
+                        Player.GetComponent<MovementController>().Freeze();
+                        Player.GetComponent<Animator>().SetTrigger("IsControllingWater");
+
+                        if (isRaisingWater)
+                        {
+                            Fillable.Fill();
+                        }
+                        else
+                        {
+                            Fillable.Drain();
+                        }
+                    }
+                    else
+                    {
+                    }
                 }
-                else if (LowerWaterAction.IsPressed())
+                else
                 {
-                    Fillable.Drain();
+                    Player.GetComponent<MovementController>().Unfreeze();
+                    Player.GetComponent<Animator>().SetTrigger("IsNotControllingWater");
                 }
             }
         }
@@ -47,6 +69,7 @@ namespace Octobass.Waves.Water
             if (collision.CompareTag(Tags.Player))
             {
                 IsFillable = true;
+                Player = collision.gameObject;
             }
         }
 
@@ -55,6 +78,7 @@ namespace Octobass.Waves.Water
             if (collision.CompareTag(Tags.Player))
             {
                 IsFillable = false;
+                Player = null;
             }
         }
     }
