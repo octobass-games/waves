@@ -12,10 +12,11 @@ public class LoreRenderer : MonoBehaviour
     public List<LoreItemRenderer> renderers;
     public Button BackButton;
 
-    void Awake()
+    void OnEnable()
     {
         initaliseRenderers(null);
         EventSystem.current.SetSelectedGameObject(BackButton.gameObject);
+        inspector.gameObject.SetActive(false);
     }
 
     public void PickItem(ItemDefinition item)
