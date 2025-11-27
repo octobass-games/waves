@@ -694,15 +694,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: -0.25
+    y: -0.18750001
+    width: 0.5
+    height: 0.37500003
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -727,7 +727,7 @@ Transform:
   m_GameObject: {fileID: 393106800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.91093, y: -0.000000063304014, z: -1}
+  m_LocalPosition: {x: -77.09612, y: -0.000000063304014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5028,6 +5028,10 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
+    - target: {fileID: 532538749580666229, guid: 4c3561bbc22a37748802fc3a35eeb40d, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 1755504926307512918, guid: 4c3561bbc22a37748802fc3a35eeb40d, type: 3}
       propertyPath: m_Name
       value: G5
@@ -5644,6 +5648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: D7
       objectReference: {fileID: 0}
+    - target: {fileID: 5515725155452300928, guid: dcc2b66be15e52b40ad67893b7a488a0, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 6809091750055358468, guid: dcc2b66be15e52b40ad67893b7a488a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -293.42548
@@ -5867,6 +5875,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2116865587}
     m_Modifications:
+    - target: {fileID: 219187433364479260, guid: d67fcd787ee3e724a83aec7a29483857, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 800254518894029355, guid: d67fcd787ee3e724a83aec7a29483857, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -18715,6 +18727,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -12.146111
       objectReference: {fileID: 0}
+    - target: {fileID: 3312958497447049325, guid: cf4f1df6e4d58964da94db477d07007d, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 3601838527095373280, guid: cf4f1df6e4d58964da94db477d07007d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 230
@@ -18795,6 +18811,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 357466902}
     m_Modifications:
+    - target: {fileID: 206840502871676002, guid: ed4f95022c65cc34a97e2e142ef0053b, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 1680927473489483779, guid: ed4f95022c65cc34a97e2e142ef0053b, type: 3}
       propertyPath: m_Name
       value: F7
@@ -19541,6 +19561,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -59.14611
       objectReference: {fileID: 0}
+    - target: {fileID: 6939357692267721531, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 7049527547531701338, guid: a797251c194ba02409b11f5ea2132305, type: 3}
       propertyPath: m_LocalPosition.x
       value: 248.01001
@@ -34433,6 +34457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2116865587}
     m_Modifications:
+    - target: {fileID: 1402534701565991300, guid: 9e032e7cb37019644bf19cd2300ce3c3, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 4367378849856029193, guid: 9e032e7cb37019644bf19cd2300ce3c3, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
