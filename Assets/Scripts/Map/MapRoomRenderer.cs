@@ -10,7 +10,6 @@ namespace Octobass.Waves.Map
         private Image Image;
         private Button Button;
         private TeleportSelector TeleportSelector;
-        private float Opacity;
 
         private MapRoomDetailsRenderer detailsRenderer;
 
@@ -22,17 +21,13 @@ namespace Octobass.Waves.Map
 
             detailsRenderer = GetComponentInChildren<MapRoomDetailsRenderer>();
 
-            Color color = Image.color;
+            float alpha = room.State == RoomState.Discovered ? 0.5f : 1f;
 
-            if (room.State == RoomState.Unknown)
-            {
-                Image.enabled = false;
-            }
-            else
-            {
-                Image.enabled = true;
-                Image.color = new Color(color.r, color.g, color.b, room.State == RoomState.Discovered ? 0.5f : 1f);
-            }
+            Color color = Image.color;
+            
+            Image.enabled = room.State != RoomState.Unknown;
+            Image.color = new Color(color.r, color.g, color.b, alpha);
+
             if (!miniMode)
             {
                 detailsRenderer.Player.SetActive(isPlayerInRoom);
