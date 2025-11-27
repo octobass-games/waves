@@ -1,10 +1,11 @@
 using Octobass.Waves.Movement;
+using Octobass.Waves.Save;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Octobass.Waves.Attack
 {
-    public class AttackController : MonoBehaviour
+    public class AttackController : MonoBehaviour, ISavable
     {
         [SerializeField]
         private AttackMove RightAttack;
@@ -23,8 +24,11 @@ namespace Octobass.Waves.Attack
 
         private AttackMove CurrentAttackMove;
 
-        // TODO: if we want multiple attacking states then we need to handle the scenario where the attack is never ended
-        private readonly List<CharacterStateId> AttackingStates = new() { CharacterStateId.Grounded };
+        private bool IsProjectileAttackUnlocked;
+
+        private const string SaveKey = "projectile-attack-unlocked";
+
+        private readonly List<CharacterStateId> AttackingStates = new() { CharacterStateId.Grounded, CharacterStateId.Jumping, CharacterStateId.WallJump, CharacterStateId.Falling };
         private bool IsAttacking;
         private Vector2 FacingDirection;
 
@@ -43,7 +47,15 @@ namespace Octobass.Waves.Attack
 
         void OnActiveFrame()
         {
-            CurrentAttackMove.Activate();
+            if (IsProjectileAttackUnlocked)
+            {
+                var go = Instantiate(ProjectileAttack);
+                go.GetComponent<Projectile>().Init(FacingDirection, FacingDirection == Vector2.right ? RightProjectileAttackStartPosition.position : LeftProjectileAttackStartPosition.position);
+            }
+            else
+            {
+                CurrentAttackMove.Activate();
+            }
         }
 
         public void OnRecoveryFrame()
@@ -65,8 +77,8 @@ namespace Octobass.Waves.Attack
                 if (movementSnapshot.FacingDirection == Vector2.right)
                 {
                     CurrentAttackMove = RightAttack;
-                    //RightAttack.gameObject.SetActive(true);
-                    //LeftAttack.gameObject.SetActive(false);
+                    RightAttack.gameObject.SetActive(true);
+                    LeftAttack.gameObject.SetActive(false);
                 }
                 else
                 {
@@ -80,25 +92,32 @@ namespace Octobass.Waves.Attack
 
             bool isInAttackingState = AttackingStates.Contains(movementSnapshot.State);
 
-            if (isInAttackingState && (driverSnapshot.AttackPressed || driverSnapshot.ProjectileAttackPressed) && !IsAttacking)
+            if (isInAttackingState && driverSnapshot.AttackPressed && !IsAttacking)
             {
                 IsAttacking = true;
-
-                var go = GameObject.Instantiate(ProjectileAttack);
-                go.GetComponent<Projectile>().Init(FacingDirection, FacingDirection == Vector2.right ? RightProjectileAttackStartPosition.position : LeftProjectileAttackStartPosition.position);
             }
             else if (!isInAttackingState && IsAttacking)
             {
                 EndAttack();
             }
 
-            return new AttackSnapshot(IsAttacking, IsAttacking);
+            return new AttackSnapshot(IsAttacking);
         }
 
         private void EndAttack()
         {
             IsAttacking = false;
             CurrentAttackMove.Deactivate();
+        }
+
+        public void Save(SaveData saveData)
+        {
+            saveData.Add(SaveKey, IsProjectileAttackUnlocked);
+        }
+
+        public void Load(SaveData saveData)
+        {
+            IsProjectileAttackUnlocked = saveData.Load<bool>(SaveKey);
         }
     }
 }

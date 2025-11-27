@@ -15,7 +15,6 @@ namespace Octobass.Waves.Movement
         private InputAction HorizontalAction;
         private InputAction ClimbingAction;
         private InputAction SwimmingAction;
-        private InputAction ProjectileAttackAction;
 
         private bool JumpPressed;
         private bool JumpReleased;
@@ -25,8 +24,6 @@ namespace Octobass.Waves.Movement
         private bool GrabReleased;
         private bool AttackPressed;
         private bool AttackReleased;
-        private bool ProjectileAttackPressed;
-        private bool ProjectileAttackReleased;
 
         void Start()
         {
@@ -42,7 +39,6 @@ namespace Octobass.Waves.Movement
             HorizontalAction = PlayerInput.actions.FindAction("Horizontal");
             ClimbingAction = PlayerInput.actions.FindAction("Climbing");
             SwimmingAction = PlayerInput.actions.FindAction("Swimming");
-            ProjectileAttackAction = PlayerInput.actions.FindAction("ProjectileAttack");
         }
 
         public MovementDriverSnapshot TakeSnapshot()
@@ -87,16 +83,6 @@ namespace Octobass.Waves.Movement
                 DashReleased = true;
             }
 
-            if (ProjectileAttackAction.WasPerformedThisFrame())
-            {
-                ProjectileAttackPressed = true;
-            }
-
-            if (ProjectileAttackAction.WasReleasedThisFrame())
-            {
-                ProjectileAttackReleased = true;
-            }
-
 
             return new MovementDriverSnapshot
             {
@@ -112,8 +98,6 @@ namespace Octobass.Waves.Movement
                 GrabHeld = GrabPressed && !GrabReleased,
                 AttackPressed = AttackPressed,
                 AttackReleased = AttackReleased,
-                ProjectileAttackPressed = ProjectileAttackPressed,
-                ProjectilAttackReleased = ProjectileAttackReleased
             };
         }
 
@@ -127,9 +111,6 @@ namespace Octobass.Waves.Movement
 
             AttackPressed = false;
             AttackReleased = false;
-
-            ProjectileAttackPressed = false;
-            ProjectileAttackReleased = false;
 
             if (GrabReleased)
             {
