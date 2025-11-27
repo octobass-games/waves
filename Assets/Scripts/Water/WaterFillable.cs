@@ -22,6 +22,9 @@ namespace Octobass.Waves.Water
         [SerializeField]
         private BoxCollider2D Collider;
 
+        [SerializeField]
+        private GameObject Entrance;
+
         private Material FillableMaterial;
         private float FillableLine;
 
@@ -57,6 +60,11 @@ namespace Octobass.Waves.Water
                 Debug.LogWarning("[WaterFillable]: Collider not set");
             }
 
+            if (Entrance == null)
+            {
+                Debug.LogWarning("[WaterFillable]: Entrance not set");
+            }
+
             FillableMaterial = SpriteRenderer.material;
             FillableLine = FillableBottom.position.y;
             FillableMaterial.SetFloat("_FillableLine", FillableLine);
@@ -78,6 +86,7 @@ namespace Octobass.Waves.Water
         private void Move(Vector2 direction)
         {
             FillableLine = Mathf.Clamp(FillableLine + direction.y * Time.deltaTime, FillableBottom.transform.position.y, FillableTop.transform.position.y);
+            Entrance.transform.position += new Vector3(0, direction.y * Time.deltaTime);
 
             Collider.size = new Vector2(Collider.size.x, (FillableLine - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
             Collider.offset = new Vector2(0, (SpriteRenderer.bounds.min.y + ((FillableLine - SpriteRenderer.bounds.min.y) / 2) - transform.position.y) / transform.lossyScale.y);
