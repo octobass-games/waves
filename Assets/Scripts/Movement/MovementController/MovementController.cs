@@ -129,8 +129,6 @@ namespace Octobass.Waves.Movement
                         StateRegistry[CharacterStateId.WallClimb] = new WallClimbState(CharacterControllerConfig);
                         StateRegistry[CharacterStateId.WallSlide] = new WallSlideState(CharacterControllerConfig);
                         StateRegistry[CharacterStateId.LedgeClimb] = new LedgeClimbState(CharacterControllerConfig, CollisionDetector);
-                        break;
-                    case CharacterStateId.WallJump:
                         StateRegistry[CharacterStateId.WallJump] = new WallJumpState(CharacterControllerConfig, CollisionDetector);
                         break;
                     case CharacterStateId.Swimming:
