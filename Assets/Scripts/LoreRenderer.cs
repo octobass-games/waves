@@ -34,6 +34,15 @@ public class LoreRenderer : MonoBehaviour
         {
             var item = inventory.FindItem(renderer.ItemDefinition);
             renderer.gameObject.SetActive(item != null && renderer.ItemDefinition != active);
+            if (active != null) {
+                if (item is LoreItemInstance loreItemInstance)
+                {
+                    if (loreItemInstance.Definition.BackSprite == null)
+                    {
+                        EventSystem.current.SetSelectedGameObject(BackButton.gameObject);
+                    }
+                }
+            }
         });
     }
 

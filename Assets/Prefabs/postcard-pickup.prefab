@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4350587697714077401}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.151606, y: -1.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  PlayerInput: {fileID: 0}
   DisplayInspect: {fileID: 8222522834994359305}
 --- !u!114 &2639159549381844754
 MonoBehaviour:
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7c5039b7e56954e8da1c621b927fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.PickupableItem
-  ItemDefinition: {fileID: 11400000, guid: 5d59254379127e74fa60a80497a9b3eb, type: 2}
+  ItemDefinition: {fileID: 11400000, guid: 7a22204a255ba3e46ab9d97a4f3da3a2, type: 2}
 --- !u!1001 &3144837250036195993
 PrefabInstance:
   m_ObjectHideFlags: 0

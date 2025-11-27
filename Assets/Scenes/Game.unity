@@ -694,15 +694,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.073437504
+    y: 0.12314814
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6303,6 +6303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: D2
       objectReference: {fileID: 0}
+    - target: {fileID: 6566425564499691574, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 6877007208712034150, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
