@@ -9,5 +9,6 @@ namespace Octobass.Waves
         public CharacterStateId NewState;
         public string Name;
         public string Explainer;
+        public Sprite Image;
     }
 }

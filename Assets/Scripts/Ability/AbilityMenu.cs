@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Octobass.Waves.Ability
 {
@@ -12,7 +13,7 @@ namespace Octobass.Waves.Ability
         private List<AbilityMenuItem> AbilityMenuItems;
 
         [SerializeField]
-        private TextMeshProUGUI Text;
+        private Image Image;
 
         [SerializeField]
         private Inventory Inventory;
@@ -34,7 +35,8 @@ namespace Octobass.Waves.Ability
                 if (unlockedAbilityItems.Exists(abilityItem => abilityItem.Ability.Name == abilityMenuItem.AbilityDefinition.Name))
                 {
                     abilityMenuItem.gameObject.SetActive(true);
-                    abilityMenuItem.RegisterOnSelect(UpdateExplainer);
+                    abilityMenuItem.RegisterOnSelect(ShowExplainer);
+                    abilityMenuItem.RegisterOnDeselect(HideExplainer);
                 }
                 else
                 {
@@ -67,9 +69,16 @@ namespace Octobass.Waves.Ability
             }
         }
 
-        private void UpdateExplainer(AbilityDefinition abilityDefinition)
+        private void ShowExplainer(AbilityDefinition abilityDefinition)
         {
-            Text.text = abilityDefinition.Name;
+            Image.enabled = true;
+            Image.sprite = abilityDefinition.Image;
+            Image.SetNativeSize();
+        }
+
+        private void HideExplainer()
+        {
+            Image.enabled = false;
         }
     }
 }
