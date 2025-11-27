@@ -42,32 +42,32 @@ namespace Octobass.Waves.Map
                 detailsRenderer.Shell.SetActive(true);
             }
 
-            if (teleportMode && room.IsTeleporterFound)
+            detailsRenderer.Waterporter.SetActive(room.IsTeleporterFound);
+
+            if (teleportMode)
             {
+                Button.GetComponent<Animator>().enabled = true;
                 Button.enabled = true;
-                
-                if (TeleportSelector != null)
+                Button.interactable = room.IsTeleporterFound;
+
+                if (room.IsTeleporterFound)
                 {
-                    TeleportSelector.enabled = true;
+                    if (TeleportSelector != null)
+                    {
+                        TeleportSelector.enabled = true;
+                    }
                 }
             }
             else
             {
                 Button.enabled = false;
-                
+                Button.GetComponent<Animator>().enabled = false;
                 if (TeleportSelector != null)
                 {
                     TeleportSelector.enabled = false;
                 }
-            }
-
-            if (room.IsTeleporterFound)
-            {
-                detailsRenderer.Waterporter.SetActive(true);
-            }
-            else
-            {
-                detailsRenderer.Waterporter.SetActive(false);
+                detailsRenderer.SelectedBorder.SetActive(false);
+                detailsRenderer.ResetAllOpacities();
             }
         }
     }
