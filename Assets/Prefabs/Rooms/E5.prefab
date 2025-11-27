@@ -21907,6 +21907,7 @@ GameObject:
   - component: {fileID: 5947252118047980590}
   - component: {fileID: 3594215433419051094}
   - component: {fileID: 2522060334291641956}
+  - component: {fileID: 2856360825657425759}
   m_Layer: 8
   m_Name: WaterEntrance
   m_TagString: Untagged
@@ -22017,7 +22018,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -22033,6 +22034,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.0625, y: 4.8125}
   m_EdgeRadius: 0
+--- !u!114 &2856360825657425759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799997865693606299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd8c1e27efbeab479200cb5614bc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Water.WaterwayEntrance
 --- !u!1 &1061229682534378939
 GameObject:
   m_ObjectHideFlags: 0
@@ -29339,6 +29352,7 @@ GameObject:
   - component: {fileID: 4708928200651918538}
   - component: {fileID: 3608979253988244268}
   - component: {fileID: 3000310932776872967}
+  - component: {fileID: 199336922021728992}
   m_Layer: 8
   m_Name: WaterEntrance (1)
   m_TagString: Untagged
@@ -29449,7 +29463,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -29465,6 +29479,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.0625, y: 4.8125}
   m_EdgeRadius: 0
+--- !u!114 &199336922021728992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5863811286296658903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd8c1e27efbeab479200cb5614bc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Water.WaterwayEntrance
 --- !u!1 &6005554384490535939
 GameObject:
   m_ObjectHideFlags: 0

@@ -29997,6 +29997,7 @@ GameObject:
   - component: {fileID: 5750641050411901433}
   - component: {fileID: 8598647621679972699}
   - component: {fileID: 625791303759914235}
+  - component: {fileID: 2936209669481708102}
   m_Layer: 8
   m_Name: WaterEntrance
   m_TagString: Untagged
@@ -30107,7 +30108,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -30123,6 +30124,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.0625, y: 4.8125}
   m_EdgeRadius: 0
+--- !u!114 &2936209669481708102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079608112645427101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd8c1e27efbeab479200cb5614bc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Water.WaterwayEntrance
 --- !u!1 &3604496185582932564
 GameObject:
   m_ObjectHideFlags: 0
