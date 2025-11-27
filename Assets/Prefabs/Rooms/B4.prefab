@@ -11244,6 +11244,7 @@ GameObject:
   - component: {fileID: 559606900881890362}
   - component: {fileID: 6978783426258615103}
   - component: {fileID: 2618156335921308843}
+  - component: {fileID: 1524161694794158887}
   m_Layer: 8
   m_Name: Water Entance
   m_TagString: Untagged
@@ -11370,6 +11371,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.0625, y: 4.8125}
   m_EdgeRadius: 0
+--- !u!114 &1524161694794158887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5082670674619210032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd8c1e27efbeab479200cb5614bc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Water.WaterwayEntrance
 --- !u!1 &5422422944407608538
 GameObject:
   m_ObjectHideFlags: 0
