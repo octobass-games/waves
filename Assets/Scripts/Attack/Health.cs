@@ -6,6 +6,7 @@ namespace Octobass.Waves.Attack
     public class Health : MonoBehaviour, IDamageable
     {
         public int HealthPoints;
+        public int MaxHealthPoints = 1;
         public UnityEvent OnDamageTaken;
         public UnityEvent OnHealthEmpty;
 
@@ -36,6 +37,11 @@ namespace Octobass.Waves.Attack
             HealthPoints = 0;
 
             OnHealthEmpty.Invoke();
+        }
+
+        public void Reset()
+        {
+            HealthPoints = MaxHealthPoints;
         }
     }
 }

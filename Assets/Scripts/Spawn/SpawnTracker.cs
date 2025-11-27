@@ -1,3 +1,4 @@
+using Octobass.Waves.Attack;
 using Octobass.Waves.Camera;
 using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
@@ -46,6 +47,11 @@ namespace Octobass.Waves.Spawn
                 Vector2 bottomOfSpawnPoint = new(CurrentSpawnPoint.transform.position.x, CurrentSpawnPoint.GetComponent<BoxCollider2D>().bounds.min.y);
                 MovementController.ResetAtPosition(bottomOfSpawnPoint);
                 Cartographer.EnterRoom(CurrentSpawnPoint.Room);
+
+                if (TryGetComponent(out IDamageable damageable))
+                {
+                    damageable.Reset();
+                }
             }
             else
             {
