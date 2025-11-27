@@ -11,11 +11,7 @@ public class LoreRenderer : MonoBehaviour
 
     void Awake()
     {
-        renderers.ForEach(renderer =>
-        {
-            var item = inventory.FindItem(renderer.ItemDefinition);
-            renderer.gameObject.SetActive(item != null);
-        });
+        initaliseRenderers(null);
     }
 
     public void PickItem(ItemDefinition item)
@@ -23,5 +19,16 @@ public class LoreRenderer : MonoBehaviour
         var instance = inventory.FindItem(item);
         inspector.gameObject.SetActive(true);
         inspector.OnItemPickedUp(instance);
+
+        initaliseRenderers(item);
+    }
+
+    private void initaliseRenderers(ItemDefinition active)
+    {
+        renderers.ForEach(renderer =>
+        {
+            var item = inventory.FindItem(renderer.ItemDefinition);
+            renderer.gameObject.SetActive(item != null && renderer.ItemDefinition != active);
+        });
     }
 }
