@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 6640141045396107075}
   - component: {fileID: 5700833244494442763}
   - component: {fileID: 7537846986049989546}
+  - component: {fileID: 992588410666651243}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -294,8 +295,8 @@ BoxCollider2D:
   m_Offset: {x: -0.12383199, y: 1.159841}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5873016, y: -0.042253517}
-    oldSize: {x: 1.96875, y: 2.21875}
+    pivot: {x: 0.48684207, y: -0.04109589}
+    oldSize: {x: 2.375, y: 2.28125}
     newSize: {x: 1.96875, y: 2.21875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -455,6 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Attack.Health
   HealthPoints: 1
+  MaxHealthPoints: 1
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -582,6 +584,19 @@ MonoBehaviour:
   SpawnTracker: {fileID: 5931426664578809513}
   Animator: {fileID: 881346472432367290}
   PlayerInput: {fileID: 215965231412949391}
+--- !u!114 &992588410666651243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806367208770461159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7084bcd90539f429c484340fe8a525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterControl
+  WaterControlAbility: {fileID: 11400000, guid: 0d0dadfb01b1b874d81aa1067018f13d, type: 2}
 --- !u!1 &2319988461481833929
 GameObject:
   m_ObjectHideFlags: 0

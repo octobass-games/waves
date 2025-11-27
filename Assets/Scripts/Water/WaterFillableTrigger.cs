@@ -12,6 +12,9 @@ namespace Octobass.Waves.Water
         [SerializeField]
         private PlayerInput PlayerInput;
 
+        [SerializeField]
+        private GameObject Interact;
+
         private InputAction RaiseWaterAction;
         private InputAction LowerWaterAction;
 
@@ -40,6 +43,8 @@ namespace Octobass.Waves.Water
                 {
                     if (Player.GetComponent<MovementController>().IsGrounded())
                     {
+                        Interact.SetActive(false);
+
                         Player.GetComponent<MovementController>().Freeze();
                         Player.GetComponent<Animator>().SetTrigger("IsControllingWater");
 
@@ -52,12 +57,11 @@ namespace Octobass.Waves.Water
                             Fillable.Drain();
                         }
                     }
-                    else
-                    {
-                    }
                 }
                 else
                 {
+                    Interact.SetActive(true);
+
                     Player.GetComponent<MovementController>().Unfreeze();
                     Player.GetComponent<Animator>().SetTrigger("IsNotControllingWater");
                 }
@@ -66,10 +70,11 @@ namespace Octobass.Waves.Water
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag(Tags.Player))
+            if (collision.CompareTag(Tags.Player) && collision.gameObject.GetComponent<WaterControl>().IsUnlocked)
             {
                 IsFillable = true;
                 Player = collision.gameObject;
+                Interact.SetActive(true);
             }
         }
 
@@ -79,6 +84,7 @@ namespace Octobass.Waves.Water
             {
                 IsFillable = false;
                 Player = null;
+                Interact.SetActive(false);
             }
         }
     }
