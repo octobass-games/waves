@@ -694,15 +694,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0453125
-    y: 0.32962963
-    width: 0.16666667
-    height: 0.16666666
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4120,7 +4120,7 @@ PrefabInstance:
       objectReference: {fileID: 1448142519}
     - target: {fileID: 4502041854851406065, guid: d56da24641067944a9bb3c17e2f60698, type: 3}
       propertyPath: UnlockAllAbilitiesOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
