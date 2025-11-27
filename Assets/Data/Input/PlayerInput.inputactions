@@ -104,15 +104,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "ProjectileAttack",
-                    "type": "Button",
-                    "id": "7d556ac6-d74c-4ef4-9212-c1e349aab191",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -663,28 +654,6 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "LowerWater",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4528b050-28a1-49ca-b693-485d12e7c2c8",
-                    "path": "<Keyboard>/v",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Mouse and Keyboard",
-                    "action": "ProjectileAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b97683f7-bfb5-4cbb-a30d-eb8a7b7b5a98",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "ProjectileAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

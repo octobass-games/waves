@@ -14,7 +14,7 @@ namespace Octobass.Waves.Movement
 
         private MovementDriverSnapshot DriverSnapshot = new();
         private MovementSnapshot MovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
-        private AttackSnapshot AttackSnapshot = new(false, false);
+        private AttackSnapshot AttackSnapshot = new(false);
 
         void Update()
         {

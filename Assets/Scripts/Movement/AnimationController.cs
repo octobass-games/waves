@@ -8,8 +8,8 @@ namespace Octobass.Waves.Movement
         public Animator Animator;
         public SpriteRenderer SpriteRenderer;
 
-        private AttackSnapshot PreviousAttackState = new(false, false);
-        private AttackSnapshot CurrentAttackState = new(false, false);
+        private AttackSnapshot PreviousAttackState = new(false);
+        private AttackSnapshot CurrentAttackState = new(false);
         private MovementSnapshot CurrentMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
         private MovementSnapshot PreviousMovementSnapshot = new(CharacterStateId.Grounded, Vector2.zero, Vector2.right);
 

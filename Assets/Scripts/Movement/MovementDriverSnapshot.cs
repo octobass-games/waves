@@ -16,7 +16,5 @@ namespace Octobass.Waves.Movement
         public bool GrabHeld;
         public bool AttackPressed;
         public bool AttackReleased;
-        public bool ProjectileAttackPressed;
-        public bool ProjectilAttackReleased;
     }
 }
