@@ -26,6 +26,8 @@ namespace Octobass.Waves.Ability
 
         private GameObject MostRecentlySelectedGameObject;
 
+        private bool Initialized;
+
         void OnEnable()
         {
             List<AbilityItemInstance> unlockedAbilityItems = Inventory.GetAbilityItems();
@@ -46,26 +48,35 @@ namespace Octobass.Waves.Ability
 
             if (unlockedAbilityItems.Count > 0)
             {
-                MostRecentlySelectedGameObject = AbilityMenuItems.Find(menuItem => menuItem != null && menuItem.isActiveAndEnabled).gameObject;
+                MostRecentlySelectedGameObject = AbilityMenuItems.Find(menuItem => menuItem.gameObject.activeSelf).gameObject;
             }
             else
             {
                 MostRecentlySelectedGameObject = BackButton;
             }
 
-            EventSystem.current.SetSelectedGameObject(MostRecentlySelectedGameObject);
+            Initialized = false;
         }
 
         void Update()
         {
-            if (EventSystem.current.currentSelectedGameObject != null && EventSystem.current.currentSelectedGameObject != MostRecentlySelectedGameObject)
+            if (Initialized)
             {
-                MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
-                Debug.Log($"Newly selected game object: {MostRecentlySelectedGameObject.name}");
+                if (EventSystem.current.currentSelectedGameObject != null && EventSystem.current.currentSelectedGameObject != MostRecentlySelectedGameObject)
+                {
+                    MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
+                    Debug.Log($"Newly selected game object: {MostRecentlySelectedGameObject.name}");
+                }
+                else if (EventSystem.current.currentSelectedGameObject == null)
+                {
+                    EventSystem.current.SetSelectedGameObject(MostRecentlySelectedGameObject);
+                }
             }
-            else if (EventSystem.current.currentSelectedGameObject == null)
+            else
             {
                 EventSystem.current.SetSelectedGameObject(MostRecentlySelectedGameObject);
+
+                Initialized = true;
             }
         }
 
