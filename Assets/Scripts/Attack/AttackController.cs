@@ -1,3 +1,4 @@
+using Octobass.Waves.Item;
 using Octobass.Waves.Movement;
 using Octobass.Waves.Save;
 using System.Collections.Generic;
@@ -22,6 +23,9 @@ namespace Octobass.Waves.Attack
         [SerializeField]
         private Transform LeftProjectileAttackStartPosition;
 
+        [SerializeField]
+        private AbilityDefinition ProjectileAttackAbilityDefinition;
+
         private AttackMove CurrentAttackMove;
 
         private bool IsProjectileAttackUnlocked;
@@ -42,6 +46,17 @@ namespace Octobass.Waves.Attack
             if (LeftAttack == null)
             {
                 Debug.Log("[AttackController]: LeftAttack not set");
+            }
+        }
+
+        public void OnItemPickedUp(ItemInstance itemInstance)
+        {
+            if (itemInstance is AbilityItemInstance item)
+            {
+                if (item.Ability.Definition.Name == ProjectileAttackAbilityDefinition.Name)
+                {
+                    IsProjectileAttackUnlocked = true;
+                }
             }
         }
 
