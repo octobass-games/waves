@@ -46,7 +46,7 @@ namespace Octobass.Waves.Ability
 
             if (unlockedAbilityItems.Count > 0)
             {
-                MostRecentlySelectedGameObject = AbilityMenuItems.Find(menuItem => menuItem.isActiveAndEnabled).gameObject;
+                MostRecentlySelectedGameObject = AbilityMenuItems.Find(menuItem => menuItem != null && menuItem.isActiveAndEnabled).gameObject;
             }
             else
             {
