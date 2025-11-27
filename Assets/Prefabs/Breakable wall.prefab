@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1308563440763378303}
   - component: {fileID: 2905452375908512487}
-  - component: {fileID: 2702275107260556103}
-  m_Layer: 0
-  m_Name: Breakable range
+  m_Layer: 3
+  m_Name: Breakable back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4399781556315119234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 1.6, z: 0}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63,11 +62,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.1306076, y: -0.025224686}
+  m_Offset: {x: -0.103752136, y: -0.09432089}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -77,39 +76,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2612152, y: 3.1692905}
+  m_Size: {x: 0.7924957, y: 2.9618714}
   m_EdgeRadius: 0
---- !u!114 &2702275107260556103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399781556315119234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc5f29bc89bdd5d45a784db1c68c358f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Attack.Health
-  HealthPoints: 1
-  OnDamageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  OnHealthEmpty:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1699407245871083742}
-        m_TargetAssemblyTypeName: Octobass.Waves.BreakableController, Assembly-CSharp
-        m_MethodName: Break
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &7992306442282523833
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +92,7 @@ GameObject:
   - component: {fileID: 8919458020806136625}
   - component: {fileID: 1699407245871083742}
   - component: {fileID: 5708229579450111997}
+  - component: {fileID: 4053734725509318350}
   m_Layer: 3
   m_Name: Breakable wall
   m_TagString: Untagged
@@ -261,7 +230,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.1875, y: 1.546875}
+  m_Offset: {x: -0.47046185, y: 1.546875}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.68749994, y: 0}
@@ -271,7 +240,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 3.09375}
+  m_Size: {x: 0.4340763, y: 3.09375}
   m_EdgeRadius: 0
 --- !u!114 &1699407245871083742
 MonoBehaviour:
@@ -301,3 +270,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
+--- !u!114 &4053734725509318350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992306442282523833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5f29bc89bdd5d45a784db1c68c358f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Attack.Health
+  HealthPoints: 1
+  MaxHealthPoints: 1
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthEmpty:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1699407245871083742}
+        m_TargetAssemblyTypeName: Octobass.Waves.BreakableController, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

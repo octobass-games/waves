@@ -12,6 +12,15 @@ namespace Octobass.Waves.Attack
         [SerializeField]
         private AttackMove LeftAttack;
 
+        [SerializeField]
+        private GameObject ProjectileAttack;
+
+        [SerializeField]
+        private Transform RightProjectileAttackStartPosition;
+
+        [SerializeField]
+        private Transform LeftProjectileAttackStartPosition;
+
         private AttackMove CurrentAttackMove;
 
         // TODO: if we want multiple attacking states then we need to handle the scenario where the attack is never ended
@@ -56,8 +65,8 @@ namespace Octobass.Waves.Attack
                 if (movementSnapshot.FacingDirection == Vector2.right)
                 {
                     CurrentAttackMove = RightAttack;
-                    RightAttack.gameObject.SetActive(true);
-                    LeftAttack.gameObject.SetActive(false);
+                    //RightAttack.gameObject.SetActive(true);
+                    //LeftAttack.gameObject.SetActive(false);
                 }
                 else
                 {
@@ -71,16 +80,19 @@ namespace Octobass.Waves.Attack
 
             bool isInAttackingState = AttackingStates.Contains(movementSnapshot.State);
 
-            if (isInAttackingState && driverSnapshot.AttackPressed && !IsAttacking)
+            if (isInAttackingState && (driverSnapshot.AttackPressed || driverSnapshot.ProjectileAttackPressed) && !IsAttacking)
             {
                 IsAttacking = true;
+
+                var go = GameObject.Instantiate(ProjectileAttack);
+                go.GetComponent<Projectile>().Init(FacingDirection, FacingDirection == Vector2.right ? RightProjectileAttackStartPosition.position : LeftProjectileAttackStartPosition.position);
             }
             else if (!isInAttackingState && IsAttacking)
             {
                 EndAttack();
             }
 
-            return new AttackSnapshot(IsAttacking);
+            return new AttackSnapshot(IsAttacking, IsAttacking);
         }
 
         private void EndAttack()

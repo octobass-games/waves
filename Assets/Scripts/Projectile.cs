@@ -33,9 +33,10 @@ namespace Octobass.Waves.Attack
             };
         }
 
-        public void Init(Vector2 direction)
+        public void Init(Vector2 direction, Vector2 startPosition)
         {
             Direction = direction;
+            Body.position = startPosition;
         }
 
         void Update()
