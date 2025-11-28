@@ -11,19 +11,27 @@ namespace Octobass.Waves
         private float Speed;
 
         [SerializeField]
+        private SpriteRenderer SpriteRenderer;
+
+        [SerializeField]
         [Tooltip("This is the point that the oscillator will first move to")]
         private Transform PointA;
 
         [SerializeField]
         private Transform PointB;
 
+        [SerializeField]
+        private bool HasNoFacingDirection = true;
+
         private Transform Target;
+        private bool Move;
         private float Tolerance;
 
         void Awake()
         {
             Target = PointA;
             Tolerance = Mathf.Max((Speed * Time.fixedDeltaTime) / 2, 0.03125f);
+            Move = true;
         }
 
         void FixedUpdate()
@@ -34,12 +42,29 @@ namespace Octobass.Waves
             }
             else
             {
-                Vector2 direction = ((Vector2)Target.position - Body.position).normalized;
+                if (Move)
+                {
+                    Vector2 direction = ((Vector2)Target.position - Body.position).normalized;
 
-                Vector2 displacement = direction * Speed * Time.fixedDeltaTime;
+                    Vector2 displacement = direction * Speed * Time.fixedDeltaTime;
+                    Body.MovePosition(Body.position + displacement);
 
-                Body.MovePosition(Body.position + displacement);
+                    if (!HasNoFacingDirection && SpriteRenderer != null)
+                    {
+                        SpriteRenderer.flipX = direction.x > 0;
+                    }
+                }
             }
+        }
+
+        public void Oscillate()
+        {
+            Move = true;
+        }
+
+        public void Pause()
+        {
+            Move = false;
         }
     }
 }

@@ -30,6 +30,18 @@ namespace Octobass.Waves.Attack
                     attackable.OnHit();
                     Attackables.Add(attackable);
                 }
+
+                OscillatingHider oscillatingHider = OverlappingColliders[i].GetComponent<OscillatingHider>();
+
+                if (oscillatingHider != null)
+                {
+                    Debug.Log("Found!");
+                    oscillatingHider.Hide();
+                }
+                else
+                {
+                    Debug.Log("Not Found!");
+                }
             }
         }
 

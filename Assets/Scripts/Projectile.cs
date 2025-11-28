@@ -63,6 +63,10 @@ namespace Octobass.Waves.Attack
                     {
                         damageable.OnOneShot();
                     }
+                    else if (collider.TryGetComponent(out OscillatingHider hider))
+                    {
+                        hider.Hide();
+                    }
                 }
             }
             else

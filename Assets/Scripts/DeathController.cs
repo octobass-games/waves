@@ -1,6 +1,7 @@
 using Octobass.Waves.Movement;
 using Octobass.Waves.Spawn;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Octobass.Waves
 {
@@ -14,6 +15,9 @@ namespace Octobass.Waves
 
         [SerializeField]
         private SpawnTracker SpawnTracker;
+
+        [SerializeField]
+        private PlayerInput PlayerInput;
 
         void Awake()
         {
@@ -35,17 +39,21 @@ namespace Octobass.Waves
 
         public void Die()
         {
+            PlayerInput.actions.FindActionMap("Gameplay").Disable();
+            PlayerInput.actions.FindActionMap("Global").Disable();
             MovementController.Freeze();
             AnimationController.PlayDeathAnimation();
         }
 
-        void OnDeathAnimationEnd()
+        public void OnDeathAnimationEnd()
         {
             SpawnTracker.Respawn();
         }
 
-        void OnRespawnAnimationEnd()
+        public void OnRespawnAnimationEnd()
         {
+            PlayerInput.actions.FindActionMap("Gameplay").Enable();
+            PlayerInput.actions.FindActionMap("Global").Enable();
             MovementController.Unfreeze();
         }
     }

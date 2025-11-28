@@ -10,6 +10,8 @@ namespace Octobass.Waves.Attack
         public UnityEvent OnDamageTaken;
         public UnityEvent OnHealthEmpty;
 
+        private bool HasRespawned;
+
         void Awake()
         {
             if (HealthPoints <= 0)
@@ -34,14 +36,20 @@ namespace Octobass.Waves.Attack
 
         public void OnOneShot()
         {
-            HealthPoints = 0;
+            if (!HasRespawned)
+            {
+                HasRespawned = true;
 
-            OnHealthEmpty.Invoke();
+                HealthPoints = 0;
+
+                OnHealthEmpty.Invoke();
+            }
         }
 
         public void Reset()
         {
             HealthPoints = MaxHealthPoints;
+            HasRespawned = false;
         }
     }
 }

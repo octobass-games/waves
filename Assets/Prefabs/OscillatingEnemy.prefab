@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 2602494351208032438}
   - component: {fileID: 2779917383743246562}
   - component: {fileID: 3971546823750162012}
+  - component: {fileID: 6819215004531761926}
   m_Layer: 0
   m_Name: Enemy - Seaslug
   m_TagString: Untagged
@@ -140,8 +141,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Oscillator
   Body: {fileID: 1982534328447729452}
   Speed: 1
+  SpriteRenderer: {fileID: 5657009545654433622}
   PointA: {fileID: 6521745249613201884}
   PointB: {fileID: 5592335588899457112}
+  HasNoFacingDirection: 0
 --- !u!212 &5657009545654433622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -280,6 +283,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6819215004531761926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578762247714683481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1abb4073ff2098478b7377d849a572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.OscillatingHider
+  Animator: {fileID: 3971546823750162012}
+  Oscillator: {fileID: 2465056488268365130}
 --- !u!1 &7743213944503772470
 GameObject:
   m_ObjectHideFlags: 0
