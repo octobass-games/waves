@@ -1,3 +1,4 @@
+using Octobass.Waves.Movement;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -13,7 +14,7 @@ namespace Octobass.Waves.Item
 
         [SerializeField]
         private GameObject DisplayInspect;
-        
+
         private bool IsInspectable;
         private bool InspectPressed;
         private InputAction InspectAction;
@@ -41,15 +42,16 @@ namespace Octobass.Waves.Item
             if (collision.CompareTag(Tags.Player))
             {
                 IsInspectable = true;
-                if (DisplayInspect != null) {
-                DisplayInspect.SetActive(true);
+                if (DisplayInspect != null)
+                {
+                    DisplayInspect.SetActive(true);
                 }
             }
         }
 
         void OnTriggerStay2D(Collider2D collision)
         {
-            if (collision.CompareTag(Tags.Player) && InspectPressed)
+            if (collision.CompareTag(Tags.Player) && InspectPressed && collision.gameObject.GetComponent<MovementController>().IsGrounded())
             {
                 InspectPressed = false;
                 OnInspect.Invoke();
