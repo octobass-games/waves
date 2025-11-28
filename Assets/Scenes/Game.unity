@@ -19930,6 +19930,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 586328210}
     m_Modifications:
+    - target: {fileID: 656246741040652812, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2029396213296902232, guid: a797251c194ba02409b11f5ea2132305, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -19937,6 +19941,10 @@ PrefabInstance:
     - target: {fileID: 5590318501569879003, guid: a797251c194ba02409b11f5ea2132305, type: 3}
       propertyPath: m_Name
       value: C8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590318501569879003, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5613308120008089422, guid: a797251c194ba02409b11f5ea2132305, type: 3}
       propertyPath: PlayerInput
