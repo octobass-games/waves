@@ -15,7 +15,7 @@ namespace Octobass.Waves.Movement
             Config = config;
         }
 
-        public override void Enter(CharacterStateId previousStateId)
+        public override void Enter(CharacterStateId previousStateId, MovementDriverSnapshot _)
         {
             ImpulseApplied = false;
             InputGracePeriodFinished = false;

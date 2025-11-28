@@ -16,6 +16,11 @@ namespace Octobass.Waves.Movement
         private InputAction ClimbingAction;
         private InputAction SwimmingAction;
 
+        private float JumpInputBuffer;
+        private float DashInputBuffer;
+        private float AttackInputBuffer;
+        private float GrabInputBuffer;
+
         private bool JumpPressed;
         private bool JumpReleased;
         private bool DashPressed;
@@ -41,16 +46,28 @@ namespace Octobass.Waves.Movement
             SwimmingAction = PlayerInput.actions.FindAction("Swimming");
         }
 
+        void Update()
+        {
+            JumpInputBuffer -= Time.deltaTime * 1000;
+
+            if (JumpInputBuffer <= 0)
+            {
+                JumpPressed = false;
+            }
+        }
+
         public MovementDriverSnapshot TakeSnapshot()
         {
             if (JumpAction.WasPerformedThisFrame())
             {
                 JumpPressed = true;
+                JumpInputBuffer = 100;
             }
 
             if (JumpAction.WasReleasedThisFrame())
             {
                 JumpReleased = true;
+                JumpInputBuffer = 0;
             }
 
             if (GrabAction.WasPerformedThisFrame())
@@ -101,10 +118,18 @@ namespace Octobass.Waves.Movement
             };
         }
 
-        public void Consume()
+        public void Consume(MovementDriverSnapshot movementDriverSnapshot)
         {
-            JumpPressed = false;
-            JumpReleased = false;
+            if (JumpInputBuffer <= 0 || movementDriverSnapshot.JumpConsumed)
+            {
+                JumpPressed = false;
+            }
+             
+            if (JumpReleased)
+            {
+                JumpPressed = false;
+                JumpReleased = false;
+            }
 
             DashPressed = false;
             DashReleased = false;

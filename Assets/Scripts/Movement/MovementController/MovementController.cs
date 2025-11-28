@@ -79,7 +79,7 @@ namespace Octobass.Waves.Movement
                 }
 
                 Debug.Log($"[MovementStateMachine]: Entering - {CurrentState}");
-                CurrentState.Enter(PreviousStateId);
+                CurrentState.Enter(PreviousStateId, driverSnapshot);
             }
 
             StateSnapshot = CurrentState.Tick(StateSnapshot, driverSnapshot, CurrentFacingDirection);

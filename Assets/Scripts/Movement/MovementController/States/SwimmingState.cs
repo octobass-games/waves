@@ -1,6 +1,3 @@
-using NUnit.Framework.Constraints;
-using Octobass.Waves.Extensions;
-using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement
@@ -20,7 +17,7 @@ namespace Octobass.Waves.Movement
             Tolerance = Config.BuoyancyAscentSpeed * Time.fixedDeltaTime / 2;
         }
 
-        public override void Enter(CharacterStateId previousStateId)
+        public override void Enter(CharacterStateId previousStateId, MovementDriverSnapshot _)
         {
             IsRising = previousStateId == CharacterStateId.Diving;
         }

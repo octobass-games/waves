@@ -16,7 +16,7 @@ namespace Octobass.Waves.Movement
             CollisionDetector = collisionDetector;
         }
 
-        public override void Enter(CharacterStateId previousStateId)
+        public override void Enter(CharacterStateId previousStateId, MovementDriverSnapshot _)
         {
             LedgeClimbTargetPosition = CollisionDetector.GetLedgeClimbTargetPosition();
             Direction = CollisionDetector.IsTouchingRightWall() ? Vector2.right : Vector2.left;

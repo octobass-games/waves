@@ -98,7 +98,7 @@ namespace Octobass.Waves.Movement
                 CharacterStateId.Dashing,
                 new()
                 {
-                    new(CharacterStateId.WallClimb, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => !collisionDetector.IsGrounded() && collisionDetector.IsTouchingWall(stateSnapshot.Velocity.normalized) && driverSnapshot.GrabPressed && collisionDetector.IsAtClimbHeight()),
+                    new(CharacterStateId.WallClimb, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => !collisionDetector.IsGrounded() && collisionDetector.IsTouchingWall(stateSnapshot.Velocity.normalized) && driverSnapshot.GrabHeld && collisionDetector.IsAtClimbHeight()),
                     new(CharacterStateId.WallSlide, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => !collisionDetector.IsGrounded() && collisionDetector.IsTouchingWall(stateSnapshot.Velocity.normalized) && driverSnapshot.Movement.normalized.x == stateSnapshot.Velocity.normalized.x),
                     new(CharacterStateId.Falling, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.Velocity == Vector2.zero && !collisionDetector.IsGrounded()),
                     new(CharacterStateId.Grounded, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.Velocity == Vector2.zero && stateSnapshot.IsDashGracePeriodFinished && collisionDetector.IsGrounded()),

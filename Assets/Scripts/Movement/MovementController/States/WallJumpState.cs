@@ -19,8 +19,10 @@ namespace Octobass.Waves.Movement
             CollisionDetector = collisionDetector;
         }
 
-        public override void Enter(CharacterStateId previousStateId)
+        public override void Enter(CharacterStateId previousStateId, MovementDriverSnapshot movementDriverSnapshot)
         {
+            movementDriverSnapshot.ConsumeJump();
+
             Direction = CollisionDetector.IsCloseToRightWall() ? Vector2.one * Vector2.left : Vector2.one;
             WallJumpInputFreezeTimer = Config.WallJumpInputFreezeTime;
             WallTouched = false;

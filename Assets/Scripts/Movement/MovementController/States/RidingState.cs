@@ -15,7 +15,7 @@ namespace Octobass.Waves.Movement
             CollisionDetector = collisionDetector;
         }
 
-        public override void Enter(CharacterStateId previousStateId)
+        public override void Enter(CharacterStateId previousStateId, MovementDriverSnapshot _)
         {
             Rideable = CollisionDetector.GetPlatform();
         }

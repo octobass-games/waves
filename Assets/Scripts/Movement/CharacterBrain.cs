@@ -26,7 +26,7 @@ namespace Octobass.Waves.Movement
         {
             MovementSnapshot = MovementStateMachine.Tick(DriverSnapshot);
             AttackSnapshot = AttackController.Tick(DriverSnapshot, MovementSnapshot);
-            Driver.Consume();
+            Driver.Consume(DriverSnapshot);
         }
     }
 }

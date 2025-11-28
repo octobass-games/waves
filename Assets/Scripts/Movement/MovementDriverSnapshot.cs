@@ -16,5 +16,12 @@ namespace Octobass.Waves.Movement
         public bool GrabHeld;
         public bool AttackPressed;
         public bool AttackReleased;
+
+        public bool JumpConsumed;
+
+        public void ConsumeJump()
+        {
+            JumpConsumed = true;
+        }
     }
 }
