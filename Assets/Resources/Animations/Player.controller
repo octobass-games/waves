@@ -246,13 +246,13 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: -660, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4478260097970165393}
-    m_Position: {x: 290, y: -430, z: 0}
+    m_Position: {x: -200, y: -480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5511445381786299524}
     m_Position: {x: 440, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6373844935359362887}
-    m_Position: {x: 690, y: -520, z: 0}
+    m_Position: {x: 1630, y: -160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6178535155579893407}
     m_Position: {x: 640, y: -670, z: 0}
@@ -1272,6 +1272,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: HasXVelocity
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsGrounded
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4478260097970165393}
   m_Solo: 0
@@ -1497,6 +1500,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: HasXVelocity
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsGrounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4478260097970165393}
@@ -2036,6 +2042,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: HasXVelocity
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsGrounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6373844935359362887}
@@ -3080,8 +3089,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: HasXVelocity
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: IsJumping
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsGrounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6373844935359362887}
