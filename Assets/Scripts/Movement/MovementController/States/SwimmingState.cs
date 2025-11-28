@@ -11,11 +11,13 @@ namespace Octobass.Waves.Movement
         private readonly MovementControllerCollisionDetector CollisionDetector;
 
         private bool IsRising;
+        private float Tolerance;
 
         public SwimmingState(MovementConfig config, MovementControllerCollisionDetector collisionDetector)
         {
             Config = config;
             CollisionDetector = collisionDetector;
+            Tolerance = Config.BuoyancyAscentSpeed * Time.fixedDeltaTime / 2;
         }
 
         public override void Enter(CharacterStateId previousStateId)
@@ -34,7 +36,7 @@ namespace Octobass.Waves.Movement
 
             Vector2 velocity = previousSnapshot.Velocity;
 
-            velocity.x = IsRising && verticalDistanceFromBobHeight <= 0.03f ? driverSnapshot.Movement.x * Config.SwimmingSpeed : 0;
+            velocity.x = IsRising && verticalDistanceFromBobHeight <= Tolerance ? driverSnapshot.Movement.x * Config.SwimmingSpeed : 0;
             velocity.y = velocity.y + Config.Gravity * Config.BuoyancyDescentModifier * Time.fixedDeltaTime;
 
             if (velocity.y >= 0)
@@ -46,7 +48,9 @@ namespace Octobass.Waves.Movement
             {
                 Velocity = new Vector2(
                     velocity.x,
-                    IsRising ? (verticalDistanceFromBobHeight > 0 ? -(verticalDistanceFromBobHeight / Time.fixedDeltaTime) : (verticalDistanceFromBobHeight == 0) ? 0 : Config.BuoyancyAscentSpeed) : velocity.y
+                    IsRising
+                        ? (Mathf.Abs(verticalDistanceFromBobHeight) < Tolerance ? 0 : verticalDistanceFromBobHeight > 0 ? -Config.BuoyancyAscentSpeed : Config.BuoyancyAscentSpeed)
+                        : velocity.y
                 ),
                 IsDashAvailable = previousSnapshot.IsDashAvailable
             };
