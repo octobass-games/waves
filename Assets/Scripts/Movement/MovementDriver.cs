@@ -17,9 +17,6 @@ namespace Octobass.Waves.Movement
         private InputAction SwimmingAction;
 
         private float JumpInputBuffer;
-        private float DashInputBuffer;
-        private float AttackInputBuffer;
-        private float GrabInputBuffer;
 
         private bool JumpPressed;
         private bool JumpReleased;
