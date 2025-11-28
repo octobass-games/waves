@@ -702,7 +702,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.875
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2037,6 +2037,10 @@ PrefabInstance:
     - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: deathSFX
       value: event:/SFX/Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: floatSFX
+      value: event:/SFX/hitwater
       objectReference: {fileID: 0}
     - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: meleeSFX
@@ -23807,7 +23811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 5.0468063
+      value: 4.7935696
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput

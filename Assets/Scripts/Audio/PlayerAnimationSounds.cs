@@ -12,10 +12,16 @@ public class PlayerAnimationSounds : MonoBehaviour
     public string respawnSFX;
     public string tpSFX;
     public string climbSFX;
+    public string floatSFX;
 
     void OnStep()
     {
         FMODUnity.RuntimeManager.PlayOneShot(stepSFX);
+    }
+
+    void OnFloat()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(floatSFX);
     }
 
     void OnClimb()
