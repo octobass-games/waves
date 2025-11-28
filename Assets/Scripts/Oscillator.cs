@@ -51,7 +51,7 @@ namespace Octobass.Waves
 
                     if (!HasNoFacingDirection && SpriteRenderer != null)
                     {
-                        SpriteRenderer.flipX = direction.x > 0;
+                        SpriteRenderer.flipX = direction.x > 0 || direction.y > 0;
                     }
                 }
             }

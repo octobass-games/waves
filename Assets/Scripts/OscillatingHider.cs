@@ -27,12 +27,8 @@ namespace Octobass.Waves
         {
             if (collision.CompareTag(Tags.Player))
             {
-                Debug.Log("Hello!");
-
                 if (collision.GetComponent<AttackMove>() != null)
                 {
-                    Debug.Log("Hello again!");
-
                     Hide();
                 }
             }
