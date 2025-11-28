@@ -61,7 +61,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2004450360942304218}
   m_Father: {fileID: 455514133994165396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5257070814688212143
@@ -78,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Water.WaterFillableTrigger
   Fillable: {fileID: 7612831856975056745}
   PlayerInput: {fileID: 0}
+  Interact: {fileID: 1602373769552802751}
 --- !u!61 &6742988096274639062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -407,3 +409,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 455514133994165396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5729764347948547375
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7968813425342517796}
+    m_Modifications:
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.013770558
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.12890346
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4251
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.076
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465181307829915280, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_Name
+      value: interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465181307829915280, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+--- !u!1 &1602373769552802751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6465181307829915280, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+  m_PrefabInstance: {fileID: 5729764347948547375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2004450360942304218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6076775000352040693, guid: e5f312d01bab57141a7a87cc76b4fd63, type: 3}
+  m_PrefabInstance: {fileID: 5729764347948547375}
+  m_PrefabAsset: {fileID: 0}
