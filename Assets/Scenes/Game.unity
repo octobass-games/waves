@@ -323,6 +323,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: e1cd2d3df1d138c4d9577775ce86eba0, type: 3}
   m_ActionId: 6e5395b1-4544-4ce4-a125-d0531c1fd527
+--- !u!1 &211142882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6738090862626599716, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
+  m_PrefabInstance: {fileID: 1764403401110984188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &211142885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211142882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 0
 --- !u!114 &222719410 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5850525000565290275, guid: cf4f1df6e4d58964da94db477d07007d, type: 3}
@@ -394,6 +415,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!1 &340292160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7616624090446438599, guid: d8f42c451eacd624298122daccf75108, type: 3}
+  m_PrefabInstance: {fileID: 8209510623443280700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &340292163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340292160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!1 &341121346
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +578,27 @@ Transform:
   - {fileID: 5475791002707285634}
   m_Father: {fileID: 908922137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &383514428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1619859545229559097, guid: f7d687168fd0f4e49b36f18087276edd, type: 3}
+  m_PrefabInstance: {fileID: 2171906070535724258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &383514431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383514428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!1 &393106800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1072,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+--- !u!1 &553214791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4200167481746933394, guid: 05e8d50c4241dea43b50f4e9149eb0b5, type: 3}
+  m_PrefabInstance: {fileID: 4872047995143768166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &553214794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553214791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!1 &586328209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1133,27 @@ Transform:
   - {fileID: 2968311220179198586}
   m_Father: {fileID: 908922137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &597545411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6481988936303216926, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
+  m_PrefabInstance: {fileID: 3740661471821758289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &597545414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597545411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!1001 &618511145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1108,7 +1213,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6532848733021837992, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2144438160}
   m_SourcePrefab: {fileID: 100100000, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
 --- !u!4 &618511146 stripped
 Transform:
@@ -3695,6 +3803,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1439090921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5657228569616518854, guid: 0dfed17565759ad42b2fe2de87990773, type: 3}
+  m_PrefabInstance: {fileID: 779380401717556511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1439090924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439090921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!1 &1448142502 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1806367208770461159, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
@@ -3799,6 +3928,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7084bcd90539f429c484340fe8a525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterControl
+--- !u!1 &1493344393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4576469060413930991, guid: 42e334e15aa0af544919426904d11376, type: 3}
+  m_PrefabInstance: {fileID: 3629733534076591026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1493344396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493344393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!114 &1503390166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3976,6 +4126,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!1 &1565884674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2595010888693635846, guid: eab00bc35eeec664c9da54d56e4f1a63, type: 3}
+  m_PrefabInstance: {fileID: 8625358745252777649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1565884677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565884674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!114 &1662000139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4682,6 +4853,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7016373576886688874, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
   m_PrefabInstance: {fileID: 2062222793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2092927983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6466835933849828418, guid: 36fc41fc663f72244a62cb5f02500d37, type: 3}
+  m_PrefabInstance: {fileID: 1812911612278768312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2092927986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092927983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!1001 &2093304771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4929,6 +5121,27 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 650893159}
   m_SourcePrefab: {fileID: 100100000, guid: c576b70f900b4ab4a929240e863580b2, type: 3}
+--- !u!1 &2108547207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 408271445287904058, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
+  m_PrefabInstance: {fileID: 597992575706367303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2108547210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108547207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!114 &2109785064 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8812004327927359172, guid: cb2fa02a4cf0a0048af342e1d324f836, type: 3}
@@ -4980,6 +5193,27 @@ Transform:
   - {fileID: 549144754442062669}
   m_Father: {fileID: 908922137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2144438157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6532848733021837992, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
+  m_PrefabInstance: {fileID: 618511145}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2144438160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144438157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioGlobalParameterTrigger
+  CollisionTag: 
+  Parameter: OutOrIn
+  TriggerEvent: 11
+  Value: 1
 --- !u!1001 &25629176012934050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5192,7 +5426,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 408271445287904058, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2108547210}
   m_SourcePrefab: {fileID: 100100000, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
 --- !u!114 &600792225638142610 stripped
 MonoBehaviour:
@@ -5387,7 +5624,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5657228569616518854, guid: 0dfed17565759ad42b2fe2de87990773, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1439090924}
   m_SourcePrefab: {fileID: 100100000, guid: 0dfed17565759ad42b2fe2de87990773, type: 3}
 --- !u!114 &779380401717556512 stripped
 MonoBehaviour:
@@ -6520,10 +6760,14 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3171580106428879786, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6738090862626599716, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 211142885}
   m_SourcePrefab: {fileID: 100100000, guid: ad4eaec5ba4ec2045b8e3c3b57d4ce4a, type: 3}
 --- !u!114 &1764403401110984189 stripped
 MonoBehaviour:
@@ -7371,7 +7615,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6466835933849828418, guid: 36fc41fc663f72244a62cb5f02500d37, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2092927986}
   m_SourcePrefab: {fileID: 100100000, guid: 36fc41fc663f72244a62cb5f02500d37, type: 3}
 --- !u!114 &1812911612278768313 stripped
 MonoBehaviour:
@@ -9668,6 +9915,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1619859545229559097, guid: f7d687168fd0f4e49b36f18087276edd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 383514431}
     - targetCorrespondingSourceObject: {fileID: 5250273151445358321, guid: f7d687168fd0f4e49b36f18087276edd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -19524,7 +19774,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4576469060413930991, guid: 42e334e15aa0af544919426904d11376, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1493344396}
   m_SourcePrefab: {fileID: 100100000, guid: 42e334e15aa0af544919426904d11376, type: 3}
 --- !u!114 &3629733534076591027 stripped
 MonoBehaviour:
@@ -19596,7 +19849,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6481988936303216926, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 597545414}
   m_SourcePrefab: {fileID: 100100000, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
 --- !u!114 &3740661471821758290 stripped
 MonoBehaviour:
@@ -24090,7 +24346,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4200167481746933394, guid: 05e8d50c4241dea43b50f4e9149eb0b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 553214794}
   m_SourcePrefab: {fileID: 100100000, guid: 05e8d50c4241dea43b50f4e9149eb0b5, type: 3}
 --- !u!114 &4872047995143768167 stripped
 MonoBehaviour:
@@ -35436,7 +35695,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7616624090446438599, guid: d8f42c451eacd624298122daccf75108, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 340292163}
   m_SourcePrefab: {fileID: 100100000, guid: d8f42c451eacd624298122daccf75108, type: 3}
 --- !u!114 &8209510623443280701 stripped
 MonoBehaviour:
@@ -39165,7 +39427,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2595010888693635846, guid: eab00bc35eeec664c9da54d56e4f1a63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1565884677}
   m_SourcePrefab: {fileID: 100100000, guid: eab00bc35eeec664c9da54d56e4f1a63, type: 3}
 --- !u!114 &8625358745252777650 stripped
 MonoBehaviour:
@@ -47193,7 +47458,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9152181289134131094, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
