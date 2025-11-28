@@ -11,10 +11,16 @@ public class PlayerAnimationSounds : MonoBehaviour
     public string deathSFX;
     public string respawnSFX;
     public string tpSFX;
+    public string climbSFX;
 
     void OnStep()
     {
         FMODUnity.RuntimeManager.PlayOneShot(stepSFX);
+    }
+
+    void OnClimb()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(climbSFX);
     }
 
     void OnMelee()
