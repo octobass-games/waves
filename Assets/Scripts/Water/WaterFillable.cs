@@ -25,6 +25,7 @@ namespace Octobass.Waves.Water
         [SerializeField]
         private GameObject Entrance;
 
+        private BoxCollider2D EntranceCollider;
         private Material FillableMaterial;
         private float FillableLine;
 
@@ -69,8 +70,13 @@ namespace Octobass.Waves.Water
             FillableLine = FillableBottom.position.y;
             FillableMaterial.SetFloat("_FillableLine", FillableLine);
 
+            EntranceCollider = Entrance.GetComponent<BoxCollider2D>();
+
+            Collider.offset = new Vector2(0, 0);
             Collider.size = new Vector3(Collider.size.x, (FillableBottom.position.y - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
-            Collider.offset = new Vector2(0, FillableBottom.position.y / transform.lossyScale.y);
+            Collider.offset = new Vector2(0, (SpriteRenderer.bounds.min.y - Collider.bounds.min.y) / transform.lossyScale.y);
+
+            Entrance.transform.position = new Vector3(Entrance.transform.position.x, Collider.bounds.max.y - EntranceCollider.bounds.extents.y + 0.03125f, 0);
         }
 
         public void Fill()
@@ -86,10 +92,10 @@ namespace Octobass.Waves.Water
         private void Move(Vector2 direction)
         {
             FillableLine = Mathf.Clamp(FillableLine + direction.y * Time.deltaTime, FillableBottom.transform.position.y, FillableTop.transform.position.y);
-            Entrance.transform.position += new Vector3(0, direction.y * Time.deltaTime);
 
             Collider.size = new Vector2(Collider.size.x, (FillableLine - SpriteRenderer.bounds.min.y) / transform.lossyScale.y);
             Collider.offset = new Vector2(0, (SpriteRenderer.bounds.min.y + ((FillableLine - SpriteRenderer.bounds.min.y) / 2) - transform.position.y) / transform.lossyScale.y);
+            Entrance.transform.position = new Vector3(Entrance.transform.position.x, Collider.bounds.max.y - EntranceCollider.bounds.extents.y + 0.03125f, 0);
 
             FillableMaterial.SetFloat("_FillableLine", FillableLine);
         }
