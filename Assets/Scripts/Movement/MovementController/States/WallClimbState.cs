@@ -1,3 +1,4 @@
+using Octobass.Waves.Extensions;
 using UnityEngine;
 
 namespace Octobass.Waves.Movement
@@ -15,7 +16,7 @@ namespace Octobass.Waves.Movement
         {
             return new StateSnapshot()
             {
-                Velocity = driverSnapshot.Climbing * Config.WallClimbSpeed,
+                Velocity = driverSnapshot.Movement.ProjectY() * Config.WallClimbSpeed,
                 IsDashAvailable = previousSnapshot.IsDashAvailable
             };
         }

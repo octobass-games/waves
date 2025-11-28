@@ -101,7 +101,6 @@ namespace Octobass.Waves.Movement
             return new MovementDriverSnapshot
             {
                 Movement = HorizontalAction.ReadValue<Vector2>(),
-                Climbing = new Vector2(0, ClimbingAction.ReadValue<float>()),
                 DashPressed = DashPressed,
                 DashReleased = DashReleased,
                 Swimming = SwimmingAction.ReadValue<Vector2>(),
