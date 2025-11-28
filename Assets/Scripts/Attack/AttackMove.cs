@@ -13,7 +13,6 @@ namespace Octobass.Waves.Attack
 
         public void Activate()
         {
-            // TODO: set up custom layer for this
             var contactFilter = new ContactFilter2D()
             {
                 useTriggers = true
@@ -35,12 +34,7 @@ namespace Octobass.Waves.Attack
 
                 if (oscillatingHider != null)
                 {
-                    Debug.Log("Found!");
                     oscillatingHider.Hide();
-                }
-                else
-                {
-                    Debug.Log("Not Found!");
                 }
             }
         }
