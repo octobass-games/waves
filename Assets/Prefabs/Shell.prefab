@@ -119,7 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.AutoPickUp
   Animator: {fileID: 3010582901501149550}
-  PickupableItem: {fileID: 3535389682098618268}
 --- !u!114 &3535389682098618268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
+  CollisionTag: Player
   EventReference:
     Guid:
       Data1: 1787191597
@@ -166,8 +165,8 @@ MonoBehaviour:
       Data4: 515983808
     Path: event:/SFX/loot shell
   Event: 
-  EventPlayTrigger: 12
-  EventStopTrigger: 11
+  EventPlayTrigger: 5
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
