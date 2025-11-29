@@ -35,6 +35,8 @@ public class ControlsHintText : MonoBehaviour
 
         var matchingImage = imageMap.Images.Find(i => i.MatchingString.ToLower() == result.ToLower());
 
+        Debug.Log("Controls: " + result.ToLower());
+
         if (matchingImage != null)
         {
             Text.gameObject.SetActive(false);
