@@ -22,7 +22,9 @@ namespace Octobass.Waves.Attack
 
             for (int i = 0; i < count; i++)
             {
-                IDamageable attackable = OverlappingColliders[i].GetComponent<IDamageable>();
+                Collider2D collider = OverlappingColliders[i];
+
+                IDamageable attackable = collider.GetComponent<IDamageable>();
 
                 if (attackable != null && !Attackables.Contains(attackable))
                 {
@@ -30,11 +32,23 @@ namespace Octobass.Waves.Attack
                     Attackables.Add(attackable);
                 }
 
-                OscillatingHider oscillatingHider = OverlappingColliders[i].GetComponent<OscillatingHider>();
+                OscillatingHider oscillatingHider = collider.GetComponent<OscillatingHider>();
 
                 if (oscillatingHider != null)
                 {
                     oscillatingHider.Hide();
+                }
+
+                ProjectileDamageable projectileDamageable = collider.GetComponent<ProjectileDamageable>();
+
+                if (projectileDamageable != null)
+                {
+                    Debug.Log("Here!");
+                    projectileDamageable.NonProjectileHit();
+                }
+                else
+                {
+                    Debug.Log("No here!");
                 }
             }
         }

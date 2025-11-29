@@ -67,6 +67,10 @@ namespace Octobass.Waves.Attack
                     {
                         hider.Hide();
                     }
+                    else if (collider.TryGetComponent(out ProjectileDamageable projectileDamageable))
+                    {
+                        projectileDamageable.ProjectileHit();
+                    }
                 }
             }
             else
