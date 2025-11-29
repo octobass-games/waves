@@ -758,14 +758,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.055555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6262,6 +6262,10 @@ PrefabInstance:
       propertyPath: Cartographer
       value: 
       objectReference: {fileID: 1253435447}
+    - target: {fileID: 5337127993354170949, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
+      propertyPath: SpawnTracker
+      value: 
+      objectReference: {fileID: 1448142528}
     - target: {fileID: 6779806814798997937, guid: 96e989b618ad4604daf78a663e3148fd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
