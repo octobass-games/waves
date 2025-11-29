@@ -18,34 +18,25 @@ public class ControlsHintText : MonoBehaviour
     public ControlsImageMap imageMap;
     public SpriteRenderer ControlSprite;
 
-    private string StringifiedBinding;
-    private string ReadableStringifiedBinding;
-
-    void Start()
+    void Update()
     {
-        ReadableStringifiedBinding = "";
+        string readableStringifiedBinding = "";
 
         if (CompositeParts.Count > 0)
         {
             foreach (var part in CompositeParts)
             {
-                ReadableStringifiedBinding += ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { name = part, groups = PlayerInput.currentControlScheme }));
+                readableStringifiedBinding += ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { name = part, groups = PlayerInput.currentControlScheme }));
             }
         }
         else
         {
-            ReadableStringifiedBinding = ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { groups = PlayerInput.currentControlScheme }));
+            readableStringifiedBinding = ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { groups = PlayerInput.currentControlScheme }));
         }
 
-        StringifiedBinding = Regex.Replace(ReadableStringifiedBinding.ToLower(), @"\s+", "");
+        string stringifiedBinding = Regex.Replace(readableStringifiedBinding.ToLower(), @"\s+", "");
         
-        Debug.Log("Controls: " + StringifiedBinding);
-    }
-
-    void Update()
-    {
-        var matchingImage = imageMap.Images.Find(i => i.MatchingString.ToLower() == StringifiedBinding);
-
+        var matchingImage = imageMap.Images.Find(i => i.MatchingString.ToLower() == stringifiedBinding);
 
         if (matchingImage != null)
         {
@@ -55,7 +46,7 @@ public class ControlsHintText : MonoBehaviour
         }
         else
         {
-            Text.text = ReadableStringifiedBinding;
+            Text.text = readableStringifiedBinding;
             Text.gameObject.SetActive(true);
             ControlSprite.gameObject.SetActive(false);
         }
