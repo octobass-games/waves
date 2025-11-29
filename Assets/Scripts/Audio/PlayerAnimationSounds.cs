@@ -125,6 +125,9 @@ public class PlayerAnimationSounds : MonoBehaviour
 
     private void OnDestroy()
     {
+        wallslideSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        waterpowerSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
         waterpowerSFX.release();
         wallslideSFX.release();
     }
