@@ -25,9 +25,9 @@ MonoBehaviour:
   WallJumpInputFreezeTime: 250
   WallSlideSpeed: 7
   WallClimbSpeed: 4
-  SwimmingSpeed: 3
+  SwimmingSpeed: 5
   SwimmingBobHeight: 0.5
-  DivingSpeedModifier: 0.3
+  DivingSpeedModifier: 0.6
   BuoyancyDescentModifier: 5
   BuoyancyAscentSpeed: 5
   GroundContactFilter:
@@ -86,7 +86,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  DashDistance: 3
+  DashDistance: 4
   DashDrag: 150
   VerticalLedgeClimbSpeed: 10
   HorizontalLedgeClimbSpeed: 15
