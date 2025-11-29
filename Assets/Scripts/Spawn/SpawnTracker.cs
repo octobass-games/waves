@@ -38,6 +38,8 @@ namespace Octobass.Waves.Spawn
             {
                 Debug.LogWarning("[SpawnTracker]: Cartographer not set");
             }
+
+            CurrentSpawnPoint = DefaultSpawnPoint;
         }
 
         public void Respawn()
