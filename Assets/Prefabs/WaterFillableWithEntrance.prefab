@@ -207,47 +207,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1602373769552802751, guid: fe67c83282653db4f9323babdb7f3a14, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6436506930256347816}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe67c83282653db4f9323babdb7f3a14, type: 3}
---- !u!1 &744960751721947679 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1602373769552802751, guid: fe67c83282653db4f9323babdb7f3a14, type: 3}
-  m_PrefabInstance: {fileID: 2047562983829639584}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6436506930256347816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744960751721947679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1231445782
-      Data2: 1094161122
-      Data3: -902633342
-      Data4: -1214833955
-    Path: event:/SFX/Water power
-  Event: 
-  EventPlayTrigger: 12
-  EventStopTrigger: 11
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!4 &1889304154883736884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 455514133994165396, guid: fe67c83282653db4f9323babdb7f3a14, type: 3}

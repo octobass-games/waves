@@ -2162,6 +2162,26 @@ PrefabInstance:
       propertyPath: upgradeSFX
       value: event:/SFX/upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: WaterPowerEvent.Path
+      value: event:/SFX/Water power
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: WaterPowerEvent.Guid.Data1
+      value: -1231445782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: WaterPowerEvent.Guid.Data2
+      value: 1094161122
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: WaterPowerEvent.Guid.Data3
+      value: -902633342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374423792661856508, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: WaterPowerEvent.Guid.Data4
+      value: -1214833955
+      objectReference: {fileID: 0}
     - target: {fileID: 5700833244494442763, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: ExplainerRoot
       value: 
@@ -6084,11 +6104,11 @@ PrefabInstance:
       objectReference: {fileID: 1047319393}
     - target: {fileID: 5011440640654861939, guid: d67fcd787ee3e724a83aec7a29483857, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -649.9255
+      value: -649.4255
       objectReference: {fileID: 0}
     - target: {fileID: 5011440640654861939, guid: d67fcd787ee3e724a83aec7a29483857, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -50.14611
+      value: -51.14611
       objectReference: {fileID: 0}
     - target: {fileID: 6502101514158162200, guid: d67fcd787ee3e724a83aec7a29483857, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9666,7 +9686,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 32.85389
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3791671333790983013, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -24074,7 +24095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.7935696
+      value: 4.9681454
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
