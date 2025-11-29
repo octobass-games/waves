@@ -6768,7 +6768,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1791635063
-  m_SortingLayer: 4
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -19637,6 +19637,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6702380439813735241}
     m_Modifications:
+    - target: {fileID: 1922149762785621943, guid: 91a172a38f72f01458fa39268b945336, type: 3}
+      propertyPath: Name
+      value: C5-Teleporter
+      objectReference: {fileID: 0}
     - target: {fileID: 1922149762785621943, guid: 91a172a38f72f01458fa39268b945336, type: 3}
       propertyPath: Room
       value: 12
