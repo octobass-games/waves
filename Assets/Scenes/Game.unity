@@ -23990,6 +23990,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -75.14611
       objectReference: {fileID: 0}
+    - target: {fileID: 7225142341880338241, guid: f9463829976c235449724402c6b2ccab, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 8442930999395101782, guid: f9463829976c235449724402c6b2ccab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 527
@@ -24033,7 +24037,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9029679492760860984, guid: f9463829976c235449724402c6b2ccab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f9463829976c235449724402c6b2ccab, type: 3}
 --- !u!114 &4054883689291170595 stripped
 MonoBehaviour:
@@ -24095,7 +24102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.9681454
+      value: 5.957046
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
