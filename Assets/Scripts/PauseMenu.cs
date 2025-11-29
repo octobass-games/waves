@@ -1,3 +1,6 @@
+using Octobass.Waves.Item;
+using Octobass.Waves.Map;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -24,6 +27,21 @@ namespace Octobass.Waves
 
         [SerializeField]
         private PlayerInput PlayerInput;
+
+        [SerializeField]
+        private TextMeshProUGUI ShellCount;
+
+        [SerializeField]
+        private TextMeshProUGUI TeleporterCount;
+
+        [SerializeField]
+        private TextMeshProUGUI LoreCount;
+
+        [SerializeField]
+        private Cartographer Cartographer;
+
+        [SerializeField]
+        private Inventory Inventory;
 
         private bool IsPaused = false;
 
@@ -93,6 +111,10 @@ namespace Octobass.Waves
             SelectedGameObjectBeforePause = EventSystem.current.currentSelectedGameObject;
             EventSystem.current.SetSelectedGameObject(InitiallySelectedGameObject);
             MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
+
+            ShellCount.text = $"{Cartographer.GetFoundShellCount()}/48";
+            TeleporterCount.text = $"{Cartographer.GetFoundTeleporterCount()}/48";
+            LoreCount.text = $"{Inventory.GetLoreItemCount()}/10";
 
             MainMenuPanel.SetActive(true);
             StaffPanel.SetActive(false);

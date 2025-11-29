@@ -132,5 +132,15 @@ namespace Octobass.Waves.Map
         {
             return Rooms.Find(room => roomId == room.Id);
         }
+
+        public int GetFoundShellCount()
+        {
+            return Rooms.Count(room => room.IsShellFound);
+        }
+
+        public int GetFoundTeleporterCount()
+        {
+            return Rooms.Count(room => room.IsTeleporterFound);
+        }
     }
 }
