@@ -52,6 +52,7 @@ namespace Octobass.Waves.Movement
                 CharacterStateId.WallClimb,
                 new()
                 {
+                    new(CharacterStateId.Swimming, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsTouchingWaterway()),
                     new(CharacterStateId.WallSlide, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => driverSnapshot.GrabReleased && (collisionDetector.IsTouchingRightWall() && driverSnapshot.Movement.x > 0 || collisionDetector.IsTouchingLeftWall() && driverSnapshot.Movement.x < 0)),
                     new(CharacterStateId.LedgeClimb, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsAtLedge() && driverSnapshot.Movement.y >= 1),
                     new(CharacterStateId.Falling, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => driverSnapshot.GrabReleased || !collisionDetector.IsCloseToWall() || !collisionDetector.IsAtClimbHeight()),
@@ -72,6 +73,7 @@ namespace Octobass.Waves.Movement
                 CharacterStateId.WallSlide,
                 new()
                 {
+                    new(CharacterStateId.Swimming, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsTouchingWaterway()),
                     new(CharacterStateId.Grounded, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsGrounded()),
                     new(CharacterStateId.WallClimb, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => driverSnapshot.GrabHeld && collisionDetector.IsAtClimbHeight()),
                     new(CharacterStateId.WallJump, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => driverSnapshot.JumpPressed),
@@ -98,6 +100,7 @@ namespace Octobass.Waves.Movement
                 CharacterStateId.Dashing,
                 new()
                 {
+                    new(CharacterStateId.Swimming, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => collisionDetector.IsTouchingWaterway()),
                     new(CharacterStateId.WallClimb, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => !collisionDetector.IsGrounded() && collisionDetector.IsTouchingWall(stateSnapshot.Velocity.normalized) && driverSnapshot.GrabHeld && collisionDetector.IsAtClimbHeight()),
                     new(CharacterStateId.WallSlide, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => !collisionDetector.IsGrounded() && collisionDetector.IsTouchingWall(stateSnapshot.Velocity.normalized) && driverSnapshot.Movement.normalized.x == stateSnapshot.Velocity.normalized.x),
                     new(CharacterStateId.Falling, (StateSnapshot stateSnapshot, MovementDriverSnapshot driverSnapshot, MovementControllerCollisionDetector collisionDetector) => stateSnapshot.Velocity == Vector2.zero && !collisionDetector.IsGrounded() && stateSnapshot.IsDashGracePeriodFinished),
