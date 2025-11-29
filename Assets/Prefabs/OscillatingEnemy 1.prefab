@@ -168,6 +168,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 3830a7fbbf5b7b94fb31d4771ef01c51, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3993170703591322014}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 3830a7fbbf5b7b94fb31d4771ef01c51, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6124750214182843481}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 3830a7fbbf5b7b94fb31d4771ef01c51, type: 3}
 --- !u!4 &3773047785871287703 stripped
 Transform:
@@ -193,8 +196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Oscillator
   Body: {fileID: 559779403444179462}
   Speed: 6
+  SpriteRenderer: {fileID: 0}
   PointA: {fileID: 2656260020749034580}
   PointB: {fileID: 3730947778956275152}
+  HasNoFacingDirection: 1
 --- !u!50 &559779403444179462
 Rigidbody2D:
   serializedVersion: 5
@@ -280,3 +285,34 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.563507, y: 2.6241035}
   m_EdgeRadius: 0
+--- !u!114 &6124750214182843481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157231985811066354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 772619731
+      Data2: 1101439402
+      Data3: -1215266429
+      Data4: -1070358986
+    Path: event:/SFX/moving box
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
