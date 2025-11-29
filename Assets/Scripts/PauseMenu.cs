@@ -1,5 +1,7 @@
 using Octobass.Waves.Item;
 using Octobass.Waves.Map;
+using Octobass.Waves.Movement;
+using Octobass.Waves.Spawn;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -42,6 +44,9 @@ namespace Octobass.Waves
 
         [SerializeField]
         private Inventory Inventory;
+
+        [SerializeField]
+        private SpawnTracker SpawnTracker;
 
         private bool IsPaused = false;
 
@@ -144,9 +149,7 @@ namespace Octobass.Waves
             StaffPanel.SetActive(true);
             ControlsPanel.SetActive(false);
             PostcardsPanel.SetActive(false);
-
         }
-
 
         public void ClickControls()
         {
@@ -156,7 +159,6 @@ namespace Octobass.Waves
             PostcardsPanel.SetActive(false);
         }
 
-
         public void ClickPostcards()
         {
             MainMenuPanel.SetActive(false);
@@ -165,9 +167,10 @@ namespace Octobass.Waves
             PostcardsPanel.SetActive(true);
         }
 
-        public void ClickRestartRoom()
+        public void OnRespawnClick()
         {
-
+            SpawnTracker.Respawn();
+            ClosePause();
         }
 
         public void ClickMainMenu()

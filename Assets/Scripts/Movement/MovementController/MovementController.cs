@@ -49,6 +49,7 @@ namespace Octobass.Waves.Movement
         {
             Body.position = position;
 
+            Unfreeze();
             CurrentStateId = CharacterStateId.Grounded;
             CurrentState = StateRegistry[CharacterStateId.Grounded];
         }
