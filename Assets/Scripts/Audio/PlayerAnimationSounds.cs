@@ -1,4 +1,6 @@
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class PlayerAnimationSounds : MonoBehaviour
 {
@@ -14,6 +16,17 @@ public class PlayerAnimationSounds : MonoBehaviour
     public string climbSFX;
     public string floatSFX;
 
+    public EventReference WaterPowerEvent;  
+
+    private EventInstance waterpowerSFX;
+
+    private bool waterPowerIsPlaying = false;
+
+    void Start()
+    {
+        waterpowerSFX = FMODUnity.RuntimeManager.CreateInstance(WaterPowerEvent);
+    }
+
     void OnStep()
     {
         FMODUnity.RuntimeManager.PlayOneShot(stepSFX);
@@ -22,6 +35,20 @@ public class PlayerAnimationSounds : MonoBehaviour
     void OnFloat()
     {
         FMODUnity.RuntimeManager.PlayOneShot(floatSFX);
+    }
+
+    void OnWaterPower()
+    {
+        if (waterPowerIsPlaying) return;
+
+        waterpowerSFX.start();
+        waterPowerIsPlaying = true;
+    }
+
+    void StopWaterPower()
+    {
+        waterpowerSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        waterPowerIsPlaying = false;
     }
 
     void OnClimb()
@@ -77,5 +104,10 @@ public class PlayerAnimationSounds : MonoBehaviour
 	{
 		FMODUnity.RuntimeManager.PlayOneShot(tpSFX);
 	}
+
+    private void OnDestroy()
+    {
+        waterpowerSFX.release();
+    }
 
 }
