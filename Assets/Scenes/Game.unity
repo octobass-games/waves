@@ -4099,11 +4099,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539800906}
   m_CullTransparentMesh: 1
---- !u!1 &1548127143 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5977752691244264825, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
-  m_PrefabInstance: {fileID: 1986812293359545316}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1565077687 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6226161797019440744, guid: a0422a69122fa9f4b8b32a2669aee9b6, type: 3}
@@ -7650,7 +7645,7 @@ PrefabInstance:
     - target: {fileID: 881903016951065193, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
       propertyPath: Inspect
       value: 
-      objectReference: {fileID: 1548127143}
+      objectReference: {fileID: 0}
     - target: {fileID: 881903016951065193, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
       propertyPath: PlayerInput
       value: 
@@ -9575,6 +9570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: G3
       objectReference: {fileID: 0}
+    - target: {fileID: 4130664716497732802, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 4164657484201109693, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -9943,11 +9942,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 103667780416798390, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -314.22546
+      value: -317.32547
       objectReference: {fileID: 0}
     - target: {fileID: 103667780416798390, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 57.35389
+      value: 65.85389
       objectReference: {fileID: 0}
     - target: {fileID: 2649762224897761163, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35602,11 +35601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2954023840310861775, guid: dc5fedb9236a9d44da1afa911d99a4c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -312.82547
+      value: -317.32547
       objectReference: {fileID: 0}
     - target: {fileID: 2954023840310861775, guid: dc5fedb9236a9d44da1afa911d99a4c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.75389
+      value: 52.85389
       objectReference: {fileID: 0}
     - target: {fileID: 4352427598519013048, guid: dc5fedb9236a9d44da1afa911d99a4c9, type: 3}
       propertyPath: PlayerInput
