@@ -19,7 +19,7 @@ namespace Octobass.Waves.Movement
         {
             ImpulseApplied = false;
             InputGracePeriodFinished = false;
-            InputGracePeriodTimer = 100;
+            InputGracePeriodTimer = Config.DashGracePeriod;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, MovementDriverSnapshot driverSnapshot, Vector2 facingDirection)

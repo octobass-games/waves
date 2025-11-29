@@ -82,5 +82,8 @@ namespace Octobass.Waves.Movement
 
         [Tooltip("The horizontal climb speed when ledge climbing")]
         public float HorizontalLedgeClimbSpeed;
+
+        [Tooltip("The grace period when dashing (milliseconds)")]
+        public float DashGracePeriod;
     }
 }
