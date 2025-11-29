@@ -19,7 +19,7 @@ namespace Octobass.Waves.Movement
         {
             ImpulseApplied = false;
             InputGracePeriodFinished = false;
-            InputGracePeriodTimer = 50;
+            InputGracePeriodTimer = 75;
         }
 
         public override StateSnapshot Tick(StateSnapshot previousSnapshot, MovementDriverSnapshot driverSnapshot, Vector2 facingDirection)
@@ -47,6 +47,8 @@ namespace Octobass.Waves.Movement
             {
                 ImpulseApplied = true;
 
+                Debug.Log(driverSnapshot.Movement.normalized);
+
                 return new StateSnapshot()
                 {
                     Velocity = (driverSnapshot.Movement == Vector2.zero ? facingDirection : driverSnapshot.Movement.normalized) * Mathf.Sqrt(2 * Config.DashDrag * Config.DashDistance),
@@ -59,6 +61,8 @@ namespace Octobass.Waves.Movement
 
             velocity.x = previousSnapshot.Velocity.normalized.x < 0 ? Mathf.Min(velocity.x, 0) : Mathf.Max(velocity.x, 0);
             velocity.y = previousSnapshot.Velocity.normalized.y < 0 ? Mathf.Min(velocity.y, 0) : Mathf.Max(velocity.y, 0);
+
+            Debug.Log(velocity);
 
             return new StateSnapshot()
             {
