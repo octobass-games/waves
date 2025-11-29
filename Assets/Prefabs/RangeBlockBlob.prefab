@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4695720800156481209}
   - component: {fileID: 671921283564290071}
   - component: {fileID: 7217038869201304648}
+  - component: {fileID: 4875017376214909281}
   m_Layer: 3
   m_Name: RangeBlob
   m_TagString: Untagged
@@ -190,6 +191,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
+--- !u!114 &4875017376214909281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258642075208621700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ee211ffd9164047bde6cd1d44f6a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CubeEnemyAudio
+  slimehitSFX: event:/SFX/Slime Hit
+  SleepEvent:
+    Guid:
+      Data1: 1658579508
+      Data2: 1307649302
+      Data3: 965855123
+      Data4: 23860823
+    Path: event:/SFX/Sleep
 --- !u!1 &6604654547698046228
 GameObject:
   m_ObjectHideFlags: 0
