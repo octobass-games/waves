@@ -16,15 +16,19 @@ public class PlayerAnimationSounds : MonoBehaviour
     public string climbSFX;
     public string floatSFX;
 
-    public EventReference WaterPowerEvent;  
+    public EventReference WaterPowerEvent;
+    public EventReference WallSlideEvent;
 
     private EventInstance waterpowerSFX;
+    private EventInstance wallslideSFX;
 
     private bool waterPowerIsPlaying = false;
+    private bool wallSlideIsPlaying = false;
 
     void Start()
     {
         waterpowerSFX = FMODUnity.RuntimeManager.CreateInstance(WaterPowerEvent);
+        wallslideSFX = FMODUnity.RuntimeManager.CreateInstance(WallSlideEvent);
     }
 
     void OnStep()
@@ -35,6 +39,20 @@ public class PlayerAnimationSounds : MonoBehaviour
     void OnFloat()
     {
         FMODUnity.RuntimeManager.PlayOneShot(floatSFX);
+    }
+
+    void OnWallSlide()
+    {
+        if (wallSlideIsPlaying) return;
+
+        wallslideSFX.start();
+        wallSlideIsPlaying = true;
+    }
+
+    void StopWallSlide()
+    {
+        wallslideSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        wallSlideIsPlaying = false;
     }
 
     void OnWaterPower()
@@ -91,23 +109,24 @@ public class PlayerAnimationSounds : MonoBehaviour
     }
 
     void OnDeath()
-	{
-		FMODUnity.RuntimeManager.PlayOneShot(deathSFX);
-	}
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(deathSFX);
+    }
 
-	void OnRespawn()
-	{
-		FMODUnity.RuntimeManager.PlayOneShot(respawnSFX);
-	}
+    void OnRespawn()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(respawnSFX);
+    }
 
-	void OnTP()
-	{
-		FMODUnity.RuntimeManager.PlayOneShot(tpSFX);
-	}
+    void OnTP()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(tpSFX);
+    }
 
     private void OnDestroy()
     {
         waterpowerSFX.release();
+        wallslideSFX.release();
     }
 
 }
