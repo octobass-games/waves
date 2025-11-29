@@ -32,13 +32,15 @@ namespace Octobass.Waves.Movement
                 {
                     InputGracePeriodFinished = true;
                 }
-
-                return new StateSnapshot()
+                else
                 {
-                    Velocity = previousSnapshot.Velocity,
-                    IsDashAvailable = false,
-                    IsDashGracePeriodFinished = false
-                };
+                    return new StateSnapshot()
+                    {
+                        Velocity = previousSnapshot.Velocity,
+                        IsDashAvailable = false,
+                        IsDashGracePeriodFinished = false
+                    };
+                }
             }
 
             if (!ImpulseApplied && InputGracePeriodFinished)
