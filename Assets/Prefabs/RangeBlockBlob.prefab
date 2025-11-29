@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6181028438993145928}
   - component: {fileID: 4695720800156481209}
   - component: {fileID: 671921283564290071}
+  - component: {fileID: 7217038869201304648}
   m_Layer: 3
   m_Name: RangeBlob
   m_TagString: Untagged
@@ -173,7 +174,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45030c72cb9032f4fa27762e528545fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileDamageable
+  Id: 
   Animator: {fileID: 6181028438993145928}
+  SpriteRenderer: {fileID: 5964518610103546864}
+  BoxCollider: {fileID: 4695720800156481209}
+--- !u!114 &7217038869201304648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258642075208621700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
 --- !u!1 &6604654547698046228
 GameObject:
   m_ObjectHideFlags: 0

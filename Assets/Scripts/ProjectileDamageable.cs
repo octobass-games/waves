@@ -1,30 +1,66 @@
+using Octobass.Waves.Save;
 using UnityEngine;
 
-public class ProjectileDamageable : MonoBehaviour
+public class ProjectileDamageable : MonoBehaviour, ISavable
 {
+    [SerializeField]
+    private string Id;
+
     [SerializeField]
     private Animator Animator;
 
-    private bool IsExploding;
+    [SerializeField]
+    private SpriteRenderer SpriteRenderer;
+
+    [SerializeField]
+    private BoxCollider2D BoxCollider;
+
+    private bool HasExploded;
+    private string SaveKey;
+
+    void Awake()
+    {
+        SaveKey = $"projectile-damageable-{Id}";
+    }
 
     public void NonProjectileHit()
     {
-        Debug.Log("Hello!");
-
         Animator.SetTrigger("hit-no-damage");
     }
 
     public void ProjectileHit()
     {
-        if (!IsExploding)
+        if (!HasExploded)
         {
             Animator.SetTrigger("hit-explode");
-            IsExploding = true;
+            HasExploded = true;
         }
     }
 
     public void OnSlimeExplode()
     {
-        Destroy(gameObject);
+        Disable();
+    }
+
+    private void Disable()
+    {
+        SpriteRenderer.enabled = false;
+        BoxCollider.enabled = false;
+        Animator.enabled = false;
+    }
+
+    public void Save(SaveData saveData)
+    {
+        saveData.Add(SaveKey, HasExploded);
+    }
+
+    public void Load(SaveData saveData)
+    {
+        HasExploded = saveData.Load<bool>(SaveKey);
+
+        if (HasExploded)
+        {
+            Disable();
+        }
     }
 }
