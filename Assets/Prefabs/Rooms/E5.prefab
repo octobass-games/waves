@@ -28263,7 +28263,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1791635063
-  m_SortingLayer: 4
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -29331,7 +29331,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -269053427
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -49263,7 +49263,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1040710139
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -50581,6 +50581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 936913041618485507}
     m_Modifications:
+    - target: {fileID: 3889593773649623142, guid: 156bf5f0e0c398b45b0037bbf1a7f6ed, type: 3}
+      propertyPath: Inspectable
+      value: 
+      objectReference: {fileID: 8351041680300415575}
     - target: {fileID: 6364451717301510602, guid: 156bf5f0e0c398b45b0037bbf1a7f6ed, type: 3}
       propertyPath: m_Name
       value: GrateAndLever

@@ -6481,6 +6481,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846812610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5546815701825941626, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+  m_PrefabInstance: {fileID: 5117037892847758983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec50892a4f2cd94386d446b467ad3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.GrateController
 --- !u!114 &890246643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18557,6 +18568,10 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[4].Array.data[27].Y
       value: -180000000
       objectReference: {fileID: 0}
+    - target: {fileID: 1173590219286311320, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 1811201959233115693, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
       propertyPath: Value
       value: 2
@@ -18804,6 +18819,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 65.85389
       objectReference: {fileID: 0}
+    - target: {fileID: 715933675257819886, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 2649762224897761163, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 244.9
@@ -28805,6 +28824,26 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 718038060524075648, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[3].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 718038060524075648, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[9].m_Data
+      value: 
+      objectReference: {fileID: 6416342842211520391, guid: c7ca7a2c2c990b54b8841314e01a6ee7, type: 3}
+    - target: {fileID: 718038060524075648, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[3].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 718038060524075648, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[9].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 718038060524075648, guid: a797251c194ba02409b11f5ea2132305, type: 3}
+      propertyPath: m_Tiles.Array.data[6].second.m_TileSpriteIndex
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2029396213296902232, guid: a797251c194ba02409b11f5ea2132305, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -32953,7 +32992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.1843395
+      value: 4.7698755
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
@@ -41244,6 +41283,34 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
+    - target: {fileID: 8351041680300415575, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351041680300415575, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351041680300415575, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 846812610}
+    - target: {fileID: 8351041680300415575, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351041680300415575, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351041680300415575, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Octobass.Waves.GrateController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351041680300415575, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8891550276835441843, guid: 3b30d0d31bfc41f46b6f88b12e303a17, type: 3}
       propertyPath: m_TileSpriteArray.Array.size
       value: 25

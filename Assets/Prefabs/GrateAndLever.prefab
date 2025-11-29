@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9163938680208573805}
+  - component: {fileID: 3889593773649623142}
+  - component: {fileID: 7537086497955604656}
   m_Layer: 0
   m_Name: GrateAndLever
   m_TagString: Untagged
@@ -33,6 +35,34 @@ Transform:
   - {fileID: 27205978522425555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3889593773649623142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6364451717301510602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec50892a4f2cd94386d446b467ad3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.GrateController
+  GrateAnimator: {fileID: 1184762324987693745}
+  LeverAnimator: {fileID: 1642712023129442507}
+  GrateCollider: {fileID: 5383887978759405980}
+  Inspectable: {fileID: 0}
+--- !u!114 &7537086497955604656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6364451717301510602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
 --- !u!1001 &1731018037144274613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,11 +115,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4847199063491014727, guid: e7c4bcfb3b29633499095a2498c06cbf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c4bcfb3b29633499095a2498c06cbf, type: 3}
+--- !u!95 &1642712023129442507 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1065622868762791550, guid: e7c4bcfb3b29633499095a2498c06cbf, type: 3}
+  m_PrefabInstance: {fileID: 1731018037144274613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3801629955021099780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226782913244894641, guid: e7c4bcfb3b29633499095a2498c06cbf, type: 3}
@@ -159,5 +198,15 @@ PrefabInstance:
 --- !u!4 &27205978522425555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4305068085441373691, guid: 6e3f73d28e2d71d4c9a93fa623450d0c, type: 3}
+  m_PrefabInstance: {fileID: 4313897777529765160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1184762324987693745 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3147756803084416921, guid: 6e3f73d28e2d71d4c9a93fa623450d0c, type: 3}
+  m_PrefabInstance: {fileID: 4313897777529765160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &5383887978759405980 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8172171555337501876, guid: 6e3f73d28e2d71d4c9a93fa623450d0c, type: 3}
   m_PrefabInstance: {fileID: 4313897777529765160}
   m_PrefabAsset: {fileID: 0}
