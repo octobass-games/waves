@@ -1166,10 +1166,22 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
+    - target: {fileID: 1642963574193762994, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -183.42548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642963574193762994, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -145.1461
+      objectReference: {fileID: 0}
     - target: {fileID: 1670070404741260981, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
       propertyPath: m_Name
       value: A5
       objectReference: {fileID: 0}
+    - target: {fileID: 6366927832070602474, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1047319393}
     - target: {fileID: 6871597379741598478, guid: ef681e29e6f4c644cb401153e7c814b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 111
@@ -5385,6 +5397,14 @@ PrefabInstance:
     - target: {fileID: 2860220785283398120, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
       propertyPath: Value
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318704235155229472, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -472.42548
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318704235155229472, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -120.1461
       objectReference: {fileID: 0}
     - target: {fileID: 5679865528237235737, guid: b036e5ce43c77a1468d2577eff07db94, type: 3}
       propertyPath: PlayerInput
@@ -19822,6 +19842,14 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
+    - target: {fileID: 1554035978719764740, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -128.42548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554035978719764740, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -113.1461
+      objectReference: {fileID: 0}
     - target: {fileID: 5971032471423165720, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 56
@@ -19862,6 +19890,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6558981543159704924, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1047319393}
     - target: {fileID: 8846363038135247814, guid: 9eb617668bd447b4ea2505edb3470ecc, type: 3}
       propertyPath: m_Name
       value: A4
@@ -24102,7 +24134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.287875
+      value: 5.581739
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
