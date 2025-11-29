@@ -19,7 +19,9 @@ public class PlayerAnimationSounds : MonoBehaviour
     public EventReference WaterPowerEvent;  
 
     private EventInstance waterpowerSFX;
- 
+
+    private bool waterPowerIsPlaying = false;
+
     void Start()
     {
         waterpowerSFX = FMODUnity.RuntimeManager.CreateInstance(WaterPowerEvent);
@@ -37,13 +39,16 @@ public class PlayerAnimationSounds : MonoBehaviour
 
     void OnWaterPower()
     {
-        waterpowerSFX.start();
+        if (waterPowerIsPlaying) return;
 
+        waterpowerSFX.start();
+        waterPowerIsPlaying = true;
     }
 
     void StopWaterPower()
     {
         waterpowerSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        waterPowerIsPlaying = false;
     }
 
     void OnClimb()
