@@ -1,5 +1,4 @@
 using Octobass.Waves.Save;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -125,6 +124,11 @@ namespace Octobass.Waves.Item
         public List<AbilityItemInstance> GetAbilityItems()
         {
             return Items.OfType<AbilityItemInstance>().ToList();
+        }
+
+        public int GetLoreItemCount()
+        {
+            return Items.OfType<LoreItemInstance>().Count();
         }
     }
 }
