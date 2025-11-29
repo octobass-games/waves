@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,23 +20,23 @@ public class ControlsHintText : MonoBehaviour
 
     void Update()
     {
-        string result = "";
+        string readableStringifiedBinding = "";
 
         if (CompositeParts.Count > 0)
         {
             foreach (var part in CompositeParts)
             {
-                result += ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { name = part, groups = PlayerInput.currentControlScheme }));
+                readableStringifiedBinding += ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { name = part, groups = PlayerInput.currentControlScheme }));
             }
         }
         else
         {
-            result = ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { groups = PlayerInput.currentControlScheme }));
+            readableStringifiedBinding = ActionReference.action.GetBindingDisplayString(ActionReference.action.GetBindingIndex(bindingMask: new InputBinding { groups = PlayerInput.currentControlScheme }));
         }
 
-        var matchingImage = imageMap.Images.Find(i => i.MatchingString.ToLower() == result.ToLower());
-
-        Debug.Log("Controls: " + result.ToLower());
+        string stringifiedBinding = Regex.Replace(readableStringifiedBinding.ToLower(), @"\s+", "");
+        
+        var matchingImage = imageMap.Images.Find(i => i.MatchingString.ToLower() == stringifiedBinding);
 
         if (matchingImage != null)
         {
@@ -45,7 +46,7 @@ public class ControlsHintText : MonoBehaviour
         }
         else
         {
-            Text.text = result;
+            Text.text = readableStringifiedBinding;
             Text.gameObject.SetActive(true);
             ControlSprite.gameObject.SetActive(false);
         }
