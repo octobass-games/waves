@@ -16,6 +16,9 @@ namespace Octobass.Waves.Map
         [SerializeField]
         private List<Room> Rooms;
 
+        [SerializeField]
+        private SaveManager SaveManager;
+
         private RoomId ActiveRoomId = RoomId.E1;
 
         private const string RoomsSaveKey = "cartographer-rooms";
@@ -57,6 +60,7 @@ namespace Octobass.Waves.Map
             }
 
             OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
+            SaveManager.Save();
         }
 
         private void GenerateRoomsFromEnums()

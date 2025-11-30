@@ -32,17 +32,14 @@ public class Teleporter : MonoBehaviour, ISavable
         if (!IsUnlocked)
         {
             Audio.PlayOneShot();
-            
+
             Unlock();
 
-            if (ServiceLocator.Instance != null)
-            {
-                Cartographer cartographer = FindFirstObjectByType<Cartographer>();
+            Cartographer cartographer = FindFirstObjectByType<Cartographer>();
 
-                if (cartographer != null)
-                {
-                    cartographer.OnTeleporterUnlocked(Room);
-                }
+            if (cartographer != null)
+            {
+                cartographer.OnTeleporterUnlocked(Room);
             }
         }
         else
