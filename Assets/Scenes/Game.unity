@@ -758,14 +758,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.041666668
-    width: 0.25
-    height: 0.25
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.875
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3424,6 +3424,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 950785971914746242}
     - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: FlippableText
+      value: 
+      objectReference: {fileID: 1196454468}
+    - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: FlippableFront
       value: 
       objectReference: {fileID: 950785971914746243}
@@ -3431,6 +3435,10 @@ PrefabInstance:
       propertyPath: FlippableButton
       value: 
       objectReference: {fileID: 950785971914746241}
+    - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
+      propertyPath: NonFlippableText
+      value: 
+      objectReference: {fileID: 1196454467}
     - target: {fileID: 6076688350194074155, guid: 53dbc33800d348d429e420d347ab1d8e, type: 3}
       propertyPath: NonFlippableImage
       value: 
@@ -4152,6 +4160,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183648941}
   m_CullTransparentMesh: 1
+--- !u!114 &1196454467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2339397797488511515, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+  m_PrefabInstance: {fileID: 950785971914746239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1196454468 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8398799934075729773, guid: 116182b8ce4675a47a13475ca3d99681, type: 3}
+  m_PrefabInstance: {fileID: 950785971914746239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &1229773306 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3329522528182504716, guid: d67fcd787ee3e724a83aec7a29483857, type: 3}
@@ -32325,7 +32355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.968343
+      value: 4.127063
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput

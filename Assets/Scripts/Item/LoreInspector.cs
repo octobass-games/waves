@@ -33,6 +33,12 @@ namespace Octobass.Waves.Item
         [SerializeField]
         private PlayerInput PlayerInput;
 
+        [SerializeField]
+        public TMPro.TextMeshProUGUI FlippableText;
+
+        [SerializeField]
+        public TMPro.TextMeshProUGUI NonFlippableText;
+
 
         public void OnItemPickedUp(ItemInstance item)
         {
@@ -47,6 +53,7 @@ namespace Octobass.Waves.Item
 
                 Sprite frontSideSprite = loreItemInstance.Definition.FrontSprite;
                 Sprite backSideSprite = loreItemInstance.Definition.BackSprite;
+                string loreText = loreItemInstance.Definition.Text;
 
                 if (frontSideSprite != null && backSideSprite != null)
                 {
@@ -58,6 +65,10 @@ namespace Octobass.Waves.Item
                     FlippableBack.SetNativeSize();
 
                     EventSystem.current.SetSelectedGameObject(FlippableButton.gameObject);
+
+                    FlippableText.gameObject.SetActive(loreText != null || loreText != "");
+                    NonFlippableText.gameObject.SetActive(false);
+                    FlippableText.text = loreText;
                 }
                 else
                 {
@@ -70,7 +81,13 @@ namespace Octobass.Waves.Item
                     {
                         EventSystem.current.SetSelectedGameObject(CloseButton);
                     }
+
+                    NonFlippableText.gameObject.SetActive(loreText != null || loreText != "");
+                    FlippableText.gameObject.SetActive(false);
+                    NonFlippableText.text = loreText;
                 }
+
+
             }
         }
 
