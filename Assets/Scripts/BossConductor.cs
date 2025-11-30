@@ -18,7 +18,7 @@ public class BossConductor : MonoBehaviour
     public Animator BossAnimator;
 
     [SerializeField]
-    private CinemachineFollow Follower;
+    private CinemachineCamera BossCamera;
 
     [SerializeField]
     private float BossXOffset;
@@ -36,7 +36,8 @@ public class BossConductor : MonoBehaviour
         DialoguePanel.SetActive(false);
         PlayerInput.SwitchCurrentActionMap(GameplayInput.name);
         BossAnimator.SetTrigger("StartBattle");
-        Follower.FollowOffset.x = BossXOffset;
+        Camera.gameObject.SetActive(false);
+        BossCamera.gameObject.SetActive(true);
     }
 
     public void OpenDialogue()
