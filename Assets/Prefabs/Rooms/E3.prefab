@@ -3543,7 +3543,7 @@ Tilemap:
       - {fileID: -8317056041114954161, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -8440385396302153196, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -5337844618644858084, guid: 5a1f94f460d015843945b80196c107df, type: 3}
-      m_AnimationSpeed: 5.3518834
+      m_AnimationSpeed: 5.9811654
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -14787,6 +14787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.RoomEntrance
   Room: 30
+  EntranceCollider: {fileID: 0}
 --- !u!212 &2377514376207414192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15870,6 +15871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.RoomEntrance
   Room: 30
+  EntranceCollider: {fileID: 0}
 --- !u!212 &4748069034888896658
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17020,6 +17022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.RoomEntrance
   Room: 30
+  EntranceCollider: {fileID: 0}
 --- !u!212 &2967025417645359284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21410,6 +21413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.RoomEntrance
   Room: 30
+  EntranceCollider: {fileID: 0}
 --- !u!212 &2698926821176634222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32434,7 +32438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 105223097794930765, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.50639
+      value: 8.523
       objectReference: {fileID: 0}
     - target: {fileID: 105223097794930765, guid: 08eaf31d77995fd43bd58ea7b073da5f, type: 3}
       propertyPath: m_LocalPosition.z
