@@ -291,6 +291,8 @@ MonoBehaviour:
   DialoguePanel: {fileID: 2651023781223352354}
   PlayerInput: {fileID: 0}
   BossAnimator: {fileID: 2190344711382729681}
+  Follower: {fileID: 2980770855307321144}
+  BossXOffset: 13
 --- !u!1 &6616904899785064461
 GameObject:
   m_ObjectHideFlags: 0
@@ -11314,6 +11316,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7016373576886688874, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
   m_PrefabInstance: {fileID: 6930872512039477980}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2980770855307321144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5292491080746401252, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
+  m_PrefabInstance: {fileID: 6930872512039477980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
 --- !u!114 &5757685853828772590 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3443018490517164082, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
