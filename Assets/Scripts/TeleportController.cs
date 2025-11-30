@@ -24,12 +24,9 @@ public class TeleportController : MonoBehaviour
     [SerializeField]
     private PlayerInput PlayerInput;
 
-    // Todo: add action for this
     private InputAction CancelTeleportAction;
 
     private List<Teleporter> Teleporters;
-
-    private bool IsTeleporting;
 
     void Start()
     {
@@ -45,8 +42,6 @@ public class TeleportController : MonoBehaviour
 
     public void BeginTeleport()
     {
-        IsTeleporting = true;
-
         MapRenderer.ShowMiniMap();
         PlayerInput.SwitchCurrentActionMap("UI");
 
@@ -74,7 +69,6 @@ public class TeleportController : MonoBehaviour
         }
 
         MapRenderer.ToggleMode();
-        IsTeleporting = false;
         Finish();
     }
 
@@ -84,7 +78,5 @@ public class TeleportController : MonoBehaviour
         Animator.SetTrigger("IsTeleportingFinished");
 
         PlayerInput.SwitchCurrentActionMap("Gameplay");
-
-        IsTeleporting = false;
     }
 }
