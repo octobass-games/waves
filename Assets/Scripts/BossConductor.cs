@@ -15,6 +15,7 @@ public class BossConductor : MonoBehaviour
     private InputActionMap UiActionMap;
     public PlayerInput PlayerInput;
     private InputActionMap InputActionMapBefore;
+    public Animator BossAnimator;
 
 
     void Start()
@@ -26,8 +27,9 @@ public class BossConductor : MonoBehaviour
     {
         Debug.Log("Boss: StartBattle");
         Camera.Follow = Boss;
-        PlayerInput.SwitchCurrentActionMap(InputActionMapBefore.name);
         DialoguePanel.SetActive(false);
+        PlayerInput.SwitchCurrentActionMap(InputActionMapBefore.name);
+        BossAnimator.SetTrigger("StartBattle");
     }
 
     public void OpenDialogue()
