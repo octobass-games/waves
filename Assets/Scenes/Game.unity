@@ -758,14 +758,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.041666668
+    width: 0.25
+    height: 0.25
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.0454545
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -17160,6 +17160,10 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
+    - target: {fileID: 5707625189016436784, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 5757685853828772590, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -17174,7 +17178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6664672224582231805, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[3].Array.size
-      value: 120
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 6664672224582231805, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.data[0].x
@@ -17222,7 +17226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6664672224582231805, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[3].Array.size
-      value: 120
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 6664672224582231805, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[1].Array.data[0].X
@@ -32321,7 +32325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.897787
+      value: 4.968343
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput

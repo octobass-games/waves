@@ -46,4 +46,9 @@ public class BossConductor : MonoBehaviour
         PlayerInput.SwitchCurrentActionMap(UiActionMap.name);
         EventSystem.current.SetSelectedGameObject(Button.gameObject);
     }
+
+    public void FinishBattle()
+    {
+        Debug.Log("Finished");
+    }
 }
