@@ -11,6 +11,7 @@ public class LoreRenderer : MonoBehaviour
 
     public List<LoreItemRenderer> renderers;
     public Button BackButton;
+    public Button CloseInspectButtonNonFlippable;
 
     void OnEnable()
     {
@@ -24,8 +25,30 @@ public class LoreRenderer : MonoBehaviour
         var instance = inventory.FindItem(item);
         inspector.gameObject.SetActive(true);
         inspector.OnItemPickedUp(instance);
+        hideRenderes();
 
-        initaliseRenderers(item);
+        if (instance is LoreItemInstance loreItemInstance)
+        {
+            if (loreItemInstance.Definition.BackSprite == null)
+            {
+                EventSystem.current.SetSelectedGameObject(CloseInspectButtonNonFlippable.gameObject);
+            }
+        }
+    }
+
+    public void CloseInspect()
+    {
+        inspector.gameObject.SetActive(false);
+        initaliseRenderers(null);
+        EventSystem.current.SetSelectedGameObject(BackButton.gameObject);
+    }
+
+    private void hideRenderes()
+    {
+        renderers.ForEach(renderer =>
+        {
+            renderer.gameObject.SetActive(false);
+        });
     }
 
     private void initaliseRenderers(ItemDefinition active)
