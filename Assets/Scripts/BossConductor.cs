@@ -14,13 +14,13 @@ public class BossConductor : MonoBehaviour
     public GameObject DialoguePanel;
     private InputActionMap UiActionMap;
     public PlayerInput PlayerInput;
-    private InputActionMap InputActionMapBefore;
+    private InputActionMap GameplayInput;
     public Animator BossAnimator;
 
 
     void Start()
     {
-        InputActionMapBefore = PlayerInput.currentActionMap;
+        GameplayInput = PlayerInput.actions.FindActionMap("Gameplay");
         UiActionMap = PlayerInput.actions.FindActionMap("UI");
     }
     public void StartBattle()
@@ -28,7 +28,7 @@ public class BossConductor : MonoBehaviour
         Debug.Log("Boss: StartBattle");
         Camera.Follow = Boss;
         DialoguePanel.SetActive(false);
-        PlayerInput.SwitchCurrentActionMap(InputActionMapBefore.name);
+        PlayerInput.SwitchCurrentActionMap(GameplayInput.name);
         BossAnimator.SetTrigger("StartBattle");
     }
 
