@@ -17,9 +17,16 @@ namespace Octobass.Waves.Save
 
         private string SaveFilePath;
 
+        private bool CanSave;
+
         void Awake()
         {
             SaveFilePath = Path.Combine(Application.persistentDataPath, SaveFileName + ".json");
+
+            if (!HasSaveData())
+            {
+                CanSave = true;
+            }
         }
 
         public void Register(Saver saver)
@@ -48,14 +55,17 @@ namespace Octobass.Waves.Save
 
         public void Save()
         {
-            SaveData saveData = new();
-
-            foreach (Saver saver in Savers)
+            if (CanSave)
             {
-                saver.Save(saveData);
-            }
+                SaveData saveData = new();
 
-            WriteData(saveData);
+                foreach (Saver saver in Savers)
+                {
+                    saver.Save(saveData);
+                }
+
+                WriteData(saveData);
+            }
         }
 
         public void Load()
@@ -68,6 +78,8 @@ namespace Octobass.Waves.Save
                 {
                     saver.Load(data);
                 }
+
+                CanSave = true;
             }
         }
 
