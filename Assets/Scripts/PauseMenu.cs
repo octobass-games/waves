@@ -52,6 +52,9 @@ namespace Octobass.Waves
         [SerializeField]
         private SaveManager SaveManager;
 
+        [SerializeField]
+        private GameObject ControlsBackButton;
+
         private bool IsPaused = false;
 
         private InputAction PauseAction;
@@ -161,6 +164,8 @@ namespace Octobass.Waves
             StaffPanel.SetActive(false);
             ControlsPanel.SetActive(true);
             PostcardsPanel.SetActive(false);
+
+            EventSystem.current.SetSelectedGameObject(ControlsBackButton);
         }
 
         public void ClickPostcards()
