@@ -1,6 +1,7 @@
 using Octobass.Waves.Item;
 using Octobass.Waves.Map;
 using Octobass.Waves.Movement;
+using Octobass.Waves.Save;
 using Octobass.Waves.Spawn;
 using TMPro;
 using UnityEngine;
@@ -47,6 +48,9 @@ namespace Octobass.Waves
 
         [SerializeField]
         private SpawnTracker SpawnTracker;
+
+        [SerializeField]
+        private SaveManager SaveManager;
 
         private bool IsPaused = false;
 
@@ -175,6 +179,7 @@ namespace Octobass.Waves
 
         public void ClickMainMenu()
         {
+            SaveManager.Save();
             Time.timeScale = 1;
             SceneManager.LoadScene("MainMenu");
         }
