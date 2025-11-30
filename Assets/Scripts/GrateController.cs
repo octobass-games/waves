@@ -16,6 +16,9 @@ namespace Octobass.Waves
         private BoxCollider2D GrateCollider;
 
         [SerializeField]
+        private BoxCollider2D LeverCollider;
+
+        [SerializeField]
         private Inspectable Inspectable;
 
         private bool IsUnlocked;
@@ -53,6 +56,7 @@ namespace Octobass.Waves
             LeverAnimator.SetBool("Left", false);
 
             GrateCollider.enabled = false;
+            LeverCollider.enabled = false;
             Inspectable.enabled = false;
         }
     }

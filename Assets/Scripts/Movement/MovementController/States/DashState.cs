@@ -62,8 +62,6 @@ namespace Octobass.Waves.Movement
             velocity.x = previousSnapshot.Velocity.normalized.x < 0 ? Mathf.Min(velocity.x, 0) : Mathf.Max(velocity.x, 0);
             velocity.y = previousSnapshot.Velocity.normalized.y < 0 ? Mathf.Min(velocity.y, 0) : Mathf.Max(velocity.y, 0);
 
-            Debug.Log(velocity);
-
             return new StateSnapshot()
             {
                 Velocity = velocity,

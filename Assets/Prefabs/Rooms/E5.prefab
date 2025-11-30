@@ -50585,6 +50585,10 @@ PrefabInstance:
       propertyPath: Inspectable
       value: 
       objectReference: {fileID: 8351041680300415575}
+    - target: {fileID: 3889593773649623142, guid: 156bf5f0e0c398b45b0037bbf1a7f6ed, type: 3}
+      propertyPath: LeverCollider
+      value: 
+      objectReference: {fileID: 2468493720659148526}
     - target: {fileID: 6364451717301510602, guid: 156bf5f0e0c398b45b0037bbf1a7f6ed, type: 3}
       propertyPath: m_Name
       value: GrateAndLever
@@ -50643,6 +50647,11 @@ PrefabInstance:
 --- !u!4 &444864872499072369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9163938680208573805, guid: 156bf5f0e0c398b45b0037bbf1a7f6ed, type: 3}
+  m_PrefabInstance: {fileID: 8719148733751625756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2468493720659148526 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6575671509933340402, guid: 156bf5f0e0c398b45b0037bbf1a7f6ed, type: 3}
   m_PrefabInstance: {fileID: 8719148733751625756}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5603245252079278872 stripped
