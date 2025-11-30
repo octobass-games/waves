@@ -757,15 +757,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.17812501
+    y: 0.027777778
+    width: 0.375
+    height: 0.375
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.0454545
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -17331,10 +17331,7 @@ PrefabInstance:
     - {fileID: 3791671333790983013, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6128231803572929194, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
 --- !u!114 &1986812293359545317 stripped
 MonoBehaviour:
@@ -17467,9 +17464,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1619859545229559097, guid: f7d687168fd0f4e49b36f18087276edd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 383514431}
-    - targetCorrespondingSourceObject: {fileID: 5250273151445358321, guid: f7d687168fd0f4e49b36f18087276edd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f7d687168fd0f4e49b36f18087276edd, type: 3}
 --- !u!114 &2171906070535724259 stripped
 MonoBehaviour:
@@ -33058,10 +33052,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9029679492760860984, guid: f9463829976c235449724402c6b2ccab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9463829976c235449724402c6b2ccab, type: 3}
 --- !u!114 &4054883689291170595 stripped
 MonoBehaviour:
@@ -47113,9 +47104,25 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3496580813148870697, guid: d8f42c451eacd624298122daccf75108, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.462
+      objectReference: {fileID: 0}
+    - target: {fileID: 3496580813148870697, guid: d8f42c451eacd624298122daccf75108, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.574
+      objectReference: {fileID: 0}
     - target: {fileID: 6076550102920777653, guid: d8f42c451eacd624298122daccf75108, type: 3}
       propertyPath: m_Name
       value: B8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437100046780802630, guid: d8f42c451eacd624298122daccf75108, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437100046780802630, guid: d8f42c451eacd624298122daccf75108, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.557
       objectReference: {fileID: 0}
     - target: {fileID: 6667674452798053515, guid: d8f42c451eacd624298122daccf75108, type: 3}
       propertyPath: PlayerInput
