@@ -758,14 +758,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.055555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.109375
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18576,6 +18576,10 @@ PrefabInstance:
       propertyPath: Value
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2794882412284798589, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 3161110700247967298, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
       propertyPath: m_Name
       value: G3
@@ -18682,6 +18686,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6128231803572929194, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 3004176398566856085, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2984166253999356522, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e0ae288046dada444b55e32fb6f71be1, type: 3}
@@ -18871,6 +18881,10 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1047319393}
+    - target: {fileID: 6280157099803686398, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7332107362557247470, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_Name
       value: H7
@@ -18878,7 +18892,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1804934967598097337, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
 --- !u!114 &2275853375860145945 stripped
 MonoBehaviour:
