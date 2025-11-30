@@ -47,8 +47,6 @@ namespace Octobass.Waves.Movement
             {
                 ImpulseApplied = true;
 
-                Debug.Log(driverSnapshot.Movement.normalized);
-
                 return new StateSnapshot()
                 {
                     Velocity = (driverSnapshot.Movement == Vector2.zero ? facingDirection : driverSnapshot.Movement.normalized) * Mathf.Sqrt(2 * Config.DashDrag * Config.DashDistance),
