@@ -2,9 +2,7 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.U2D;
 using UnityEngine.UI;
-using static UnityEngine.Timeline.DirectorControlPlayable;
 
 public class BossConductor : MonoBehaviour
 {
@@ -20,9 +18,6 @@ public class BossConductor : MonoBehaviour
     [SerializeField]
     private CinemachineCamera BossCamera;
 
-    [SerializeField]
-    private float BossXOffset;
-
 
     void Start()
     {
@@ -32,12 +27,16 @@ public class BossConductor : MonoBehaviour
     public void StartBattle()
     {
         Debug.Log("Boss: StartBattle");
-        Camera.Follow = Boss;
         DialoguePanel.SetActive(false);
         PlayerInput.SwitchCurrentActionMap(GameplayInput.name);
         BossAnimator.SetTrigger("StartBattle");
         Camera.gameObject.SetActive(false);
         BossCamera.gameObject.SetActive(true);
+    }
+
+    public void RestartBattle()
+    {
+        BossAnimator.SetTrigger("StartBattle");
     }
 
     public void OpenDialogue()

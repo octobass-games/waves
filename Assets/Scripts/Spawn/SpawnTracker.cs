@@ -21,6 +21,12 @@ namespace Octobass.Waves.Spawn
         private SpawnPoint DefaultSpawnPoint;
 
         [SerializeField]
+        private SpawnPoint PenultimateSpawnPoint;
+
+        [SerializeField]
+        private SpawnPoint BossSpawnPoint;
+
+        [SerializeField]
         private Cartographer Cartographer;
 
         private SpawnPoint CurrentSpawnPoint;
@@ -92,7 +98,14 @@ namespace Octobass.Waves.Spawn
         {
             if (CurrentSpawnPoint != null)
             {
-                saveData.Add(SpawnPointSaveKey, CurrentSpawnPoint.Name);
+                if (CurrentSpawnPoint != BossSpawnPoint)
+                {
+                    saveData.Add(SpawnPointSaveKey, CurrentSpawnPoint.Name);
+                }
+                else
+                {
+                    saveData.Add(SpawnPointSaveKey, PenultimateSpawnPoint.Name);
+                }
             }
         }
     }

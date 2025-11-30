@@ -17,7 +17,6 @@ namespace Octobass.Waves.Attack
                     Debug.Log("[EnironmentalAttack]: Could not find IDamageable on player");
                 }
             }
-            
         }
     }
 }
