@@ -4833,8 +4833,8 @@ Transform:
   m_GameObject: {fileID: 1610318795556919364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.96, y: 20.05, z: 0}
-  m_LocalScale: {x: 0.84199786, y: 0.34043962, z: 1}
+  m_LocalPosition: {x: 11.9569, y: 16.84, z: 0}
+  m_LocalScale: {x: 2.0067942, y: 0.34043962, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2353980330535442199}
@@ -4852,6 +4852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.RoomEntrance
   Room: 20
+  EntranceCollider: {fileID: 0}
 --- !u!212 &2317175990381823426
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11323,7 +11324,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1791635063
-  m_SortingLayer: 4
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -12455,7 +12456,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -269053427
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -14823,6 +14824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.RoomEntrance
   Room: 20
+  EntranceCollider: {fileID: 0}
 --- !u!212 &2565942359538998101
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31940,6 +31942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Map.RoomEntrance
   Room: 20
+  EntranceCollider: {fileID: 0}
 --- !u!212 &5668784274765466510
 SpriteRenderer:
   m_ObjectHideFlags: 0
