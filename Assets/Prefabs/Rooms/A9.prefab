@@ -12916,6 +12916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HintText
       objectReference: {fileID: 0}
+    - target: {fileID: 8051952571804351420, guid: 9a9f148039bf60945a3b1dc025d2881b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12924,6 +12928,11 @@ PrefabInstance:
 --- !u!4 &1883886202735570981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2619370693442679461, guid: 9a9f148039bf60945a3b1dc025d2881b, type: 3}
+  m_PrefabInstance: {fileID: 4502815957485879936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5891692866548857148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8051952571804351420, guid: 9a9f148039bf60945a3b1dc025d2881b, type: 3}
   m_PrefabInstance: {fileID: 4502815957485879936}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5710391047400782868
@@ -13164,6 +13173,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6072511750602372145}
     m_Modifications:
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5891692866548857148}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6726734162253145002}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Octobass.Waves.Item.PickupableItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121207302834582363, guid: f39401a684d67684cb282bb071c74414, type: 3}
+      propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3135453274689948600, guid: f39401a684d67684cb282bb071c74414, type: 3}
       propertyPath: m_Name
       value: Gem
@@ -13222,6 +13279,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6188697728548480077, guid: f39401a684d67684cb282bb071c74414, type: 3}
   m_PrefabInstance: {fileID: 7938849662124449024}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6726734162253145002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3708253185916092074, guid: f39401a684d67684cb282bb071c74414, type: 3}
+  m_PrefabInstance: {fileID: 7938849662124449024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7c5039b7e56954e8da1c621b927fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Item.PickupableItem
 --- !u!1001 &8257083492496560151
 PrefabInstance:
   m_ObjectHideFlags: 0
