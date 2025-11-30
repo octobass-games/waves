@@ -119,50 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &5029042
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5029044}
-  - component: {fileID: 5029043}
-  m_Layer: 0
-  m_Name: ServiceLocator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &5029043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed91e639e64bcf443b21b5dc274d3712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.ServiceLocator
---- !u!4 &5029044
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5029042}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.80896, y: 9.33847, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129779919
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Room.RoomEntrance
   Room: 0
+  EntranceCollider: {fileID: 0}
 --- !u!4 &129779924
 Transform:
   m_ObjectHideFlags: 0
@@ -5173,8 +5130,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Oscillator
   Body: {fileID: 1415411765}
   Speed: 1
+  SpriteRenderer: {fileID: 0}
   PointA: {fileID: 796225094}
   PointB: {fileID: 1301486767}
+  HasNoFacingDirection: 1
 --- !u!4 &1415411769
 Transform:
   m_ObjectHideFlags: 0
@@ -5269,6 +5228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Room.RoomEntrance
   Room: 0
+  EntranceCollider: {fileID: 0}
 --- !u!4 &1592359426
 Transform:
   m_ObjectHideFlags: 0
@@ -5421,6 +5381,7 @@ MonoBehaviour:
   FillableBottom: {fileID: 1702874873}
   FillableLineWidth: 0.1
   Collider: {fileID: 1639302055}
+  Entrance: {fileID: 0}
 --- !u!61 &1639302055
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5499,6 +5460,7 @@ MonoBehaviour:
   OnItemPickedUp:
     m_PersistentCalls:
       m_Calls: []
+  ItemRegistry: []
   Items: []
   references:
     version: 2
@@ -5884,6 +5846,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Rooms: []
+  SaveManager: {fileID: 0}
 --- !u!4 &1740119437
 Transform:
   m_ObjectHideFlags: 0
@@ -5981,9 +5944,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.010185185
+    width: 0.9770834
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -6013,7 +5976,7 @@ Transform:
   m_GameObject: {fileID: 1775404523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 3.201023, y: 0.54346085, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6284,6 +6247,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  PlayerInput: {fileID: 0}
   DisplayInspect: {fileID: 0}
 --- !u!114 &1786268892
 MonoBehaviour:
@@ -6451,6 +6415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Attack.Health
   HealthPoints: 1
+  MaxHealthPoints: 1
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -6561,6 +6526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Water.WaterFillableTrigger
   Fillable: {fileID: 1639302054}
+  PlayerInput: {fileID: 0}
+  Interact: {fileID: 0}
 --- !u!1 &1961480235
 GameObject:
   m_ObjectHideFlags: 0
@@ -6989,7 +6956,6 @@ SceneRoots:
   - {fileID: 1592359426}
   - {fileID: 129779924}
   - {fileID: 1740119437}
-  - {fileID: 5029044}
   - {fileID: 1717916083}
   - {fileID: 436578756}
   - {fileID: 1668698968}
