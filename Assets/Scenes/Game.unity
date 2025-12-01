@@ -757,15 +757,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.025390625
+    y: 0.3263889
+    width: 0.25
+    height: 0.25
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 1.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -53282,6 +53282,10 @@ PrefabInstance:
       propertyPath: OnInspect.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2668337855907649987, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      propertyPath: PlayerInput
+      value: 
+      objectReference: {fileID: 1047319394}
     - target: {fileID: 3013360085121036842, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -53455,6 +53459,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 6022542894036974198, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 4327068782453389242, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}

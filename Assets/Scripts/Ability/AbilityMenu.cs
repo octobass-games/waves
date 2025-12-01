@@ -46,14 +46,7 @@ namespace Octobass.Waves.Ability
                 }
             }
 
-            if (unlockedAbilityItems.Count > 0)
-            {
-                MostRecentlySelectedGameObject = AbilityMenuItems.Find(menuItem => menuItem.gameObject.activeSelf).gameObject;
-            }
-            else
-            {
-                MostRecentlySelectedGameObject = BackButton;
-            }
+            MostRecentlySelectedGameObject = BackButton;
 
             Initialized = false;
         }
