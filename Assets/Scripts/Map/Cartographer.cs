@@ -123,7 +123,6 @@ namespace Octobass.Waves.Map
         public void Load(SaveData saveData)
         {
             Rooms = saveData.Load<List<Room>>(RoomsSaveKey);
-            ActiveRoomId = saveData.Load<RoomId>(ActiveRoomSaveKey);
             OnRoomStateChanged.Invoke(Rooms, ActiveRoomId);
         }
 
