@@ -58,7 +58,6 @@ namespace Octobass.Waves.Ability
                 if (EventSystem.current.currentSelectedGameObject != null && EventSystem.current.currentSelectedGameObject != MostRecentlySelectedGameObject)
                 {
                     MostRecentlySelectedGameObject = EventSystem.current.currentSelectedGameObject;
-                    Debug.Log($"Newly selected game object: {MostRecentlySelectedGameObject.name}");
                 }
                 else if (EventSystem.current.currentSelectedGameObject == null)
                 {

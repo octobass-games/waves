@@ -33,7 +33,6 @@ public class BossConductor : MonoBehaviour
     }
     public void StartBattle()
     {
-        Debug.Log("Boss: StartBattle");
         DialoguePanel.SetActive(false);
         BlockingWall.SetActive(false);
         PlayerInput.SwitchCurrentActionMap(GameplayInput.name);
@@ -50,7 +49,6 @@ public class BossConductor : MonoBehaviour
 
     public void OpenDialogue()
     {
-        Debug.Log("Boss: OpenDialogue");
         DialoguePanel.SetActive(true);
         PlayerInput.SwitchCurrentActionMap(UiActionMap.name);
         EventSystem.current.SetSelectedGameObject(Button.gameObject);

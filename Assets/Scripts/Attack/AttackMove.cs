@@ -43,12 +43,7 @@ namespace Octobass.Waves.Attack
 
                 if (projectileDamageable != null)
                 {
-                    Debug.Log("Here!");
                     projectileDamageable.NonProjectileHit();
-                }
-                else
-                {
-                    Debug.Log("No here!");
                 }
             }
         }
