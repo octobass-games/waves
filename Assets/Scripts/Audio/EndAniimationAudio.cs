@@ -9,6 +9,7 @@ public class EndAniimationAudio : MonoBehaviour
     public string staffpowerSFX;
     public string staffswingSFX;
     public string staffwaterpowerSFX;
+    public string catchSFX;
 
 
     void OnOrbHover()
@@ -44,6 +45,11 @@ public class EndAniimationAudio : MonoBehaviour
     void OnStaffWaterPower()
     {
         FMODUnity.RuntimeManager.PlayOneShot(staffwaterpowerSFX);
+    }
+
+    void OnCatch()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(catchSFX);
     }
 
 }
