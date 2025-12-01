@@ -27,8 +27,15 @@ public class PlayerAnimationSounds : MonoBehaviour
 
     void Start()
     {
-        waterpowerSFX = FMODUnity.RuntimeManager.CreateInstance(WaterPowerEvent);
-        wallslideSFX = FMODUnity.RuntimeManager.CreateInstance(WallSlideEvent);
+        if (!WaterPowerEvent.IsNull)
+        {
+            waterpowerSFX = FMODUnity.RuntimeManager.CreateInstance(WaterPowerEvent);
+        }
+
+        if (!WallSlideEvent.IsNull)
+        {
+            wallslideSFX = FMODUnity.RuntimeManager.CreateInstance(WallSlideEvent);
+        }
     }
 
     void OnStep()
