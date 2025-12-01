@@ -383943,16 +383943,38 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7704793181598073466}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
 --- !u!4 &1374213668377409051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
   m_PrefabInstance: {fileID: 1504148572511729175}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5405432871804069035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 1504148572511729175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7704793181598073466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5405432871804069035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!1001 &1979750288553506247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384266,16 +384288,38 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 709427082656200461}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
 --- !u!4 &2725744611410234532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
   m_PrefabInstance: {fileID: 2458461188513402024}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9061821662706277908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 2458461188513402024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &709427082656200461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061821662706277908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!1001 &2602661327461847363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384414,16 +384458,38 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 802837012109578530}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
 --- !u!4 &2367325902675154429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
   m_PrefabInstance: {fileID: 2816880041029228017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8704238581734852429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 2816880041029228017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &802837012109578530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8704238581734852429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!1001 &3021479440686282324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -385375,11 +385441,33 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9078753599539879201}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+--- !u!1 &749317727756250057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 6177292884500380021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9078753599539879201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749317727756250057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!4 &5942455740514351481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
@@ -385453,11 +385541,33 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2449920554490550548}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+--- !u!1 &595446648083600930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 6313844594418730142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2449920554490550548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595446648083600930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!4 &5787889752581506194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
@@ -386499,11 +386609,33 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3280245457333920939}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+--- !u!1 &3516635893990585477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 8003356203446134329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3280245457333920939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3516635893990585477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!4 &7556016755319285301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
@@ -386647,11 +386779,33 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4563405977087175244}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+--- !u!1 &3388669600059710382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 8132026114992785682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4563405977087175244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388669600059710382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!4 &8581395295957387550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
@@ -386725,11 +386879,33 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.5410967
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7799679689668743582, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7948514311403326861}
   m_SourcePrefab: {fileID: 100100000, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+--- !u!1 &3402169639747044712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6907461514993668796, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
+  m_PrefabInstance: {fileID: 8136549759065053140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7948514311403326861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402169639747044712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff270258541d6a44cae658204bc3a1e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnvironmentalHazard
+  BossConductor: {fileID: 7360303058742501693}
 --- !u!4 &8585879323116509144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562386061341736972, guid: bf96f03dfe44d93438d3183db15d7d21, type: 3}
