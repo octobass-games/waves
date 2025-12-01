@@ -12,10 +12,6 @@ namespace Octobass.Waves.Attack
                 {
                     damageable.OnOneShot();
                 }
-                else
-                {
-                    Debug.Log("[EnironmentalAttack]: Could not find IDamageable on player");
-                }
             }
         }
     }

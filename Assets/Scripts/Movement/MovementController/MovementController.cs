@@ -79,7 +79,6 @@ namespace Octobass.Waves.Movement
                     CurrentStateId = nextState.Value;
                 }
 
-                Debug.Log($"[MovementStateMachine]: Entering - {CurrentState}");
                 CurrentState.Enter(PreviousStateId, driverSnapshot);
             }
 
@@ -142,13 +141,8 @@ namespace Octobass.Waves.Movement
                         StateRegistry[CharacterStateId.Dashing] = new DashState(CharacterControllerConfig);
                         break;
                     default:
-                        Debug.LogWarning($"[MovementStateMachine]: Trying to add a state that is not supported - {stateId}");
                         break;
                 }
-            }
-            else
-            {
-                Debug.LogWarning($"[MovementStateMachine]: State already exists in state machine - {stateId}");
             }
             
             UnlockedStates.Add(stateId);

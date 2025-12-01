@@ -15,10 +15,6 @@ public class BossEnvironmentalHazard : MonoBehaviour
             {
                 damageable.OnOneShot();
             }
-            else
-            {
-                Debug.Log("[EnironmentalAttack]: Could not find IDamageable on player");
-            }
 
             BossConductor.RestartBattle();
         }
