@@ -10,6 +10,8 @@ public class EndAniimationAudio : MonoBehaviour
     public string staffswingSFX;
     public string staffwaterpowerSFX;
     public string catchSFX;
+    public string voiceSFX;
+    public string voicetwoSFX;
 
 
     void OnOrbHover()
@@ -50,6 +52,17 @@ public class EndAniimationAudio : MonoBehaviour
     void OnCatch()
     {
         FMODUnity.RuntimeManager.PlayOneShot(catchSFX);
+    }
+
+    void OnVoice()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(voiceSFX);
+    }
+
+    void OnVoiceTwo()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(voicetwoSFX);
+
     }
 
 }
