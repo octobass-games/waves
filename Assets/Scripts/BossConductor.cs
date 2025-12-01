@@ -18,6 +18,9 @@ public class BossConductor : MonoBehaviour
     [SerializeField]
     private CinemachineCamera BossCamera;
 
+    [SerializeField]
+    private CinemachineCamera OpeningCamera;
+
 
     void Start()
     {
@@ -31,6 +34,7 @@ public class BossConductor : MonoBehaviour
         PlayerInput.SwitchCurrentActionMap(GameplayInput.name);
         BossAnimator.SetTrigger("StartBattle");
         Camera.gameObject.SetActive(false);
+        OpeningCamera.gameObject.SetActive(false);
         BossCamera.gameObject.SetActive(true);
     }
 

@@ -765,7 +765,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.0454545
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5526,6 +5526,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7016373576886688874, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
   m_PrefabInstance: {fileID: 2062222793}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2062222795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3443018490517164082, guid: dc578bf66e9e826499214c79619d8dd1, type: 3}
+  m_PrefabInstance: {fileID: 2062222793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295790160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1 &2092927983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6466835933849828418, guid: 36fc41fc663f72244a62cb5f02500d37, type: 3}
@@ -17756,6 +17767,10 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1047319394}
+    - target: {fileID: 7360303058742501693, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
+      propertyPath: OpeningCamera
+      value: 
+      objectReference: {fileID: 2062222795}
     - target: {fileID: 8002355269376871550, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: Value
       value: 3
@@ -33162,7 +33177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.7088184
+      value: 4.3178735
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
