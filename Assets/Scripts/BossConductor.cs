@@ -22,6 +22,9 @@ public class BossConductor : MonoBehaviour
     [SerializeField]
     private CinemachineCamera OpeningCamera;
 
+    [SerializeField]
+    private GameObject BlockingWall;
+
 
     void Start()
     {
@@ -32,6 +35,7 @@ public class BossConductor : MonoBehaviour
     {
         Debug.Log("Boss: StartBattle");
         DialoguePanel.SetActive(false);
+        BlockingWall.SetActive(false);
         PlayerInput.SwitchCurrentActionMap(GameplayInput.name);
         BossAnimator.SetTrigger("StartBattle");
         Camera.gameObject.SetActive(false);
