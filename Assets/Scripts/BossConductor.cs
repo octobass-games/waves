@@ -2,6 +2,7 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BossConductor : MonoBehaviour
@@ -53,6 +54,6 @@ public class BossConductor : MonoBehaviour
 
     public void FinishBattle()
     {
-        Debug.Log("Finished");
+        SceneManager.LoadScene("EndScene");
     }
 }
