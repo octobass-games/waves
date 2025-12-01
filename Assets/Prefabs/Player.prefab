@@ -189,6 +189,7 @@ MonoBehaviour:
   RightProjectileAttackStartPosition: {fileID: 8574207782874054088}
   LeftProjectileAttackStartPosition: {fileID: 5013840431814635145}
   ProjectileAttackAbilityDefinition: {fileID: 11400000, guid: 12dc3bd2d6827cd4f907953b3e52b171, type: 2}
+  JumpAbilityDefinition: {fileID: 11400000, guid: 2b058167e31b6fc498636850f748beed, type: 2}
 --- !u!114 &4136274269782190093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +428,8 @@ MonoBehaviour:
   MovementController: {fileID: 7789577042043984978}
   CameraSwitcher: {fileID: 0}
   DefaultSpawnPoint: {fileID: 0}
+  PenultimateSpawnPoint: {fileID: 0}
+  BossSpawnPoint: {fileID: 0}
   Cartographer: {fileID: 0}
 --- !u!114 &4374423792661856508
 MonoBehaviour:
@@ -449,6 +452,22 @@ MonoBehaviour:
   deathSFX: 
   respawnSFX: 
   tpSFX: 
+  climbSFX: 
+  floatSFX: 
+  WaterPowerEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  WallSlideEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &402517801013150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,6 +520,8 @@ MonoBehaviour:
   FlippableButton: {fileID: 0}
   CloseButton: {fileID: 0}
   PlayerInput: {fileID: 0}
+  FlippableText: {fileID: 0}
+  NonFlippableText: {fileID: 0}
 --- !u!114 &215965231412949391
 MonoBehaviour:
   m_ObjectHideFlags: 0

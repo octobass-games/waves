@@ -26,11 +26,16 @@ namespace Octobass.Waves.Attack
         [SerializeField]
         private AbilityDefinition ProjectileAttackAbilityDefinition;
 
+        [SerializeField]
+        private AbilityDefinition JumpAbilityDefinition;
+
         private AttackMove CurrentAttackMove;
 
+        private bool IsNonProjectileAttackUnlocked;
         private bool IsProjectileAttackUnlocked;
 
-        private const string SaveKey = "projectile-attack-unlocked";
+        private const string NonProjectileAttackSaveKey = "non-projectile-attack-unlocked";
+        private const string ProjectileAttackSaveKey = "projectile-attack-unlocked";
 
         private readonly List<CharacterStateId> AttackingStates = new() { CharacterStateId.Grounded, CharacterStateId.Jumping, CharacterStateId.WallJump, CharacterStateId.Falling };
         private bool IsAttacking;
@@ -53,7 +58,11 @@ namespace Octobass.Waves.Attack
         {
             if (itemInstance is AbilityItemInstance item)
             {
-                if (item.Ability.Definition.Name == ProjectileAttackAbilityDefinition.Name)
+                if (item.Ability.Definition.Name == JumpAbilityDefinition.Name)
+                {
+                    IsNonProjectileAttackUnlocked = true;
+                }
+                else if (item.Ability.Definition.Name == ProjectileAttackAbilityDefinition.Name)
                 {
                     IsProjectileAttackUnlocked = true;
                 }
@@ -80,40 +89,44 @@ namespace Octobass.Waves.Attack
 
         public AttackSnapshot Tick(MovementDriverSnapshot driverSnapshot, MovementSnapshot movementSnapshot)
         {
-            bool changedFacingDirection = FacingDirection != movementSnapshot.FacingDirection;
-
-            if (changedFacingDirection)
+            if (IsNonProjectileAttackUnlocked || IsProjectileAttackUnlocked)
             {
-                if (IsAttacking)
+                bool changedFacingDirection = FacingDirection != movementSnapshot.FacingDirection;
+
+                if (changedFacingDirection)
+                {
+                    if (IsAttacking)
+                    {
+                        EndAttack();
+                    }
+
+                    if (movementSnapshot.FacingDirection == Vector2.right)
+                    {
+                        CurrentAttackMove = RightAttack;
+                        RightAttack.gameObject.SetActive(true);
+                        LeftAttack.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        CurrentAttackMove = LeftAttack;
+                        RightAttack.gameObject.SetActive(false);
+                        LeftAttack.gameObject.SetActive(true);
+                    }
+
+                    FacingDirection = movementSnapshot.FacingDirection;
+                }
+
+                bool isInAttackingState = AttackingStates.Contains(movementSnapshot.State);
+
+                if (isInAttackingState && driverSnapshot.AttackPressed && !IsAttacking)
+                {
+                    IsAttacking = true;
+                }
+                else if (!isInAttackingState && IsAttacking)
                 {
                     EndAttack();
                 }
-
-                if (movementSnapshot.FacingDirection == Vector2.right)
-                {
-                    CurrentAttackMove = RightAttack;
-                    RightAttack.gameObject.SetActive(true);
-                    LeftAttack.gameObject.SetActive(false);
-                }
-                else
-                {
-                    CurrentAttackMove = LeftAttack;
-                    RightAttack.gameObject.SetActive(false);
-                    LeftAttack.gameObject.SetActive(true);
-                }
-
-                FacingDirection = movementSnapshot.FacingDirection;
-            }
-
-            bool isInAttackingState = AttackingStates.Contains(movementSnapshot.State);
-
-            if (isInAttackingState && driverSnapshot.AttackPressed && !IsAttacking)
-            {
-                IsAttacking = true;
-            }
-            else if (!isInAttackingState && IsAttacking)
-            {
-                EndAttack();
+                
             }
 
             return new AttackSnapshot(IsAttacking);
@@ -127,12 +140,14 @@ namespace Octobass.Waves.Attack
 
         public void Save(SaveData saveData)
         {
-            saveData.Add(SaveKey, IsProjectileAttackUnlocked);
+            saveData.Add(NonProjectileAttackSaveKey, IsNonProjectileAttackUnlocked);
+            saveData.Add(ProjectileAttackSaveKey, IsProjectileAttackUnlocked);
         }
 
         public void Load(SaveData saveData)
         {
-            IsProjectileAttackUnlocked = saveData.Load<bool>(SaveKey);
+            IsNonProjectileAttackUnlocked = saveData.Load<bool>(NonProjectileAttackSaveKey);
+            IsProjectileAttackUnlocked = saveData.Load<bool>(ProjectileAttackSaveKey);
         }
     }
 }
