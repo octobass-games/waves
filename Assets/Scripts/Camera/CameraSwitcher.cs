@@ -35,11 +35,6 @@ namespace Octobass.Waves.Camera
 
             foreach (RoomCameraBinding binding in RoomCameraBindings)
             {
-                if (RoomCameraBindingRegistry.ContainsKey(binding.Room))
-                {
-                    Debug.LogWarning($"[CameraSwitcher]: Multiple bindings found for room - {binding.Room}");
-                }
-
                 RoomCameraBindingRegistry[binding.Room] = binding.Camera;
             }
         }
