@@ -1,30 +1,33 @@
 using UnityEngine;
 
-public class Parallax : MonoBehaviour
+namespace Octobass.Waves
 {
-    public float parallaxFactor = 0.1f;
-
-    private Transform cam;
-    private Vector3 previousCamPos;
-    public float activationDistance = 15;
-
-    void Start()
+    public class Parallax : MonoBehaviour
     {
-        cam = Camera.main.transform;
-        previousCamPos = cam.position;
-    }
+        public float parallaxFactor = 0.1f;
 
-    void LateUpdate()
-    {
-        float distance = Vector3.Distance(cam.position, transform.position);
+        private Transform MainCamera;
+        private Vector3 PreviousCameraPosition;
+        public float ActivationDistance = 15;
 
-        if (distance <= activationDistance)
+        void Start()
         {
-            Vector3 deltaMovement = cam.position - previousCamPos;
-
-            transform.position += new Vector3(deltaMovement.x * parallaxFactor, deltaMovement.y * parallaxFactor, 0);
+            MainCamera = UnityEngine.Camera.main.transform;
+            PreviousCameraPosition = MainCamera.position;
         }
 
-        previousCamPos = cam.position;
+        void LateUpdate()
+        {
+            float distance = Vector3.Distance(MainCamera.position, transform.position);
+
+            if (distance <= ActivationDistance)
+            {
+                Vector3 displacement = MainCamera.position - PreviousCameraPosition;
+
+                transform.position += new Vector3(displacement.x * parallaxFactor, displacement.y * parallaxFactor, 0);
+            }
+
+            PreviousCameraPosition = MainCamera.position;
+        }
     }
 }
