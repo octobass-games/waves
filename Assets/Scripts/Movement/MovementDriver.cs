@@ -72,7 +72,7 @@ namespace Octobass.Waves.Movement
                 GrabPressed = true;
             }
 
-            if (GrabAction.WasReleasedThisFrame())
+            if (GrabAction.WasReleasedThisFrame() || !GrabAction.enabled)
             {
                 GrabReleased = true;
             }
