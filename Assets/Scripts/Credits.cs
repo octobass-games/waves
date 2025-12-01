@@ -1,18 +1,18 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject ContinueButton;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (EventSystem.current == null || EventSystem.current.currentSelectedGameObject != ContinueButton)
+        {
+            EventSystem.current.SetSelectedGameObject(ContinueButton);
+        }
     }
 
     public void MainMenu()
