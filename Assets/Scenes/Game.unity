@@ -757,15 +757,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.025390625
-    y: 0.3263889
-    width: 0.25
-    height: 0.25
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.875
+  orthographic size: 2.109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -17509,7 +17509,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 103667780416798390, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -317.32547
+      value: -317.42548
       objectReference: {fileID: 0}
     - target: {fileID: 103667780416798390, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17525,7 +17525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2649762224897761163, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 244.9
+      value: 245
       objectReference: {fileID: 0}
     - target: {fileID: 2649762224897761163, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17563,6 +17563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3578676106489858215, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1047319393}
     - target: {fileID: 3709179847025442361, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: PlayerInput
       value: 
