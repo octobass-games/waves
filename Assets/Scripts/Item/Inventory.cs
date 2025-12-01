@@ -113,6 +113,13 @@ namespace Octobass.Waves.Item
                 {
                     Debug.Log($"[Inventory]: PickupableItem not found for {item.Name}");
                 }
+
+                ItemDefinition definition = ItemRegistry.Find(itemDefinition => itemDefinition.Name == item.Name);
+
+                if (definition != null && definition is LoreItemDefinition loreItemDefinition && item is LoreItemInstance loreItem)
+                {
+                    loreItem.Definition = loreItemDefinition;
+                }
             }
         }
 
