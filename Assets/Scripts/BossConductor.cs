@@ -1,3 +1,4 @@
+using Octobass.Waves.Spawn;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -24,6 +25,8 @@ public class BossConductor : MonoBehaviour
 
     [SerializeField]
     private GameObject BlockingWall;
+    public SpawnPoint SpawnPoint;
+    public SpawnTracker SpawnTracker;
 
 
     void Start()
@@ -40,6 +43,7 @@ public class BossConductor : MonoBehaviour
         Camera.gameObject.SetActive(false);
         OpeningCamera.gameObject.SetActive(false);
         BossCamera.gameObject.SetActive(true);
+        SpawnTracker.SetSpawnPoint(SpawnPoint);
     }
 
     public void RestartBattle()

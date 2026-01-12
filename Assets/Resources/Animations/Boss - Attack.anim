@@ -20,17 +20,17 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.39, y: -11.25, z: 0}
-        inSlope: {x: 5.960886, y: 0, z: 0}
-        outSlope: {x: 5.960886, y: 0, z: 0}
+        value: {x: -2.67, y: -11.25, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 4.818867, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.8400484, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 80.03333
         value: {x: 383, y: -11.25, z: 0}
-        inSlope: {x: 4.790379, y: 0, z: 0}
+        inSlope: {x: 4.818867, y: 0, z: 0}
         outSlope: {x: 12.632882, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
@@ -198,17 +198,17 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.39
-        inSlope: 5.960886
-        outSlope: 5.960886
-        tangentMode: 0
+        value: -2.67
+        inSlope: 0
+        outSlope: 4.818867
+        tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.8400484
+        outWeight: 0.33333334
       - serializedVersion: 3
         time: 80.03333
         value: 383
-        inSlope: 4.790379
+        inSlope: 4.818867
         outSlope: 12.632882
         tangentMode: 69
         weightedMode: 0
@@ -218,48 +218,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Boss
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -11.25
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.y
-    path: Boss
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalPosition.z
     path: Boss
     classID: 4
     script: {fileID: 0}
@@ -304,6 +262,27 @@ AnimationClip:
     attribute: m_IsActive
     path: Boss/death-box
     classID: 1
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -11.25
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Boss
+    classID: 4
     script: {fileID: 0}
     flags: 0
   m_EulerEditorCurves: []
