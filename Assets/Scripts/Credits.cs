@@ -19,4 +19,9 @@ public class Credits : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("Game");
+    }
 }

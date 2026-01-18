@@ -27,6 +27,6 @@ public class Ending : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
 
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credits - Post Game Trigger");
     }
 }
