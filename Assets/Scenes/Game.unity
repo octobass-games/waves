@@ -22650,6 +22650,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2062222795}
     - target: {fileID: 7360303058742501693, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
+      propertyPath: PostGameGrate
+      value: 
+      objectReference: {fileID: 9155442939798803099}
+    - target: {fileID: 7360303058742501693, guid: 0444eb3c23104af4ba1b3e5566e425d1, type: 3}
       propertyPath: PostGameSpawnPoint
       value: 
       objectReference: {fileID: 478393966}
@@ -25283,7 +25287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461558468480231428, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 4.8194904
+      value: 5.736833
       objectReference: {fileID: 0}
     - target: {fileID: 6548661119938037109, guid: 402617311824c634da48d190faeb7ad6, type: 3}
       propertyPath: PlayerInput
@@ -46174,11 +46178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5531717674118600191, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[7].second.m_AnimationSpeed
-      value: 4.360846
+      value: 4.515695
       objectReference: {fileID: 0}
     - target: {fileID: 5531717674118600191, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[14].second.m_AnimationSpeed
-      value: 5.693941
+      value: 5.6338887
       objectReference: {fileID: 0}
     - target: {fileID: 6431932677307570680, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
       propertyPath: m_Color.a
@@ -46307,6 +46311,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e71dcafca4b624eb804e90a40a5c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Spawn.SpawnPoint
+--- !u!114 &9155442939798803099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6551577536872984597, guid: 3b2d0232f69b1e446b53fe517b3a5d4a, type: 3}
+  m_PrefabInstance: {fileID: 9155442939798803094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec50892a4f2cd94386d446b467ad3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.GrateController
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

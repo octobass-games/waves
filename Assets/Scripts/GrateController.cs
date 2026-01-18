@@ -23,11 +23,12 @@ namespace Octobass.Waves
 
         private bool IsUnlocked;
 
-        private string SaveKey = "grate-unlocked";
+        public string SaveKey = "grate-unlocked";
 
         public void Load(SaveData saveData)
         {
             IsUnlocked = saveData.Load<bool>(SaveKey);
+            Debug.Log("load" + SaveKey + IsUnlocked);
 
             if (IsUnlocked)
             {
@@ -52,12 +53,28 @@ namespace Octobass.Waves
 
         private void Open()
         {
+            if (GrateAnimator != null)
+            {
             GrateAnimator.SetBool("Closed", false);
-            LeverAnimator.SetBool("Left", false);
+
+            }
+            if (LeverAnimator != null)
+            {
+                LeverAnimator.SetBool("Left", false);
+            }
+
 
             GrateCollider.enabled = false;
-            LeverCollider.enabled = false;
-            Inspectable.enabled = false;
+
+            if (LeverCollider != null)
+            {
+                LeverCollider.enabled = false;
+            }
+
+            if (Inspectable != null)
+            {
+                Inspectable.enabled = false;
+            }
         }
     }
 }

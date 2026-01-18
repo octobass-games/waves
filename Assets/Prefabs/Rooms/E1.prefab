@@ -1249,7 +1249,7 @@ Tilemap:
       - {fileID: -8317056041114954161, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -8440385396302153196, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -5337844618644858084, guid: 5a1f94f460d015843945b80196c107df, type: 3}
-      m_AnimationSpeed: 4.789151
+      m_AnimationSpeed: 4.253316
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 8, y: -17, z: 0}
@@ -1310,7 +1310,7 @@ Tilemap:
       - {fileID: -8317056041114954161, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -8440385396302153196, guid: 5a1f94f460d015843945b80196c107df, type: 3}
       - {fileID: -5337844618644858084, guid: 5a1f94f460d015843945b80196c107df, type: 3}
-      m_AnimationSpeed: 5.208496
+      m_AnimationSpeed: 4.5927405
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 4, y: -10, z: 0}
@@ -47990,8 +47990,8 @@ Transform:
   m_GameObject: {fileID: 6880725969713947992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.417, y: -4.2806, z: 0}
-  m_LocalScale: {x: 0.4521881, y: 0.80488, z: 1}
+  m_LocalPosition: {x: 6.417, y: -10.1631, z: 0}
+  m_LocalScale: {x: 0.4521881, y: 3.2495067, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5475917945376907728}
@@ -48088,7 +48088,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -7.3704844}
+  m_Offset: {x: 0, y: -0.002610445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -48098,7 +48098,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.0625, y: 19.553461}
+  m_Size: {x: 7.0625, y: 4.8177123}
   m_EdgeRadius: 0
 --- !u!1 &7300356663797356313
 GameObject:
@@ -48110,6 +48110,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2868151215888381129}
   - component: {fileID: 6055614075238546861}
+  - component: {fileID: 6551577536872984597}
+  - component: {fileID: 7793195410744826351}
+  - component: {fileID: 8938377727225299523}
   m_Layer: 3
   m_Name: Grate
   m_TagString: Untagged
@@ -48180,6 +48183,58 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.748005, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6551577536872984597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300356663797356313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec50892a4f2cd94386d446b467ad3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.GrateController
+  GrateAnimator: {fileID: 7793195410744826351}
+  LeverAnimator: {fileID: 0}
+  GrateCollider: {fileID: 6055614075238546861}
+  LeverCollider: {fileID: 0}
+  Inspectable: {fileID: 0}
+  SaveKey: grate-shell-unlocked
+--- !u!95 &7793195410744826351
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300356663797356313}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e0da594ec024544d9891cedb8a0385e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8938377727225299523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300356663797356313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9768bd9abeaf954587f8fd94df65b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Octobass.Waves.Save.Saver
 --- !u!1 &7822007220364567368
 GameObject:
   m_ObjectHideFlags: 0

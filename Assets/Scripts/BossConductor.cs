@@ -1,3 +1,4 @@
+using Octobass.Waves;
 using Octobass.Waves.Save;
 using Octobass.Waves.Spawn;
 using Unity.Cinemachine;
@@ -30,6 +31,7 @@ public class BossConductor : MonoBehaviour
     public SpawnPoint SpawnPoint;
     public SpawnTracker SpawnTracker;
     public SpawnPoint PostGameSpawnPoint;
+    public GrateController PostGameGrate;
 
 
     void Start()
@@ -64,6 +66,7 @@ public class BossConductor : MonoBehaviour
     public void FinishBattle()
     {
         SpawnTracker.SetSpawnPoint(PostGameSpawnPoint);
+        PostGameGrate.Unlock();
         SaveManager.Save();
         SceneManager.LoadScene("EndScene");
     }
